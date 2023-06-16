@@ -1,0 +1,8 @@
+---
+applications:
+  - name: test-alexa-nodejs
+    random-route: true
+    buildpacks:
+      - nodejs_buildpack
+    memory: 1024M
+    stack: cflinuxfs4
