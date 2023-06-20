@@ -18,6 +18,6 @@ This setup will be segregated into two main directories
 |  📊 | bar chart | GA: | Code that integrates/updates Google Analytics |
 |  ⚡️ | lightning | perf: | Code that improves performance |
 |  👷‍♂️ | man con | refactor: | Code that neither fixes a bug nor adds a feature |
-|  🎨 | artist | style: | Code that is related to styling |
+|  🎨 | artist | style: | Code that is related to styling/auditory |
 |  🧪 | test | test: | Adding new test or making changes to existing test |
 |  ♿️ | wheelchair | 508: | Code that improves 508/Accessibility |
