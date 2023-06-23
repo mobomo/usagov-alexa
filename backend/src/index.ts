@@ -62,9 +62,9 @@ const LaunchRequestHandler: RequestHandler = {
 
 const GetRecommendationAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === 'IntentRequest'
-      && request.intent.name === 'AskWeatherIntent';
+    const request: any = handlerInput.requestEnvelope.request;
+    return request.type === 'Dialog.API.Invoked'
+      && request.apiRequest.name === 'getRecommendation';
   },
   handle(handlerInput: CustomHandlerInput): Response {
     const apiRequest: {
