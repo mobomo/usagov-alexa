@@ -1,0 +1,116 @@
+{
+  "banking-fakecheck": {
+    "level1": "Fake Check",
+    "SSET": "fakecheck",
+    "description": "A fake check scam usually involves a scammer sending you a check for more than the amount they owe then they ask you to refund the difference. But the check was fake, so you have to pay your bank the amount of the check and lose any money you gave the scammer.",
+    "result": "Report fake checks you receive by mail to the U.S. Postal Inspection Service, at USPIS.gov. Then visit FTC.gov to learn how to avoid and deal with fake check scams."
+  },
+  "banking-unsolicited": {
+    "level1": "Unsolicited Check",
+    "SSET": "unsolicitedcheck",
+    "description": "An unsolicited check scam typically occurs when a scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn't ask for.",
+    "result": "Report unsolicited checks you receive by mail to the U.S. Postal Inspection Service, at USPIS.gov. Then visit FTC.gov to learn how to avoid and deal with fake check scams."
+  },
+  "banking-unauthorized": {
+    "level1": "Unauthorized Withdrawal",
+    "SSET": "unauthorizedwithdrawal",
+    "description": "An unauthorized withdrawal scam is when a scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.",
+    "result": "Ok, Contact your bank as soon as possible to report and stop unauthorized withdrawals from your account. Also, learn about dealing with unauthorized withdrawals from the helpwithmybank.gov site."
+  },
+  "banking-phishing": {
+    "level1": "Phishing",
+    "SSET": "phishing",
+    "description": "A phishing scam is when you receive a scam email or text message that looks like it's from a company you trust. It asks you to verify your bank account, debit card, or credit card number.",
+    "result": "Ok, If this was an email, forward it to the Anti-Phishing Working Group at reportphishing@apwg.org. If it is a text message text message, forward it to your cell provider at 7726 (SPAM). Then please report your phishing scam situation to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, learn more about how to recognize and avoid phishing scams at FTC.gov."
+  },
+  "housing-rental": {
+    "level1": "Rental Ad",
+    "SSET": "rentalAd",
+    "description": "A rental scam involves scammers advertising apartments or vacation rentals that they don't own, manage, or that don't actually exist.",
+    "result": "Ok, report rental scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also please report this to your local law enforcement and the website or publication where the rental ad was posted. Then learn about how to spot the signs of a rental listing scam at FTC.gov."
+  },
+  "housing-mortgage": {
+    "level1": "Mortgage Foreclosure",
+    "SSET": "mortgageForclosure",
+    "description": "A mortgage scam typically involves Scammers offering to help you make your mortgage payments, but they're just trying to take your money.",
+    "result": "Report mortgage and foreclosure scams to the Federal Trade Commission website, or contact them by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also please Report online scams to the FBI as well. Then learn about types of mortgage relief scams to avoid at ftc.gov."
+  },
+  "housing-moving-local": {
+    "level1": "Moving Withing same state",
+    "SSET": "movingWithinstate",
+    "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
+    "result": "Ok, for a move within your same city or state, file a complaint with your state or local regulatory authority at fmcsa.dot.gov. Then please file a report using the Better Business Bureau Scam Tracker. Also, learn how to spot moving fraud before it happens on the federal motor carrier safety administration site."
+  },
+  "housing-moving-national": {
+    "level1": "Moving Across state lines",
+    "SSET": "movingAccrossstatelines",
+    "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
+    "result": "Ok, for a move across state lines, file a complaint with the Federal Motor Carrier Safety Administration. Then please file a report using the Better Business Bureau Scam Tracker.  Also, learn how to spot moving fraud before it happens at fmcsa.dot.gov."
+  },
+  "identity-tax": {
+    "level1": "Tax",
+    "SSET": "taxTheft",
+    "description": "A tax scam is when Scammers use your Social Security number and other personal information to file a fraudulent tax return.",
+    "result": "Ok, Report tax or tax refund scams to both the IRS and Federal Trade Commission. Report to the IRS using Form 14039. Report to the FTC online or by phone at 1-877-438-4338. Please Also, report this scam to the FBI. Then learn more about Identity theft scams and how to keep yourself safe at consumer.gov."
+  },
+  "identity-job-unemployed": {
+    "level1": "Unemployed",
+    "SSET": "unemployment",
+    "description": "An unemployment scam occurs when A person uses your name, Social Security number, and other information to apply for unemployment benefits.",
+    "result": "Ok,  Search for your state's department of labor contact information on dol.gov to report it. Please Also, report this scam to the FBI. Then visit the ftc.gov site to learn how to protect your finances after an unemployment scam."
+  },
+  "identity-job-employed": {
+    "level1": "Employement",
+    "SSET": "employment",
+    "description": "An employment scam occurrs when A person uses your name, Social Security number, and personal information to apply for a job.",
+    "result": "Report employment identity theft to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then learn more about employment-related identity theft at IRS.gov."
+  },
+  "identity-medical-medicare": {
+    "level1": "Medicaid Medicare",
+    "SSET": "medicaidMedicare",
+    "description": "A Medicare or Medicaid scam is when Someone uses your personal information to submit health claims to Medicare or Medicaid.",
+    "result": "Ok, report medicaid or medicare scams online to the Health and Human Services Office of Inspector General Hotline. Or report by phone at 1-800-447-8477 (1-800-HHS-TIPS). Please Also, report it to the FBI. Then visit the ftc.gov site to learn how to avoid medical identity theft in the future."
+  },
+  "identity-medical": {
+    "level1": "Medical",
+    "SSET": "medical",
+    "description": "A medical scam occurs when Someone uses your personal information to get health care and submit claims to your insurance provider.",
+    "result": "Ok, Report medical scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then visit the ftc.gov site to learn more about how to avoid medical identity theft."
+  },
+  "identity-other": {
+    "level1": "IdentityTheft",
+    "SSET": "IdentityTheft",
+    "description": "Identity theft happens when someone uses your personal or financial information to commit fraud.",
+    "result": "Ok Report identity theft scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then go to the ftc.gov site to learn more about warning signs and how to protect yourself from identity theft."
+  },
+  "imposter-tax": {
+    "level1": "IRS",
+    "SSET": "IRS",
+    "description": "Imposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.",
+    "result": "Ok, report tax scams to the U.S. Department of the Treasury. Forward email messages that claim to be from the IRS to phishing@irs.gov. Please also report online scams to the FBI. Then, visit consumer.gov to learn more about impostor scams and how to keep yourself safe"
+  },
+  "imposter-benefits": {
+    "level1": "Social Security Office",
+    "SSET": "socialSecurityoffice",
+    "description": "Scammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.",
+    "result": "Ok, report government impostor scams to the Social Security Administration and report online scams to the FBI. Then visit ssa.gov to Learn how to recognize and avoid Social Security-related scams."
+  },
+  "imposter-company": {
+    "level1": "Trusted Person",
+    "SSET": "trustedPerson",
+    "description": "Imposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.",
+    "result": "Ok, report impostor scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report all online scams to the FBI. Then visit consumer.gov to learn more about impostor scams and how to keep yourself safe."
+  },
+  "imposter-other": {
+    "level1": "Impostor",
+    "SSET": "impostor",
+    "description": "Other type of imposter scam",
+    "result": "Call FTC."
+  },
+  "banking-other": {
+    "level1": "Other",
+    "SSET": "other",
+    "description": "place holder",
+    "result": "No worries. There are so many types of scams. If your banking scam does not fit into the common categories but did occur online, report it to the FBI. Also report it to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET)."
+  }
+}

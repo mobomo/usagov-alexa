@@ -14,21 +14,19 @@ import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
 
 
-import data from "./PetMatch.json";
+import data from "./BankingScam.json";
 
 
 interface DataType {
-  [key: string]: PetMatchTypesL2;
+  [key: string]: scamTypesL2;
 }
 
 
-interface PetMatchTypesL2 {
-  size: string,
-  energy: string,
+interface scamTypesL2 {
+  level1: string,
   SSET: string,
-  temperament: string,
   description: string,
-  breed: string
+  result: string
 }
 
 
@@ -72,36 +70,27 @@ const GetRecommendationAPIHandler: RequestHandler = {
     } = handlerInput.requestEnvelope.request.apiRequest;
 
 
-    let energy: string = resolveEntity(apiRequest.slots, "energy");
-    let size: string = resolveEntity(apiRequest.slots, "size");
-    let temperament: string = resolveEntity(apiRequest.slots, "temperament");
-
+    let scam: string = resolveEntity(apiRequest.slots, "scam");
 
     const recommendationEntity: {
-      name: string,
-      size: string,
-      energy: string,
-      temperament: string
+      result: string,
+      scam: string
     } = {
-      name: "",
-      size: "",
-      energy: "",
-      temperament: ""
+      result: "",
+      scam: ""
     };
 
 
-    if (energy !== null && size !== null && temperament !== null) {
-      const key = `${energy}-${size}-${temperament}`;
+    if (scam !== null) {
+      const key = `banking-${scam}`;
       const databaseResponse = parsedData[key];
 
 
       console.log("Response from mock database ", databaseResponse);
 
 
-      recommendationEntity.name = databaseResponse.breed;
-      recommendationEntity.size = size;
-      recommendationEntity.energy = energy;
-      recommendationEntity.temperament = temperament;
+      recommendationEntity.result = databaseResponse.result;
+      recommendationEntity.scam = scam;
     }
 
 
@@ -111,7 +100,7 @@ const GetRecommendationAPIHandler: RequestHandler = {
 };
 
 
-const buildSuccessApiResponse = (returnEntity: { name: string; size: string; energy: string; temperament: string; }) => {
+const buildSuccessApiResponse = (returnEntity: { result: string; scam: string; }) => {
   return { apiResponse: returnEntity };
 };
 
