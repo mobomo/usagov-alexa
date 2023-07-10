@@ -1,0 +1,226 @@
+{
+  "new york": {
+    "los angeles": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "las vegas": {
+      "cost": "340",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "seattle": {
+      "cost": "470",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "boston": {
+      "cost": "150",
+      "time": "7 pm",
+      "airline": "Lightning Airways"
+    },
+    "chicago": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san francisco": {
+      "cost": "520",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "los angeles": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "las vegas": {
+      "cost": "140",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "seattle": {
+      "cost": "180",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "boston": {
+      "cost": "470",
+      "time": "4 pm",
+      "airline": "Lightning Airways"
+    },
+    "chicago": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san Francisco": {
+      "cost": "220",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "las vegas": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "los angeles": {
+      "cost": "150",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "seattle": {
+      "cost": "270",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "boston": {
+      "cost": "350",
+      "time": "4 pm",
+      "airline": "Lightning Airways"
+    },
+    "chicago": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san francisco": {
+      "cost": "520",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "seattle": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "los angeles": {
+      "cost": "340",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "las vegas": {
+      "cost": "150",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "boston": {
+      "cost": "270",
+      "time": "5 pm",
+      "airline": "Lightning Airways"
+    },
+    "chicago": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san francisco": {
+      "cost": "220",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "boston": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "los angeles": {
+      "cost": "340",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "las vegas": {
+      "cost": "470",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "seattle": {
+      "cost": "150",
+      "time": "7 pm",
+      "airline": "Lightning Airways"
+    },
+    "chicago": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san francisco": {
+      "cost": "520",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "chicago": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Lightning Airways"
+    },
+    "los angeles": {
+      "cost": "340",
+      "time": "2 pm",
+      "airline": "Lightning Airways"
+    },
+    "las vegas": {
+      "cost": "470",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "seattle": {
+      "cost": "150",
+      "time": "7 pm",
+      "airline": "Lightning Airways"
+    },
+    "boston": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "san francisco": {
+      "cost": "520",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  },
+  "san francisco": {
+    "new york": {
+      "cost": "450",
+      "time": "12 pm",
+      "airline": "Lightning Airways"
+    },
+    "los angeles": {
+      "cost": "340",
+      "time": "2 pm",
+      "airline": "Hippogriff Air Lines"
+    },
+    "las vegas": {
+      "cost": "470",
+      "time": "11 am",
+      "airline": "Harpy Intercontinental"
+    },
+    "seattle": {
+      "cost": "150",
+      "time": "7 pm",
+      "airline": "Lightning Airways"
+    },
+    "boston": {
+      "cost": "250",
+      "time": "3 pm",
+      "airline": "Harpy Intercontinental"
+    },
+    "chicago": {
+      "cost": "520",
+      "time": "8 am",
+      "airline": "Griffin Air"
+    }
+  }
+}

@@ -12,34 +12,71 @@ import {
 } from 'ask-sdk-model';
 import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
+import { util } from "./util";
 
 
-import data from "./PetMatch.json";
+import FLIGHT_DATA from "./flight-data.json";
 
-
-interface DataType {
-  [key: string]: PetMatchTypesL2;
+interface FLIGHT_DATAType {
+  [key: string]: {
+    [key: string]: {
+      "cost": string,
+      "time": string,
+      "airline": string
+    }
+  }
 }
 
-
-interface PetMatchTypesL2 {
-  size: string,
-  energy: string,
-  SSET: string,
-  temperament: string,
-  description: string,
-  breed: string
-}
-
-
-interface CustomHandlerInput {
-  requestEnvelope: {
-    request?: any
+const parsedFLIGHT_DATA: FLIGHT_DATAType = FLIGHT_DATA;
+const getFlightData = (cityFrom: string, cityTo: string) => {
+  if (cityFrom && parsedFLIGHT_DATA[cityFrom] && cityTo && parsedFLIGHT_DATA[cityFrom][cityTo]) {
+    return parsedFLIGHT_DATA[cityFrom][cityTo];
+  }
+  return {
+    cost: "",
+    time: "",
+    airline: "",
   };
-}
+};
 
+/* *
+ * FlightFinderHandler searches for the flight for given departure and arrival city and returns the response to the skill.
+ * This handler will be triggered when three slots are collected: arrivalCity, departureCity and date
+ * Response contains the json which maps FlightDetails type in ACDL and display for APL template
+ * */
+const FlightFinderHandler = {
+  canHandle(handlerInput: HandlerInput) {
+    return util.isApiRequest(handlerInput, "com.flightsearch.FlightFinder"); //this needs to be your namespace and api name
+  },
+  handle(handlerInput: HandlerInput) {
+    console.log(`flight finder handler: ~~~ ${JSON.stringify(handlerInput)}`);
 
-const parsedData: DataType = data;
+    const departure = util.getApiSlotBestValue(handlerInput, "departureCity"); //name of the U.S. city given in the api for departureCity slot (API definition)
+    const arrival = util.getApiSlotBestValue(handlerInput, "arrivalCity"); //name of the U.S. city given in the api for arrivalCity slot (API definition)
+    const date = util.getApiSlotBestValue(handlerInput, "date"); //date in the api for date slot (API definition)
+    const flightData = getFlightData(departure, arrival);
+
+    // response maps to FlightDetails type in ACDL
+    // arrivalCity, departureCity, date, time, cost and airline
+    // display is used in APL template
+    const response = {
+      arrivalCity: arrival,
+      departureCity: departure,
+      date: date,
+      time: flightData.time,
+      cost: flightData.cost,
+      airline: flightData.airline,
+    };
+    console.log("response: ", response);
+
+    return handlerInput.responseBuilder
+      .withApiResponse(response)
+      .withShouldEndSession(false) // Setting this to false keeps the mic on after Alexa responds
+      .getResponse();
+  },
+};
+
+// const parsedData: DataType = data;
 
 
 const LaunchRequestHandler: RequestHandler = {
@@ -59,144 +96,38 @@ const LaunchRequestHandler: RequestHandler = {
   },
 };
 
-
-const GetRecommendationAPIHandler: RequestHandler = {
-  canHandle(handlerInput: HandlerInput): boolean {
-    const request: any = handlerInput.requestEnvelope.request;
-    return request.type === 'Dialog.API.Invoked'
-      && request.apiRequest.name === 'getRecommendation';
+/* *
+ * SessionEndedRequest notifies that a session was ended. This handler will be triggered when a currently open
+ * session is closed for one of the following reasons: 1) The user says "exit" or "quit". 2) The user does not
+ * respond or says something that does not match an intent defined in your voice model. 3) An error occurs
+ * */
+const SessionEndedRequestHandler = {
+  canHandle(handlerInput: any) {
+    return handlerInput.getRequestType(handlerInput.requestEnvelope) === "SessionEndedRequest";
   },
-  handle(handlerInput: CustomHandlerInput): Response {
-    const apiRequest: {
-      [x: string]: any; apiRequest?: any
-    } = handlerInput.requestEnvelope.request.apiRequest;
+  handle(handlerInput: any) {
+    console.log(`~~~~ Session ended: ${JSON.stringify(handlerInput.requestEnvelope)}`);
 
-
-    let energy: string = resolveEntity(apiRequest.slots, "energy");
-    let size: string = resolveEntity(apiRequest.slots, "size");
-    let temperament: string = resolveEntity(apiRequest.slots, "temperament");
-
-
-    const recommendationEntity: {
-      name: string,
-      size: string,
-      energy: string,
-      temperament: string
-    } = {
-      name: "",
-      size: "",
-      energy: "",
-      temperament: ""
-    };
-
-
-    if (energy !== null && size !== null && temperament !== null) {
-      const key = `${energy}-${size}-${temperament}`;
-      const databaseResponse = parsedData[key];
-
-
-      console.log("Response from mock database ", databaseResponse);
-
-
-      recommendationEntity.name = databaseResponse.breed;
-      recommendationEntity.size = size;
-      recommendationEntity.energy = energy;
-      recommendationEntity.temperament = temperament;
-    }
-
-
-    const response = buildSuccessApiResponse(recommendationEntity);
-    return response;
+    // Any cleanup logic goes here.
+    return handlerInput.responseBuilder.getResponse(); // notice we send an empty response
   },
 };
 
-
-const buildSuccessApiResponse = (returnEntity: { name: string; size: string; energy: string; temperament: string; }) => {
-  return { apiResponse: returnEntity };
-};
-
-
-const resolveEntity = function (resolvedEntity: { [x: string]: { resolutions: { resolutionsPerAuthority: any[]; }; }; }, slot: string) {
-  //This is built in functionality with SDK Using Alexa's ER
-  let erAuthorityResolution = resolvedEntity[slot].resolutions.resolutionsPerAuthority[0];
-  let value = null;
-
-
-  if (erAuthorityResolution.status.code === "ER_SUCCESS_MATCH") {
-    value = erAuthorityResolution.values[0].value.name;
-  }
-
-
-  return value;
-};
-
-
-const HelpIntentHandler: RequestHandler = {
-  canHandle(handlerInput: HandlerInput): boolean {
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === 'IntentRequest'
-      && request.intent.name === 'AMAZON.HelpIntent';
-  },
-  handle(handlerInput: HandlerInput): Response {
-    const speechText = 'You can ask me the weather!';
-
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(speechText)
-      .withSimpleCard('You can ask me the weather!', speechText)
-      .getResponse();
-  },
-};
-
-
-const CancelAndStopIntentHandler: RequestHandler = {
-  canHandle(handlerInput: HandlerInput): boolean {
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === 'IntentRequest'
-      && (request.intent.name === 'AMAZON.CancelIntent'
-        || request.intent.name === 'AMAZON.StopIntent');
-  },
-  handle(handlerInput: HandlerInput): Response {
-    const speechText = 'Goodbye!';
-
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .withSimpleCard('Goodbye!', speechText)
-      .withShouldEndSession(true)
-      .getResponse();
-  },
-};
-
-
-const SessionEndedRequestHandler: RequestHandler = {
-  canHandle(handlerInput: HandlerInput): boolean {
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === 'SessionEndedRequest';
-  },
-  handle(handlerInput: HandlerInput): Response {
-    console.log(`Session ended with reason: ${(handlerInput.requestEnvelope.request as SessionEndedRequest).reason}`);
-
-
-    return handlerInput.responseBuilder.getResponse();
-  },
-};
-
-
+/**
+ * Generic error handling to capture any syntax or routing errors. If you receive an error
+ * stating the request handler chain is not found, you have not implemented a handler for
+ * the intent being invoked or included it in the skill builder below
+ * */
 const ErrorHandler: ErrorHandler = {
-  canHandle(handlerInput: HandlerInput, error: Error): boolean {
+  canHandle() {
     return true;
   },
-  handle(handlerInput: HandlerInput, error: Error): Response {
-    console.log(`Error handled: ${error.message}`);
+  handle(handlerInput: HandlerInput, error) {
+    const speakOutput = "Sorry, I had trouble doing what you asked. Please try again.";
+    console.log(`~~~~ Error handled: ${JSON.stringify(error)}`);
 
-
-    return handlerInput.responseBuilder
-      .speak('Sorry, I don\'t understand your command. Please say it again.')
-      .reprompt('Sorry, I don\'t understand your command. Please say it again.')
-      .getResponse();
-  }
+    return handlerInput.responseBuilder.speak(speakOutput).reprompt(speakOutput).getResponse();
+  },
 };
 
 
@@ -207,14 +138,9 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
   console.log(`REQUEST++++${JSON.stringify(event)}`);
   if (!skill) {
     skill = SkillBuilders.custom()
-      .addRequestHandlers(
-        LaunchRequestHandler,
-        GetRecommendationAPIHandler,
-        HelpIntentHandler,
-        CancelAndStopIntentHandler,
-        SessionEndedRequestHandler,
-      )
+      .addRequestHandlers(FlightFinderHandler, SessionEndedRequestHandler)
       .addErrorHandlers(ErrorHandler)
+      .withCustomUserAgent("sample/hello-world/v1.2")
       .create();
   }
 
@@ -229,14 +155,9 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
 
 const app = express();
 skill = SkillBuilders.custom()
-  .addRequestHandlers(
-    LaunchRequestHandler,
-    GetRecommendationAPIHandler,
-    HelpIntentHandler,
-    CancelAndStopIntentHandler,
-    SessionEndedRequestHandler,
-  )
+  .addRequestHandlers(FlightFinderHandler, SessionEndedRequestHandler)
   .addErrorHandlers(ErrorHandler)
+  .withCustomUserAgent("sample/hello-world/v1.2")
   .create();
 const adapter = new ExpressAdapter(skill, true, true);
 

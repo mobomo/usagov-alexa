@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: test-alexa-nodejs
+  - name: test-flightsearch-alexa-nodejs
     random-route: true
     buildpacks:
       - nodejs_buildpack
