@@ -1,0 +1,20 @@
+Docs used
+- Pet Match Tutorial (Labs 1 through 4): https://developer.amazon.com/en-US/docs/alexa/workshops/build-multi-turn-skills/get-started/index.html
+- ACDL Conversion Tutorial:  https://developer.amazon.com/en-US/docs/alexa/conversations/acdl-tutorial-convert-skill.html
+
+Steps you had issues with?
+- I didn't have any problems with the steps in the Pet Match tutorial
+- I didn't have any problems with the steps in the ACDL Conversion Tutorial until I actually tried to test the skill in the "Alexa Simulator" of the "Test" tab in the Pet Match CLI developer console.
+- I was using the alexa simulator in the test tab, not an actual device. I only used text input for testing the "Pet Match CLI" skill
+
+Steps to reproduce the issue...
+- Here are the steps 
+  - Input: dog command finder
+    - Welcome Response: ...
+  - Input: I want a large high energy guard dog
+    - Expected Response: "I recommend a bloody werewolf" 
+    - Actual Response: "There was a problem with the requested skill's response"
+
+I am still experiencing this concern.
+
+utterance activity key: Request Identifier: amzn1.echo-api.request.4784e67e-be6f-4fd2-a9b2-29aeeb2bc8b4

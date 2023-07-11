@@ -14,22 +14,26 @@ import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
 
 
-import data from "./PetMatch.json";
+
+
+import data from "./data.json";
+
+
 
 
 interface DataType {
-  [key: string]: PetMatchTypesL2;
+  [key: string]: BankingScamTypesL2;
 }
 
 
-interface PetMatchTypesL2 {
-  size: string,
-  energy: string,
-  SSET: string,
-  temperament: string,
-  description: string,
-  breed: string
+
+
+interface BankingScamTypesL2 {
+  level1: string,
+  result: string
 }
+
+
 
 
 interface CustomHandlerInput {
@@ -39,7 +43,11 @@ interface CustomHandlerInput {
 }
 
 
+
+
 const parsedData: DataType = data;
+
+
 
 
 const LaunchRequestHandler: RequestHandler = {
@@ -51,6 +59,8 @@ const LaunchRequestHandler: RequestHandler = {
     const speechText = 'Welcome to your SDK weather skill. Ask me the weather!';
 
 
+
+
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -58,6 +68,8 @@ const LaunchRequestHandler: RequestHandler = {
       .getResponse();
   },
 };
+
+
 
 
 const GetRecommendationAPIHandler: RequestHandler = {
@@ -72,37 +84,39 @@ const GetRecommendationAPIHandler: RequestHandler = {
     } = handlerInput.requestEnvelope.request.apiRequest;
 
 
-    let energy: string = resolveEntity(apiRequest.slots, "energy");
-    let size: string = resolveEntity(apiRequest.slots, "size");
-    let temperament: string = resolveEntity(apiRequest.slots, "temperament");
+
+
+    let Fruit: string = resolveEntity(apiRequest.slots, "Fruit");
 
 
     const recommendationEntity: {
       name: string,
-      size: string,
-      energy: string,
-      temperament: string
+      Fruit: string
     } = {
       name: "",
-      size: "",
-      energy: "",
-      temperament: ""
+      Fruit: ""
     };
 
 
-    if (energy !== null && size !== null && temperament !== null) {
-      const key = `${energy}-${size}-${temperament}`;
+
+
+    if (Fruit !== null) {
+      const key = `banking-${Fruit}`;
       const databaseResponse = parsedData[key];
+
+
 
 
       console.log("Response from mock database ", databaseResponse);
 
 
-      recommendationEntity.name = databaseResponse.breed;
-      recommendationEntity.size = size;
-      recommendationEntity.energy = energy;
-      recommendationEntity.temperament = temperament;
+
+
+      recommendationEntity.name = databaseResponse.result;
+      recommendationEntity.Fruit = Fruit;
     }
+
+
 
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -111,9 +125,13 @@ const GetRecommendationAPIHandler: RequestHandler = {
 };
 
 
-const buildSuccessApiResponse = (returnEntity: { name: string; size: string; energy: string; temperament: string; }) => {
+
+
+const buildSuccessApiResponse = (returnEntity: { name: string; Fruit: string; }) => {
   return { apiResponse: returnEntity };
 };
+
+
 
 
 const resolveEntity = function (resolvedEntity: { [x: string]: { resolutions: { resolutionsPerAuthority: any[]; }; }; }, slot: string) {
@@ -122,13 +140,19 @@ const resolveEntity = function (resolvedEntity: { [x: string]: { resolutions: { 
   let value = null;
 
 
+
+
   if (erAuthorityResolution.status.code === "ER_SUCCESS_MATCH") {
     value = erAuthorityResolution.values[0].value.name;
   }
 
 
+
+
   return value;
 };
+
+
 
 
 const HelpIntentHandler: RequestHandler = {
@@ -141,6 +165,8 @@ const HelpIntentHandler: RequestHandler = {
     const speechText = 'You can ask me the weather!';
 
 
+
+
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -148,6 +174,8 @@ const HelpIntentHandler: RequestHandler = {
       .getResponse();
   },
 };
+
+
 
 
 const CancelAndStopIntentHandler: RequestHandler = {
@@ -161,6 +189,8 @@ const CancelAndStopIntentHandler: RequestHandler = {
     const speechText = 'Goodbye!';
 
 
+
+
     return handlerInput.responseBuilder
       .speak(speechText)
       .withSimpleCard('Goodbye!', speechText)
@@ -168,6 +198,8 @@ const CancelAndStopIntentHandler: RequestHandler = {
       .getResponse();
   },
 };
+
+
 
 
 const SessionEndedRequestHandler: RequestHandler = {
@@ -179,9 +211,13 @@ const SessionEndedRequestHandler: RequestHandler = {
     console.log(`Session ended with reason: ${(handlerInput.requestEnvelope.request as SessionEndedRequest).reason}`);
 
 
+
+
     return handlerInput.responseBuilder.getResponse();
   },
 };
+
+
 
 
 const ErrorHandler: ErrorHandler = {
@@ -192,6 +228,8 @@ const ErrorHandler: ErrorHandler = {
     console.log(`Error handled: ${error.message}`);
 
 
+
+
     return handlerInput.responseBuilder
       .speak('Sorry, I don\'t understand your command. Please say it again.')
       .reprompt('Sorry, I don\'t understand your command. Please say it again.')
@@ -200,7 +238,11 @@ const ErrorHandler: ErrorHandler = {
 };
 
 
+
+
 let skill: Skill;
+
+
 
 
 exports.handler = async (event: RequestEnvelope, context: unknown) => {
@@ -219,12 +261,18 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
   }
 
 
+
+
   const response = await skill.invoke(event, context);
   console.log(`RESPONSE++++${JSON.stringify(response)}`);
 
 
+
+
   return response;
 };
+
+
 
 
 const app = express();
@@ -241,6 +289,13 @@ skill = SkillBuilders.custom()
 const adapter = new ExpressAdapter(skill, true, true);
 
 
+
+
 app.post('/', adapter.getRequestHandlers());
 app.listen(process.env.PORT || 3000);
+
+
+
+
+
 
