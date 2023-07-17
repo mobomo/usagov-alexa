@@ -13,14 +13,14 @@
     "SSET": "high-large-guard",
     "temperament": "Guard",
     "description": "The Otterhound is a extra large dog bred to be a scent hound to track otter and other prey in watery conditions. This British breed loves to swim and has a special oily rough double coat to repel water and webbed feet. They are known for their playful, clownish personality but can be a bit of a handful weighing in at 80 to 115 lbs!",
-    "breed": "bloody werewolf"
+    "breed": "Otterhound"
   },
   "high-regular-family": {
     "size": "Regular",
     "energy": "High",
     "SSET": "high-regular-family",
     "temperament": "Family",
-    "description": "The Boxer dog was founded in 1895 in Germany, bred to be a large size guard dog. They are instinctive guardians and make for loving family companions that are good around small children. Boxers are high-energy dogs that need adequate exercise to relieve boredom. Boxers come in a range of tan to brown colors with flashy white markings, weighing between 55 and 75 lbs.",
+    "description": "The Boxer dog was founded in 1895 in Germany, bred to be a large size guard dog. They are instinctive guardians and make for loving family companions that are good around small children. Boxers are high-energy dogs that need adequate exercise to relieve boredom.  Boxers come in a range of tan to brown colors with flashy white markings, weighing between 55 and 75 lbs.",
     "breed": "Boxer"
   },
   "high-regular-guard": {
@@ -76,7 +76,7 @@
     "energy": "Normal",
     "SSET": "normal-regular-guard",
     "temperament": "Guard",
-    "description": "The Appenzeller Sennenhund is famed to be decended from cattle dogs left by the Romans in the Swiss Alps. They are very athletic working dogs that require a lot of exercise and a job, so they aren't the best dog breed for small homes or city apartments. The Appenzeller is a medium sized dog with a distinctive tri-color coat, weighing around 49 to 70lbs.",
+    "description": "The Appenzeller Sennenhund is famed to be decended from cattle dogs left by the Romans in the Swiss Alps.  They are very athletic working dogs that require a lot of exercise and a job, so they aren't the best dog breed for small homes or city apartments. The Appenzeller is a medium sized dog with a distinctive tri-color coat, weighing around 49 to 70lbs.",
     "breed": "Appenzeller"
   },
   "normal-small-family": {

@@ -14,7 +14,7 @@ import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
 
 
-import data from "./PetMatch.json";
+import data from "./Data.json";
 
 
 interface DataType {
@@ -243,4 +243,3 @@ const adapter = new ExpressAdapter(skill, true, true);
 
 app.post('/', adapter.getRequestHandlers());
 app.listen(process.env.PORT || 3000);
-
