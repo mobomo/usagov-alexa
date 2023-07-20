@@ -60,11 +60,11 @@ const LaunchRequestHandler: RequestHandler = {
 };
 
 
-const GetRecommendationAPIHandler: RequestHandler = {
+const GetPetAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
     return request.type === 'Dialog.API.Invoked'
-      && request.apiRequest.name === 'getRecommendation';
+      && request.apiRequest.name === 'getPet';
   },
   handle(handlerInput: CustomHandlerInput): Response {
     const apiRequest: {
@@ -77,7 +77,7 @@ const GetRecommendationAPIHandler: RequestHandler = {
     let temperament: string = resolveEntity(apiRequest.slots, "temperament");
 
 
-    const recommendationEntity: {
+    const petEntity: {
       name: string,
       size: string,
       energy: string,
@@ -98,14 +98,14 @@ const GetRecommendationAPIHandler: RequestHandler = {
       console.log("Response from mock database ", databaseResponse);
 
 
-      recommendationEntity.name = databaseResponse.breed;
-      recommendationEntity.size = size;
-      recommendationEntity.energy = energy;
-      recommendationEntity.temperament = temperament;
+      petEntity.name = databaseResponse.breed;
+      petEntity.size = size;
+      petEntity.energy = energy;
+      petEntity.temperament = temperament;
     }
 
 
-    const response = buildSuccessApiResponse(recommendationEntity);
+    const response = buildSuccessApiResponse(petEntity);
     return response;
   },
 };
@@ -209,7 +209,7 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
     skill = SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        GetRecommendationAPIHandler,
+        GetPetAPIHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,
@@ -231,7 +231,7 @@ const app = express();
 skill = SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
-    GetRecommendationAPIHandler,
+    GetPetAPIHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
