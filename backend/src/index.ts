@@ -18,17 +18,15 @@ import data from "./Data.json";
 
 
 interface DataType {
-  [key: string]: PetMatchTypesL2;
+  [key: string]: CarMatchTypesL2;
 }
 
 
-interface PetMatchTypesL2 {
-  size: string,
-  energy: string,
+interface CarMatchTypesL2 {
+  area: string,
   SSET: string,
-  temperament: string,
   description: string,
-  breed: string
+  car: string
 }
 
 
@@ -60,11 +58,11 @@ const LaunchRequestHandler: RequestHandler = {
 };
 
 
-const GetPetAPIHandler: RequestHandler = {
+const GetCarAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
     return request.type === 'Dialog.API.Invoked'
-      && request.apiRequest.name === 'getPet';
+      && request.apiRequest.name === 'getCar';
   },
   handle(handlerInput: CustomHandlerInput): Response {
     const apiRequest: {
@@ -72,46 +70,38 @@ const GetPetAPIHandler: RequestHandler = {
     } = handlerInput.requestEnvelope.request.apiRequest;
 
 
-    let energy: string = resolveEntity(apiRequest.slots, "energy");
-    let size: string = resolveEntity(apiRequest.slots, "size");
-    let temperament: string = resolveEntity(apiRequest.slots, "temperament");
+    let area: string = resolveEntity(apiRequest.slots, "area");
 
 
-    const petEntity: {
+    const carEntity: {
       name: string,
-      size: string,
-      energy: string,
-      temperament: string
+      area: string,
     } = {
       name: "",
-      size: "",
-      energy: "",
-      temperament: ""
+      area: ""
     };
 
 
-    if (energy !== null && size !== null && temperament !== null) {
-      const key = `${energy}-${size}-${temperament}`;
+    if (area !== null) {
+      const key = `${area}`;
       const databaseResponse = parsedData[key];
 
 
       console.log("Response from mock database ", databaseResponse);
 
 
-      petEntity.name = databaseResponse.breed;
-      petEntity.size = size;
-      petEntity.energy = energy;
-      petEntity.temperament = temperament;
+      carEntity.name = databaseResponse.car;
+      carEntity.area = area;
     }
 
 
-    const response = buildSuccessApiResponse(petEntity);
+    const response = buildSuccessApiResponse(carEntity);
     return response;
   },
 };
 
 
-const buildSuccessApiResponse = (returnEntity: { name: string; size: string; energy: string; temperament: string; }) => {
+const buildSuccessApiResponse = (returnEntity: { name: string; area: string; }) => {
   return { apiResponse: returnEntity };
 };
 
@@ -209,7 +199,7 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
     skill = SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        GetPetAPIHandler,
+        GetCarAPIHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,
@@ -231,7 +221,7 @@ const app = express();
 skill = SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
-    GetPetAPIHandler,
+    GetCarAPIHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
