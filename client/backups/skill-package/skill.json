@@ -123,6 +123,20 @@
       }
     },
     "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      },
+      {
+        "name": "alexa::profile:name:read"
+      },
+      {
+        "name": "alexa::profile:mobile_number:read"
+      },
+      {
+        "name": "alexa::devices:all:geolocation:read"
+      }
+    ],
     "publishingInformation": {
       "distributionCountries": [],
       "isAvailableWorldwide": true,

@@ -70,90 +70,6 @@
             "say that again",
             "repeat"
           ]
-        },
-        {
-          "slots": [],
-          "name": "fraud",
-          "samples": [
-            "someone is using government benefits",
-            "hes stealing my social care",
-            "a medical crook",
-            "unemployment benefits",
-            "stole my tax return",
-            "stealing my tax return",
-            "stealing my unemployment checks",
-            "stealing my social security checks",
-            "stealing my benefits",
-            "credit card fraud",
-            "using my personal information",
-            "medicaid fraud",
-            "medicare fraud",
-            "medical fraud",
-            "employment fraud",
-            "unemployment fraud",
-            "social security fraud",
-            "tax fraud",
-            "fraud",
-            "identity theft"
-          ]
-        },
-        {
-          "slots": [],
-          "name": "trickery",
-          "samples": [
-            "sweepstakes",
-            "trusted company",
-            "trusted government entity",
-            "trusted person",
-            "granddaughter",
-            "grandson",
-            "fake moving company",
-            "fake property management company",
-            "fake advertisement",
-            "fake ad",
-            "impersonator",
-            "government office",
-            "phishing",
-            "pretending to be someone they are not",
-            "online dating",
-            "rental ad",
-            "social security office",
-            "IRS",
-            "trusted person or government office",
-            "love interest scam",
-            "impostor"
-          ]
-        },
-        {
-          "slots": [],
-          "name": "moving",
-          "samples": [
-            "moving locally",
-            "moving nearby",
-            "moving in state",
-            "in state",
-            "across state lines",
-            "out of state",
-            "moving out of state",
-            "moving"
-          ]
-        },
-        {
-          "slots": [],
-          "name": "Somethingelse",
-          "samples": [
-            "social media scam",
-            "crypto currency scam",
-            "another type of financial situation",
-            "another type of housing situation",
-            "another type of moving situation",
-            "another type of fraud",
-            "other",
-            "a different situation",
-            "another situation",
-            "none of those",
-            "something else"
-          ]
         }
       ],
       "types": [
@@ -162,11 +78,11 @@
             {
               "name": {
                 "synonyms": [
+                  "mortgage and foreclosure",
                   "debt relief",
-                  "foreclosure",
-                  "mortgage"
+                  "foreclosure"
                 ],
-                "value": "mortgage and foreclosure"
+                "value": "mortgage"
               }
             },
             {
@@ -178,28 +94,6 @@
                   "taking money from my account"
                 ],
                 "value": "unauthorized"
-              }
-            },
-            {
-              "name": {
-                "synonyms": [
-                  "other financial situation",
-                  "other",
-                  "discover",
-                  "mastercard",
-                  "store card",
-                  "american express",
-                  "visa",
-                  "other banking scam",
-                  "different financial situation",
-                  "atm",
-                  "something else",
-                  "bank card",
-                  "another situation",
-                  "other situation",
-                  "credit card"
-                ],
-                "value": "financial situation"
               }
             },
             {
@@ -291,10 +185,10 @@
             {
               "name": {
                 "synonyms": [
-                  "tax",
+                  "tax refund",
                   "tax return"
                 ],
-                "value": "tax refund"
+                "value": "tax"
               }
             },
             {
@@ -341,6 +235,7 @@
             {
               "name": {
                 "synonyms": [
+                  "company",
                   "pretending to be a trusted person, from a government office or from a company",
                   "acting as they they are",
                   "acting as though I owe",
@@ -445,6 +340,8 @@
             {
               "name": {
                 "synonyms": [
+                  "credit card",
+                  "another financial situation",
                   "social media scam",
                   "another situation",
                   "another financial scam",
@@ -496,7 +393,7 @@
           "name": "financialscam"
         }
       ],
-      "invocationName": "where report scam"
+      "invocationName": "report scam"
     }
   }
 }

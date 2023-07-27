@@ -60,11 +60,11 @@ const LaunchRequestHandler: RequestHandler = {
 };
 
 
-const GetPetAPIHandler: RequestHandler = {
+const GetRecommendationAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
     return request.type === 'Dialog.API.Invoked'
-      && request.apiRequest.name === 'getPet';
+      && request.apiRequest.name === 'getRecommendation';
   },
   handle(handlerInput: CustomHandlerInput): Response {
     const apiRequest: {
@@ -209,7 +209,7 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
     skill = SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        GetPetAPIHandler,
+        GetRecommendationAPIHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,
@@ -231,7 +231,7 @@ const app = express();
 skill = SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
-    GetPetAPIHandler,
+    GetRecommendationAPIHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
