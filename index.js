@@ -4,7 +4,7 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require("ask-sdk-core");
-const data = require("./PetMatch.json");
+const data = require("./bankingmatch.json");
 
 const GetRecommendationAPIHandler = {
   canHandle(handlerInput) {
@@ -16,24 +16,25 @@ const GetRecommendationAPIHandler = {
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    let energy = resolveEntity(apiRequest.slots, "energy");
-    let size = resolveEntity(apiRequest.slots, "size");
-    let temperament = resolveEntity(apiRequest.slots, "temperament");
+    const scam = resolveEntity(apiRequest.slots, "BankingScam");
 
     const recommendationEntity = {};
-    if (energy !== null && size !== null && temperament !== null) {
-      const key = `${energy}-${size}-${temperament}`;
+    if (scam !== null) {
+      const key = `banking-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      recommendationEntity.result = databaseResponse.breed;
-      recommendationEntity.size = size;
-      recommendationEntity.energy = energy;
-      recommendationEntity.temperament = temperament;
+      recommendationEntity.name = databaseResponse.result;
+      recommendationEntity.BankingScam = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
+    
+    // const attributes = handlerInput.attributesManager.getSessionAttributes();
+    // attributes.lastResult = "This is from the get recommendation handler";
+    // handlerInput.attributesManager.getSessionAttributes(attributes);
+    
     return response;
   },
 };
@@ -100,22 +101,69 @@ const HelpIntentHandler = {
   },
 };
 
-const CancelAndStopIntentHandler = {
+// const RepeatIntentHandler = {
+//   canHandle(handlerInput) {
+//     return (
+//       Alexa.getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
+//       Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.RepeatIntent"
+//     );
+//   },
+//   handle(handlerInput) {
+//     let speakOutput = "There was nothing to repeat.";
+//     const attributes = handlerInput.attributesManager.getSessionAttrbutes
+    
+//     if(attributes.lastResult){
+//         speakOutput = `{attributes.lastResult}. Let me know if you need me to repeat this information, also If you need to speak to a human at USA dot gov, say "help". Thank you.`
+//     }
+
+//     return handlerInput.responseBuilder.speak(speakOutput).reprompt(speakOutput).getResponse();
+//   },
+// };
+
+// const CancelAndStopIntentHandler = {
+//   canHandle(handlerInput) {
+//     return (
+//       Alexa.getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
+//       (Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.CancelIntent" ||
+//         Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.StopIntent")
+//     );
+//   },
+//   handle(handlerInput) {
+//     const speakOutput = "Goodbye!";
+
+//     return handlerInput.responseBuilder.speak(speakOutput).getResponse();
+//   },
+// };
+
+const CancelIntentHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
-      (Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.CancelIntent" ||
-        Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.StopIntent")
+      (Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.CancelIntent")
     );
   },
   handle(handlerInput) {
-    const speakOutput = "Goodbye!";
+    const speakOutput = "Cancelled!";
+
+    return handlerInput.responseBuilder.speak(speakOutput).getResponse();
+  },
+};
+
+const StopIntentHandler = {
+  canHandle(handlerInput) {
+    return (
+      Alexa.getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
+      (Alexa.getIntentName(handlerInput.requestEnvelope) === "AMAZON.StopIntent")
+    );
+  },
+  handle(handlerInput) {
+    const speakOutput = "Stopped!";
 
     return handlerInput.responseBuilder.speak(speakOutput).getResponse();
   },
 };
 /* *
- * FallbackIntent triggers when a customer says something that doesn’t map to any intents in your skill
+ * FallbackIntent triggers when a customer says something that doesnâ€™t map to any intents in your skill
  * It must also be defined in the language model (if the locale supports it)
  * This handler can be safely added but will be ingnored in locales that do not support it yet
  * */
@@ -193,10 +241,11 @@ const ErrorHandler = {
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     GetRecommendationAPIHandler,
+    CancelIntentHandler,
+    StopIntentHandler,
     LaunchRequestHandler,
     HelloWorldIntentHandler,
     HelpIntentHandler,
-    CancelAndStopIntentHandler,
     FallbackIntentHandler,
     SessionEndedRequestHandler,
     IntentReflectorHandler
