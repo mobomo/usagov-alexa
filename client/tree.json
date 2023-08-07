@@ -1,0 +1,28 @@
+{
+  "different": "result",
+  "employment": "result",
+  "romance": "result",
+  "medical": "result",
+  "moving": {
+    "rental": "result",
+    "locally": "result",
+    "nationally": "result"
+  },
+  "taxes or ssn": {
+    "return": "result",
+    "irs": "result"
+  },
+  "financial": {
+    "mortgage": "result",
+    "investment": "result",
+    "other": "result",
+
+    "banking": {
+      "unsolicitedCheck": "result",
+      "fakeCheck": "result",
+      "withdrawal": "result",
+      "phishing": "result",
+      "unknown": "result"
+    }
+  }
+}
