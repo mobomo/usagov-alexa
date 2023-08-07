@@ -4,7 +4,10 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "stop",
+            "cancel"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -20,7 +23,24 @@
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "stop"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "I just lost money",
+            "I\u0027ve been scammed",
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
@@ -49,20 +69,6 @@
             "I didn\u0027t get that the first time",
             "say that again",
             "repeat"
-          ]
-        },
-        {
-          "slots": [],
-          "name": "outofdomain",
-          "samples": [
-            "I\u0027ve been scammed",
-            "hello",
-            "how are you",
-            "say hi world",
-            "say hi",
-            "hi",
-            "say hello world",
-            "say hello"
           ]
         }
       ],
@@ -110,7 +116,7 @@
               }
             }
           ],
-          "name": "banking"
+          "name": "BankingScam"
         },
         {
           "values": [
@@ -134,7 +140,7 @@
                   "within the state",
                   "nearby"
                 ],
-                "value": "local"
+                "value": "locally"
               }
             },
             {
@@ -143,25 +149,13 @@
                   "to another state",
                   "between states",
                   "to another state",
-                  "across state lines",
-                  "out of state"
+                  "across state lines"
                 ],
-                "value": "national"
-              }
-            },
-            {
-              "name": {
-                "synonyms": [
-                  "movers",
-                  "moving company",
-                  "extortion",
-                  "moving scam"
-                ],
-                "value": "moving"
+                "value": "out of state"
               }
             }
           ],
-          "name": "moving"
+          "name": "outofstateorlocalmove"
         },
         {
           "values": [
@@ -169,10 +163,10 @@
               "name": {
                 "synonyms": [
                   "government health benefits",
-                  "medicaid and medicare",
+                  "medicaid",
                   "medicare"
                 ],
-                "value": "medicaid"
+                "value": "medicaid and medicare"
               }
             },
             {
@@ -216,13 +210,14 @@
               }
             }
           ],
-          "name": "fraud"
+          "name": "typeoffraud"
         },
         {
           "values": [
             {
               "name": {
                 "synonyms": [
+                  "fishing",
                   "emails pretending to be",
                   "messages pretending to be",
                   "texts pretending to be",
@@ -241,7 +236,7 @@
             {
               "name": {
                 "synonyms": [
-                  "trusted person company or government office",
+                  "company",
                   "pretending to be a trusted person, from a government office or from a company",
                   "acting as they they are",
                   "acting as though I owe",
@@ -259,7 +254,7 @@
                   "trusted person",
                   "government office"
                 ],
-                "value": "company"
+                "value": "trusted person company or government office"
               }
             },
             {
@@ -275,19 +270,17 @@
                   "rental ad",
                   "condo for rent",
                   "apartment for rent",
-                  "fake ad",
-                  "rental ad"
+                  "fake ad"
                 ],
-                "value": "ad"
+                "value": "rental ad"
               }
             },
             {
               "name": {
                 "synonyms": [
-                  "social security office",
                   "from social security"
                 ],
-                "value": "SSN"
+                "value": "social security office"
               }
             },
             {
@@ -305,13 +298,43 @@
                   "catfishing",
                   "online dating",
                   "tinder",
-                  "love interest"
+                  "romance"
                 ],
-                "value": "romance"
+                "value": "love interest"
               }
             }
           ],
-          "name": "trickery"
+          "name": "typesoftrickery"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "movers",
+                  "moving company",
+                  "extortion",
+                  "moving"
+                ],
+                "value": "moving scam"
+              }
+            }
+          ],
+          "name": "moving"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "a type of fraud",
+                  "identity theft"
+                ],
+                "value": "fraud"
+              }
+            }
+          ],
+          "name": "fraud"
         },
         {
           "values": [
@@ -333,15 +356,13 @@
                   "another type of fraud",
                   "another fraud",
                   "another online scam",
-                  "a different type of scam",
-                  "something else",
-                  "another"
+                  "a different type of scam"
                 ],
-                "value": "other"
+                "value": "something else"
               }
             }
           ],
-          "name": "other"
+          "name": "somethingelse"
         },
         {
           "values": [
@@ -351,11 +372,11 @@
                   "someone pretending to be someone they are not",
                   "impersonator"
                 ],
-                "value": "impostor"
+                "value": "imposter"
               }
             }
           ],
-          "name": "impostor"
+          "name": "imposter"
         },
         {
           "values": [
@@ -364,17 +385,16 @@
                 "synonyms": [
                   "financial loss",
                   "financial fraud",
-                  "affecting my finances fraudulently",
-                  "financial scam"
+                  "affecting my finances fraudulently"
                 ],
-                "value": "financial"
+                "value": "financial scam"
               }
             }
           ],
-          "name": "financial"
+          "name": "financialscam"
         }
       ],
-      "invocationName": "david\u0027s scam report finder"
+      "invocationName": "scam reporting match"
     }
   }
 }

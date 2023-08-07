@@ -5,28 +5,45 @@
  * */
 const Alexa = require("ask-sdk-core");
 const data = require("./scammatch.json");
+// const invokefraudgenericAPIHandler = {
+//   canHandle(handlerInput) {},
+//   handle(handlerInput) {},
+// };
+// const invokefinancialgenericAPIHandler = {
+//   canHandle(handlerInput) {},
+//   handle(handlerInput) {},
+// };
+// const invokemovinggenericAPIHandler = {
+//   canHandle(handlerInput) {},
+//   handle(handlerInput) {},
+// };
+// const invokeimpostorgenericAPIHandler = {
+//   canHandle(handlerInput) {},
+//   handle(handlerInput) {},
+// };
 
-const defOtherAPIHandler = {
+const GetRecommendationsomethingelseAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "defOther"
+      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendationsomethingelse"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    const scam = resolveEntity(apiRequest.slots, "other");
+    const category = "somethingelse";
+    const scam = resolveEntity(apiRequest.slots, category);
 
     const recommendationEntity = {};
     if (scam !== null) {
-      const key = `other-${scam}`;
+      const key = `${category}-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
       recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.other = scam;
+      recommendationEntity[`${category}`] = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -34,27 +51,28 @@ const defOtherAPIHandler = {
   },
 };
 
-const defMovingAPIHandler = {
+const GetRecommendationMovingAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "defMoving"
+      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendationMoving"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    const scam = resolveEntity(apiRequest.slots, "moving");
+    const category = "outofstateorlocalmove";
+    const scam = resolveEntity(apiRequest.slots, category);
 
     const recommendationEntity = {};
     if (scam !== null) {
-      const key = `moving-${scam}`;
+      const key = `${category}-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
       recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.moving = scam;
+      recommendationEntity[`${category}`] = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -62,27 +80,27 @@ const defMovingAPIHandler = {
   },
 };
 
-const defTrickeryAPIHandler = {
+const GetRecommendationtrickeryAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "defTrickery"
+      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendationtrickery"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    const scam = resolveEntity(apiRequest.slots, "trickery");
+    const scam = resolveEntity(apiRequest.slots, "typesoftrickery");
 
     const recommendationEntity = {};
     if (scam !== null) {
-      const key = `trickery-${scam}`;
+      const key = `typesoftrickery-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
       recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.trickery = scam;
+      recommendationEntity.typesoftrickery = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -90,27 +108,28 @@ const defTrickeryAPIHandler = {
   },
 };
 
-const defFraudAPIHandler = {
+const GetRecommendationfraudAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "defFraud"
+      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendationfraud"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    const scam = resolveEntity(apiRequest.slots, "fraud");
+    const category = "typeoffraud";
+    const scam = resolveEntity(apiRequest.slots, category);
 
     const recommendationEntity = {};
     if (scam !== null) {
-      const key = `fraud-${scam}`;
+      const key = `${category}-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
       recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.fraud = scam;
+      recommendationEntity[`${category}`] = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -118,27 +137,28 @@ const defFraudAPIHandler = {
   },
 };
 
-const defBankingAPIHandler = {
+const GetRecommendationbankingscamAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "defBanking"
+      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendationbankingscam"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    const scam = resolveEntity(apiRequest.slots, "banking");
+    const category = "BankingScam";
+    const scam = resolveEntity(apiRequest.slots, category);
 
     const recommendationEntity = {};
     if (scam !== null) {
-      const key = `banking-${scam}`;
+      const key = `BankingScam-${scam}`;
       const databaseResponse = data[key];
 
       console.log("Response from mock database ", databaseResponse);
 
       recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.banking = scam;
+      recommendationEntity.BankingScam = scam;
     }
 
     const response = buildSuccessApiResponse(recommendationEntity);
@@ -169,13 +189,14 @@ const LaunchRequestHandler = {
     return Alexa.getRequestType(handlerInput.requestEnvelope) === "LaunchRequest";
   },
   handle(handlerInput) {
-    const speakOutput = "Welcome, you can say Hello or Help. Which would you like to try?";
+    const speakOutput =
+      "<speak> <amazon:emotion name= 'disappointed' intensity= 'medium'> Hi there! I'm sorry to hear you are experiencing a scam. I can help you learn where to report it! </amazon:emotion> This is the USA dot gov scams wizard. No need to tell me any personal information, just say which category applies. Say 'financial scam' if your accounts or loans are affected. Say 'moving scam' regarding a scam moving company or movers. Say 'fraud' if the scam involves identity theft. Say 'impostor' if the scam involves someone pretending to be someone they are not, including a love interest, or phishing. Say 'something else' if none apply.</speak>";
 
     return handlerInput.responseBuilder.speak(speakOutput).reprompt(speakOutput).getResponse();
   },
 };
 
-const HelloWorldIntentHandler = {
+const OutofdomainIntentHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
@@ -235,7 +256,7 @@ const FallbackIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speakOutput = "Sorry, I don't know about that. Please try again.";
+    const speakOutput = "I'm sorry, I don't know about that. Please try again.";
 
     return handlerInput.responseBuilder.speak(speakOutput).reprompt(speakOutput).getResponse();
   },
@@ -300,13 +321,13 @@ const ErrorHandler = {
  * */
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
-    defBankingAPIHandler,
-    defFraudAPIHandler,
-    defTrickeryAPIHandler,
-    defMovingAPIHandler,
-    defOtherAPIHandler,
+    GetRecommendationbankingscamAPIHandler,
+    GetRecommendationfraudAPIHandler,
+    GetRecommendationtrickeryAPIHandler,
+    GetRecommendationMovingAPIHandler,
+    GetRecommendationsomethingelseAPIHandler,
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    OutofdomainIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     FallbackIntentHandler,
