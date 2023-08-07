@@ -1,0 +1,380 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "is there a number to call",
+            "how do I speak to a human to help me with my scam",
+            "I need a human",
+            "I need assistance",
+            "how do I get help",
+            "I need to speak to a human",
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": [
+            "start over",
+            "go back"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": [
+            "how do I recover my losses",
+            "does reporting get my money",
+            "can you help me get my money",
+            "how do I get my money back"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "come again",
+            "say it again",
+            "I\u0027m trying to write this down",
+            "too fast Alexa",
+            "I didn\u0027t get that",
+            "I didn\u0027t get that the first time",
+            "say that again",
+            "repeat"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "outofdomain",
+          "samples": [
+            "I\u0027ve been scammed",
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "mortgage and foreclosure",
+                  "debt relief",
+                  "foreclosure"
+                ],
+                "value": "mortgage"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "stole money from my account",
+                  "unauthorized withdrawal",
+                  "automatic withdrawal",
+                  "taking money from my account"
+                ],
+                "value": "unauthorized"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "unsolicited check"
+                ],
+                "value": "unsolicited"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fake check",
+                  "check bounced",
+                  "bounced check",
+                  "bad check"
+                ],
+                "value": "fakecheck"
+              }
+            }
+          ],
+          "name": "banking"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dummy"
+              }
+            }
+          ],
+          "name": "name"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "moving just down the street",
+                  "within my same state",
+                  "just in the neighborhood",
+                  "down the street",
+                  "within the state",
+                  "nearby"
+                ],
+                "value": "local"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "to another state",
+                  "between states",
+                  "to another state",
+                  "across state lines",
+                  "out of state"
+                ],
+                "value": "national"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "movers",
+                  "moving company",
+                  "extortion",
+                  "moving scam"
+                ],
+                "value": "moving"
+              }
+            }
+          ],
+          "name": "moving"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "government health benefits",
+                  "medicaid and medicare",
+                  "medicare"
+                ],
+                "value": "medicaid"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "supplemental medical coverage",
+                  "aca",
+                  "obama care",
+                  "supplemental coverage",
+                  "hospital",
+                  "health insurance"
+                ],
+                "value": "medical"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "tax refund",
+                  "tax return"
+                ],
+                "value": "tax"
+              }
+            },
+            {
+              "name": {
+                "value": "employment"
+              }
+            },
+            {
+              "name": {
+                "value": "unemployment"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "retirement benefits"
+                ],
+                "value": "social security"
+              }
+            }
+          ],
+          "name": "fraud"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "emails pretending to be",
+                  "messages pretending to be",
+                  "texts pretending to be",
+                  "fake texts",
+                  "scam emails",
+                  "fake emails",
+                  "scam messages",
+                  "fake messages",
+                  "paypal",
+                  "fake sender",
+                  "fake company emails"
+                ],
+                "value": "phishing"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "trusted person company or government office",
+                  "pretending to be a trusted person, from a government office or from a company",
+                  "acting as they they are",
+                  "acting as though I owe",
+                  "acting like they are from",
+                  "pretending to be from",
+                  "someone acting like they are from",
+                  "someone pretending to be",
+                  "family member",
+                  "grandchildren",
+                  "from the government",
+                  "sweepstakes",
+                  "paypal",
+                  "trusted company",
+                  "grandchild",
+                  "trusted person",
+                  "government office"
+                ],
+                "value": "company"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fake",
+                  "lost my downpayment",
+                  "fake property management",
+                  "fake advertisement",
+                  "advertisement for a rental",
+                  "home for rent",
+                  "advertisement for rent",
+                  "rental ad",
+                  "condo for rent",
+                  "apartment for rent",
+                  "fake ad",
+                  "rental ad"
+                ],
+                "value": "ad"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "social security office",
+                  "from social security"
+                ],
+                "value": "SSN"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "from the IRS"
+                ],
+                "value": "IRS"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "dating scam",
+                  "catfishing",
+                  "online dating",
+                  "tinder",
+                  "love interest"
+                ],
+                "value": "romance"
+              }
+            }
+          ],
+          "name": "trickery"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "credit card",
+                  "another financial situation",
+                  "social media scam",
+                  "another situation",
+                  "another financial scam",
+                  "other banking scam",
+                  "another type of fraud",
+                  "other situation",
+                  "a different scam",
+                  "none of those",
+                  "crypto currency",
+                  "crypto",
+                  "another type of fraud",
+                  "another fraud",
+                  "another online scam",
+                  "a different type of scam",
+                  "something else",
+                  "another"
+                ],
+                "value": "other"
+              }
+            }
+          ],
+          "name": "other"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "someone pretending to be someone they are not",
+                  "impersonator"
+                ],
+                "value": "impostor"
+              }
+            }
+          ],
+          "name": "impostor"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "financial loss",
+                  "financial fraud",
+                  "affecting my finances fraudulently",
+                  "financial scam"
+                ],
+                "value": "financial"
+              }
+            }
+          ],
+          "name": "financial"
+        }
+      ],
+      "invocationName": "david\u0027s scam report finder"
+    }
+  }
+}
