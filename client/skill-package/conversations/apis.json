@@ -1,0 +1,1 @@
+{"schema":"https://amazonalexa.com/ask/2020/12/Module","expressions":[{"kind":"ActionDeclaration","name":"apis.getRecommendation","arguments":[{"name":"BankingScam","type":{"kind":"TypeReference","name":"slotTypes.BankingScam"}}],"returnType":{"kind":"TypeReference","name":"types.getRecommendationResult"}}]}

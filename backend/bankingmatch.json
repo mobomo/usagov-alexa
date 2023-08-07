@@ -15,13 +15,13 @@
     "level1": "Unauthorized Withdrawal",
     "SSET": "unauthorizedwithdrawal",
     "description": "An unauthorized withdrawal scam is when a scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.",
-    "result": "Ok, Contact your bank as soon as possible to report and stop unauthorized withdrawals from your account. Also, learn about dealing with unauthorized withdrawals from the helpwithmybank.gov site."
+    "result": "Contact your bank as soon as possible to report and stop unauthorized withdrawals from your account. Also, learn about dealing with unauthorized withdrawals from the helpwithmybank.gov site."
   },
   "banking-phishing": {
     "level1": "Phishing",
     "SSET": "phishing",
     "description": "A phishing scam is when you receive a scam email or text message that looks like it's from a company you trust. It asks you to verify your bank account, debit card, or credit card number.",
-    "result": "Ok, If this was an email, forward it to the Anti-Phishing Working Group at reportphishing@apwg.org. If it is a text message text message, forward it to your cell provider at 7726 (SPAM). Then please report your phishing scam situation to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, learn more about how to recognize and avoid phishing scams at FTC.gov."
+    "result": "If this was a phishing email, forward it to the Anti-Phishing Working Group at reportphishing@apwg.org. If it is a text message, forward it to your cell provider at 7726 (SPAM). Then please also report your phishing scam to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, learn more about how to recognize and avoid phishing scams at FTC.gov."
   },
   "housing-rental": {
     "level1": "Rental Ad",
@@ -33,19 +33,19 @@
     "level1": "Mortgage Foreclosure",
     "SSET": "mortgageForclosure",
     "description": "A mortgage scam typically involves Scammers offering to help you make your mortgage payments, but they're just trying to take your money.",
-    "result": "Report mortgage and foreclosure scams to the Federal Trade Commission website, or contact them by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also please Report online scams to the FBI as well. Then learn about types of mortgage relief scams to avoid at ftc.gov."
+    "result": "Report mortgage and foreclosure scams to the Federal Trade Commission online or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also please Report online scams to the FBI as well. Then learn about types of mortgage relief scams to look out for at ftc.gov."
   },
   "housing-moving-local": {
     "level1": "Moving Withing same state",
     "SSET": "movingWithinstate",
     "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
-    "result": "Ok, for a move within your same city or state, file a complaint with your state or local regulatory authority at fmcsa.dot.gov. Then please file a report using the Better Business Bureau Scam Tracker. Also, learn how to spot moving fraud before it happens on the federal motor carrier safety administration site."
+    "result": "for a move within your same city or state, file a complaint with your state or local regulatory authority at fmcsa.dot.gov. Then please file a report using the Better Business Bureau Scam Tracker. Also, learn how to spot moving fraud before it happens on the fmcsa.dot.gov."
   },
   "housing-moving-national": {
     "level1": "Moving Across state lines",
     "SSET": "movingAccrossstatelines",
     "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
-    "result": "Ok, for a move across state lines, file a complaint with the Federal Motor Carrier Safety Administration. Then please file a report using the Better Business Bureau Scam Tracker.  Also, learn how to spot moving fraud before it happens at fmcsa.dot.gov."
+    "result": "Ok, for a move across state lines, file a complaint with the Federal Motor Carrier Safety Administration at fmcsa.dot.gov. Then please file a report using the Better Business Bureau Scam Tracker.  Also, learn how to spot moving fraud before it happens at fmcsa.dot.gov."
   },
   "identity-tax": {
     "level1": "Tax",
@@ -57,13 +57,13 @@
     "level1": "Unemployed",
     "SSET": "unemployment",
     "description": "An unemployment scam occurs when A person uses your name, Social Security number, and other information to apply for unemployment benefits.",
-    "result": "Ok,  Search for your state's department of labor contact information on dol.gov to report it. Please Also, report this scam to the FBI. Then visit the ftc.gov site to learn how to protect your finances after an unemployment scam."
+    "result": "to report unemployment fraud, Search for your state's department of labor contact information on dol.gov to report it. Please Also, report this scam to the FBI. Then visit the ftc.gov site to learn how to protect your finances after an unemployment scam."
   },
   "identity-job-employed": {
     "level1": "Employement",
     "SSET": "employment",
     "description": "An employment scam occurrs when A person uses your name, Social Security number, and personal information to apply for a job.",
-    "result": "Report employment identity theft to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then learn more about employment-related identity theft at IRS.gov."
+    "result": "Report employment fraud to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then learn more about employment-related identity theft at IRS.gov."
   },
   "identity-medical-medicare": {
     "level1": "Medicaid Medicare",
@@ -75,31 +75,31 @@
     "level1": "Medical",
     "SSET": "medical",
     "description": "A medical scam occurs when Someone uses your personal information to get health care and submit claims to your insurance provider.",
-    "result": "Ok, Report medical scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then visit the ftc.gov site to learn more about how to avoid medical identity theft."
+    "result": "Report medical scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then visit the ftc.gov site to learn more about how to avoid medical identity theft."
   },
   "identity-other": {
     "level1": "IdentityTheft",
     "SSET": "IdentityTheft",
     "description": "Identity theft happens when someone uses your personal or financial information to commit fraud.",
-    "result": "Ok Report identity theft scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then go to the ftc.gov site to learn more about warning signs and how to protect yourself from identity theft."
+    "result": "Report identity theft scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Please Also, report it to the FBI. Then go to the ftc.gov site to learn more about warning signs and how to protect yourself from identity theft."
   },
   "imposter-tax": {
     "level1": "IRS",
     "SSET": "IRS",
     "description": "Imposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.",
-    "result": "Ok, report tax scams to the U.S. Department of the Treasury. Forward email messages that claim to be from the IRS to phishing@irs.gov. Please also report online scams to the FBI. Then, visit consumer.gov to learn more about impostor scams and how to keep yourself safe"
+    "result": "Report tax scams to the U.S. Department of the Treasury. Forward email messages that claim to be from the IRS to phishing@irs.gov. Please also report online scams to the FBI. Then, visit consumer.gov to learn more about impostor scams and how to keep yourself safe"
   },
   "imposter-benefits": {
     "level1": "Social Security Office",
     "SSET": "socialSecurityoffice",
     "description": "Scammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.",
-    "result": "Ok, report government impostor scams to the Social Security Administration and report online scams to the FBI. Then visit ssa.gov to Learn how to recognize and avoid Social Security-related scams."
+    "result": "Report government impostor scams to the Social Security Administration and report online scams to the FBI. Then visit ssa.gov to Learn how to recognize and avoid Social Security-related scams."
   },
   "imposter-company": {
     "level1": "Trusted Person",
     "SSET": "trustedPerson",
     "description": "Imposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.",
-    "result": "Ok, report impostor scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report all online scams to the FBI. Then visit consumer.gov to learn more about impostor scams and how to keep yourself safe."
+    "result": "Report impostor scams to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report all online scams to the FBI. Then visit consumer.gov to learn more about impostor scams and how to keep yourself safe."
   },
   "imposter-other": {
     "level1": "Impostor",
@@ -107,10 +107,10 @@
     "description": "Other type of imposter scam",
     "result": "Call FTC."
   },
-  "banking-other": {
-    "level1": "Other",
-    "SSET": "other",
+  "banking-somethingelse": {
+    "level1": "something else",
+    "SSET": "something else",
     "description": "place holder",
-    "result": "No worries. There are so many types of scams. If your banking scam does not fit into the common categories but did occur online, report it to the FBI. Also report it to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET)."
+    "result": "Report any scam affecting your accounts to the financial institution for that account. If your financial scam occurred online, report it to the FBI. Also report it to the Federal Trade Commission online, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET)."
   }
 }

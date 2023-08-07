@@ -1,7 +1,6 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "pet match",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -9,16 +8,26 @@
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
+          "samples": [
+            "is there a number to call",
+            "how do I speak to a human to help me with my scam",
+            "I need a human",
+            "I need assistance",
+            "how do I get help",
+            "I need to speak to a human",
+            "help"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",
           "samples": []
         },
         {
-          "name": "HelloWorldIntent",
           "slots": [],
+          "name": "HelloWorldIntent",
           "samples": [
+            "I just lost money",
+            "I\u0027ve been scammed",
             "hello",
             "how are you",
             "say hi world",
@@ -30,32 +39,53 @@
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
+          "samples": [
+            "start over",
+            "go back"
+          ]
         },
         {
           "name": "AMAZON.FallbackIntent",
-          "samples": []
+          "samples": [
+            "how do I recover my losses",
+            "does reporting get my money",
+            "can you help me get my money",
+            "how do I get my money back"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "come again",
+            "say it again",
+            "I\u0027m trying to write this down",
+            "too fast Alexa",
+            "I didn\u0027t get that",
+            "I didn\u0027t get that the first time",
+            "say that again",
+            "repeat"
+          ]
         }
       ],
       "types": [
         {
-          "name": "BankingScam",
           "values": [
             {
               "name": {
-                "value": "unauthorized",
                 "synonyms": [
                   "unauthorized withdrawal",
                   "automatic withdrawal",
                   "taking money from my account"
-                ]
+                ],
+                "value": "unauthorized"
               }
             },
             {
               "name": {
-                "value": "other",
                 "synonyms": [
+                  "other",
                   "other financial situation",
+                  "other",
                   "discover",
                   "mastercard",
                   "store card",
@@ -63,50 +93,62 @@
                   "visa",
                   "other banking scam",
                   "different financial situation",
-                  "atm ",
+                  "atm",
+                  "something else",
                   "bank card",
                   "another situation",
                   "other situation",
                   "credit card"
-                ]
+                ],
+                "value": "something else"
               }
             },
             {
               "name": {
-                "value": "unsolicited",
-                "synonyms": ["unsolicited check"]
+                "synonyms": [
+                  "scam check",
+                  "unsolicited check"
+                ],
+                "value": "unsolicited"
               }
             },
             {
               "name": {
-                "value": "phishing",
                 "synonyms": [
                   "fake company emails",
                   "fake messages",
                   "fake company texts",
                   "fake emails"
-                ]
+                ],
+                "value": "phishing"
               }
             },
             {
               "name": {
-                "value": "fakecheck",
-                "synonyms": ["fake check", "check bounced", "bounced check", "bad check"]
+                "synonyms": [
+                  "fake check",
+                  "check bounced",
+                  "bounced check",
+                  "bad check"
+                ],
+                "value": "fakecheck"
               }
             }
-          ]
+          ],
+          "name": "BankingScam"
         },
         {
-          "name": "stringLiteral",
           "values": [
             {
               "name": {
-                "value": "dummy value: literal API return entity"
+                "value": "dummy"
               }
             }
-          ]
+          ],
+          "name": "name"
         }
-      ]
+      ],
+      "invocationName": "report financial scam david"
     }
   }
 }
