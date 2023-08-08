@@ -1,28 +1,47 @@
 {
-  "different": "result",
-  "employment": "result",
-  "romance": "result",
-  "medical": "result",
-  "moving": {
-    "rental": "result",
-    "locally": "result",
-    "nationally": "result"
-  },
-  "taxes or ssn": {
-    "return": "result",
-    "irs": "result"
-  },
-  "financial": {
-    "mortgage": "result",
-    "investment": "result",
-    "other": "result",
+  "figma": {
+    "different": true,
+    "employment": true,
+    "romance": true,
+    "medical": true,
+    "moving": {
+      "rental": true,
+      "locally": true,
+      "nationally": true
+    },
+    "taxes or ssn": {
+      "return": true,
+      "irs": true
+    },
+    "financial": {
+      "mortgage": true,
+      "investment": true,
+      "other": true,
 
-    "banking": {
-      "unsolicitedCheck": "result",
-      "fakeCheck": "result",
-      "withdrawal": "result",
-      "phishing": "result",
-      "unknown": "result"
+      "banking": {
+        "unsolicitedCheck": true,
+        "fakeCheck": true,
+        "withdrawal": true,
+        "phishing": true,
+        "unknown": true
+      }
     }
+  },
+  "morgan": {
+    "fakeCheck": true,
+    "financialScam": {
+      "fake check": true,
+      "withdrawal": true,
+      "somethingElse": true
+    },
+    "fraud": {
+      "ssn": true,
+      "tax": true,
+      "medical": true,
+      "medicaid": true,
+      "other": true
+    },
+    "moving": {},
+    "trickery or imposterscam": {}
   }
 }
