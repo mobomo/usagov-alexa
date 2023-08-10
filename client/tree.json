@@ -29,19 +29,43 @@
   },
   "morgan": {
     "fakeCheck": true,
+    "withdrawal": true,
+    "somethingElse": true,
+    "ssn": true,
+    "tax": true,
+    "medical": true,
+    "medicaid": true,
+    "other": true,
+    "locally": true,
+    "nationally": true,
+    "irs": true,
+    "person": true,
+    "company": true,
+    "gov": true,
+    "phishing": true,
     "financialScam": {
       "fake check": true,
       "withdrawal": true,
       "somethingElse": true
     },
     "fraud": {
-      "ssn": true,
       "tax": true,
       "medical": true,
       "medicaid": true,
       "other": true
     },
-    "moving": {},
-    "trickery or imposterscam": {}
+    "moving": {
+      "locally": true,
+      "nationally": true
+    },
+    "trickery or imposterscam": {
+      "irs": true,
+      "ssn": true,
+      "person": true,
+      "company": true,
+      "gov": true,
+      "phishing": true,
+      "other": true
+    }
   }
 }
