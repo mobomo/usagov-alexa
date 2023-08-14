@@ -357,12 +357,12 @@
         "arguments": ["general"],
         "return": "resultDefGeneral"
       },
-      "getExact": {
+      "defExact": {
         "arguments": ["exact"],
         "return": "resultDefExact"
       },
-      "getDesc": {
-        "arguments": [{ "exactResult": "getExactResult" }],
+      "defDesc": {
+        "arguments": ["description"],
         "return": "resultDefDesc"
       }
     },
@@ -434,7 +434,7 @@
                 {
                   "type": "Speech",
                   "contentType": "text",
-                  "content": "${payload.resultDefGeneral.name}.",
+                  "content": "${payload.resultDefGeneral.question}",
                   "description": "Expand on 'items' array to add multiple prompts, use response template arguments by adding it to 'content' like this ${payload.input_argument_name} and add SSML by changing 'contentType' to 'SSML' and adding SSML to 'content' <amazon:effect name=\"whispered\">like that</amazon:effect>"
                 }
               ]
@@ -457,7 +457,7 @@
                 {
                   "type": "Speech",
                   "contentType": "text",
-                  "content": "${payload.resultDefExact.name}.",
+                  "content": "${payload.resultDefExact.result}",
                   "description": "Expand on 'items' array to add multiple prompts, use response template arguments by adding it to 'content' like this ${payload.input_argument_name} and add SSML by changing 'contentType' to 'SSML' and adding SSML to 'content' <amazon:effect name=\"whispered\">like that</amazon:effect>"
                 }
               ]
@@ -480,20 +480,25 @@
                 {
                   "type": "Speech",
                   "contentType": "text",
-                  "content": "${payload.getDescResult.description}.",
+                  "content": "${payload.resultDefDesc.description}",
                   "description": "Expand on 'items' array to add multiple prompts, use response template arguments by adding it to 'content' like this ${payload.input_argument_name} and add SSML by changing 'contentType' to 'SSML' and adding SSML to 'content' <amazon:effect name=\"whispered\">like that</amazon:effect>"
                 }
               ]
             }
           }
         },
-        "arguements": ["getDescResult"]
+        "arguements": ["resultDefDesc"]
       }
     },
     "Utterances": {
       "invoke_exact": {
         "slots": ["exact"],
-        "utterances": ["{exact}", "I think it's {exact}", "It's {exact}"]
+        "utterances": [
+          "{exact}",
+          "I think it's {exact}",
+          "It's {exact}",
+          1234567890.0987654321123456789
+        ]
       },
       "invoke_general": {
         "slots": ["general"],
@@ -501,18 +506,20 @@
           "{general}",
           "I think it's {general}",
           "It's {general}",
-          "My scam was {general}"
+          "My scam was {general}",
+          1234567890.0987654321123456789
         ]
       },
-      "invoke_defDesc": {
+      "invoke_description": {
         "slots": [],
         "utterances": [
           "What's a {exact}",
           "What is a {exact}",
           "Can you describe {exact}",
           "Tell me what {exact} is.",
+          "What is a {exact} scam?"
           "Tell me about {exact}",
-          1234567890.0987654321
+          1234567890.0987654321123456789
         ]
       }
     },
