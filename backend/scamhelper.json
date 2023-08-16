@@ -2,21 +2,21 @@
   "banking": {
     "general": "banking",
     "SSET": "banking",
-    "ask": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, or something else."
+    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, or something else."
   },
   "trickery": {
     "general": "trickery",
     "SSET": "trickery",
-    "ask": "Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or a trusted person, company, or other government office? Or is this about you receiving phishing emails, texts, or phone calls? Is it something else?"
+    "question": "Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or a trusted person, company, or other government office? Or is this about you receiving phishing emails, texts, or phone calls? Is it something else?"
   },
   "moving": {
     "general": "moving",
     "SSET": "moving",
-    "ask": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Were you moving within your state or out of state?"
+    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Were you moving within your state or out of state?"
   },
   "fraud": {
     "general": "fraud",
     "SSET": "fraud",
-    "ask": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: social security fraud, tax fraud, medical fraud, medicaid or medicare fraud, or another type of fraud."
+    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: social security fraud, tax fraud, medical fraud, medicaid or medicare fraud, or another type of fraud."
   }
 }
