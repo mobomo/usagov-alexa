@@ -4,6 +4,7 @@
       "Interaction Model": {
         "interactionModel": {
           "languageModel": {
+            "invocationName": "federal scam assistant",
             "intents": [
               {
                 "name": "AMAZON.CancelIntent",
@@ -43,19 +44,19 @@
                 "samples": [
                   "come again",
                   "say it again",
-                  "I\u0027m trying to write this down",
+                  "I'm trying to write this down",
                   "too fast Alexa",
-                  "I didn\u0027t get that",
-                  "I didn\u0027t get that the first time",
+                  "I didn't get that",
+                  "I didn't get that the first time",
                   "say that again",
                   "repeat"
                 ]
               },
               {
-                "slots": [],
                 "name": "outofdomain",
+                "slots": [],
                 "samples": [
-                  "I\u0027ve been scammed",
+                  "I've been scammed",
                   "hello",
                   "how are you",
                   "say hi world",
@@ -99,6 +100,21 @@
               {
                 "name": "exact",
                 "values": [
+                  {
+                    "name": {
+                      "value": "romance",
+                      "synonyms": [
+                        "romantic trick",
+                        "romance trickery",
+                        "tinder",
+                        "online dating",
+                        "dating",
+                        "catfish",
+                        "catfishing",
+                        "love interest"
+                      ]
+                    }
+                  },
                   {
                     "name": {
                       "value": "fakecheck",
@@ -173,6 +189,8 @@
                     "name": {
                       "value": "locally",
                       "synonyms": [
+                        "i moved within my state",
+                        "i was moving within my state",
                         "moving just down the street",
                         "within my same state",
                         "just in the neighborhood",
@@ -187,6 +205,10 @@
                     "name": {
                       "value": "nationally",
                       "synonyms": [
+                        "i moved to another state",
+                        "i moved out of my state",
+                        "i moved out of state",
+                        "i was moving out of state",
                         "to another state",
                         "between states",
                         "to another state",
@@ -199,25 +221,27 @@
                   {
                     "name": {
                       "value": "tax",
-                      "synonyms": ["tax refund", "tax return"]
+                      "synonyms": ["tax fraud", "tax refund", "tax return"]
                     }
                   },
                   {
                     "name": {
                       "value": "unemployment",
-                      "synonyms": ["jobless", "laid off"]
+                      "synonyms": ["unemployment fraud", "jobless", "laid off"]
                     }
                   },
                   {
                     "name": {
                       "value": "employment",
-                      "synonyms": ["job"]
+                      "synonyms": ["employment fraud", "job"]
                     }
                   },
                   {
                     "name": {
                       "value": "medicaid",
                       "synonyms": [
+                        "medicare fraud",
+                        "medicaid fraud",
                         "government health benefits",
                         "medicaid and medicare",
                         "medicare"
@@ -265,13 +289,22 @@
                   {
                     "name": {
                       "value": "IRS",
-                      "synonyms": ["from the IRS"]
+                      "synonyms": [
+                        "IRS trickery",
+                        "IRS trick",
+                        "i. r. s. trick",
+                        "i. r. s. trickery",
+                        "from the i. r. s.",
+                        "i. r. s.",
+                        "from the IRS"
+                      ]
                     }
                   },
                   {
                     "name": {
                       "value": "SSN",
                       "synonyms": [
+                        "social security fraud",
                         "social security office",
                         "from social security",
                         "social security"
@@ -305,37 +338,36 @@
                 ]
               },
               {
+                "name": "category",
                 "values": [
                   {
                     "name": {
                       "value": "dummy"
                     }
                   }
-                ],
-                "name": "category"
+                ]
               },
               {
+                "name": "scam",
                 "values": [
                   {
                     "name": {
                       "value": "dummy"
                     }
                   }
-                ],
-                "name": "scam"
+                ]
               },
               {
+                "name": "description",
                 "values": [
                   {
                     "name": {
                       "value": "dummy"
                     }
                   }
-                ],
-                "name": "description"
+                ]
               }
-            ],
-            "invocationName": "federal scam assistant"
+            ]
           }
         }
       },
