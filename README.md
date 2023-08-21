@@ -8,6 +8,7 @@ This setup will be segregated into two main directories
 ## Commit Emoji Legend
 | Emoji | Win + . Code | Type/Prefix | Description |
 | ----- | ------------ | ----------- | ----------- |
+|       | **Cmd + Ctrl + Space** |  |  |
 | 🔨 | hammer | build: | Build related changes (eg: npm related/ adding external dependencies) |
 |  🧮 | aba | calc: | Calculation related changes |
 |  🧹 | broom | chore: | A code change that external users won't see (eg: change to .gitignore file or .prettierrc file) |
