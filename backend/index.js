@@ -4,8 +4,8 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require("ask-sdk-core");
-const dataMatch = require("./scammatch.json");
-const dataHelper = require("./scamhelper.json");
+const dataScamMatch = require("./scamMatch.json");
+const dataScamHelper = require("./scamHelper.json");
 
 const DefDescAPIHandler = {
   canHandle(handlerInput) {
@@ -22,7 +22,7 @@ const DefDescAPIHandler = {
     const entityGeneral = {};
     if (exact !== null) {
       const key = `${exact}`;
-      const databaseResponse = dataMatch[key];
+      const databaseResponse = dataScamMatch[key];
 
       console.log("Response from mock database ", databaseResponse);
 
@@ -50,7 +50,7 @@ const DefGeneralAPIHandler = {
     const entityGeneral = {};
     if (general !== null) {
       const key = `${general}`;
-      const databaseResponse = dataHelper[key];
+      const databaseResponse = dataScamHelper[key];
 
       console.log("Response from mock database ", databaseResponse);
 
@@ -78,7 +78,7 @@ const DefExactAPIHandler = {
     const entityScam = {};
     if (exact !== null) {
       const key = `${exact}`;
-      const databaseResponse = dataMatch[key];
+      const databaseResponse = dataScamMatch[key];
 
       console.log("Response from mock database ", databaseResponse);
 

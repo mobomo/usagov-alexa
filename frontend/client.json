@@ -4,7 +4,7 @@
       "Interaction Model": {
         "interactionModel": {
           "languageModel": {
-            "invocationName": "federal scam assistant",
+            "invocationName": "federal scam assistant copy",
             "intents": [
               {
                 "name": "AMAZON.CancelIntent",
@@ -74,25 +74,52 @@
                   {
                     "name": {
                       "value": "banking",
-                      "synonyms": ["financial", "financial scam"]
+                      "synonyms": [
+                        "budgeting",
+                        "fiscal",
+                        "monetary",
+                        "money",
+                        "funding",
+                        "investment",
+                        "financial"
+                      ]
                     }
                   },
                   {
                     "name": {
                       "value": "moving",
-                      "synonyms": ["relocating"]
+                      "synonyms": [
+                        "relocation services",
+                        "relocation service",
+                        "relocation",
+                        "relocating services",
+                        "relocating service",
+                        "moving services",
+                        "moving service",
+                        "Penske",
+                        "U-Haul",
+                        "relocating"
+                      ]
                     }
                   },
                   {
                     "name": {
                       "value": "fraud",
-                      "synonyms": ["identity theft"]
+                      "synonyms": ["ransom", "extortion", "blackmail", "identity theft"]
                     }
                   },
                   {
                     "name": {
                       "value": "trickery",
-                      "synonyms": ["tricked", "imposter"]
+                      "synonyms": [
+                        "deception",
+                        "swindler",
+                        "swindle",
+                        "impersonator",
+                        "impersonation",
+                        "tricked",
+                        "imposter"
+                      ]
                     }
                   }
                 ]
@@ -413,7 +440,7 @@
                 {
                   "type": "Speech",
                   "contentType": "SSML",
-                  "content": "<speak> <amazon:emotion name= 'disappointed' intensity= 'medium'> Hi there! I'm sorry to hear you are experiencing a scam. I can help you learn where to report it! </amazon:emotion> This is the USA dot gov scams wizard. No need to tell me any personal information, just say which category applies. Say 'financial scam' if your accounts or loans are affected. Say 'moving scam' regarding a scam moving company or movers. Say 'fraud' if the scam involves identity theft. Say 'impostor' if the scam involves someone pretending to be someone they are not, including a love interest, or phishing. Say 'something else' if none apply.</speak>",
+                  "content": "<speak> <amazon:emotion name= 'disappointed' intensity= 'medium'> Hi there! I'm sorry to hear you are experiencing a scam. I can help you learn where to report it! </amazon:emotion> This is the USA dot gov scams wizard. No need to tell me any personal information, just say which category applies. Say 'financial scam' if your accounts or loans are affected. Say 'moving scam' regarding a scam moving company or movers. Say 'fraud' if the scam involves identity theft. Say 'imposter' if the scam involves someone pretending to be someone they are not, including a love interest, or phishing. Say 'something else' if none apply.</speak>",
                   "description": "Expand on 'items' array to add multiple prompts, use response template arguments by adding it to 'content' like this ${payload.input_argument_name} and add SSML by changing 'contentType' to 'SSML' and adding SSML to 'content' <amazon:effect name=\"whispered\">like that</amazon:effect>"
                 }
               ]
@@ -522,12 +549,26 @@
           "{exact}",
           "I think it's {exact}",
           "It's {exact}",
+          "It must be an {exact} scam.",
+          "It's a {exact} scam",
+          "{exact} scam",
+          "It was a {exact} scam",
+          "I think it's an {exact} scam",
+          "I think it was a {exact} scam",
+          "The scam was related to a {exact}",
+          "It was a {exact} attempt",
+          "It was a {exact} scam attempt",
           1234567890.0987654321123456789
         ]
       },
       "invoke_general": {
         "slots": ["general"],
         "utterances": [
+          "My scam was a {general} scam",
+          "It's {general} scam",
+          "I think it's {general} scam",
+          "I think it's a {general} scam",
+          "{general} scam",
           "{general}",
           "I think it's {general}",
           "It's {general}",
