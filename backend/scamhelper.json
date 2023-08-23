@@ -1,22 +1,26 @@
 {
   "banking": {
-    "general": "banking",
-    "SSET": "banking",
-    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, or something else."
+    "general": "financial",
+    "SSET": "financial",
+    "description": "General description for banking.",
+    "result": "Thank you for that information. Now to be more specific, Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, or is it something else?"
   },
-  "trickery": {
-    "general": "trickery",
-    "SSET": "trickery",
-    "question": "Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or a trusted person, company, or other government office? Or is this about you receiving phishing emails, texts, or phone calls? Is it something else?"
+  "imposter": {
+    "general": "imposter",
+    "SSET": "imposter",
+    "description": "General description for imposter.",
+    "result": "Thank you for that information. Now to be more specific, Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or are they pretending to be a trusted person, company, or from another government office? Or are you experiencing phishing? Is it something else?"
   },
   "moving": {
     "general": "moving",
     "SSET": "moving",
-    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Were you moving within your state or out of state?"
+    "description": "General description for moving.",
+    "result": "Thank you for that information. Were you moving within your state or out of state?"
   },
   "fraud": {
     "general": "fraud",
     "SSET": "fraud",
-    "question": "Hi! This is the USA dot gov scams wizard. I'm sorry to hear you are experiencing a scam. I can help you learn where to report it. Tell me which situation applies: social security fraud, tax fraud, medical fraud, medicaid or medicare fraud, or another type of fraud."
+    "description": "General description for fraud.",
+    "result": "Thank you for that information. Now to be more specific, please tell me which situation applies: employment fraud, unemployment fraud, tax fraud, medical fraud, medicaid or medicare fraud, or another type of fraud."
   }
 }
