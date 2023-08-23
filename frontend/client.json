@@ -584,6 +584,7 @@
           "What is the {exact} scam?",
           "What is a {exact}?",
           "Can you describe {exact}",
+          "Describe {exact}",
           "Tell me what {exact} is.",
           "What is a {exact} scam?",
           "Tell me about {exact}",
@@ -594,7 +595,7 @@
     "Dialogs": {
       "dialogGeneral": [
         {
-          "user": "trickery",
+          "user": "imposter",
           "alexa": "null"
         }
       ],
@@ -606,7 +607,7 @@
       ],
       "dialogDesc": [
         {
-          "user": "What is a medicaid scam?",
+          "user": "medicaid",
           "alexa": "null"
         }
       ]
