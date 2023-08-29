@@ -1,0 +1,127 @@
+{
+  "check": {
+    "general": "financial",
+    "exact": "check",
+    "SSET": "check",
+    "description": "A fake check scam usually involves a scammer sending you a check for more than the amount they owe then asking you to refund the difference. But, the check bounces, so you owe your bank the amount of the check and lose any money you gave the scammer. An unsolicited check scam typically occurs when a scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn't ask for.",
+    "result": "<speak><prosody rate='medium'>Report fake or unsolicited checks you receive by mail at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>USPIS</say-as> dot gov</prosody></prosody>. Then learn how to avoid and deal with fake check scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "unsolicited": {
+    "general": "financial",
+    "exact": "unsolicited",
+    "SSET": "unsolicited",
+    "description": "An unsolicited check scam typically occurs when a scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn't ask for.",
+    "result": "<speak><prosody rate='medium'>Report fake or unsolicited checks you receive by mail at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>USPIS</say-as> dot gov</prosody></prosody>. Then learn how to avoid and deal with fake check scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "unauthorized": {
+    "general": "financial",
+    "exact": "unauthorized",
+    "SSET": "unauthorized",
+    "description": "An unauthorized withdrawal scam is when a scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.",
+    "result": "<speak><prosody rate='medium'>Contact your bank immediately to report and stop unauthorized withdrawals from your account. Also, learn about unauthorized withdrawals at <prosody volume='loud'><prosody rate='slow'> help with my bank dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "phishing": {
+    "general": "imposter",
+    "exact": "phishing",
+    "SSET": "phishing",
+    "description": "A phishing scam is when you receive a scam email or text message that looks like it's from a company you trust. It asks you to verify your bank account, debit card, or credit card number.",
+    "result": "<speak><prosody rate='medium'>If this was an email, forward it to the Anti-Phishing Working Group at <prosody volume='loud'><prosody rate='slow'>report phishing at <say-as interpret-as='spell-out'>apwg</say-as> dot org</prosody></prosody>. If it is a text message, forward the message to your cell provider at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>7726</say-as></prosody></prosody>. Also, report your phishing scam at<prosody volume='loud'><prosody rate='slow'> <say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Then, learn to recognize and avoid phishing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "ad": {
+    "general": "imposter",
+    "exact": "ad",
+    "SSET": "ad",
+    "description": "A rental scam involves scammers advertising apartments or vacation rentals that they don't own, manage, or that don't actually exist.",
+    "result": "<speak><prosody rate='medium'>report rental scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report this to your local law enforcement and the website or publication where the rental ad was posted. Then, Learn to identify rental listing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "mortgage": {
+    "general": "imposter",
+    "exact": "mortgage",
+    "SSET": "mortgage",
+    "description": "A mortgage scam typically involves Scammers offering to help you make your mortgage payments, but they're just trying to take your money.",
+    "result": "<speak><prosody rate='medium'>Report mortgage and foreclosure scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then, Learn about mortgage relief scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "IRS": {
+    "general": "imposter",
+    "exact": "IRS",
+    "SSET": "IRS",
+    "description": "Imposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.",
+    "result": "<speak><prosody rate='medium'>Report tax scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>tigta</say-as> dot gov</prosody></prosody>. Forward email messages that claim to be from the IRS to <prosody volume='loud'><prosody rate='slow'>phishing at <say-as interpret-as='spell-out'>irs</say-as> dot gov</prosody></prosody>. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then, learn about imposter scams at <prosody volume='loud'><prosody rate='slow'>consumer dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "SocialSecurityOffice": {
+    "general": "imposter",
+    "exact": "SocialSecurityOffice",
+    "SSET": "SocialSecurityOffice",
+    "description": "Scammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.",
+    "result": "<speak><prosody rate='medium'>Report Social Security administration impostors at <prosody volume='loud'><prosody rate='slow'>secure dot <say-as interpret-as='spell-out'>ssa</say-as> dot gov foward slash <say-as interpret-as='spell-out'>ipff</say-as> forward slash home</prosody></prosody>. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Learn about social security scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ssa</say-as> dot gov forward slash scam</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "romance": {
+    "general": "imposter",
+    "exact": "romance",
+    "SSET": "romance",
+    "description": "Scammers use flattery, fake photographs and background stories to gain your affection. They then ask you to send money or gift cards.",
+    "result": "<speak><prosody rate='medium'>Report romance or catfishing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn to avoid romance scammers at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "company": {
+    "general": "imposter",
+    "exact": "company",
+    "SSET": "company",
+    "description": "Imposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.",
+    "result": "<speak><prosody rate='medium'>Report impostor scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody> or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then visit <prosody volume='loud'><prosody rate='slow'>consumer dot gov</prosody></prosody> to learn more about scams and identity theft. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "locally": {
+    "general": "moving",
+    "exact": "locally",
+    "SSET": "locally",
+    "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
+    "result": "<speak><prosody rate='medium'>For a move within your same city or state, file a complaint at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Also, file a report at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>bbb</say-as> dot org forward slash scamtracker</prosody></prosody>. Then, learn to identify moving fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "nationally": {
+    "general": "moving",
+    "exact": "nationally",
+    "SSET": "nationally",
+    "description": "Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.",
+    "result": "<speak><prosody rate='medium'>for a move across state lines, file a complaint at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Also, file a report at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>bbb</say-as> dot org forward slash scamtracker</prosody></prosody>. Then, learn to identify moving fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "tax": {
+    "general": "fraud",
+    "exact": "tax",
+    "SSET": "tax",
+    "description": "A tax scam is when Scammers use your Social Security number and other personal information to file a fraudulent tax return.",
+    "result": "<speak><prosody rate='medium'>Report tax return or tax refund scams at <prosody volume='loud'><prosody rate='slow'>IRS dot gov</prosody></prosody> using Form <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>14039</say-as></prosody></prosody> and at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. or by phone at 1-877-438-4338. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='4ms'/> C<break time='4ms'/> 3 dot gov</prosody></prosody>. Then learn more about Identity theft scams at <prosody volume='loud'><prosody rate='slow'>consumer gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "unemployment": {
+    "general": "fraud",
+    "exact": "unemployment",
+    "SSET": "unemployment",
+    "description": "An unemployment scam occurs when A person uses your name, Social Security number, and other information to apply for unemployment benefits.",
+    "result": "<speak><prosody rate='medium'>Search for your state's department of labor contact information at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>dol</say-as> dot gov</prosody></prosody> to report unemployment fraud. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn how to protect your finances after an unemployment scam at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "employment": {
+    "general": "fraud",
+    "exact": "employment",
+    "SSET": "employment",
+    "description": "An employment scam occurrs when A person uses your name, Social Security number, and personal information to apply for a job.",
+    "result": "<speak><prosody rate='medium'>Report employment identity theft at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn about employment-related identity theft at <prosody volume='loud'><prosody rate='slow'>IRS dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "medicaid": {
+    "general": "fraud",
+    "exact": "medicaid",
+    "SSET": "medicaid",
+    "description": "A Medicare or Medicaid scam is when Someone uses your personal information to submit health claims to Medicare or Medicaid.",
+    "result": "<speak><prosody rate='medium'>Report medicaid or medicare fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>oig</say-as> dot <say-as interpret-as='spell-out'>hhs</say-as> dot gov</prosody></prosody> Or by phone at 1-800-447-8477. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn to avoid medical identity theft at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "medical": {
+    "general": "fraud",
+    "exact": "medical",
+    "SSET": "medical",
+    "description": "A medical scam occurs when Someone uses your personal information to get health care and submit claims to your insurance provider.",
+    "result": "<speak><prosody rate='medium'>Report medical scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody> or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Learn to avoid medical identity theft at <prosody volume='loud'><prosody rate='slow'>consumer dot <say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  },
+  "other": {
+    "exact": "other",
+    "SSET": "other",
+    "description": "Identity theft happens when someone uses your personal or financial information to commit fraud.",
+    "result": "<speak><prosody rate='medium'>If your scam does not fit into the common categories but did occur online, report it at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Also report it at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Let me know if you want me to repeat this, also say help If you need to speak to a human at USA dot gov. Thank you.</prosody></speak>"
+  }
+}

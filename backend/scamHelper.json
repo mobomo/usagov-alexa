@@ -1,0 +1,26 @@
+{
+  "financial": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "A scam that affects your bank accounts, such as savings or checking is a financial scam. Also, any scam that involves investment accounts, credit card, or mortgage accounts is a financial scam.",
+    "question": "<speak>Thank you for that information. For the correct reporting instructions, please Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, Or is it something else.</speak>"
+  },
+  "imposter": {
+    "general": "imposter",
+    "SSET": "imposter",
+    "description": "A scam that involves some sort of trickery where a person is trying to make you think they are from a trusted entity, such as the government, or a known company. An imposter scam can also involve someone pretending to be a love interest, or a family member.",
+    "question": "<speak>Thank you for that information. Just one more question: Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or are they pretending to be a trusted person, company, or from another government office? Are you experiencing phishing. Or is it something else.</speak>"
+  },
+  "moving": {
+    "general": "moving",
+    "SSET": "moving",
+    "description": "Moving scams occur when you are working with movers or a moving company and the original price quote is not honored when it is time to deliver your belongings. Usually, the scammers try to extort you for more money in order to give you your belongings.",
+    "question": "<speak>Thank you for that information. Were you moving <prosody volume='loud'><prosody rate='slow'>within</prosody></prosody> your state. or <prosody volume='loud'><prosody rate='slow'>out</prosody></prosody> of state.</speak>"
+  },
+  "fraud": {
+    "general": "fraud",
+    "SSET": "fraud",
+    "description": "Fraud scams occur when someone steals personal information from you then uses that information to pretend they are you in order to gain access to services such as unemployment, or social security.",
+    "question": "<speak>Thank you for that information. Just one more question, please tell me the type of identity theft you experienced: <prosody volume='loud'><prosody rate='slow'>employment</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='medium'>unemployment</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='medium'>tax</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='slow'>medical</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='slow'>medicaid or medicare</prosody></prosody><break time='3ms'/> or another type of fraud.</speak>"
+  }
+}

@@ -4,32 +4,117 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require("ask-sdk-core");
-const data = require("./bankingmatch.json");
+const dataScamMatch = require("./scamMatch.json");
+const dataScamHelper = require("./scamHelper.json");
 
-const GetRecommendationAPIHandler = {
+const DefExactDescAPIHandler = {
   canHandle(handlerInput) {
     return (
       Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
-      handlerInput.requestEnvelope.request.apiRequest.name === "getRecommendation"
+      handlerInput.requestEnvelope.request.apiRequest.name === "defExactDesc"
     );
   },
   handle(handlerInput) {
     const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
 
-    let BankingScam = resolveEntity(apiRequest.slots, "BankingScam");
+    let exact = resolveEntity(apiRequest.slots, "exact");
 
-    const recommendationEntity = {};
-    if (BankingScam !== null) {
-      const key = `banking-${BankingScam}`;
-      const databaseResponse = data[key];
+    const entityGeneral = {};
+    if (exact !== null) {
+      const key = `${exact}`;
+      const databaseResponse = dataScamMatch[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      recommendationEntity.name = databaseResponse.result;
-      recommendationEntity.BankingScam = BankingScam;
+      entityGeneral.description = databaseResponse.description;
+      entityGeneral.exact = exact;
     }
 
-    const response = buildSuccessApiResponse(recommendationEntity);
+    const response = buildSuccessApiResponse(entityGeneral);
+    return response;
+  },
+};
+
+const DefGeneralDescAPIHandler = {
+  canHandle(handlerInput) {
+    return (
+      Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
+      handlerInput.requestEnvelope.request.apiRequest.name === "defGeneralDesc"
+    );
+  },
+  handle(handlerInput) {
+    const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
+
+    let general = resolveEntity(apiRequest.slots, "general");
+
+    const entityList = {};
+    if (general !== null) {
+      const key = `${general}`;
+      const databaseResponse = dataScamHelper[key];
+
+      console.log("Response from mock database ", databaseResponse);
+
+      entityList.result = databaseResponse.description;
+      entityList.general = general;
+    }
+
+    const response = buildSuccessApiResponse(entityList);
+    return response;
+  },
+};
+
+const DefGeneralAPIHandler = {
+  canHandle(handlerInput) {
+    return (
+      Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
+      handlerInput.requestEnvelope.request.apiRequest.name === "defGeneral"
+    );
+  },
+  handle(handlerInput) {
+    const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
+
+    let general = resolveEntity(apiRequest.slots, "general");
+
+    const entityGeneral = {};
+    if (general !== null) {
+      const key = `${general}`;
+      const databaseResponse = dataScamHelper[key];
+
+      console.log("Response from mock database ", databaseResponse);
+
+      entityGeneral.category = databaseResponse.question;
+      entityGeneral.general = general;
+    }
+
+    const response = buildSuccessApiResponse(entityGeneral);
+    return response;
+  },
+};
+
+const DefExactAPIHandler = {
+  canHandle(handlerInput) {
+    return (
+      Alexa.getRequestType(handlerInput.requestEnvelope) === "Dialog.API.Invoked" &&
+      handlerInput.requestEnvelope.request.apiRequest.name === "defExact"
+    );
+  },
+  handle(handlerInput) {
+    const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
+
+    let exact = resolveEntity(apiRequest.slots, "exact");
+
+    const entityScam = {};
+    if (exact !== null) {
+      const key = `${exact}`;
+      const databaseResponse = dataScamMatch[key];
+
+      console.log("Response from mock database ", databaseResponse);
+
+      entityScam.scam = databaseResponse.result;
+      entityScam.exact = exact;
+    }
+
+    const response = buildSuccessApiResponse(entityScam);
     return response;
   },
 };
@@ -188,7 +273,10 @@ const ErrorHandler = {
  * */
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
-    GetRecommendationAPIHandler,
+    DefExactDescAPIHandler,
+    DefGeneralDescAPIHandler,
+    DefGeneralAPIHandler,
+    DefExactAPIHandler,
     LaunchRequestHandler,
     HelloWorldIntentHandler,
     HelpIntentHandler,
