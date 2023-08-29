@@ -1,0 +1,82 @@
+{
+  "financial": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Financial description"
+  },
+  "imposter": {
+    "general": "imposter",
+    "SSET": "imposter",
+    "description": "Imposter description"
+  },
+  "moving": {
+    "general": "moving",
+    "SSET": "moving",
+    "description": "Moving description"
+  },
+  "fraud": {
+    "general": "fraud",
+    "SSET": "fraud",
+    "description": "Fraud description"
+  },
+  "financialvsimposter": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Financial description. While, imposter description"
+  },
+  "financialvsmoving": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Financial description. While, moving description"
+  },
+  "financialvsfraud": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Financial description. While, fraud description"
+  },
+  "impostervsfinancial": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Imposter description. While, financial description"
+  },
+  "impostervsmoving": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Imposter description. While, moving description"
+  },
+  "impostervsfraud": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Imposter description. While, fraud description"
+  },
+  "movingvsfinancial": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Moving description. While, financial description"
+  },
+  "movingvsimposter": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Moving description. While, imposter description"
+  },
+  "movingvsfraud": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Moving description. While, fraud description"
+  },
+  "fraudvsfinancial": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Fraud description. While, financial description"
+  },
+  "fraudvsimposter": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Fraud description. While, imposter description"
+  },
+  "fraudvsmoving": {
+    "general": "financial",
+    "SSET": "financial",
+    "description": "Fraud description. While, moving description"
+  }
+}

@@ -1,26 +1,26 @@
 {
-  "banking": {
-    "general": "financial",
+  "financial": {
+    "list": "financial",
     "SSET": "financial",
-    "description": "General description for banking.",
+    "description": "Financial description",
     "result": "Thank you for that information. Now to be more specific, Tell me which situation applies: fake or unsolicited check scam, unauthorized withdrawal, or is it something else?"
   },
   "imposter": {
-    "general": "imposter",
+    "list": "imposter",
     "SSET": "imposter",
-    "description": "General description for imposter.",
+    "description": "Imposter description",
     "result": "Thank you for that information. Now to be more specific, Are you experiencing someone contacting you pretending to be from the IRS, Social security office, or are they pretending to be a trusted person, company, or from another government office? Or are you experiencing phishing? Is it something else?"
   },
   "moving": {
-    "general": "moving",
+    "list": "moving",
     "SSET": "moving",
-    "description": "General description for moving.",
+    "description": "Moving description",
     "result": "Thank you for that information. Were you moving within your state or out of state?"
   },
   "fraud": {
-    "general": "fraud",
+    "list": "fraud",
     "SSET": "fraud",
-    "description": "General description for fraud.",
+    "description": "Fraud description",
     "result": "Thank you for that information. Now to be more specific, please tell me which situation applies: employment fraud, unemployment fraud, tax fraud, medical fraud, medicaid or medicare fraud, or another type of fraud."
   }
 }
