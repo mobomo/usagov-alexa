@@ -19,18 +19,18 @@ const DefExactDescAPIHandler = {
 
     let exact = resolveEntity(apiRequest.slots, "exact");
 
-    const entityGeneral = {};
+    const entityExact = {};
     if (exact !== null) {
       const key = `${exact}`;
       const databaseResponse = dataScamMatch[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      entityGeneral.description = databaseResponse.description;
-      entityGeneral.exact = exact;
+      entityExact.description = databaseResponse.description;
+      entityExact.exact = exact;
     }
 
-    const response = buildSuccessApiResponse(entityGeneral);
+    const response = buildSuccessApiResponse(entityExact);
     return response;
   },
 };
@@ -47,18 +47,18 @@ const DefGeneralDescAPIHandler = {
 
     let general = resolveEntity(apiRequest.slots, "general");
 
-    const entityList = {};
+    const entityGeneral = {};
     if (general !== null) {
       const key = `${general}`;
       const databaseResponse = dataScamHelper[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      entityList.result = databaseResponse.description;
-      entityList.general = general;
+      entityGeneral.description = databaseResponse.description;
+      entityGeneral.general = general;
     }
 
-    const response = buildSuccessApiResponse(entityList);
+    const response = buildSuccessApiResponse(entityGeneral);
     return response;
   },
 };
@@ -103,18 +103,18 @@ const DefExactAPIHandler = {
 
     let exact = resolveEntity(apiRequest.slots, "exact");
 
-    const entityScam = {};
+    const entityExact = {};
     if (exact !== null) {
       const key = `${exact}`;
       const databaseResponse = dataScamMatch[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      entityScam.scam = databaseResponse.result;
-      entityScam.exact = exact;
+      entityExact.scam = databaseResponse.result;
+      entityExact.exact = exact;
     }
 
-    const response = buildSuccessApiResponse(entityScam);
+    const response = buildSuccessApiResponse(entityExact);
     return response;
   },
 };
