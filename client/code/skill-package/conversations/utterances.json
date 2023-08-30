@@ -1,1 +1,595 @@
-{"schema":"https://amazonalexa.com/ask/2020/12/Module","expressions":[{"kind":"QualifiedNameDeclaration","name":"utterances.invoke_general_description","expression":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.utterances","genericArguments":[{"kind":"TypeReference","name":"types.invoke_general_descriptionRequestType"}],"arguments":{"samples":{"kind":"Call","name":"com.amazon.alexa.schema.List","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.schema.String"}],"arguments":[{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"please define {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"tell me what an {general} is"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me what a {general} is"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"define the difference between {general} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"define {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between a {general} scam and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between an {general} scam and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between an {general} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is the difference between a {general} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what's an {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what's an {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is an {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is an {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What's a {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What's a {general}?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is the {general} scam?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is a {general}?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Can you describe {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me what {general} is."},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is a {general} scam?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me about {general}"}]}}},"annotations":[{"kind":"Call","name":"com.amazon.alexa.ask.conversations.locale","arguments":{"locales":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.Args","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}],"arguments":[{"kind":"PropertyReference","name":"en_US","expression":{"kind":"NameReference","name":"com.amazon.alexa.ask.conversations.Locale","type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Type","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}}],"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Args","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.schema.Nothing"}}]},{"kind":"QualifiedNameDeclaration","name":"utterances.invoke_exact_description","expression":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.utterances","genericArguments":[{"kind":"TypeReference","name":"types.invoke_exact_descriptionRequestType"}],"arguments":{"samples":{"kind":"Call","name":"com.amazon.alexa.schema.List","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.schema.String"}],"arguments":[{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"please define {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"tell me what an {exact} is"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me what a {exact} is"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"define the difference between {exact} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"define {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between a {exact} scam and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between an {exact} scam and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is the difference between an {exact} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is the difference between a {exact} and"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what's an {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what's an {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is an {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"what is an {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What's a {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What's a {exact}?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is the {exact} scam?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is a {exact}?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Can you describe {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me what {exact} is."},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"What is a {exact} scam?"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"Tell me about {exact}"}]}}},"annotations":[{"kind":"Call","name":"com.amazon.alexa.ask.conversations.locale","arguments":{"locales":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.Args","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}],"arguments":[{"kind":"PropertyReference","name":"en_US","expression":{"kind":"NameReference","name":"com.amazon.alexa.ask.conversations.Locale","type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Type","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}}],"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Args","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.schema.Nothing"}}]},{"kind":"QualifiedNameDeclaration","name":"utterances.invoke_general","expression":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.utterances","genericArguments":[{"kind":"TypeReference","name":"types.invoke_generalRequestType"}],"arguments":{"samples":{"kind":"Call","name":"com.amazon.alexa.schema.List","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.schema.String"}],"arguments":[{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"it's a {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"My scam was a {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It's an {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"I think it's an {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"I think it's a {general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"{general} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"{general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It's a {general}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"My scam was a {general}"}]}}},"annotations":[{"kind":"Call","name":"com.amazon.alexa.ask.conversations.locale","arguments":{"locales":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.Args","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}],"arguments":[{"kind":"PropertyReference","name":"en_US","expression":{"kind":"NameReference","name":"com.amazon.alexa.ask.conversations.Locale","type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Type","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}}],"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Args","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.schema.Nothing"}}]},{"kind":"QualifiedNameDeclaration","name":"utterances.invoke_exact","expression":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.utterances","genericArguments":[{"kind":"TypeReference","name":"types.invoke_exactRequestType"}],"arguments":{"samples":{"kind":"Call","name":"com.amazon.alexa.schema.List","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.schema.String"}],"arguments":[{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"it's an {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"{exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"I think it's {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It's a {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It must be an {exact} scam."},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It's a {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"{exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It was a {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"I think it's an {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"I think it was a {exact} scam"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"The scam was related to a {exact}"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It was a {exact} attempt"},{"kind":"Call","name":"com.amazon.alexa.schema.String","arguments":"It was a {exact} scam attempt"}]}}},"annotations":[{"kind":"Call","name":"com.amazon.alexa.ask.conversations.locale","arguments":{"locales":{"kind":"Call","name":"com.amazon.alexa.ask.conversations.Args","genericArguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}],"arguments":[{"kind":"PropertyReference","name":"en_US","expression":{"kind":"NameReference","name":"com.amazon.alexa.ask.conversations.Locale","type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Type","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}}],"type":{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Args","arguments":[{"kind":"TypeReference","name":"com.amazon.alexa.ask.conversations.Locale"}]}}},"type":{"kind":"TypeReference","name":"com.amazon.alexa.schema.Nothing"}}]}]}
+{
+  "schema": "https://amazonalexa.com/ask/2020/12/Module",
+  "expressions": [
+    {
+      "kind": "QualifiedNameDeclaration",
+      "name": "utterances.invoke_general_description",
+      "expression": {
+        "kind": "Call",
+        "name": "com.amazon.alexa.ask.conversations.utterances",
+        "genericArguments": [
+          { "kind": "TypeReference", "name": "types.invoke_general_descriptionRequestType" }
+        ],
+        "arguments": {
+          "samples": {
+            "kind": "Call",
+            "name": "com.amazon.alexa.schema.List",
+            "genericArguments": [
+              { "kind": "TypeReference", "name": "com.amazon.alexa.schema.String" }
+            ],
+            "arguments": [
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "please define {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "tell me what an {general} is"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me what a {general} is"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "define the difference between {general} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "define {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between a {general} scam and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between an {general} scam and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between an {general} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is the difference between a {general} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what's an {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what's an {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is an {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is an {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What's a {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What's a {general}?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is the {general} scam?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is a {general}?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Can you describe {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me what {general} is."
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is a {general} scam?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me about {general}"
+              }
+            ]
+          }
+        }
+      },
+      "annotations": [
+        {
+          "kind": "Call",
+          "name": "com.amazon.alexa.ask.conversations.locale",
+          "arguments": {
+            "locales": {
+              "kind": "Call",
+              "name": "com.amazon.alexa.ask.conversations.Args",
+              "genericArguments": [
+                { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+              ],
+              "arguments": [
+                {
+                  "kind": "PropertyReference",
+                  "name": "en_US",
+                  "expression": {
+                    "kind": "NameReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale",
+                    "type": {
+                      "kind": "TypeReference",
+                      "name": "com.amazon.alexa.ask.conversations.Type",
+                      "arguments": [
+                        {
+                          "kind": "TypeReference",
+                          "name": "com.amazon.alexa.ask.conversations.Locale"
+                        }
+                      ]
+                    }
+                  },
+                  "type": {
+                    "kind": "TypeReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale"
+                  }
+                }
+              ],
+              "type": {
+                "kind": "TypeReference",
+                "name": "com.amazon.alexa.ask.conversations.Args",
+                "arguments": [
+                  { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+                ]
+              }
+            }
+          },
+          "type": { "kind": "TypeReference", "name": "com.amazon.alexa.schema.Nothing" }
+        }
+      ]
+    },
+    {
+      "kind": "QualifiedNameDeclaration",
+      "name": "utterances.invoke_exact_description",
+      "expression": {
+        "kind": "Call",
+        "name": "com.amazon.alexa.ask.conversations.utterances",
+        "genericArguments": [
+          { "kind": "TypeReference", "name": "types.invoke_exact_descriptionRequestType" }
+        ],
+        "arguments": {
+          "samples": {
+            "kind": "Call",
+            "name": "com.amazon.alexa.schema.List",
+            "genericArguments": [
+              { "kind": "TypeReference", "name": "com.amazon.alexa.schema.String" }
+            ],
+            "arguments": [
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "please define {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "tell me what an {exact} is"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me what a {exact} is"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "define the difference between {exact} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "define {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between a {exact} scam and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between an {exact} scam and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is the difference between an {exact} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is the difference between a {exact} and"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what's an {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what's an {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is an {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "what is an {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What's a {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What's a {exact}?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is the {exact} scam?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is a {exact}?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Can you describe {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me what {exact} is."
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "What is a {exact} scam?"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "Tell me about {exact}"
+              }
+            ]
+          }
+        }
+      },
+      "annotations": [
+        {
+          "kind": "Call",
+          "name": "com.amazon.alexa.ask.conversations.locale",
+          "arguments": {
+            "locales": {
+              "kind": "Call",
+              "name": "com.amazon.alexa.ask.conversations.Args",
+              "genericArguments": [
+                { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+              ],
+              "arguments": [
+                {
+                  "kind": "PropertyReference",
+                  "name": "en_US",
+                  "expression": {
+                    "kind": "NameReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale",
+                    "type": {
+                      "kind": "TypeReference",
+                      "name": "com.amazon.alexa.ask.conversations.Type",
+                      "arguments": [
+                        {
+                          "kind": "TypeReference",
+                          "name": "com.amazon.alexa.ask.conversations.Locale"
+                        }
+                      ]
+                    }
+                  },
+                  "type": {
+                    "kind": "TypeReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale"
+                  }
+                }
+              ],
+              "type": {
+                "kind": "TypeReference",
+                "name": "com.amazon.alexa.ask.conversations.Args",
+                "arguments": [
+                  { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+                ]
+              }
+            }
+          },
+          "type": { "kind": "TypeReference", "name": "com.amazon.alexa.schema.Nothing" }
+        }
+      ]
+    },
+    {
+      "kind": "QualifiedNameDeclaration",
+      "name": "utterances.invoke_general",
+      "expression": {
+        "kind": "Call",
+        "name": "com.amazon.alexa.ask.conversations.utterances",
+        "genericArguments": [
+          { "kind": "TypeReference", "name": "types.invoke_generalRequestType" }
+        ],
+        "arguments": {
+          "samples": {
+            "kind": "Call",
+            "name": "com.amazon.alexa.schema.List",
+            "genericArguments": [
+              { "kind": "TypeReference", "name": "com.amazon.alexa.schema.String" }
+            ],
+            "arguments": [
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "it's a {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "My scam was a {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It's an {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "I think it's an {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "I think it's a {general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "{general} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "{general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It's a {general}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "My scam was a {general}"
+              }
+            ]
+          }
+        }
+      },
+      "annotations": [
+        {
+          "kind": "Call",
+          "name": "com.amazon.alexa.ask.conversations.locale",
+          "arguments": {
+            "locales": {
+              "kind": "Call",
+              "name": "com.amazon.alexa.ask.conversations.Args",
+              "genericArguments": [
+                { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+              ],
+              "arguments": [
+                {
+                  "kind": "PropertyReference",
+                  "name": "en_US",
+                  "expression": {
+                    "kind": "NameReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale",
+                    "type": {
+                      "kind": "TypeReference",
+                      "name": "com.amazon.alexa.ask.conversations.Type",
+                      "arguments": [
+                        {
+                          "kind": "TypeReference",
+                          "name": "com.amazon.alexa.ask.conversations.Locale"
+                        }
+                      ]
+                    }
+                  },
+                  "type": {
+                    "kind": "TypeReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale"
+                  }
+                }
+              ],
+              "type": {
+                "kind": "TypeReference",
+                "name": "com.amazon.alexa.ask.conversations.Args",
+                "arguments": [
+                  { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+                ]
+              }
+            }
+          },
+          "type": { "kind": "TypeReference", "name": "com.amazon.alexa.schema.Nothing" }
+        }
+      ]
+    },
+    {
+      "kind": "QualifiedNameDeclaration",
+      "name": "utterances.invoke_exact",
+      "expression": {
+        "kind": "Call",
+        "name": "com.amazon.alexa.ask.conversations.utterances",
+        "genericArguments": [{ "kind": "TypeReference", "name": "types.invoke_exactRequestType" }],
+        "arguments": {
+          "samples": {
+            "kind": "Call",
+            "name": "com.amazon.alexa.schema.List",
+            "genericArguments": [
+              { "kind": "TypeReference", "name": "com.amazon.alexa.schema.String" }
+            ],
+            "arguments": [
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "it's an {exact}"
+              },
+              { "kind": "Call", "name": "com.amazon.alexa.schema.String", "arguments": "{exact}" },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "I think it's {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It's a {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It must be an {exact} scam."
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It's a {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "{exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It was a {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "I think it's an {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "I think it was a {exact} scam"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "The scam was related to a {exact}"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It was a {exact} attempt"
+              },
+              {
+                "kind": "Call",
+                "name": "com.amazon.alexa.schema.String",
+                "arguments": "It was a {exact} scam attempt"
+              }
+            ]
+          }
+        }
+      },
+      "annotations": [
+        {
+          "kind": "Call",
+          "name": "com.amazon.alexa.ask.conversations.locale",
+          "arguments": {
+            "locales": {
+              "kind": "Call",
+              "name": "com.amazon.alexa.ask.conversations.Args",
+              "genericArguments": [
+                { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+              ],
+              "arguments": [
+                {
+                  "kind": "PropertyReference",
+                  "name": "en_US",
+                  "expression": {
+                    "kind": "NameReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale",
+                    "type": {
+                      "kind": "TypeReference",
+                      "name": "com.amazon.alexa.ask.conversations.Type",
+                      "arguments": [
+                        {
+                          "kind": "TypeReference",
+                          "name": "com.amazon.alexa.ask.conversations.Locale"
+                        }
+                      ]
+                    }
+                  },
+                  "type": {
+                    "kind": "TypeReference",
+                    "name": "com.amazon.alexa.ask.conversations.Locale"
+                  }
+                }
+              ],
+              "type": {
+                "kind": "TypeReference",
+                "name": "com.amazon.alexa.ask.conversations.Args",
+                "arguments": [
+                  { "kind": "TypeReference", "name": "com.amazon.alexa.ask.conversations.Locale" }
+                ]
+              }
+            }
+          },
+          "type": { "kind": "TypeReference", "name": "com.amazon.alexa.schema.Nothing" }
+        }
+      ]
+    }
+  ]
+}
