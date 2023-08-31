@@ -1,14 +1,5 @@
 {
-  "banking-fakecheck": {
-    "level1": "red",
-    "result": "apple"
-  },
-  "banking-unsolicited": {
-    "level1": "blue",
-    "result": "blue berry"
-  },
-  "banking-unauthorized": {
-    "level1": "yellow",
-    "result": "lemon"
+  "request": {
+    "response": "response"
   }
 }
