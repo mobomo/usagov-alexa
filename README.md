@@ -22,3 +22,4 @@ This setup will be segregated into two main directories
 |  🎨 | artist | style: | Code that is related to styling |
 |  🧪 | test | test: | Adding new test or making changes to existing test |
 |  ♿️ | wheelchair | 508: | Code that improves 508/Accessibility |
+|  📦 | package | backup: | Code backups, mainly from other sources (such as the Alexa Developer Console) |
