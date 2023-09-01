@@ -46,7 +46,7 @@
             ],
             "types": [
               {
-                "name": "requester",
+                "name": "req",
                 "values": [
                   {
                     "name": {
@@ -57,7 +57,7 @@
                 ]
               },
               {
-                "name": "response",
+                "name": "res",
                 "values": [
                   {
                     "name": {
@@ -70,15 +70,15 @@
           }
         }
       },
-      "resultDefGeneral": {
-        "createProp": "resultDefRequester",
-        "props": ["requester"]
+      "resultDefReq": {
+        "createProp": "resultDefReq",
+        "props": ["req"]
       }
     },
     "API": {
       "defRequester": {
-        "arguments": ["requester"],
-        "return": "resultDefGeneral"
+        "arguments": ["req"],
+        "return": "resultDefReq"
       }
     },
     "Responses": {
@@ -128,7 +128,7 @@
         },
         "arguments": [""]
       },
-      "answer_resultDefRequester": {
+      "answer_resultDefReq": {
         "json": {
           "type": "APLA",
           "version": "0.8",
@@ -142,20 +142,20 @@
                 {
                   "type": "Speech",
                   "contentType": "text",
-                  "content": "${payload.resultDefRequester.response}",
+                  "content": "${payload.resultDefReq.res}",
                   "description": "Expand on 'items' array to add multiple prompts, use response template arguments by adding it to 'content' like this ${payload.input_argument_name} and add SSML by changing 'contentType' to 'SSML' and adding SSML to 'content' <amazon:effect name=\"whispered\">like that</amazon:effect>"
                 }
               ]
             }
           }
         },
-        "arguements": ["resultDefRequester"]
+        "arguements": ["resultDefReq"]
       }
     },
     "Utterances": {
-      "invoke_requester": {
-        "slots": ["requester"],
-        "utterances": ["{requester}", 1234567890.0987654321123456789]
+      "invoke_req": {
+        "slots": ["req"],
+        "utterances": ["{req}", 1234567890.0987654321123456789]
       }
     },
     "Dialogs": {

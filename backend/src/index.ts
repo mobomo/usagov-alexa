@@ -6,10 +6,10 @@ import { ExpressAdapter } from "ask-sdk-express-adapter";
 import data from "./data.json";
 
 interface DataType {
-  [key: string]: RequestType;
+  [key: string]: ReqType;
 }
 
-interface RequestType {
+interface ReqType {
   response: string;
 }
 
@@ -50,7 +50,7 @@ const DefRequesterAPIHandler: RequestHandler = {
 
     let request: string = resolveEntity(apiRequest.slots, "request");
 
-    const responseEntity: RequestType = {
+    const responseEntity: ReqType = {
       response: "",
     };
 
@@ -68,7 +68,7 @@ const DefRequesterAPIHandler: RequestHandler = {
   },
 };
 
-const buildSuccessApiResponse = (returnEntity: RequestType) => {
+const buildSuccessApiResponse = (returnEntity: ReqType) => {
   return { apiResponse: returnEntity };
 };
 
