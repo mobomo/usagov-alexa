@@ -4,7 +4,7 @@
       "Interaction Model": {
         "interactionModel": {
           "languageModel": {
-            "invocationName": "cloud gov",
+            "invocationName": "cloud test",
             "intents": [
               {
                 "name": "AMAZON.CancelIntent",
@@ -39,9 +39,17 @@
                 "samples": []
               },
               {
-                "name": "outofdomain",
+                "name": "HelloWorldIntent",
                 "slots": [],
-                "samples": []
+                "samples": [
+                  "hello",
+                  "how are you",
+                  "say hi world",
+                  "say hi",
+                  "hi",
+                  "say hello world",
+                  "say hello"
+                ]
               }
             ],
             "types": [
@@ -76,7 +84,7 @@
       }
     },
     "API": {
-      "defRequester": {
+      "defReq": {
         "arguments": ["req"],
         "return": "resultDefReq"
       }
@@ -159,7 +167,7 @@
       }
     },
     "Dialogs": {
-      "dialogGeneral": [
+      "dialogReq": [
         {
           "user": "request",
           "alexa": "null"
