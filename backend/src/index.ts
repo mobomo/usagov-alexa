@@ -27,7 +27,7 @@ const parsedData: DataType = data;
  * Default Handlers
  * ,,,,,,,,,,,,,,,,
 **/
-const DefRequesterAPIHandler: RequestHandler = {
+const DefReqAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
     return request.type === "Dialog.API.Invoked" && request.apiRequest.name === "defRequester";
@@ -184,7 +184,7 @@ const app = express();
 skill = SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
-    GetRecommendationAPIHandler,
+    DefReqAPIHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
