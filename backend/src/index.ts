@@ -21,22 +21,12 @@ interface CustomHandlerInput {
 
 const parsedData: DataType = data;
 
-const LaunchRequestHandler: RequestHandler = {
-  canHandle(handlerInput: HandlerInput): boolean {
-    const request = handlerInput.requestEnvelope.request;
-    return request.type === "LaunchRequest";
-  },
-  handle(handlerInput: HandlerInput): Response {
-    const speechText = "Welcome, you can say Hello or Help. Which would you like to try?";
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(speechText)
-      .withSimpleCard("Welcome, you can say Hello or Help. Which would you like to try?", speechText)
-      .getResponse();
-  },
-};
-
+/******************************************************************************/
+/**
+ * ^^^^^^^^^^^^^^^^
+ * Default Handlers
+ * ,,,,,,,,,,,,,,,,
+**/
 const DefRequesterAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
@@ -85,6 +75,22 @@ const resolveEntity = function (
   }
 
   return value;
+};
+
+const LaunchRequestHandler: RequestHandler = {
+  canHandle(handlerInput: HandlerInput): boolean {
+    const request = handlerInput.requestEnvelope.request;
+    return request.type === "LaunchRequest";
+  },
+  handle(handlerInput: HandlerInput): Response {
+    const speechText = "Welcome, you can say Hello or Help. Which would you like to try?";
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard("Welcome, you can say Hello or Help. Which would you like to try?", speechText)
+      .getResponse();
+  },
 };
 
 const HelpIntentHandler: RequestHandler = {
