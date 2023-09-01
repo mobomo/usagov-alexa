@@ -10,7 +10,7 @@ interface DataType {
 }
 
 interface ReqType {
-  response: string;
+  res: string;
 }
 
 interface CustomHandlerInput {
@@ -21,16 +21,11 @@ interface CustomHandlerInput {
 
 const parsedData: DataType = data;
 
-/******************************************************************************/
-/**
- * ^^^^^^^^^^^^^^^^
- * Default Handlers
- * ,,,,,,,,,,,,,,,,
-**/
+
 const DefReqAPIHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput): boolean {
     const request: any = handlerInput.requestEnvelope.request;
-    return request.type === "Dialog.API.Invoked" && request.apiRequest.name === "defRequester";
+    return request.type === "Dialog.API.Invoked" && request.apiRequest.name === "defReq";
   },
   handle(handlerInput: CustomHandlerInput): Response {
     const apiRequest: {
@@ -38,26 +33,33 @@ const DefReqAPIHandler: RequestHandler = {
       apiRequest?: any;
     } = handlerInput.requestEnvelope.request.apiRequest;
 
-    let request: string = resolveEntity(apiRequest.slots, "request");
+    let req: string = resolveEntity(apiRequest.slots, "req");
 
-    const responseEntity: ReqType = {
-      response: "",
+    const resEntity: ReqType = {
+      res: "",
     };
 
-    if (request !== null) {
-      const key = `${request}`;
+    if (req !== null) {
+      const key = `${req}`;
       const databaseResponse = parsedData[key];
 
       console.log("Response from mock database ", databaseResponse);
 
-      responseEntity.response = databaseResponse.response;
+      resEntity.res = databaseResponse.res;
     }
 
-    const response = buildSuccessApiResponse(responseEntity);
+    const response = buildSuccessApiResponse(resEntity);
     return response;
   },
 };
 
+
+/******************************************************************************/
+/**
+ * ^^^^^^^^^^^^^^^^
+ * Default Handlers
+ * ,,,,,,,,,,,,,,,,
+**/
 const buildSuccessApiResponse = (returnEntity: ReqType) => {
   return { apiResponse: returnEntity };
 };
@@ -165,7 +167,7 @@ exports.handler = async (event: RequestEnvelope, context: unknown) => {
     skill = SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        DefRequesterAPIHandler,
+        DefReqAPIHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler
