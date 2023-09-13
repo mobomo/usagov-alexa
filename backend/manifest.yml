@@ -4,5 +4,5 @@ applications:
     random-route: true
     buildpacks:
       - nodejs_buildpack
-    memory: 1024M
+    memory: 512M
     stack: cflinuxfs4

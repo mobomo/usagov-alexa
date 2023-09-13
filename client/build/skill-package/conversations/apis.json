@@ -1,0 +1,1 @@
+{"schema":"https://amazonalexa.com/ask/2020/12/Module","exports":["apis.defReq"],"expressions":[{"kind":"ActionDeclaration","name":"apis.defReq","arguments":[{"name":"req","type":{"kind":"TypeReference","name":"ask.interactionModel.slotTypes.req"}}],"returnType":{"kind":"TypeReference","name":"types.resultDefReq"}}]}

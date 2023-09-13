@@ -1,0 +1,12 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.f698b08b-01f8-4f99-a249-a86d454a3f61",
+      "skillMetadata": {
+        "lastDeployHash": "PpmSE0QrvQPa/c+Y+5+UdO/VpZQ=",
+        "lastDeployType": "alexa-conversations"
+      }
+    }
+  }
+}
