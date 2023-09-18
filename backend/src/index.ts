@@ -14,7 +14,7 @@ import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
 
 
-import data from "./Data.json";
+import data from "./data.json";
 
 
 interface DataType {
@@ -238,8 +238,20 @@ skill = SkillBuilders.custom()
   )
   .addErrorHandlers(ErrorHandler)
   .create();
+
+
 const adapter = new ExpressAdapter(skill, true, true);
 
+const port = 8080; // default port to listen
 
+// define a route handler for the default home page
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+
+// start the Express server
+// app.listen(port, () => {
+//   console.log(`server started at http://localhost:${port}`);
+// });
 app.post('/', adapter.getRequestHandlers());
-app.listen(process.env.PORT || 3000);
+app.listen(port);
