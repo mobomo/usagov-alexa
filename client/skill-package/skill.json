@@ -14,7 +14,7 @@
         },
         "endpoint": {
           "sslCertificateType": "Wildcard",
-          "uri": "https://alexa-cloud-test.app.cloud.gov"
+          "uri": "https://voice-test-app.jsi82uf6iq17c.us-east-1.cs.amazonlightsail.com/"
         },
         "interfaces": [
           {
