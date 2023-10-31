@@ -2,18 +2,8 @@
   "manifest": {
     "apis": {
       "custom": {
-        "dialogManagement": {
-          "dialogManagers": [
-            {
-              "type": "AMAZON.Conversations"
-            }
-          ],
-          "sessionStartDelegationStrategy": {
-            "target": "AMAZON.Conversations"
-          }
-        },
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:637780880766:function:391facac-4851-4c46-b782-fb0b9e1da820:Release_0"
+          "uri": "arn:aws:lambda:us-east-1:637780880766:function:66c7e943-841b-46a2-b112-c19c6a8e9c92:Release_0"
         },
         "interfaces": [
           {
@@ -106,17 +96,17 @@
         "regions": {
           "NA": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:637780880766:function:391facac-4851-4c46-b782-fb0b9e1da820:Release_0"
+              "uri": "arn:aws:lambda:us-east-1:637780880766:function:66c7e943-841b-46a2-b112-c19c6a8e9c92:Release_0"
             }
           },
           "EU": {
             "endpoint": {
-              "uri": "arn:aws:lambda:eu-west-1:637780880766:function:391facac-4851-4c46-b782-fb0b9e1da820:Release_0"
+              "uri": "arn:aws:lambda:eu-west-1:637780880766:function:66c7e943-841b-46a2-b112-c19c6a8e9c92:Release_0"
             }
           },
           "FE": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-west-2:637780880766:function:391facac-4851-4c46-b782-fb0b9e1da820:Release_0"
+              "uri": "arn:aws:lambda:us-west-2:637780880766:function:66c7e943-841b-46a2-b112-c19c6a8e9c92:Release_0"
             }
           }
         }
@@ -135,7 +125,7 @@
             "help"
           ],
           "keywords": [],
-          "name": "Banking Scam with more intents dth",
+          "name": "Intent Based Scam Wizard",
           "summary": "Sample Short Description"
         }
       },
