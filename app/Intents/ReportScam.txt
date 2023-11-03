@@ -1,0 +1,187 @@
+I'm dealing with {moving}
+I'm dealing with {imposter}
+I'm dealing with {fraud}
+I'm dealing with {financial}
+I'm reporting an {fraud}
+I'm reporting an {financial}
+I'm reporting an {imposter}
+I'm reporting an {moving}
+I'm reporting {fraud}
+I'm reporting {financial}
+I'm reporting {imposter}
+I'm reporting {moving}
+I'm reporting a {fraud} scam
+I'm reporting a {financial} scam
+I'm reporting a {imposter} scam
+I'm reporting a {moving} scam
+Does the government take scam reports
+Where do i report {fraud}
+Where do i report {imposter}
+Where do i report {financial}
+Where do i report {moving}
+Where do i report {exact}
+How do I report {fraud}
+How do I report {imposter}
+How do I report {financial}
+How do I report {moving}
+How do I report {exact}
+I believe I might have been scammed
+Where do I report a scammer
+Where do I report a suspected scam
+Where do I report a scam
+I just got duped
+I just lost money to a scammer
+I've been scammed
+I need to report {fraud}
+I need to report {exact}
+I need to report a scam
+My scam is a {imposter}
+My scam is a {exact}
+My scam is a {moving}
+My scam is a {financial}
+I'm experiencing {fraud}
+I'm experiencing {exact}
+I'm experiencing {financial}
+I'm experiencing {imposter}
+I'm experiencing {moving}
+Someone committed {moving} fraud
+Someone committed {fraud} fraud
+Someone committed {imposter} fraud
+Someone committed {exact} fraud
+Someone committed {financial} fraud
+I believe it is a {exact}
+I believe it is a {moving}
+I believe it is a {financial}
+I believe it is a {imposter}
+I believe it is a {fraud}
+I believe it is a {moving} scam
+I believe it is a {imposter} scam
+I believe it is a {exact} scam
+I believe it is a {fraud} scam
+I believe it is a {financial} scam
+Someone {exact}
+Someone {fraud}
+Someone {financial}
+Someone {imposter}
+Someone {moving}
+I'm experiencing an {exact} fraud
+I'm experiencing an {fraud} fraud
+I'm experiencing an {imposter} fraud
+I'm experiencing an {financial} fraud
+I'm experiencing an {moving} fraud
+I'm experiencing {exact} fraud
+I'm experiencing {moving} fraud
+I'm experiencing {fraud} fraud
+I'm experiencing {imposter} fraud
+I'm experiencing {financial} fraud
+I need to report someone using my {exact}
+I need to report someone using my {imposter}
+I need to report someone using my {financial}
+I need to report someone using my {fraud}
+I'm experiencing an {exact} scam
+I'm experiencing an {imposter} scam
+I'm experiencing an {fraud} scam
+I'm experiencing an {financial} scam
+I'm experiencing an {moving} scam
+I'm experiencing a {exact} scam
+I'm experiencing a {imposter} scam
+I'm experiencing a {moving} scam
+I'm experiencing a {financial} scam
+I'm experiencing a {fraud} scam
+{exact} fraud
+{moving} fraud
+{imposter} fraud
+{fraud} fraud
+{financial} fraud
+Someone committed {exact}
+Someone committed {moving}
+Someone committed {imposter}
+Someone committed {fraud}
+Someone committed {financial}
+I believe it is an {exact}
+I believe it is an {moving}
+I believe it is an {fraud}
+I believe it is an {financial}
+I believe it is an {imposter}
+I need to report an {exact}
+I need to report an {moving}
+I need to report an {financial}
+I need to report an {imposter}
+I need to report an {fraud}
+I need to report a {exact}
+I need to report a {moving}
+I need to report a {fraud}
+I need to report a {imposter}
+I need to report a {financial}
+I believe it fits into the {exact} category
+I believe it fits into the {moving} category
+I believe it fits into the {fraud} category
+I believe it fits into the {financial} category
+I believe it fits into the {imposter} category
+It is an {exact}
+It is an {moving}
+It is an {imposter}
+It is an {financial}
+It is an {fraud}
+It is {exact}
+It is {moving}
+It is {imposter}
+It is {fraud}
+It is {financial}
+It is a {exact}
+It is a {moving}
+It is a {imposter}
+It is a {fraud}
+It is a {financial}
+My scam was a {exact} scam
+My scam was a {moving} scam
+My scam was a {financial} scam
+My scam was a {imposter} scam
+My scam was a {fraud} scam
+I think it's an {exact}
+I think it's an {imposter}
+I think it's an {fraud}
+I think it's an {financial}
+I think it's an {moving}
+I think it's a {exact}
+I think it's a {moving}
+I think it's a {imposter}
+I think it's a {fraud}
+I think it's a {financial}
+{exact} scam
+{imposter} scam
+{fraud} scam
+{financial} scam
+{moving} scam
+{exact}
+{moving}
+{imposter}
+{fraud}
+{financial}
+It's a {exact}
+It's a {moving}
+It's a {financial}
+It's a {fraud}
+It's a {imposter}
+My scam was a {exact}
+My scam was a {financial}
+My scam was a {moving}
+My scam was a {imposter}
+My scam was a {fraud}
+They said they were from {exact}
+They said they were {exact}
+I believe it is an {exact} scam
+I need to report a {exact} scam
+I need to report an {exact} scam
+It's an {exact}
+I think it's {exact}
+It's a {exact}
+It must be an {exact} scam.
+It's a {exact} scam
+{exact} scam
+It was a {exact} scam
+I think it's an {exact} scam
+I think it was a {exact} scam
+The scam was related to a {exact}
+It was a {exact} attempt
+It was a {exact} scam attempt
