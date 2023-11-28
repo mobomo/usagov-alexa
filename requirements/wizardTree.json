@@ -1,0 +1,125 @@
+{
+  "dataTree1": {
+    "scams": {
+      "parent": null,
+      "path": "/scams",
+      "title": "USA.gov Scams Wizard",
+      "h2": "Please select the type of scam you experienced."
+    },
+    "banking": {
+      "parent": "scams",
+      "path": "/scams/banking",
+      "title": "Types of Banking Scams",
+      "h2": "Which Banking Scam?"
+    },
+    "trickery": {
+      "parent": "scams",
+      "path": "/scams/trickery",
+      "title": "Types of Trickery Scams",
+      "h2": "Which Trickery Scam?"
+    },
+    "moving": {
+      "parent": "scams",
+      "path": "/scams/moving",
+      "title": "Types of Moving Scams",
+      "h2": "Which Moving Scam?"
+    },
+    "fraud": {
+      "parent": "scams",
+      "path": "/scams/fraud",
+      "title": "Types of Fraud Scams",
+      "h2": "Which Fraud Scam"
+    },
+    "other": {
+      "parent": "scams",
+      "path": "/scams/other",
+      "title": "Another Type",
+      "h2": "Some Other Scam",
+      "p1": "Here's what t do..."
+    },
+    "fakecheck": {
+      "parent": "banking",
+      "path": "/scams/banking/fakecheck",
+      "title": "Fake Check",
+      "h2": "A Fake Check Scam",
+      "p1": "Here's what to do about a fake check scam..."
+    },
+    "unsolicitedcheck": {
+      "parent": "banking",
+      "path": "/scams/banking/unsolicitedcheck",
+      "title": "Unsolicited Check",
+      "h2": "An Unsolicited Check Scam",
+      "p1": "Here's what to do about an unsolicited check scam..."
+    },
+    "unauthorizedwithdrawal": {
+      "parent": "banking",
+      "path": "/scams/banking/unauthorizedwithdrawal",
+      "title": "Unauthorized Withdrawal",
+      "h2": "An Unauthorized Withdrawal Scam",
+      "p1": "Here's what to do about an unauthorized withdrawal scam..."
+    },
+    "irs": {
+      "parent": "trickery",
+      "path": "/scams/trickery/irs",
+      "title": "IRS",
+      "h2": "An IRS Scam",
+      "p1": "Here's what to do about an IRS scam..."
+    },
+    "socialsecurityoffice": {
+      "parent": "trickery",
+      "path": "/scams/trickery/socialsecurityoffice",
+      "title": "Social Security Office",
+      "h2": "A Social Security Office Scam",
+      "p1": "Here's what to do about a Social Security office scam..."
+    },
+    "company": {
+      "parent": "trickery",
+      "path": "/scams/trickery/company",
+      "title": "Company",
+      "h2": "A Company Scam",
+      "p1": "Here's what to do about a company scam..."
+    },
+    "instate": {
+      "parent": "moving",
+      "path": "/scams/moving/instate",
+      "title": "In State",
+      "h2": "An In State Moving Scam",
+      "p1": "Here's what to do about an in state moving scam..."
+    },
+    "outofstate": {
+      "parent": "moving",
+      "path": "/scams/moving/outofstate",
+      "title": "Out of State",
+      "h2": "An Out of State Moving Scam",
+      "p1": "Here's what to do about an in state moving scam..."
+    },
+    "socialsecurityfraud": {
+      "parent": "fraud",
+      "path": "/scams/fraud/socialsecurityfraud",
+      "title": "Social Security Fraud",
+      "h2": "A Social Security Fraud Scam",
+      "p1": "Here's what to do about a Social Security fraud scam..."
+    },
+    "taxfraud": {
+      "parent": "fraud",
+      "path": "/scams/fraud/taxfraud",
+      "title": "Tax Fraud",
+      "h2": "A Tax Fraud Scam",
+      "p1": "Here's what to do about a Social Security fraud scam..."
+    },
+    "medicalfraud": {
+      "parent": "fraud",
+      "path": "/scams/fraud/medicalfraud",
+      "title": "Medical Fraud",
+      "h2": "A Medical Fraud Scam",
+      "p1": "Here's what to do about a medical fraud scam..."
+    },
+    "medicaid": {
+      "parent": "frauud",
+      "path": "/scams/fraud/medicaidormedicarefraud",
+      "title": "Medicaid/Medicare Fraud",
+      "h2": "A Medicaid/Medicare Fraud Scam",
+      "p1": "Here's what to do about medicaid or medicare fraud scams..."
+    }
+  }
+}
