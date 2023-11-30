@@ -17,11 +17,13 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/alexa": "^1.1",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
-        "drush/drush": "^12.3"
+        "drush/drush": "^12.3",
+        "jakubsuchy/amazon-alexa-php": "^0.1.7"
     },
     "conflict": {
         "drupal/drupal": "*"
