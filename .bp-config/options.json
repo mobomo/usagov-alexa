@@ -1,0 +1,15 @@
+{
+  "WEBDIR": "web",
+  "PHP_EXTENSIONS": [
+    "bz2",
+    "curl",
+    "gd",
+    "mbstring",
+    "mcrypt",
+    "pdo",
+    "pdo_mysql",
+    "pdo_sqlite",
+    "zlib",
+    "zip"
+  ]
+}

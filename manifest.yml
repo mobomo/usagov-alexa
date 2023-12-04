@@ -1,0 +1,9 @@
+---
+applications:
+  - name: test-alexa-drupal
+    random-route: false
+    buildpacks:
+      - php_buildpack
+    memory: 512M
+    disk_quota: 768M
+    stack: cflinuxfs4
