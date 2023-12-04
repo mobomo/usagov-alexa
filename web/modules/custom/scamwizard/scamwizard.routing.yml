@@ -1,0 +1,143 @@
+scamwizard.scamwizardpage:
+  path: "/scams"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizard'
+    _title: "USA.gov Scams Wizard"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.banking:
+  path: "/scams/banking"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardBanking'
+    _title: "Types of Banking Scams"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.banking.fakecheck:
+  path: "/scams/banking/fakecheck"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardBankingFakecheck'
+    _title: "Fake Check"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.banking.unsolicitedcheck:
+  path: "/scams/banking/unsolicitedcheck"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardBankingUnsolicitedcheck'
+    _title: "Unsolicited Check"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.banking.unauthorizedwithdrawal:
+  path: "/scams/banking/unauthorizedwithdrawal"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardBankingUnauthorizedwithdrawal'
+    _title: "Unauthorized Withdrawal"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.trickery:
+  path: "/scams/trickery"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardTrickery'
+    _title: "Types of Trickery Scams"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.trickery.irs:
+  path: "/scams/trickery/irs"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardTrickeryIRS'
+    _title: "IRS"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.trickery.socialsecurityoffice:
+  path: "/scams/trickery/socialsecurityoffice"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardTrickerySocialsecurityoffice'
+    _title: "Social Security Office"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.trickery.company:
+  path: "/scams/trickery/company"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardTrickeryCompany'
+    _title: "Company"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.moving:
+  path: "/scams/moving"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardMoving'
+    _title: "Types of Moving Scams"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.moving.instate:
+  path: "/scams/moving/instate"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardMovingInstate'
+    _title: "In State"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.moving.outofstate:
+  path: "/scams/moving/outofstate"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardMovingOutofstate'
+    _title: "Out of State"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.fraud:
+  path: "/scams/fraud"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardFraud'
+    _title: "Types of Fraud Scams"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.fraud.socialsecurityfraud:
+  path: "/scams/fraud/socialsecurityfraud"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardFraudSocialsecurityfraud'
+    _title: "Social Security Fraud"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.fraud.taxfraud:
+  path: "/scams/fraud/taxfraud"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardFraudTaxfraud'
+    _title: "Tax Fraud"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.fraud.medicalfraud:
+  path: "/scams/fraud/medicalfraud"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardFraudMedicalfraud'
+    _title: "Medical Fraud"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.fraud.medicaidormedicarefraud:
+  path: "/scams/fraud/medicaidormedicarefraud"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardFraudMedicaidormedicarefraud'
+    _title: "Medicaid or Medicare Fraud"
+  requirements:
+    _permission: "access content"
+
+scamwizard.scamwizardpage.other:
+  path: "/scams/other"
+  defaults:
+    _controller: '\Drupal\scamwizard\Controller\ScamsController::scamWizardOther'
+    _title: "Other Type of Scam"
+  requirements:
+    _permission: "access content"

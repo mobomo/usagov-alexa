@@ -1,0 +1,18 @@
+scams
+  banking
+    fakecheck
+    unsolicitedcheck
+    unauthorizedwithdrawal
+  trickery
+    irs
+    socialsecurityoffice
+    company
+  moving
+    instate
+    outofstate
+  fraud
+    socialsecurityfraud
+    taxfraud
+    medicalfraud
+    medicaidormedicarefraud
+  other

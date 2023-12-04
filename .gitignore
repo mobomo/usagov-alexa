@@ -1,5 +1,8 @@
+# Backend files
+.DS_Store
+
 # Visual Studio Code workspace file
-usagov-alexa.code-workspace
+DrupalLocal.code-workspace
 
 # Logs
 logs

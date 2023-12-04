@@ -1,0 +1,6 @@
+curl -s https://getcomposer.org/installer | php
+php composer.phar create-project drupal/recommended-project localhost -n
+mv -v ./localhost/* .
+php composer.phar require drush/drush
+vendor/bin/drush si standard --locale=en --db-url=sqlite://../drupal.sqlite --account-name=admin --account-pass=admin -y
+vendor/bin/drush runserver

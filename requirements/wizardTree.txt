@@ -1,0 +1,25 @@
+Pick a scam
+  Banking
+    Fake check
+    Unsolicited check scam
+    Unauthorized withdrawal
+    Something else
+
+  Trickery
+    IRS
+    Social Security office
+    A company
+    Another government office
+
+  Moving
+    in state
+    out of state
+
+  Fraud
+    Social Security fraud
+    Tax fraud
+    Medical fraud
+    Medicaid or medicare fraud
+    Another type of fraud
+
+Result: It was a <scam> scam.
