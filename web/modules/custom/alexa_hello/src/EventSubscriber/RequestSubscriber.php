@@ -27,24 +27,24 @@ class RequestSubscriber implements EventSubscriberInterface {
    */
   public function onRequest(AlexaEvent $event) {
     $request = $event->getRequest();
-    $response = $event->getResponse();
+    //$response = $event->getResponse();
     $intentName = $request instanceof IntentRequest ? $request->intentName : NULL;
 
     switch ($intentName) {
       case 'AMAZON.HelpIntent':
-        $response->respond('You can ask anything and I will respond with "Hello Drupal"');
+        $event->getResponse()->respond('You can ask anything and I will respond with "Hello Drupal"');
         break;
 
       case 'LaunchRequest':
-        $response->respond('Welcome to this custom hosted skill!');
+        $event->getResponse()->respond('Welcome to this custom hosted skill!');
         break;
 
       case 'HelloWorldIntent':
-        $response->respond('Hello World from local!');
+        $event->getResponse()->respond('Hello World from local. It is amazing!');
         break;
 
       default:
-        $response->respond('Hello Drupal');
+        $event->getResponse()->respond('Hello every single person');
         break;
     }
   }

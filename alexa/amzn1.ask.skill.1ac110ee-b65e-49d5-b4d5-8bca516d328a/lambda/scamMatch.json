@@ -1,0 +1,268 @@
+{
+  "enUS": {
+    "check": {
+      "financial": "financial",
+      "exact": "check",
+      "SSET": "check",
+      "description": "<speak><prosody rate='medium'>A fake check scam usually involves a scammer sending you a check for more than the amount they owe, then asking you to refund the difference. But, the check bounces, so you owe your bank the amount of the check and lose any money you gave the scammer. An unsolicited check scam typically occurs when a scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn't ask for.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report fake or unsolicited checks you receive by mail at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>USPIS</say-as> dot gov</prosody></prosody>. Then learn how to avoid and deal with fake check scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "unsolicited": {
+      "financial": "financial",
+      "exact": "unsolicited",
+      "SSET": "unsolicited",
+      "description": "<speak><prosody rate='medium'>An unsolicited check scam typically occurs when a scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn't ask for.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report fake or unsolicited checks you receive by mail at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>USPIS</say-as> dot gov</prosody></prosody>. Then learn how to avoid and deal with fake check scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "withdrawal": {
+      "financial": "financial",
+      "exact": "withdrawal",
+      "SSET": "withdrawal",
+      "description": "<speak><prosody rate='medium'>An unauthorized withdrawal scam is when a scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Contact your bank immediately to report and stop unauthorized withdrawals from your account. Also, learn about unauthorized withdrawals at <prosody volume='loud'><prosody rate='slow'> help with my bank dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "phishing": {
+      "imposter": "imposter",
+      "exact": "phishing",
+      "SSET": "phishing",
+      "description": "<speak><prosody rate='medium'>A phishing scam is when you receive a scam email or text message that looks like it's from a company you trust. It asks you to verify your bank account, debit card, or credit card number.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>If this was an email, forward it to the Anti-Phishing Working Group at <prosody volume='loud'><prosody rate='slow'>report phishing at <say-as interpret-as='spell-out'>apwg</say-as> dot org</prosody></prosody>. If it is a text message, forward the message to your cell provider at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>7726</say-as></prosody></prosody>. Also, report your phishing scam at<prosody volume='loud'><prosody rate='slow'> <say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Then, learn to recognize and avoid phishing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "rental": {
+      "imposter": "imposter",
+      "exact": "rental",
+      "SSET": "rental",
+      "description": "<speak><prosody rate='medium'>A rental scam involves scammers advertising apartments or vacation rentals that they don't own, manage, or that don't actually exist.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>report rental scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report this to your local law enforcement and the website or publication where the rental ad was posted. Then, Learn to identify rental listing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "mortgage": {
+      "financial": "financial",
+      "exact": "mortgage",
+      "SSET": "mortgage",
+      "description": "<speak><prosody rate='medium'>A mortgage scam typically involves Scammers offering to help you make your mortgage payments, but they're just trying to take your money.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report mortgage and foreclosure scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then, Learn about mortgage relief scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "irs": {
+      "imposter": "imposter",
+      "exact": "IRS",
+      "SSET": "IRS",
+      "description": "<speak><prosody rate='medium'>Imposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report tax scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>tigta</say-as> dot gov</prosody></prosody>. Forward email messages that claim to be from the IRS to <prosody volume='loud'><prosody rate='slow'>phishing at <say-as interpret-as='spell-out'>irs</say-as> dot gov</prosody></prosody>. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then, learn about imposter scams at <prosody volume='loud'><prosody rate='slow'>consumer dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "socialsecurity": {
+      "imposter": "imposter",
+      "exact": "Social Security",
+      "SSET": "Social Security",
+      "description": "<speak><prosody rate='medium'>Scammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report Social Security administration impostors at <prosody volume='loud'><prosody rate='slow'>secure dot <say-as interpret-as='spell-out'>ssa</say-as> dot gov foward slash <say-as interpret-as='spell-out'>ipff</say-as> forward slash home</prosody></prosody>. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Learn about social security scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ssa</say-as> dot gov forward slash scam</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "romance": {
+      "imposter": "imposter",
+      "exact": "romance",
+      "SSET": "romance",
+      "description": "<speak><prosody rate='medium'>Scammers use flattery, fake photographs and background stories to gain your affection. They then ask you to send money or gift cards.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report romance or catfishing scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn to avoid romance scammers at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "company": {
+      "imposter": "imposter",
+      "exact": "company",
+      "SSET": "company",
+      "description": "<speak><prosody rate='medium'>Imposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report impostor scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody> or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then visit <prosody volume='loud'><prosody rate='slow'>consumer dot gov</prosody></prosody> to learn more about scams and identity theft. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "local": {
+      "moving": "moving",
+      "exact": "same state",
+      "SSET": "same state",
+      "description": "<speak><prosody rate='medium'>Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>For a move within your same city or state, file a complaint at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Also, file a report at <prosody volume='loud'><prosody rate='slow'>b<break time='.5ms'/> b<break time='.5ms'/> b<break time='.5ms'/> dot org, forward slash, scamtracker</prosody></prosody>. Then, learn to identify moving fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "across": {
+      "moving": "moving",
+      "exact": "different state",
+      "SSET": "different state",
+      "description": "<speak><prosody rate='medium'>Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>for a move across state lines, file a complaint at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Also, file a report at <prosody volume='loud'><prosody rate='slow'>b<break time='.5ms'/> b<break time='.5ms'/> b<break time='.5ms'/> dot org, forward slash, scamtracker</prosody></prosody>. Then, learn to identify moving fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "tax": {
+      "fraud": "fraud",
+      "exact": "tax",
+      "SSET": "tax",
+      "description": "<speak><prosody rate='medium'>A tax scam is when Scammers use your Social Security number and other personal information to file a fraudulent tax return.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report tax return or tax refund scams at <prosody volume='loud'><prosody rate='slow'>IRS dot gov</prosody></prosody> using Form <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>14039</say-as></prosody></prosody> and at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>. or by phone at 1-877-438-4338. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='4ms'/> C<break time='4ms'/> 3 dot gov</prosody></prosody>. Then learn more about Identity theft scams at <prosody volume='loud'><prosody rate='slow'>consumer gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "unemployment": {
+      "fraud": "fraud",
+      "exact": "unemployment",
+      "SSET": "unemployment",
+      "description": "<speak><prosody rate='medium'>An unemployment scam occurs when A person uses your name, Social Security number, and other information to apply for unemployment benefits.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Search for your state's department of labor contact information at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>dol</say-as> dot gov</prosody></prosody> to report unemployment fraud. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn how to protect your finances after an unemployment scam at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "employment": {
+      "fraud": "fraud",
+      "exact": "employment",
+      "SSET": "employment",
+      "description": "<speak><prosody rate='medium'>An employment scam occurrs when A person uses your name, Social Security number, and personal information to apply for a job.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report employment identity theft at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn about employment-related identity theft at <prosody volume='loud'><prosody rate='slow'>IRS dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "medicaid": {
+      "fraud": "fraud",
+      "exact": "medicaid",
+      "SSET": "medicaid",
+      "description": "<speak><prosody rate='medium'>A Medicare or Medicaid scam is when Someone uses your personal information to submit health claims to Medicare or Medicaid.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report medicaid or medicare fraud at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>oig</say-as> dot <say-as interpret-as='spell-out'>hhs</say-as> dot gov</prosody></prosody> Or by phone at 1-800-447-8477. Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Then learn to avoid medical identity theft at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "medical": {
+      "fraud": "fraud",
+      "exact": "medical",
+      "SSET": "medical",
+      "description": "<speak><prosody rate='medium'>A medical scam occurs when Someone uses your personal information to get health care and submit claims to your insurance provider.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Report medical scams at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody> or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). Also, report online scams at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Learn to avoid medical identity theft at <prosody volume='loud'><prosody rate='slow'>consumer dot <say-as interpret-as='spell-out'>ftc</say-as> dot gov</prosody></prosody>. If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "other": {
+      "exact": "other",
+      "SSET": "other",
+      "description": "<speak><prosody rate='medium'>Identity theft happens when someone uses your personal or financial information to commit fraud.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>If your scam occurred online, report it at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Also report it at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    },
+    "online": {
+      "exact": "online",
+      "SSET": "online",
+      "description": "<speak><prosody rate='medium'>Identity theft happens when someone uses your personal or financial information to commit fraud.</prosody></speak>",
+      "result": "<speak><prosody rate='medium'>If your scam occurred online, report it at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Also report it at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). If you need to speak to a human about your scam, Say help. Thank you.</prosody></speak>"
+    }
+  },
+  "esUS": {
+    "cheque": {
+      "financial": "financiera",
+      "exact": "cheque",
+      "SSET": "cheque",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de cheque falso ocurre cuando el estafador te envía un cheque por más del monto que supestamente te debe, y luego dice que le devuelvas la diferencia. Pero el cheque rebota, entonces, debes pagarle a tu banco el monto del cheque, y además pierdes el dinero que le diste al estafador. Mientras que, una estafa de cheque no solicitado ocurre cuando el estafador te envía un cheque sin motivo, y si lo cobras, podrías estar autorizando compras o préstamos no deseados.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'>Para reportar los cheques falsos visita el sitio web de la Comisión Federal de Comercio <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto com</prosody></prosody>. O llama, al 1-877-382-4357, de 9 AM a 8 PM, hora del este. También, puedes aprender cómo evitar estafas bancarias y cuáles son los tipos de fraudes con cheques en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto com</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "unsolicited": {
+      "financial": "financiera",
+      "exact": "unsolicited",
+      "SSET": "unsolicited",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de cheque no solicitado ocurre cuando el estafador te envía un cheque sin motivo, y si lo cobras, podrías estar autorizando compras o préstamos no deseados.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar los cheques no solicitados visita el sitio web de la Comisión Federal de Comercio <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto com</prosody></prosody>. O llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. También, puedes aprender cómo evitar estafas bancarias y cuáles son los tipos de fraudes con cheques en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto com</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "retiro": {
+      "financial": "financiera",
+      "exact": "retiro",
+      "SSET": "retiro",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de retiro no autorizado ocurre cuando una compañía ficticia programa retiros automáticos de tu cuenta de banco, para que pruebes un servicio gratis o recibas un premio.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Contacta a tu banco inmediatamente para notificar y detener retiros no autorizados de tu cuenta. También, puedes aprender cómo evitar retiros no autorizados en el sitio web de la Comisión Federal de Comercio, visita <prosody volume='loud'><prosody rate='slow'> consumidor punto ftc punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "phishing": {
+      "imposter": "impostor",
+      "exact": "phishing",
+      "SSET": "phishing",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de phishing es un engaño informático para pescar información personal. Y puede ocurrir cuando te envían un mensaje por correo electrónico o texto, que parece de una compañía conocida, donde te piden que verifiques datos personales, o los números de tu cuenta de banco, tarjeta de crédito o débito.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Si recibiste un correo electrónico falso o phishing, reenvía ese mensaje al Equipo de Trabajo Contra el Phishing a <prosody volume='loud'><prosody rate='slow'>report phishing arroba <say-as interpret-as='spell-out'>apwg</say-as> punto org</prosody></prosody>. Si recibiste un mensaje de texto, reenvía ese mensaje a tu compañía de servicio celular al número <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>7726</say-as></prosody></prosody>. Además, reporta tu caso de estafa de phishing en el sitio web de la Comisión Federal de Comercio<prosody volume='loud'><prosody rate='slow'> <say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. También, puedes aprender cómo evitar estafas de phishing en el sitio web de la Comisión Federal de Comercio, visita <prosody volume='loud'><prosody rate='slow'> consumidor punto ftc punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "renta": {
+      "imposter": "impostor",
+      "exact": "renta",
+      "SSET": "renta",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de alquiler o renta de vivienda ocurre cuando el estafador anuncia apartamentos o casas vacacionales en alquiler. Pero no es el dueño de esas propiedades, ni las administra, o no existen.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas hipotecarias o de préstamos visita el sitio web de la Comisión Federal de Comercio <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de Denuncias de Delitos en Internet <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar estafas sobre ayudas hipotecarias en el sitio web <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "hipoteca": {
+      "financial": "financiera",
+      "exact": "hipoteca",
+      "SSET": "hipoteca",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con hipotecas o préstamos ocurre cuando te ofrecen ayuda para pagar el préstamo de tu vivienda. Pero en realidad el estafador está tratando de quedarse con tu dinero.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas hipotecarias o de préstamos visita el sitio web de la Comisión Federal de Comercio <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de Denuncias de Delitos en Internet <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar estafas sobre ayudas hipotecarias en el sitio web <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "irs": {
+      "imposter": "impostor",
+      "exact": "irs",
+      "SSET": "irs",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con el IRS o Servicio de Impuestos Internos ocurre cuando el estafador finge trabajar para el IRS y afirma que tienes una deuda de impuesto, y después te exige que le pagues con tarjetas prepagadas o transferencias de dinero.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas relacionadas con impuestos federales visita el sitio web del Departamento del Tesoro de Estados Unidos <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>tigta</say-as> punto gov</prosody></prosody>. También, reenvía los mensajes de correo electrónico recibidos, y que aparentan ser del Servicio de Impuestos Internos a <prosody volume='loud'><prosody rate='slow'>phishing arroba <say-as interpret-as='spell-out'>irs</say-as> punto gov</prosody></prosody>. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de Denuncias de delitos en Internet <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo identificar y evitar estafas de impostores en el sitio web de la Comisión Federal de Comercio, visita<prosody volume='loud'><prosody rate='slow'>consumidor punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "SeguroSocial": {
+      "imposter": "impostor",
+      "exact": "SeguroSocial",
+      "SSET": "SeguroSocial",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con la Oficina del Seguro Social ocurre cuando el estafador se hace pasar por empleado de la Administración del Seguro Social o de otra agencia del Gobierno, para pedirte información personal o exigirte dinero.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de impostores de la Administración del Seguro Social visita el sitio web <prosody volume='loud'><prosody rate='slow'>ssa punto gov <say-as interpret-as='spell-out'>barra diagonal espanol</say-as>barra diagonal fraude</prosody></prosody> Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de Delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender como identificar y evitar estafas relacionadas con Seguro Social en el sitio web <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ssa</say-as> punto gov barra diagonal</prosody></prosody>. Si quieres hablar con una persona, di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "romance": {
+      "imposter": "impostor",
+      "exact": "romance",
+      "SSET": "romance",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con un romance o amor por interés ocurre cuando el estafador te hace halagos, usa fotografías falsas e historias para ganarse tu afecto y después te pide que le envíes dinero o tarjetas de regalo.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de impostores del romance visita el sitio web de la Comisión Federal de Comercio <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo identificar y evitar estafas del romance en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> punto gov </prosody></prosody>. Si quieres hablar con una persona, di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "compañía": {
+      "imposter": "impostor",
+      "exact": "compañía",
+      "SSET": "compañía",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de impostor también ocurre cuando el estafador finge ser alguien que conoces o aparenta ser una persona en un puesto de autoridad, con la intención de pedirte dinero de una manera urgente.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de impostores que pretenden ser alguien que tu conoces visita el sitio web de la Comisión Federal de Comercio, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo identificar y evitar estafas de impostores en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>ftc</say-as> punto gov </prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "local": {
+      "moving": "mudanza",
+      "exact": "local",
+      "SSET": "local",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de mudanza ocurre cuando la empresa usa prácticas fraudulentas, como exigirte un pago en efectivo por adelantado, o pedirte pagos adicionales para entregar tus pertenencias.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Si la mudanza fue en la misma ciudad o estado, presenta una queja en la Administración Federal de Seguridad de Autotransportes, llama al 1-888-368-7238, de lunes a viernes de 8 AM a 8 PM, hora del este. Para español presiona el número 2 <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Además, presenta una queja en el sitio web del Buró para Mejores Negocios, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>bbb</say-as> punto org barra diagonal scamtracker</prosody></prosody>. También, puedes aprende cómo identificar y evitar estafas relacionadas con mudanzas en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "nacional": {
+      "moving": "mudanza",
+      "exact": "nacional",
+      "SSET": "nacional",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de mudanza ocurre cuando la empresa usa prácticas fraudulentas, como exigirte un pago en efectivo por adelantado, o pedirte pagos adicionales a cambio de entregar tus pertenencias.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Si la mudanza fue en la misma ciudad o estado, presenta una queja en la Administración Federal de Seguridad de Autotransportes, llama al 1-888-368-7238, de lunes a viernes de 8 AM a 8 PM, hora del este. Para español presiona el número 2 <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> dot gov</prosody></prosody>. Además, presenta una queja en el sitio web del Buró para Mejores Negocios, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>bbb</say-as> punto org barra diagonal scamtracker</prosody></prosody>. También, puedes aprende cómo identificar y evitar estafas relacionadas con mudanzas en <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>fmcsa</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "impuesto": {
+      "fraud": "fraude",
+      "exact": "impuesto",
+      "SSET": "impuesto",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa de impuestos ocurre cuando el estafador usa tu número de Seguro Social u otro tipo de información personal para presentar una declaración de impuestos fraudulenta.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas relacionadas con la declaración o reembolso de impuestos visita el sitio web del Servicio de Impuestos Internos, <prosody volume='loud'><prosody rate='slow'>IRS punto gov</prosody></prosody> y encuentra el formulario <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='digits'>14039</say-as></prosody></prosody> También, denuncia tu caso de estafa en el sitio web de la Comisión Federal de Comercio, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='4ms'/> C<break time='4ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar estafas de robo de identidad en el sitio web <prosody volume='loud'><prosody rate='slow'>consumidor punto FTC punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "desempleo": {
+      "fraud": "fraude",
+      "exact": "desempleo",
+      "SSET": "desempleo",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con robo de identidad para obtener beneficios por desempleo ocurre cuando el estafador usa tu nombre, número de Seguro Social, u otro tipo de información personal para solicitar los beneficios del seguro de desempleo.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de robo de identidad relacionadas con beneficios por desempleo, encuentra la oficina del Departamento del Trabajo de tu estado en el sitio web <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>dol</say-as> punto gov</prosody></prosody> Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender qué hacer si alguien te roba información personal para obtener beneficios por desempleo, visita <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>consumidor punto ftc</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "empleo": {
+      "fraud": "fraude",
+      "exact": "empleo",
+      "SSET": "empleo",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con el robo de identidad para conseguir un empleo ocurre cuando el estafador usa tu nombre, o número de Seguro Social, u otro tipo de información personal para solicitar empleos.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de robo de identidad relacionadas con empleos visita el sitio web de la Comisión Federal de Comercio, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>reportefraude punto FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar estafas de robo de identidad relacionadas con empleos, en el sitio web del Servicio de Impuestos Internos, <prosody volume='loud'><prosody rate='slow'>IRS punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</prosody></speak>"
+    },
+    "medicaid": {
+      "fraud": "fraude",
+      "exact": "medicaid",
+      "SSET": "medicaid",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con robo de identidad para conseguir benefocios de Medicare o Medicaid ocurre cuando el estafador usa tu información personal para presentar reclamos al seguro de Medicare o Medicaid.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de robo de identidad relacionadas con el seguro de Medicare o Medicaid, llama a la Línea Directa de la Oficina de Salud y Servicios Humanos del Inspector General, al 1-800-447-8477. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar el robo de identidad vinculado a servicios médicos en el sitio web de la Comisión Federal de Comercio, visita <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>consumidor punto ftc</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "médicos": {
+      "fraud": "fraude",
+      "exact": "médicos",
+      "SSET": "médicos",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Una estafa relacionada con robo de identidad para obtener servicios médicos ocurre cuando el estafador usa tu información personal para solicitar atención médica y presentar reclamos a tu proveedor del seguro médico.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas de robo de identidad relacionadas con servicios médicos visita el sitio web de la Comisión Federal de Comercio, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>reportefraude punto FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. También, puedes aprender cómo evitar el robo de identidad vinculado a servicios médicos en el sitio web de la Comisión Federal de Comercio, visita <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>consumidor punto ftc</say-as> punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "otro": {
+      "exact": "otro",
+      "SSET": "otro",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>El robo de identidad ocurre cuando alguien usa tu información personal o financiera, sin tu autorización, para cometer un fraude o estafa.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Para reportar las estafas relacionadas con el robo de identidad visita el sitio web de la Comisión Federal de Comercio, <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>reportefraude punto FTC</say-as> punto gov</prosody></prosody>, o llama al 1-877-382-4357, de 9 AM a 8 PM, hora del este. Además, reporta cualquier estafa que ocurra en línea en el sitio web del Centro de denuncias de delitos en Internet, <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 punto gov</prosody></prosody>. Si quieres hablar con una persona, simplemente di: dame el número de teléfono. Gracias.</lang></voice></prosody></speak>"
+    },
+    "internet": {
+      "exact": "internet",
+      "SSET": "internet",
+      "description": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>An online scam is any scam that occurrs online through a website, or email.</lang></voice></prosody></speak>",
+      "result": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>If your scam occurred online, report it at <prosody volume='loud'><prosody rate='slow'>I<break time='2ms'/> C<break time='2ms'/> 3 dot gov</prosody></prosody>. Also report it at <prosody volume='loud'><prosody rate='slow'><say-as interpret-as='spell-out'>FTC</say-as> dot gov</prosody></prosody>, or by phone at 1-877-382-4357 (9:00 AM - 8:00 PM, ET). If you need to speak to a human about your scam, Say give me the number. Thank you.</lang></voice></prosody></speak>"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "enUS": {
+    "LaunchRequestHandler": {
+      "prompt": "<speak><prosody rate='medium'>Welcome to the <prosody rate='x-slow'>USA gov</prosody> scams wizard!<amazon:emotion name='disappointed' intensity='high'> I'm sorry that you are experiencing a scam. I can help you learn where to report it!</amazon:emotion> Please tell me the type of scam you want to report.</prosody></speak>",
+      "reprompt": "It is a financial scam, if your accounts or loans are affected. a moving scam, to report a moving company or movers. Identity theft, if someone used your personal information. or imposter scam, if the scam involves deception or threats, including romance scams, and phishing. say something else if none of these categories apply."
+    },
+    "ReportScamIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "ExactDefinitionIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "FinancialDefinitionIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "ImposterDefinitionIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "FraudDefinitionIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "MovingDefinitionIntentHandler": {
+      "reprompt": "add a reprompt if you want to keep the session open for the user to respond."
+    },
+    "HelpIntentHandler": {
+      "prompt": "<speak>The <prosody rate='slow'>USA gov</prosody> scams wizard is designed to help you figure out where to report your scam. To speak to a human about reporting your scam, please Call us at <say-as interpret-as= 'digits'> 1844</say-as>USA<say-as interpret-as= 'spell-out'>GOV1</say-as></speak>"
+    },
+    "CancelAndStopIntentHandler": {
+      "prompt": "<speak> <amazon:emotion name= 'disappointed' intensity= 'medium'>I hope you figured out where to report your scam.</amazon:emotion> If you need further assistance from a human, say 'help,' then I will provide you the<prosody rate='slow'> USA gov number</prosody>.</speak>"
+    },
+    "FallbackIntentHandler": {
+      "prompt": "Sorry, I don't know about that. Please try again."
+    },
+    "SessionEndedRequestHandler": {
+      "prompt": ""
+    }
+  },
+  "esUS": {
+    "LaunchRequestHandler": {
+      "prompt": "Bienvenido al asistente de estafas.",
+      "reprompt": "El asistente de estafas no se dio cuenta de eso. Inténtalo de nuevo."
+    },
+    "ReportScamIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "ExactDefinitionIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "FinancialDefinitionIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "ImposterDefinitionIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "FraudDefinitionIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "MovingDefinitionIntentHandler": {
+      "reprompt": "agregue una nueva notificación si desea mantener la sesión abierta para que el usuario responda."
+    },
+    "HelpIntentHandler": {
+      "prompt": "El asistente de estafa está diseñado para ayudarte"
+    },
+    "CancelAndStopIntentHandler": {
+      "prompt": "Espero que hayas descubierto dónde denunciar tu estafa."
+    },
+    "FallbackIntentHandler": {
+      "prompt": "Lo siento, no sé sobre eso. Inténtalo de nuevo."
+    },
+    "SessionEndedRequestHandler": {
+      "prompt": ""
+    }
+  }
+}

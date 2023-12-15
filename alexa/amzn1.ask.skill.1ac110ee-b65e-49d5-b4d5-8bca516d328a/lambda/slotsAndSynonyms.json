@@ -1,0 +1,109 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "first choice",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "FirstGenPokemon",
+          "slots": [
+            {
+              "name": "element",
+              "type": "element"
+            }
+          ],
+          "samples": ["{element}", "I choose {element}"]
+        }
+      ],
+      "types": [
+        {
+          "name": "element",
+          "values": [
+            {
+              "name": {
+                "value": "grass",
+                "synonyms": ["plant", "leaf"]
+              }
+            },
+            {
+              "name": {
+                "value": "water",
+                "synonyms": ["wet", "aqua"]
+              }
+            },
+            {
+              "name": {
+                "value": "fire",
+                "synonyms": ["flame", "hot"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "FirstGenPokemon",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "element",
+              "type": "element",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1276559556549.40755437973"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1276559556549.40755437973",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "This has to be filled"
+          }
+        ]
+      }
+    ]
+  }
+}
