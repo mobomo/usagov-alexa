@@ -1,0 +1,249 @@
+[
+  {
+    "children": [
+      {
+        "name": "banking",
+        "title": "banking",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120002"
+      },
+      {
+        "name": "trickery",
+        "title": "trickery",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120003"
+      },
+      {
+        "name": "moving",
+        "title": "moving",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120004"
+      },
+      {
+        "name": "fraud",
+        "title": "fraud",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120005"
+      },
+      {
+        "name": "other",
+        "title": "other",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120006"
+      }
+    ],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120001",
+    "path": "/scams",
+    "name": "scams",
+    "title": "Alt USA.gov Scams Wizard",
+    "h2": "Please select the type of scam you experienced."
+  },
+  {
+    "children": [
+      {
+        "name": "fakecheck",
+        "title": "fake check",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120007"
+      },
+      {
+        "name": "unsolicitedcheck",
+        "title": "unsolicited check",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120008"
+      },
+      {
+        "name": "unauthorizedwithdrawal",
+        "title": "unauthorized withdrawal",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120009"
+      }
+    ],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120002",
+    "path": "/scams/banking",
+    "name": "banking",
+    "title": "Types of Banking Scams",
+    "h2": "Which Banking Scam?"
+  },
+  {
+    "children": [
+      {
+        "name": "irs",
+        "title": "i. r. s.",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120010"
+      },
+      {
+        "name": "socialsecurityoffice",
+        "title": "social security office",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120011"
+      },
+      {
+        "name": "company",
+        "title": "company",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120012"
+      }
+    ],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120003",
+    "path": "/scams/trickery",
+    "name": "trickery",
+    "title": "Types of Trickery Scams",
+    "h2": "Which Trickery Scam?"
+  },
+  {
+    "children": [
+      {
+        "name": "instate",
+        "title": "in state",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120013"
+      },
+      {
+        "name": "outofstate",
+        "title": "out of state",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120014"
+      }
+    ],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120004",
+    "path": "/scams/moving",
+    "name": "moving",
+    "title": "Types of Moving Scams",
+    "h2": "Which Moving Scam?"
+  },
+  {
+    "children": [
+      {
+        "name": "socialsecurity",
+        "title": "social security",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120015"
+      },
+      {
+        "name": "tax",
+        "title": "tax",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120016"
+      },
+      {
+        "name": "medical",
+        "title": "medical",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120017"
+      },
+      {
+        "name": "medicaid",
+        "title": "medicaid",
+        "uuid": "7b5b8830-7763-11ee-b962-0242ac120018"
+      }
+    ],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120005",
+    "path": "/scams/fraud",
+    "name": "fraud",
+    "title": "Types of Fraud Scams",
+    "h2": "Which Fraud Scam"
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120006",
+    "path": "/scams/other",
+    "name": "other",
+    "title": "Another Type",
+    "h2": "Some Other Scam",
+    "p1": "Here's what to do about other scams."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120007",
+    "path": "/scams/banking/fakecheck",
+    "name": "fakecheck",
+    "title": "fake check",
+    "h2": "A Fake Check Scam",
+    "p1": "Here's what to do about a fake check scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120008",
+    "path": "/scams/banking/unsolicitedcheck",
+    "name": "unsolicitedcheck",
+    "title": "Unsolicited Check",
+    "h2": "An Unsolicited Check Scam",
+    "p1": "Here's what to do about an unsolicited check scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120009",
+    "path": "/scams/banking/unauthorizedwithdrawal",
+    "name": "unauthorizedwithdrawal",
+    "title": "Unauthorized Withdrawal",
+    "h2": "An Unauthorized Withdrawal Scam",
+    "p1": "Here's what to do about an unauthorized withdrawal scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120010",
+    "path": "/scams/trickery/irs",
+    "name": "irs",
+    "title": "IRS",
+    "h2": "An IRS Scam",
+    "p1": "Here's what to do about an IRS scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120011",
+    "path": "/scams/trickery/socialsecurityoffice",
+    "name": "socialsecurityoffice",
+    "title": "Social Security Office",
+    "h2": "A Social Security Office Scam",
+    "p1": "Here's what to do about a Social Security office scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120012",
+    "path": "/scams/trickery/company",
+    "name": "company",
+    "title": "Company",
+    "h2": "A Company Scam",
+    "p1": "Here's what to do about a company scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120013",
+    "path": "/scams/moving/instate",
+    "name": "instate",
+    "title": "In State",
+    "h2": "An In State Moving Scam",
+    "p1": "Here's what to do about an in state moving scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120014",
+    "path": "/scams/moving/outofstate",
+    "name": "outofstate",
+    "title": "Out of State",
+    "h2": "An Out of State Moving Scam",
+    "p1": "Here's what to do about an in state moving scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120015",
+    "path": "/scams/fraud/socialsecurity",
+    "name": "socialsecurity",
+    "title": "Social Security Fraud",
+    "h2": "A Social Security Fraud Scam",
+    "p1": "Here's what to do about a Social Security fraud scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120016",
+    "path": "/scams/fraud/tax",
+    "name": "tax",
+    "title": "Tax Fraud",
+    "h2": "A Tax Fraud Scam",
+    "p1": "Here's what to do about a Social Security fraud scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120017",
+    "path": "/scams/fraud/medical",
+    "name": "medical",
+    "title": "Medical Fraud",
+    "h2": "A Medical Fraud Scam",
+    "p1": "Here's what to do about a medical fraud scam."
+  },
+  {
+    "children": [null],
+    "uuid": "7b5b8830-7763-11ee-b962-0242ac120018",
+    "path": "/scams/fraud/medicaid",
+    "name": "medicaid",
+    "title": "Medicaid or Medicare Fraud",
+    "h2": "A Medicaid or Medicare Fraud Scam",
+    "p1": "Here's what to do about medicaid or medicare fraud scams."
+  }
+]
