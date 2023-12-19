@@ -76,28 +76,31 @@ class RequestSubscriber implements EventSubscriberInterface {
         $shouldEndSession = false;
         break;
 
-      case 'AnswerIntent':
-        $choice = $this->getSlotValue( $request, 'Choice' );
-        $nextStep = $this->findNextStep( $choice, $currentStep );
-        $shouldEndSession = empty($nextStep['options']);
-        $response->sessionAttributes['path'] = $nextStep['path'];
-        $output = $nextStep['question'];
+      case 'SearchQueryIntent':
+        $choice = $request->request->intent->slots->query->value; // $this->getSlotValue( $request, 'Choice' ); // Choice?
+        $pattern = "/ /i"; // remove white-space
+        $choice = preg_replace($pattern, "", $choice);
+        $pattern = "/\./i"; // remove periods
+        $choice = strtolower(preg_replace($pattern, "", $choice));
+
+        $shouldEndSession = in_array($choice, $db);
+        $response->sessionAttributes['path'] .= "/" . $choice['path'];
+        $output = getMessage();
         if ( $shouldEndSession ) {
           $output .= '. Goodbye.';
         } else {
-          $repromptSpeech = OutputSpeech::createByText($nextStep['question']);
+          $repromptSpeech = OutputSpeech::createByText($nextStep['h2']);
           $reprompt = new Reprompt($repromptSpeech);
           $response->response->reprompt = $reprompt;
         }
         $response->response->outputSpeech = OutputSpeech::createByText( $output );
-        // $response->response->card = Card::createSimple($title,$content);
         break;
 
       case 'LaunchRequest':
       default:
         $response->sessionAttributes['path'] = 'launch';
-        $response->response->outputSpeech = OutputSpeech::createByText($currentStep['question']);
-        $repromptSpeech = OutputSpeech::createByText($currentStep['question']);
+        $response->response->outputSpeech = OutputSpeech::createByText($currentStep['h2']);
+        $repromptSpeech = OutputSpeech::createByText($currentStep['h2']);
         $reprompt = new Reprompt($repromptSpeech);
         $response->response->reprompt = $reprompt;
         break;
@@ -110,8 +113,6 @@ class RequestSubscriber implements EventSubscriberInterface {
     $fileOpen = file_get_contents("modules/custom/alexa_hello/src/EventSubscriber/wizardTree.json");
     $db = json_decode($fileOpen);
 
-    //$this->calculatePhenomes( $db );
-    $this->calculateFullPaths( $db );
     return $db;
   }
 
@@ -136,24 +137,6 @@ class RequestSubscriber implements EventSubscriberInterface {
       $result['phenome2'] = implode( ' ', $phenome2 );
     }
     return $result;
-  }
-
-  public function calculateFullPaths( &$step ) {
-
-    if ( empty($step['parent']) ) {
-      $step['parent'] = null;
-      $step['path'] = $step['id'];
-    } else if ( !empty($step['parent']['path']) ){
-      $step['path'] = $step['parent']['path'].'/'.$step['id'];
-    } else {
-      $step['path'] = $step['id'];
-    }
-
-    foreach ( $step['options'] as &$option ) {
-      $option['parent'] =& $step;
-      $this->calculateFullPaths( $option );
-    }
-
   }
 
   public function getCurrentPath( $request ) {
@@ -182,7 +165,7 @@ class RequestSubscriber implements EventSubscriberInterface {
   }
 
   public function getSlotValue( $request, $slotName ) {
-    foreach ( $request->request->intent->slots as $slot ) {
+    foreach ( $request->request->intent->slots->query->value as $slot ) {
       if ( $slot->name == $slotName ) {
         return $slot->value;
       }
@@ -190,30 +173,26 @@ class RequestSubscriber implements EventSubscriberInterface {
     return null;
   }
 
-  public function findNextStep( $choice, $currentStep ) {
-    // prefer more specific to more fuzzy matches
-    // check for exact match
-    foreach ( $currentStep['options'] as $option ) {
-      // echo "if ( this->choiceMatchesStep( $choice, ${option['id']}, 'exact' ) )\n";
-      if ( $this->choiceMatchesStep( $choice, $option, 'exact' ) ) {
-        return $option;
+  function getMessage($choice) {
+    $msg = $choice->h2;
+
+
+    if( !is_null($choice->children[0]) ) {
+      $count = 1;
+
+      foreach ( $choice->children as $option ) {
+        if($count === count($choice->children)) {
+          $msg .= ", or " . $option->name;
+        } else if($count === 1){
+          $msg .= " " . $option->name;
+        } else {
+          $msg .= ", " . $option->name;
+        }
+        $count++;
       }
     }
-    // check for alias match
-    foreach ( $currentStep['options'] as $option ) {
-      // echo "if ( this->choiceMatchesStep( $choice, ".implode(',',$option['aliases']).", 'alias' ) )\n";
-      if ( $this->choiceMatchesStep( $choice, $option, 'alias' ) ) {
-        return $option;
-      }
-    }
-    // check for primary phenome match
-    foreach ( $currentStep['options'] as $option ) {
-      // echo "if ( this->choiceMatchesStep( $choice, ".implode(',',$option['phenomes']).", 'phenomes' ) )\n";
-      if ( $this->choiceMatchesStep( $choice, $option, 'phenomes' ) ) {
-        return $option;
-      }
-    }
-    return $currentStep;
+
+    return $msg;
   }
 
   public function phrasesMatch( $phrases, $matches ) {
@@ -233,33 +212,13 @@ class RequestSubscriber implements EventSubscriberInterface {
     return false;
   }
 
-  public function choiceMatchesStep( $choice, $step, $matchType = 'exact|alias|phenomes' ) {
-    // echo "choiceMatchesStep( $choice, ${step['id']}, $matchType )\n";
+  public function choiceMatchesStep( $choice, $step ) {
     $choice = $this->normalizePhrase( $choice, true );
-    if ( preg_match('/\bexact\b/',$matchType) ) {
-      // echo "exact\n";
-      if ( $this->phrasesMatch( $choice, $step['id'] ) ) {
-        return true;
-      }
+
+    if ( $this->phrasesMatch( $choice, $step['name'] ) ) {
+      return true;
     }
-    if ( preg_match('/\balias\b/',$matchType) ) {
-      // echo "alias\n";
-      if ( !empty($step['aliases']) ) {
-        if ( $this->phrasesMatch( $choice, $step['aliases'] ) ) {
-          return true;
-        }
-      }
-    }
-    //if ( preg_match('/\bphenomes\b/',$matchType) ) {
-    //  // echo "phenomea\n";
-    //  if ( !empty($step['phenome']) || !empty($step['phenome2']) ) {
-    //    if ( $this->phrasesMatch( $choice, [$step['phenome'],$step['phenome2']] ) ) {
-    //      return true;
-    //    }
-    //  }
-    //}
-    // send this off to openAI?
-    // use local llm to check matches?
+
     return false;
   }
 }
