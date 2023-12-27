@@ -1,0 +1,6 @@
+alexa2.admin_settings:
+  route_name: "alexa2.admin_settings"
+  title: "Alexa2 Configuration"
+  description: "Manage Application IDs for Alexa Skills"
+  parent: "system.admin_config_services"
+  menu_name: admin

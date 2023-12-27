@@ -19,8 +19,8 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/web/core/includes/bootstrap.inc',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
@@ -90,6 +90,7 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         ),
         'M' => 
         array (
+            'MaxBeckers\\AmazonAlexa\\' => 23,
             'Masterminds\\' => 12,
         ),
         'L' => 
@@ -327,6 +328,10 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         'Peast\\' => 
         array (
             0 => __DIR__ . '/..' . '/mck89/peast/lib/Peast',
+        ),
+        'MaxBeckers\\AmazonAlexa\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxbeckers/amazon-alexa-php/src',
         ),
         'Masterminds\\' => 
         array (

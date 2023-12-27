@@ -2895,6 +2895,74 @@
             "install-path": "../masterminds/html5"
         },
         {
+            "name": "maxbeckers/amazon-alexa-php",
+            "version": "1.13.0",
+            "version_normalized": "1.13.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxbeckers/amazon-alexa-php.git",
+                "reference": "44c05d67f6810820594bfb40c4391d406179f553"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxbeckers/amazon-alexa-php/zipball/44c05d67f6810820594bfb40c4391d406179f553",
+                "reference": "44c05d67f6810820594bfb40c4391d406179f553",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": ">=6.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": ">=2.8",
+                "phpunit/phpunit": ">=6.0"
+            },
+            "time": "2023-03-13T08:19:55+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "MaxBeckers\\AmazonAlexa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maximilian Beckers",
+                    "email": "beckers.maximilian@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Php library for amazon echo (alexa) skill development.",
+            "keywords": [
+                "Alexa",
+                "PHP7",
+                "alexa-custom-skill",
+                "alexa-sdk",
+                "alexa-skill",
+                "alexa-skill-php",
+                "amazon-alexa",
+                "amazon-alexa-php",
+                "amazon-echo",
+                "amazon-echo-php",
+                "echo",
+                "library",
+                "php",
+                "php71",
+                "php72",
+                "skill",
+                "ssml"
+            ],
+            "support": {
+                "issues": "https://github.com/maxbeckers/amazon-alexa-php/issues",
+                "source": "https://github.com/maxbeckers/amazon-alexa-php"
+            },
+            "install-path": "../maxbeckers/amazon-alexa-php"
+        },
+        {
             "name": "mck89/peast",
             "version": "v1.15.4",
             "version_normalized": "1.15.4.0",
