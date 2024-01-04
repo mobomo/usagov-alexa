@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\alexa_hello\EventSubscriber;
+namespace Drupal\alexa2_demo\EventSubscriber;
 
 use MaxBeckers\AmazonAlexa\Request\Request\Request;
 use MaxBeckers\AmazonAlexa\Request\Request\Standard\IntentRequest;
@@ -19,7 +19,7 @@ use MaxBeckers\AmazonAlexa\Helper;
 /**
  * An event subscriber for Alexa request events.
  */
-class RequestSubscriber implements EventSubscriberInterface {
+class RequestSubscriber2 implements EventSubscriberInterface {
 
   /**
    * Gets the event.
@@ -113,7 +113,7 @@ class RequestSubscriber implements EventSubscriberInterface {
   }
 
   public function getDB() {
-    $fileOpen = file_get_contents("modules/custom/alexa_hello/src/EventSubscriber/wizardTree.json");
+    $fileOpen = file_get_contents("modules/custom/alexa2/alexa2_demo/src/EventSubscriber/wizardTree.json");
     $db = json_decode($fileOpen);
 
     return $db;
