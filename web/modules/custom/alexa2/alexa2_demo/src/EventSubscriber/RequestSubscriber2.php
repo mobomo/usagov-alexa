@@ -25,15 +25,12 @@ class RequestSubscriber2 implements EventSubscriberInterface {
    * Gets the event.
    */
   public static function getSubscribedEvents() {
-    $events['alexaevent.request'][] = ['onRequest', 0];
+    $events['alexa2event.request'][] = ['onRequest', 0];
     return $events;
   }
 
   /**
-   * Called upon a request event.
-   *
-   * @param \Drupal\alexa2\Alexa2Event $event
-   *   The event object.
+   * An event subscriber for Alexa request events.
    */
   public function onRequest(Alexa2Event $event) {
 

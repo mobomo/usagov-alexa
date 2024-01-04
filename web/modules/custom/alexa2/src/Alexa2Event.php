@@ -3,8 +3,8 @@
 namespace Drupal\alexa2;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use Alexa\Request\Request as AlexaRequest;
-use Alexa\Response\Response as AlexaResponse;
+use MaxBeckers\AmazonAlexa\Request\Request as AlexaRequest;
+use MaxBeckers\AmazonAlexa\Response\Response as AlexaResponse;
 
 /**
  * Implements a new Symfony event.
@@ -14,39 +14,39 @@ use Alexa\Response\Response as AlexaResponse;
  * for an example of how to implement a new Event Subscriber to handle these
  * events.
  */
-class AlexaEvent extends Event {
+class Alexa2Event extends Event {
 
   /**
    * The associated Alexa request.
    *
-   * @var \Alexa\Request\Request
+   * @var \MaxBeckers\AmazonAlexa\Request\Request
    */
   protected $request;
 
   /**
    * The Alexa response object to use for the response.
    *
-   * @var \Alexa\Response\Response
+   * @var \MaxBeckers\AmazonAlexa\Response\Response
    */
   protected $response;
 
   /**
    * Constructor.
    *
-   * @param \Alexa\Request\Request $request
+   * @param \MaxBeckers\AmazonAlexa\Request\Request $request
    *   The Alexa request.
-   * @param \Alexa\Response\Response $response
+   * @param \MaxBeckers\AmazonAlexa\Response\Response $response
    *   An Alexa response object to use for any response.
    */
-  public function __construct(AlexaRequest $request, AlexaResponse $response) {
+  public function __construct(AlexaRequest $request, AlexaResponse &$response) {
     $this->request = $request;
-    $this->response = $response;
+    $this->response =& $response;
   }
 
   /**
    * Getter for the request object.
    *
-   * @return \Alexa\Request\Request
+   * @return \MaxBeckers\AmazonAlexa\Request\Request
    *   The associated Alexa request.
    */
   public function getRequest() {
@@ -56,31 +56,31 @@ class AlexaEvent extends Event {
   /**
    * Setter for the request object.
    *
-   * @param \Alexa\Request\Request $request
+   * @param \MaxBeckers\AmazonAlexa\Request\Request $request
    *   The Alexa request to associate with this event.
    */
-  public function setRequest(AlexaRequest $request) {
+  public function setRequest(AlexaRequest &$request) {
     $this->request = $request;
   }
 
   /**
    * Getter for the response object.
    *
-   * @return \Alexa\Response\Response
+   * @return \MaxBeckers\AmazonAlexa\Response\Response
    *   The associated Alexa response.
    */
-  public function getResponse() {
+  public function &getResponse() {
     return $this->response;
   }
 
   /**
    * Setter for the response object.
    *
-   * @param \Alexa\Response\Response $response
+   * @param \MaxBeckers\AmazonAlexa\Response\Response $response
    *   The Alexa response to associate with this event.
    */
-  public function setResponse(AlexaResponse $response) {
-    $this->response = $response;
+  public function setResponse(AlexaResponse &$response) {
+    $this->response =& $response;
   }
 
 }
