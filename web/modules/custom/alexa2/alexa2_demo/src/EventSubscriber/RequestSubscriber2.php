@@ -81,17 +81,17 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         $pattern = "/\./i"; // remove periods
         $choice = strtolower(preg_replace($pattern, "", $choice));
 
-        $shouldEndSession = in_array($choice, $db);
-        if ( $shouldEndSession ) {
-          $output .= '. Goodbye.';
-        } else {
-          $response->sessionAttributes['path'] .= "/" . $choice['path'];
-          $output = getMessage($db[$choice]);
-          $repromptSpeech = OutputSpeech::createByText($db[$choice]['h2']);
-          $reprompt = new Reprompt($repromptSpeech);
-          $response->response->reprompt = $reprompt;
-        }
-        $response->response->outputSpeech = OutputSpeech::createByText( $output );
+        //$shouldEndSession = in_array($choice, $db);
+        //if ( $shouldEndSession ) {
+        //  $output .= '. Goodbye.';
+        //} else {
+        //  $response->sessionAttributes['path'] .= "/" . $choice['path'];
+        //  $output = getMessage($db[$choice]);
+        //  $repromptSpeech = OutputSpeech::createByText($db[$choice]['h2']);
+        //  $reprompt = new Reprompt($repromptSpeech);
+        //  $response->response->reprompt = $reprompt;
+        //}
+        $response->response->outputSpeech = OutputSpeech::createByText( "Anything can happen" );
         break;
 
       case 'LaunchRequest':
