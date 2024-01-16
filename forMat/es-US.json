@@ -1,0 +1,1314 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi asistente para reportar estafas",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Quiero el número",
+            "Necesito el número",
+            "Dame el número",
+            "dame el número de teléfono",
+            "una persona por favor",
+            "hablar con una persona",
+            "quiero hablar con alguien",
+            "quiero hablar con una persona",
+            "dónde me pueden ayudar",
+            "necesito más información",
+            "hay algún número para llamar",
+            "cómo puedo hablar con una persona para que me ayude con mi problema de estafa",
+            "necesito a una persona",
+            "necesito ayuda",
+            "cómo puedo encontrar ayuda",
+            "necesito hablar con una persona",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ReportScam",
+          "slots": [
+            {
+              "name": "exact",
+              "type": "exact",
+              "samples": [
+                "fue un intento de fraude con {exact}",
+                "fue un intento de fraude {exact}",
+                "fue un intento de estafa con {exact}",
+                "fue un intento de estafa de {exact}",
+                "fue un intento de estafa {exact}",
+                "fue un intento de {exact}",
+                "la estafa fue relacionada con una {exact}",
+                "la estafa fue relacionada con un {exact}",
+                "la estafa fue relacionada con {exact}",
+                "creo que fue un fraude con {exact}",
+                "esto es un {exact}",
+                "esto es una {exact}",
+                "es un {exact}",
+                "es una {exact}",
+                "Creo que es {exact} ",
+                "debe ser una estafa de {exact}",
+                "debe ser un fraude de {exact} d",
+                "es una estafa de {exact}",
+                "es un fraude de {exact}",
+                "estafa {exact}",
+                "It's a {exact} scam",
+                "estafa de {exact}",
+                "fraude {exact}",
+                "fraude de {exact}",
+                "estafa con {exact}",
+                "It is {exact}",
+                "it is an {exact}",
+                "fraude con {exact}",
+                "fue una estafa {exact}",
+                "fue una estafa de {exact}",
+                "fue una estafa con {exact}",
+                "fue un fraude {exact}",
+                "fue un fraide de {exact}",
+                "fue un fraude con {exact}",
+                "creo que es una estafa {exact}",
+                "creo que es una estafa de {exact}",
+                "creo que es una estafa con {exact}",
+                "creo que es un fraude {exact}",
+                "creo que es un fraude de {exact}",
+                "creo que es un fraude con {exact}",
+                "creo que fue una estafa {exact}",
+                "creo que fue una estafa de {exact}",
+                "creo que fue una estafa con {exact}",
+                "creo que fue un fraude {exact}",
+                "creo que fue un fraude de {exact}",
+                "{exact}"
+              ]
+            },
+            {
+              "name": "financiera",
+              "type": "financiera"
+            },
+            {
+              "name": "impostor",
+              "type": "impostor"
+            },
+            {
+              "name": "fraude",
+              "type": "fraude"
+            },
+            {
+              "name": "mudanza",
+              "type": "mudanza"
+            }
+          ],
+          "samples": [
+            "fraude {financiera}",
+            "alguien cometió fraude {financiera}",
+            "creo que es {financiera}",
+            "creo que es una estafa {financiera}",
+            "alguien {financiera}",
+            "algo {financiera}",
+            "necesito reportar una estafa {financiera}",
+            "creo que entra en la categoría de {financiera}",
+            "Es {financiera}",
+            "mi estafa fue una estafa {financiera}",
+            "es una estafa {financiera}",
+            "pienso que es una estafa {financiera}",
+            "estafa {financiera}",
+            "es una {financiera}",
+            "mi estafa fue una {financiera}",
+            "fraude de {financiera}",
+            "alguien cometió fraude de {financiera}",
+            "creo que es un {financiera}",
+            "creo que es una estafa de {financiera}",
+            "necesito reportar a un {financiera}",
+            "necesito reportar una estafa de {financiera}",
+            "es un {financiera}",
+            "es de {financiera}",
+            "es una estafa de {financiera}",
+            "mi estafa fue una estafa de {financiera}",
+            "pienso que es una estafa de {financiera}",
+            "estafa de {financiera}",
+            "{financiera}",
+            "mi estafa fue una de {financiera}",
+            "fraude con {financiera}",
+            "creo que es de {financiera}",
+            "alguien de {financiera}",
+            "algo con {financiera}",
+            "es con una {financiera}",
+            "algo de {financiera}",
+            "necesito reportar un {financiera}",
+            "esto es un {financiera}",
+            "esto es una {financiera}",
+            "debe ser una estafa de {financiera}",
+            "debe ser un fraude de {financiera} d",
+            "es un fraude de {financiera}",
+            "estafa con {financiera}",
+            "fue una estafa {financiera}",
+            "fue una estafa de {financiera}",
+            "fue una estafa con {financiera}",
+            "fue un fraude {financiera}",
+            "fue un fraide de {financiera}",
+            "fue un fraude con {financiera}",
+            "creo que es una estafa con {financiera}",
+            "creo que es un fraude {financiera}",
+            "creo que es un fraude de {financiera}",
+            "creo que es un fraude con {financiera}",
+            "creo que fue una estafa {financiera}",
+            "creo que fue una estafa de {financiera}",
+            "creo que fue una estafa con {financiera}",
+            "creo que fue un fraude {financiera}",
+            "creo que fue un fraude de {financiera}",
+            "creo que fue un fraude con {financiera}",
+            "la estafa fue relacionada con {financiera}",
+            "la estafa fue relacionada con un {financiera}",
+            "la estafa fue relacionada con una {financiera}",
+            "fue un intento de {financiera}",
+            "fue un intento de estafa {financiera}",
+            "fue un intento de estafa de {financiera}",
+            "fue un intento de estafa con {financiera}",
+            "fue un intento de fraude {financiera}",
+            "fue un intento de fraude con {financiera}",
+            "Ellos me contactaron {financiera}",
+            "necesito reportalo {financiera}",
+            "necesito reportarlo {financiera}",
+            "pasó {financiera}",
+            "fraude {exact}",
+            "alguien cometió fraude {exact}",
+            "creo que es {exact}",
+            "creo que es una estafa {exact}",
+            "alguien {exact}",
+            "algo {exact}",
+            "necesito reportar una estafa {exact}",
+            "creo que entra en la categoría de {exact}",
+            "Es {exact}",
+            "mi estafa fue una estafa {exact}",
+            "es una estafa {exact}",
+            "pienso que es una estafa {exact}",
+            "estafa {exact}",
+            "es una {exact}",
+            "mi estafa fue una {exact}",
+            "fraude de {exact}",
+            "alguien cometió fraude de {exact}",
+            "creo que es un {exact}",
+            "creo que es una estafa de {exact}",
+            "necesito reportar a un {exact}",
+            "necesito reportar una estafa de {exact}",
+            "es un {exact}",
+            "es de {exact}",
+            "es una estafa de {exact}",
+            "mi estafa fue una estafa de {exact}",
+            "pienso que es una estafa de {exact}",
+            "estafa de {exact}",
+            "{exact}",
+            "mi estafa fue una de {exact}",
+            "fraude con {exact}",
+            "creo que es de {exact}",
+            "alguien de {exact}",
+            "algo con {exact}",
+            "es con una {exact}",
+            "algo de {exact}",
+            "necesito reportar un {exact}",
+            "esto es un {exact}",
+            "esto es una {exact}",
+            "debe ser una estafa de {exact}",
+            "debe ser un fraude de {exact} d",
+            "es un fraude de {exact}",
+            "estafa con {exact}",
+            "fue una estafa {exact}",
+            "fue una estafa de {exact}",
+            "fue una estafa con {exact}",
+            "fue un fraude {exact}",
+            "fue un fraide de {exact}",
+            "fue un fraude con {exact}",
+            "creo que es una estafa con {exact}",
+            "creo que es un fraude {exact}",
+            "creo que es un fraude de {exact}",
+            "creo que es un fraude con {exact}",
+            "creo que fue una estafa {exact}",
+            "creo que fue una estafa de {exact}",
+            "creo que fue una estafa con {exact}",
+            "creo que fue un fraude {exact}",
+            "creo que fue un fraude de {exact}",
+            "creo que fue un fraude con {exact}",
+            "la estafa fue relacionada con {exact}",
+            "la estafa fue relacionada con un {exact}",
+            "la estafa fue relacionada con una {exact}",
+            "fue un intento de {exact}",
+            "fue un intento de estafa {exact}",
+            "fue un intento de estafa de {exact}",
+            "fue un intento de estafa con {exact}",
+            "fue un intento de fraude {exact}",
+            "fue un intento de fraude con {exact}",
+            "Ellos me contactaron {exact}",
+            "necesito reportalo {exact}",
+            "necesito reportarlo {exact}",
+            "pasó {exact}",
+            "fraude {impostor}",
+            "alguien cometió fraude {impostor}",
+            "creo que es {impostor}",
+            "creo que es una estafa {impostor}",
+            "alguien {impostor}",
+            "algo {impostor}",
+            "necesito reportar una estafa {impostor}",
+            "creo que entra en la categoría de {impostor}",
+            "Es {impostor}",
+            "mi estafa fue una estafa {impostor}",
+            "es una estafa {impostor}",
+            "pienso que es una estafa {impostor}",
+            "estafa {impostor}",
+            "es una {impostor}",
+            "mi estafa fue una {impostor}",
+            "fraude de {impostor}",
+            "alguien cometió fraude de {impostor}",
+            "creo que es un {impostor}",
+            "creo que es una estafa de {impostor}",
+            "necesito reportar a un {impostor}",
+            "necesito reportar una estafa de {impostor}",
+            "es un {impostor}",
+            "es de {impostor}",
+            "es una estafa de {impostor}",
+            "mi estafa fue una estafa de {impostor}",
+            "pienso que es una estafa de {impostor}",
+            "estafa de {impostor}",
+            "{impostor}",
+            "mi estafa fue una de {impostor}",
+            "fraude con {impostor}",
+            "creo que es de {impostor}",
+            "alguien de {impostor}",
+            "algo con {impostor}",
+            "es con una {impostor}",
+            "algo de {impostor}",
+            "necesito reportar un {impostor}",
+            "esto es un {impostor}",
+            "esto es una {impostor}",
+            "debe ser una estafa de {impostor}",
+            "debe ser un fraude de {impostor} d",
+            "es un fraude de {impostor}",
+            "estafa con {impostor}",
+            "fue una estafa {impostor}",
+            "fue una estafa de {impostor}",
+            "fue una estafa con {impostor}",
+            "fue un fraude {impostor}",
+            "fue un fraide de {impostor}",
+            "fue un fraude con {impostor}",
+            "creo que es una estafa con {impostor}",
+            "creo que es un fraude {impostor}",
+            "creo que es un fraude de {impostor}",
+            "creo que es un fraude con {impostor}",
+            "creo que fue una estafa {impostor}",
+            "creo que fue una estafa de {impostor}",
+            "creo que fue una estafa con {impostor}",
+            "creo que fue un fraude {impostor}",
+            "creo que fue un fraude de {impostor}",
+            "creo que fue un fraude con {impostor}",
+            "la estafa fue relacionada con {impostor}",
+            "la estafa fue relacionada con un {impostor}",
+            "la estafa fue relacionada con una {impostor}",
+            "fue un intento de {impostor}",
+            "fue un intento de estafa {impostor}",
+            "fue un intento de estafa de {impostor}",
+            "fue un intento de estafa con {impostor}",
+            "fue un intento de fraude {impostor}",
+            "fue un intento de fraude con {impostor}",
+            "Ellos me contactaron {impostor}",
+            "necesito reportalo {impostor}",
+            "necesito reportarlo {impostor}",
+            "pasó {impostor}",
+            "fraude {fraude}",
+            "alguien cometió fraude {fraude}",
+            "creo que es {fraude}",
+            "creo que es una estafa {fraude}",
+            "alguien {fraude}",
+            "algo {fraude}",
+            "necesito reportar una estafa {fraude}",
+            "creo que entra en la categoría de {fraude}",
+            "Es {fraude}",
+            "mi estafa fue una estafa {fraude}",
+            "es una estafa {fraude}",
+            "pienso que es una estafa {fraude}",
+            "estafa {fraude}",
+            "es una {fraude}",
+            "mi estafa fue una {fraude}",
+            "fraude de {fraude}",
+            "alguien cometió fraude de {fraude}",
+            "creo que es un {fraude}",
+            "creo que es una estafa de {fraude}",
+            "necesito reportar a un {fraude}",
+            "necesito reportar una estafa de {fraude}",
+            "es un {fraude}",
+            "es de {fraude}",
+            "es una estafa de {fraude}",
+            "mi estafa fue una estafa de {fraude}",
+            "pienso que es una estafa de {fraude}",
+            "estafa de {fraude}",
+            "{fraude}",
+            "mi estafa fue una de {fraude}",
+            "fraude con {fraude}",
+            "creo que es de {fraude}",
+            "alguien de {fraude}",
+            "algo con {fraude}",
+            "es con una {fraude}",
+            "algo de {fraude}",
+            "necesito reportar un {fraude}",
+            "esto es un {fraude}",
+            "esto es una {fraude}",
+            "debe ser una estafa de {fraude}",
+            "debe ser un fraude de {fraude} d",
+            "es un fraude de {fraude}",
+            "estafa con {fraude}",
+            "fue una estafa {fraude}",
+            "fue una estafa de {fraude}",
+            "fue una estafa con {fraude}",
+            "fue un fraude {fraude}",
+            "fue un fraide de {fraude}",
+            "fue un fraude con {fraude}",
+            "creo que es una estafa con {fraude}",
+            "creo que es un fraude {fraude}",
+            "creo que es un fraude de {fraude}",
+            "creo que es un fraude con {fraude}",
+            "creo que fue una estafa {fraude}",
+            "creo que fue una estafa de {fraude}",
+            "creo que fue una estafa con {fraude}",
+            "creo que fue un fraude {fraude}",
+            "creo que fue un fraude de {fraude}",
+            "creo que fue un fraude con {fraude}",
+            "la estafa fue relacionada con {fraude}",
+            "la estafa fue relacionada con un {fraude}",
+            "la estafa fue relacionada con una {fraude}",
+            "fue un intento de {fraude}",
+            "fue un intento de estafa {fraude}",
+            "fue un intento de estafa de {fraude}",
+            "fue un intento de estafa con {fraude}",
+            "fue un intento de fraude {fraude}",
+            "fue un intento de fraude con {fraude}",
+            "Ellos me contactaron {fraude}",
+            "necesito reportalo {fraude}",
+            "necesito reportarlo {fraude}",
+            "pasó {fraude}",
+            "fraude {mudanza}",
+            "alguien cometió fraude {mudanza}",
+            "creo que es {mudanza}",
+            "creo que es una estafa {mudanza}",
+            "alguien {mudanza}",
+            "algo {mudanza}",
+            "necesito reportar una estafa {mudanza}",
+            "creo que entra en la categoría de {mudanza}",
+            "Es {mudanza}",
+            "mi estafa fue una estafa {mudanza}",
+            "es una estafa {mudanza}",
+            "pienso que es una estafa {mudanza}",
+            "estafa {mudanza}",
+            "es una {mudanza}",
+            "mi estafa fue una {mudanza}",
+            "fraude de {mudanza}",
+            "alguien cometió fraude de {mudanza}",
+            "creo que es un {mudanza}",
+            "creo que es una estafa de {mudanza}",
+            "necesito reportar a un {mudanza}",
+            "necesito reportar una estafa de {mudanza}",
+            "es un {mudanza}",
+            "es de {mudanza}",
+            "es una estafa de {mudanza}",
+            "mi estafa fue una estafa de {mudanza}",
+            "pienso que es una estafa de {mudanza}",
+            "estafa de {mudanza}",
+            "{mudanza}",
+            "mi estafa fue una de {mudanza}",
+            "fraude con {mudanza}",
+            "creo que es de {mudanza}",
+            "alguien de {mudanza}",
+            "algo con {mudanza}",
+            "es con una {mudanza}",
+            "algo de {mudanza}",
+            "necesito reportar un {mudanza}",
+            "esto es un {mudanza}",
+            "esto es una {mudanza}",
+            "debe ser una estafa de {mudanza}",
+            "debe ser un fraude de {mudanza} d",
+            "es un fraude de {mudanza}",
+            "estafa con {mudanza}",
+            "fue una estafa {mudanza}",
+            "fue una estafa de {mudanza}",
+            "fue una estafa con {mudanza}",
+            "fue un fraude {mudanza}",
+            "fue un fraide de {mudanza}",
+            "fue un fraude con {mudanza}",
+            "creo que es una estafa con {mudanza}",
+            "creo que es un fraude {mudanza}",
+            "creo que es un fraude de {mudanza}",
+            "creo que es un fraude con {mudanza}",
+            "creo que fue una estafa {mudanza}",
+            "creo que fue una estafa de {mudanza}",
+            "creo que fue una estafa con {mudanza}",
+            "creo que fue un fraude {mudanza}",
+            "creo que fue un fraude de {mudanza}",
+            "creo que fue un fraude con {mudanza}",
+            "la estafa fue relacionada con {mudanza}",
+            "la estafa fue relacionada con un {mudanza}",
+            "la estafa fue relacionada con una {mudanza}",
+            "fue un intento de {mudanza}",
+            "fue un intento de estafa {mudanza}",
+            "fue un intento de estafa de {mudanza}",
+            "fue un intento de estafa con {mudanza}",
+            "fue un intento de fraude {mudanza}",
+            "fue un intento de fraude con {mudanza}",
+            "Ellos me contactaron {mudanza}",
+            "necesito reportalo {mudanza}",
+            "necesito reportarlo {mudanza}",
+            "pasó {mudanza}"
+          ]
+        },
+        {
+          "name": "FinancialDefinition",
+          "slots": [
+            {
+              "name": "financiera",
+              "type": "financiera"
+            }
+          ],
+          "samples": [
+            "dime qué es una {financiera}",
+            "qué significa un {financiera}",
+            "qué significa una {financiera}",
+            "dime la diferencia entre {financiera} y",
+            "cuál es la diferencia entre un fraude de {financiera} y",
+            "cuál es la diferencia entre una {financiera} y",
+            "qué es un fraude de {financiera}",
+            "qué es una {financiera}",
+            "qué es el fraude {financiera}",
+            "qué es el fraude de {financiera}",
+            "dime acerca {financiera}",
+            "describe una estafa {financiera}",
+            "describe estafa {financiera}",
+            "cómo describirías una estafa {financiera}",
+            "cuál es la diferencia entre una estafa {financiera}",
+            "cuál es la diferencia entre {financiera} y",
+            "cuál es la diferencia entre una estafa de {financiera} y",
+            "describe una estafa de {financiera}",
+            "describe estafa de {financiera}",
+            "describe a un {financiera}",
+            "describe {financiera}",
+            "cómo describirías una estafa de {financiera}",
+            "cómo describirías a un {financiera}",
+            "dime qué es un {financiera}",
+            "dime qué es {financiera}",
+            "define la diferencia entre {financiera} y",
+            "cuál es la diferencia entre un {financiera} y",
+            "qué es una estafa de {financiera}",
+            "qué es un {financiera}",
+            "qué es la estafa del {financiera}",
+            "puedes describir {financiera}",
+            "dime sobre {financiera}",
+            "por favor define {financiera}",
+            "qué es la estafa {financiera}",
+            "qué es la estafa de {financiera}",
+            "me puedes dar más información sobre {financiera}",
+            "cómo describirías {financiera}",
+            "qué significa {financiera}",
+            "define {financiera}"
+          ]
+        },
+        {
+          "name": "ImposterDefinition",
+          "slots": [
+            {
+              "name": "impostor",
+              "type": "impostor"
+            }
+          ],
+          "samples": [
+            "dime qué es una {impostor}",
+            "qué significa un {impostor}",
+            "qué significa una {impostor}",
+            "dime la diferencia entre {impostor} y",
+            "cuál es la diferencia entre un fraude de {impostor} y",
+            "cuál es la diferencia entre una {impostor} y",
+            "qué es un fraude de {impostor}",
+            "qué es una {impostor}",
+            "qué es el fraude {impostor}",
+            "qué es el fraude de {impostor}",
+            "dime acerca {impostor}",
+            "describe una estafa {impostor}",
+            "describe estafa {impostor}",
+            "cómo describirías una estafa {impostor}",
+            "cuál es la diferencia entre una estafa {impostor}",
+            "cuál es la diferencia entre {impostor} y",
+            "cuál es la diferencia entre una estafa de {impostor} y",
+            "describe una estafa de {impostor}",
+            "describe estafa de {impostor}",
+            "describe a un {impostor}",
+            "describe {impostor}",
+            "cómo describirías una estafa de {impostor}",
+            "cómo describirías a un {impostor}",
+            "dime qué es un {impostor}",
+            "dime qué es {impostor}",
+            "define la diferencia entre {impostor} y",
+            "cuál es la diferencia entre un {impostor} y",
+            "qué es una estafa de {impostor}",
+            "qué es un {impostor}",
+            "qué es la estafa del {impostor}",
+            "puedes describir {impostor}",
+            "dime sobre {impostor}",
+            "por favor define {impostor}",
+            "qué es la estafa {impostor}",
+            "qué es la estafa de {impostor}",
+            "me puedes dar más información sobre {impostor}",
+            "cómo describirías {impostor}",
+            "qué significa {impostor}",
+            "define {impostor}"
+          ]
+        },
+        {
+          "name": "FraudDefinition",
+          "slots": [
+            {
+              "name": "fraude",
+              "type": "fraude"
+            }
+          ],
+          "samples": [
+            "dime qué es una {fraude}",
+            "qué significa un {fraude}",
+            "qué significa una {fraude}",
+            "dime la diferencia entre {fraude} y",
+            "cuál es la diferencia entre un fraude de {fraude} y",
+            "cuál es la diferencia entre una {fraude} y",
+            "qué es un fraude de {fraude}",
+            "qué es una {fraude}",
+            "qué es el fraude {fraude}",
+            "qué es el fraude de {fraude}",
+            "dime acerca {fraude}",
+            "describe una estafa {fraude}",
+            "describe estafa {fraude}",
+            "cómo describirías una estafa {fraude}",
+            "cuál es la diferencia entre una estafa {fraude}",
+            "cuál es la diferencia entre {fraude} y",
+            "cuál es la diferencia entre una estafa de {fraude} y",
+            "describe una estafa de {fraude}",
+            "describe estafa de {fraude}",
+            "describe a un {fraude}",
+            "describe {fraude}",
+            "cómo describirías una estafa de {fraude}",
+            "cómo describirías a un {fraude}",
+            "dime qué es un {fraude}",
+            "dime qué es {fraude}",
+            "define la diferencia entre {fraude} y",
+            "cuál es la diferencia entre un {fraude} y",
+            "qué es una estafa de {fraude}",
+            "qué es un {fraude}",
+            "qué es la estafa del {fraude}",
+            "puedes describir {fraude}",
+            "dime sobre {fraude}",
+            "por favor define {fraude}",
+            "qué es la estafa {fraude}",
+            "qué es la estafa de {fraude}",
+            "me puedes dar más información sobre {fraude}",
+            "cómo describirías {fraude}",
+            "qué significa {fraude}",
+            "define {fraude}"
+          ]
+        },
+        {
+          "name": "MovingDefinition",
+          "slots": [
+            {
+              "name": "mudanza",
+              "type": "mudanza"
+            }
+          ],
+          "samples": [
+            "dime qué es una {mudanza}",
+            "qué significa un {mudanza}",
+            "qué significa una {mudanza}",
+            "dime la diferencia entre {mudanza} y",
+            "cuál es la diferencia entre un fraude de {mudanza} y",
+            "cuál es la diferencia entre una {mudanza} y",
+            "qué es un fraude de {mudanza}",
+            "qué es una {mudanza}",
+            "qué es el fraude {mudanza}",
+            "qué es el fraude de {mudanza}",
+            "dime acerca {mudanza}",
+            "describe una estafa {mudanza}",
+            "describe estafa {mudanza}",
+            "cómo describirías una estafa {mudanza}",
+            "cuál es la diferencia entre una estafa {mudanza}",
+            "cuál es la diferencia entre {mudanza} y",
+            "cuál es la diferencia entre una estafa de {mudanza} y",
+            "describe una estafa de {mudanza}",
+            "describe estafa de {mudanza}",
+            "describe a un {mudanza}",
+            "describe {mudanza}",
+            "cómo describirías una estafa de {mudanza}",
+            "cómo describirías a un {mudanza}",
+            "dime qué es un {mudanza}",
+            "dime qué es {mudanza}",
+            "define la diferencia entre {mudanza} y",
+            "cuál es la diferencia entre un {mudanza} y",
+            "qué es una estafa de {mudanza}",
+            "qué es un {mudanza}",
+            "qué es la estafa del {mudanza}",
+            "puedes describir {mudanza}",
+            "dime sobre {mudanza}",
+            "por favor define {mudanza}",
+            "qué es la estafa {mudanza}",
+            "qué es la estafa de {mudanza}",
+            "me puedes dar más información sobre {mudanza}",
+            "cómo describirías {mudanza}",
+            "qué significa {mudanza}",
+            "define {mudanza}"
+          ]
+        },
+        {
+          "name": "ExactDefinicion",
+          "slots": [
+            {
+              "name": "exact",
+              "type": "exact"
+            }
+          ],
+          "samples": [
+            "dime qué es una {exact}",
+            "qué significa un {exact}",
+            "qué significa una {exact}",
+            "dime la diferencia entre {exact} y",
+            "cuál es la diferencia entre un fraude de {exact} y",
+            "cuál es la diferencia entre una {exact} y",
+            "qué es un fraude de {exact}",
+            "qué es una {exact}",
+            "qué es el fraude {exact}",
+            "qué es el fraude de {exact}",
+            "dime acerca {exact}",
+            "describe una estafa {exact}",
+            "describe estafa {exact}",
+            "cómo describirías una estafa {exact}",
+            "cuál es la diferencia entre una estafa {exact}",
+            "cuál es la diferencia entre {exact} y",
+            "cuál es la diferencia entre una estafa de {exact} y",
+            "describe una estafa de {exact}",
+            "describe estafa de {exact}",
+            "describe a un {exact}",
+            "describe {exact}",
+            "cómo describirías una estafa de {exact}",
+            "cómo describirías a un {exact}",
+            "dime qué es un {exact}",
+            "dime qué es {exact}",
+            "define la diferencia entre {exact} y",
+            "cuál es la diferencia entre un {exact} y",
+            "qué es una estafa de {exact}",
+            "qué es un {exact}",
+            "qué es la estafa del {exact}",
+            "puedes describir {exact}",
+            "dime sobre {exact}",
+            "por favor define {exact}",
+            "qué es la estafa {exact}",
+            "qué es la estafa de {exact}",
+            "me puedes dar más información sobre {exact}",
+            "cómo describirías {exact}",
+            "qué significa {exact}",
+            "define {exact}"
+          ]
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": [
+            "hay otra estafa que quiero reportar",
+            "Tengo otra estafa que reportar",
+            "Quiero reportar una segunda estafa",
+            "Quiero reportar otra estafa",
+            "Necesito reportar una segunda estafa",
+            "Necesito reportar otra estafa"
+          ]
+        },
+        {
+          "name": "SearchQueryIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": ["I want {query}"]
+        }
+      ],
+      "types": [
+        {
+          "name": "exact",
+          "values": [
+            {
+              "name": {
+                "value": "internet",
+                "synonyms": [
+                  "en línea",
+                  "whats app",
+                  "digital",
+                  "compras en línea",
+                  "compras en internet",
+                  "pasó en línea",
+                  "pasó en internet",
+                  "comenzó en línea",
+                  "comenzó en internet",
+                  "instagram",
+                  "WhatsApp",
+                  "what's app",
+                  "facebook",
+                  "digital",
+                  "ciber"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cheque",
+                "synonyms": [
+                  "falso",
+                  "no solicitado",
+                  "inesperado",
+                  "cheque no solicitado",
+                  "cheque inesperado",
+                  "cheque falso",
+                  "cheque devuelto",
+                  "cheque rebotado",
+                  "cheque sin fondos",
+                  "cheque sin fondos",
+                  "falso o cheque no solicitado",
+                  "falso o cheque inesperado"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "romance",
+                "synonyms": [
+                  "tener una cita",
+                  "salir con alguien",
+                  "amorosa",
+                  "tinder",
+                  "catfish",
+                  "identidad falsa para engañar a otro",
+                  "persona con perfil faso en internet",
+                  "farsante del amor",
+                  "catfishing",
+                  "pesca de inocentes en redes sociales",
+                  "engañar en línea",
+                  "amor por interés",
+                  "amor falso"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "retiro",
+                "synonyms": [
+                  "sin autorización",
+                  "no autorizado",
+                  "de mi cuenta",
+                  "tomar dinero",
+                  "quitar dinero",
+                  "sacar dinero",
+                  "de mi cuenta",
+                  "robó dinero",
+                  "de mi cuenta de cheques",
+                  "de mi cuenta corriente",
+                  "de mis ahorros",
+                  "de mi cuenta de ahorros",
+                  "robando dinero",
+                  "tomar dinero",
+                  "quitar dinero",
+                  "sacar dinero",
+                  "robar dinero",
+                  "retiro de dinero",
+                  "retiro sin autorización",
+                  "retiro no autorizado",
+                  "retiro automático"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "phishing",
+                "synonyms": [
+                  "links",
+                  "pesca de",
+                  "robo de información en línea",
+                  "pesca de información personal",
+                  "emails",
+                  "correos electrónicos",
+                  "email",
+                  "correo electrónico",
+                  "enlaces falso",
+                  "textos",
+                  "mensajes de textos",
+                  "mensajes",
+                  "estafadores me llamaron",
+                  "email",
+                  "estafa con la computadora",
+                  "digital",
+                  "estafa por teléfono y texto",
+                  "estafa de llamadas y mensajes",
+                  "correo de voz",
+                  "mensajeemail",
+                  "estafa por teléfono",
+                  "estafa de mensajes",
+                  "estafas de texto",
+                  "estafa de llamadas",
+                  "phish",
+                  "mensajes de textos falsos",
+                  "estafas de correos electrónicos",
+                  "estafas con emails",
+                  "correos electrónicos falsos",
+                  "emails falsos",
+                  "estafas por mensajes",
+                  "mensajes falsos",
+                  "paypal",
+                  "remitente falso",
+                  "correo electrónico de una compañía falsa",
+                  "email de una compañía falsa"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "alquiler",
+                "synonyms": [
+                  "propiedades",
+                  "apartamento",
+                  "departamentos",
+                  "anuncio",
+                  "anuncio",
+                  "en renta",
+                  "en alquiler",
+                  "de alquiler",
+                  "para renta",
+                  "de alquiler",
+                  "para renta",
+                  "inventario falso",
+                  "anuncio falso",
+                  "anuncio publicitario falso",
+                  "falsa de administración de propiedades",
+                  "falsa de alquiler",
+                  "publicidad falsa",
+                  "casa en renta",
+                  "casa en alquiler",
+                  "condominio en renta",
+                  "condominio en alquiler",
+                  "apartamento en renta",
+                  "apartamento en alquiler",
+                  "anuncio falso",
+                  "anuncio publicitario falso",
+                  "anuncio de alquiler",
+                  "anuncio para renta",
+                  "de bienes raíces",
+                  "en renta",
+                  "en alquiler",
+                  "cuarto en renta",
+                  "cuarto en alquiler"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hipoteca",
+                "synonyms": [
+                  "deuda",
+                  "ayuda con mis facturas",
+                  "ayuda con deuda",
+                  "ayuda para pagar deudas",
+                  "asistente para pagar deudas",
+                  "asistencia con ejecución hipotecaria",
+                  "ayuda hipotecaria",
+                  "hipoteca y ejecución hipotecaria",
+                  "préstamo y ejecución hipoteracia",
+                  "alivio de deudas",
+                  "ayuda con deudas",
+                  "ayuda para pagar deudas",
+                  "foreclosure",
+                  "ejecución hipotecaria",
+                  "perder la casa",
+                  "asistente para pagar deudas"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "local",
+                "synonyms": [
+                  "mismo estado",
+                  "local move",
+                  "locally",
+                  "en el mismo vecindario",
+                  "my mismo estado",
+                  "en la misma calle",
+                  "cerca de mi calle",
+                  "en el estado",
+                  "dentro",
+                  "dentro de mi estado",
+                  "mudanza cerca de aquí",
+                  "dentro del estado",
+                  "cerca de aquí",
+                  "dentro del mismo estado"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "nacional",
+                "synonyms": [
+                  "un estado diferente",
+                  "nacional",
+                  "a otro estado",
+                  "entre estados",
+                  "a otro estado",
+                  "cruzando las fronteras del estado",
+                  "a través de las fronteras estatales",
+                  "fuera del estado"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "impuesto",
+                "synonyms": [
+                  "reembolso de impuestos",
+                  "devolución de impuestos",
+                  "declaración de impuestos"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "desempleo",
+                "synonyms": [
+                  "reclamo faudulento de beneficios por desempleo",
+                  "beneficios de desempleo",
+                  "beneficios por desempleo",
+                  "acceso a beneficios de desempleo"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "empleo",
+                "synonyms": ["trabajo", "trabajo en Estados Unidos"]
+              }
+            },
+            {
+              "name": {
+                "value": "medicaid",
+                "synonyms": [
+                  "cobertura de medicare",
+                  "cobertura de medicaid",
+                  "servicios de salud del Gobierno",
+                  "medicaid y medicare",
+                  "medicare"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "médico",
+                "synonyms": [
+                  "servicio médico",
+                  "cobertura de atención médica",
+                  "cobertura de cuidados médicos",
+                  "cobertura médica",
+                  "ley del cuidado de salud a bajo precio",
+                  "seguro suplementario",
+                  "cobertura médica suplementaria",
+                  "seguro médico suplementario",
+                  "aca",
+                  "cobertura suplementaria",
+                  "hospital",
+                  "seguro de salud",
+                  "aseguranza de salud"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "otro",
+                "synonyms": [
+                  "otro tipo de fraude",
+                  "otro tipo de estafa",
+                  "hotel",
+                  "algo más",
+                  "algo diferente",
+                  "cripto",
+                  "virus",
+                  "fraude con transferencia",
+                  "algo diferente",
+                  "ayuda para eliminar problemas",
+                  "ayuda para resolver problemas",
+                  "tarjeta de crédito",
+                  "otra situación financiera",
+                  "estafa en redes sociales",
+                  "otra situación",
+                  "otro caso",
+                  "otra estafa finaciera",
+                  "otra estafa bancaria",
+                  "otra situación",
+                  "una estafa diferente",
+                  "ninguno de estos",
+                  "criptomonedas"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "irs",
+                "synonyms": [
+                  "IRS",
+                  "I.R.S.",
+                  "i r s",
+                  "i. r. s.",
+                  "i.r.s.",
+                  "ai arr es",
+                  "del I.R.S.",
+                  "I.R.S.",
+                  "del IRS"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "SeguroSocial",
+                "synonyms": [
+                  "seguro social",
+                  "oficina del seguro social",
+                  "from the social security office",
+                  "del seguro social",
+                  "con el seguro seguro social"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "compañía",
+                "synonyms": [
+                  "falso",
+                  "website falso",
+                  "centro de llamadas",
+                  "compañía falsa",
+                  "empresa falsa",
+                  "compañía de confianza",
+                  "empresa de confianza",
+                  "estafa relacionada con amenaza",
+                  "compañía falsa",
+                  "empresa falsa",
+                  "embaucador",
+                  "falsante",
+                  "mafia tactics",
+                  "departamento del tesoro",
+                  "Gobierno federal",
+                  "nieta",
+                  "nieto",
+                  "miembro de la familia",
+                  "pariente",
+                  "nietos",
+                  "del Gobierno",
+                  "premios",
+                  "sorteos",
+                  "paypal",
+                  "persona de confianza",
+                  "oficina del Gobierno"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "financiera",
+          "values": [
+            {
+              "name": {
+                "value": "financiera",
+                "synonyms": [
+                  "account",
+                  "bancaria",
+                  "financiero",
+                  "afectó mis finanzas",
+                  "afectando mis finanzas",
+                  "pérdida financiera",
+                  "préstamo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "mudanza",
+          "values": [
+            {
+              "name": {
+                "value": "mudanza",
+                "synonyms": [
+                  "relocation service scammers",
+                  "scam relocation service",
+                  "scam movers",
+                  "cargador de mudanza",
+                  "ayudante de mudanza",
+                  "servicio de reubicación",
+                  "reubicación",
+                  "servicio de mudanza"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "fraude",
+          "values": [
+            {
+              "name": {
+                "value": "fraude",
+                "synonyms": [
+                  "robar mi información personal",
+                  "robo de identidad",
+                  "información",
+                  "información personal",
+                  "stole my information",
+                  "robó mi identidad",
+                  "stealing my information",
+                  "stealing my identity",
+                  "identidad",
+                  "information",
+                  "robo de información"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "impostor",
+          "values": [
+            {
+              "name": {
+                "value": "impostor",
+                "synonyms": [
+                  "estafador",
+                  "farsante",
+                  "tácticas mafiosas",
+                  "astucia",
+                  "engañador",
+                  "deception",
+                  "embaucador",
+                  "tramposo",
+                  "suplantación de identidad",
+                  "falsante"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ReportScam",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "exact",
+              "type": "exact",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.662925100949.99637767998"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.62347839380.179007778197.148090886604"
+                }
+              ]
+            },
+            {
+              "name": "financiera",
+              "type": "financiera",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "impostor",
+              "type": "impostor",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "fraude",
+              "type": "fraude",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "mudanza",
+              "type": "mudanza",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.662925100949.99637767998",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'><!-- {fraude} -->  Gracias por esa información. Ahora, dime: ¿cuál de estos tipos de robo de identidad se parece a tu caso. <prosody volume='loud'><prosody rate='slow'>empleo</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='medium'>seguro por desempleo</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='medium'>impuestos</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='slow'>servicios médicos</prosody></prosody><break time='3ms'/> <prosody volume='loud'><prosody rate='slow'>medicaid o medicare</prosody></prosody><break time='3ms'/> u otro tipo de fraude.</lang></voice></prosody></speak>"
+          },
+          {
+            "type": "SSML",
+            "value": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'><!-- {mudanza} -->Gracias por esa información. Ahora, dime.: Fue una mudanza <prosody volume='loud'><prosody rate='slow'>dentro</prosody></prosody> de tu estado. O <prosody volume='loud'><prosody rate='slow'>fuera</prosody></prosody> del estado.</lang></voice></prosody></speak>"
+          },
+          {
+            "type": "SSML",
+            "value": " <speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'><!-- {impostor} -->Gracias por esa información. Ahora, dime.: ¿Alguien se comunicó contigo y se hizo pasar por una persona de confianza, empleado del IRS, del Seguro Social, de otra oficina del Gobierno o empresa conocida. ¿Ocurrió por internet. O, ¿es otra cosa?</lang></voice></prosody></speak>"
+          },
+          {
+            "type": "SSML",
+            "value": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'><!-- {financiera} -->Gracias por esa información. Ahora, para darte las instrucciones correctas sobre dónde hacer el reporte, dime qué situación aplica a tu caso.: estafa con un cheque falso o no solicitado, un retiro no autorizado de tu cuenta, o ¿se trata de otra cosa?</lang></voice></prosody></speak>"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1010946470881",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "<speak> Welcome to the <prosody rate='slow'>USA gov</prosody> scams wizard! I'm sorry that you are experiencing a scam. I can help you learn where to report it! Please tell me the type of scam you want to report.</speak>"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.62347839380.179007778197.148090886604",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>Si necesitas reportar una estafa relacionada con tus cuentas bancarias o préstamos, menciona 'estafa financiera'. Para denunciar empresas falsas de mudanzas, di 'estafa de mudanza'. Si alguien está utilizando tu información personal sin autorización, puedes decir 'robo de identidad'. Si alguien se hizo pasar por otra persona para estafarte, ya sea con un engaño amoroso o mediante robo de información en línea phishing, menciona 'impostor'. Y si ninguno de estos casos aplica al tuyo, simplemente di 'algo más' y te ayudaré con tu situación específica.</lang></voice></prosody></speak>"
+          }
+        ]
+      }
+    ]
+  }
+}

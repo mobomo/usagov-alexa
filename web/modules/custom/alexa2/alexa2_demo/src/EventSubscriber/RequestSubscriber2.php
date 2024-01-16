@@ -2,7 +2,7 @@
 
 namespace Drupal\alexa2_demo\EventSubscriber;
 
-use MaxBeckers\AmazonAlexa\Request\Request\Request;
+use MaxBeckers\AmazonAlexa\Request\Request;
 use MaxBeckers\AmazonAlexa\Request\Request\Standard\IntentRequest;
 use Drupal\alexa2\Alexa2Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -37,20 +37,73 @@ class RequestSubscriber2 implements EventSubscriberInterface {
     // \Drupal::logger('alexa2')->error('Handling Alexa Request');
 
     $request = $event->getRequest();
+    error_log(json_encode($request));
+    error_log(json_encode($request->request));
     $response =& $event->getResponse();
 
-    $intentName = $request?->request instanceof IntentRequest ? $request->request->intent->name : $request?->request?->type;
+    //$intentName = $request?->request instanceof IntentRequest ? $request->request->intent->name : $request?->request?->type;
+    $intentName = "";
+
+    if($request->request->type == "LaunchRequest") {
+      $intentName = $request->request->type;
+    }
+    elseif ($request->request->type == "IntentRequest") {
+      $intentName = $request->request->intent->name;
+    }
 
     // $response->response->outputSpeech = OutputSpeech::createByText('Hello Drupal');
     // $response->response->shouldEndSession = true;
 
-    $db = $this->getDB();
+    //$db = (object) [
+    //  "colorado" => (object) [
+    //    "options" => "Pick Denver or Alamosa"
+    //    "denver" => "Population 2,000,000",
+    //    "alamosa" => "Population 2,000"
+    //  ],
+    //  "texas" => (object) [
+    //    "options" => "Pick Houston or Austin",
+    //    "houston" => "Population 5,000,000",
+    //    "austin" => "Population 1,500,000"
+    //  ]
+    //];
 
     //$currentPath = $this->getCurrentPath( $request );
     //$currentPathString = implode('/', $currentPath);
     //$currentStep = $this->getCurrentStep($currentPath, $db);
 
     //$shouldEndSession = empty($currentStep['options']);
+    $shouldEndSession = false;
+
+
+    //switch($intentName) {
+    //  case 'CancelIntent':
+    //    $response->response->outputSpeech = OutputSpeech::createByText('Cancel Intent heard');
+    //    $shouldEndSession = true;
+    //    break;
+
+    //  case 'StopIntent':
+    //    $response->response->outputSpeech = OutputSpeech::createByText('Stop Intent heard');
+    //    $shouldEndSession = true;
+    //    break;
+
+    //  case 'NavigateHomeIntent':
+    //    $response->response->outputSpeech = OutputSpeech::createByText('Navigate Home Intent heard');
+    //    $shouldEndSession = false;
+    //    break;
+
+    //  case 'AMAZON.HelpIntent':
+    //    $response->response->outputSpeech = OutputSpeech::createByText('You can ask anything and I will respond with "Hello Drupal"');
+    //    $shouldEndSession = false;
+    //    break;
+
+    //  case 'LaunchRequest':
+    //    $response->response->outputSpeech = OutputSpeech::createByText( "Hello light switch and " . $request->request->type);
+    //    break;
+
+    //  default:
+    //    $response->response->outputSpeech = OutputSpeech::createByText( "Default message " . $intentName);
+    //    break;
+    //}
 
     switch ($intentName) {
       case 'CancelIntent':
@@ -68,8 +121,8 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         $shouldEndSession = false;
         break;
 
-      case 'HelpIntent':
-        $response->response->outputSpeech = OutputSpeech::createByText('You can ask anything and I will respond with "Hello Drupal"');
+      case 'AMAZON.HelpIntent':
+        $response->response->outputSpeech = OutputSpeech::createByText('You asked for help. Here it is.');
         $shouldEndSession = false;
         break;
 
@@ -91,18 +144,16 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         //  $reprompt = new Reprompt($repromptSpeech);
         //  $response->response->reprompt = $reprompt;
         //}
-        $response->response->outputSpeech = OutputSpeech::createByText( "Anything can happen" );
+        $response->response->outputSpeech = OutputSpeech::createByText( "Anything can happen. " . $request->request->intent->slots->query->name /* $request->request->intent->slots->query->value */ );
+        $shouldEndSession = false;
         break;
 
       case 'LaunchRequest':
-        $response->response->outputSpeech = OutputSpeech::createByText( "This is a scam wizard. Please say your scam." );
+        $response->response->outputSpeech = OutputSpeech::createByText( "This is a launch request for the scam wizard. Please say your scam." );
+        break;
+
       default:
-        //$response->sessionAttributes['path'] = 'launch';
-        //$response->response->outputSpeech = OutputSpeech::createByText($currentStep['h2']);
-        //$repromptSpeech = OutputSpeech::createByText($currentStep['h2']);
-        //$reprompt = new Reprompt($repromptSpeech);
-        //$response->response->reprompt = $reprompt;
-        $response->response->outputSpeech = OutputSpeech::createByText( "This is a scam wizard. Please say your scam." );
+        $response->response->outputSpeech = OutputSpeech::createByText( "Default message " . $intentName);
         break;
     }
     $response->response->shouldEndSession = $shouldEndSession;
