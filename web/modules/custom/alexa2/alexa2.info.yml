@@ -1,0 +1,14 @@
+name: Alexa2
+type: module
+description: Provides an endpoint to receive Amazon Echo callbacks from Alexa Skills.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Alexa
+configure: alexa2.admin_settings
+test_dependencies:
+  - chatbot_api:chatbot_api (>=2.0-rc0)
+
+# Information added by Drupal.org packaging script on 2022-07-25
+version: '8.x-1.1'
+project: 'alexa2'
+datestamp: 1658758001

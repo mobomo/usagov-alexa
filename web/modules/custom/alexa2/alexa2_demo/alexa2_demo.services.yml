@@ -1,0 +1,11 @@
+services:
+  alexa2_demo.request_subscriber:
+    class: Drupal\alexa2_demo\EventSubscriber\RequestSubscriber2
+    tags:
+      - { name: event_subscriber }
+  alexa2_demo.commands:
+    class: \Drupal\alexa2_demo\Drush\Commands\Alexa2DemoCommands
+    tags:
+      - { name: drush.command }
+  alexa2_demo.wizard_tree:
+    class: Drupal\alexa2\Services\WizardTreeService

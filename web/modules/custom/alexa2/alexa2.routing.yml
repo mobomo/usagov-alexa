@@ -1,0 +1,13 @@
+alexa2.callback:
+  path: '/alexa2/callback'
+  defaults:
+    _controller: '\Drupal\alexa2\Controller\Alexa2EndpointController::callback'
+  requirements:
+    _permission: 'access content'
+alexa2.admin_settings:
+  path: '/admin/config/services/alexa2'
+  defaults:
+    _form: '\Drupal\alexa2\Form\ModuleConfigurationForm2'
+    _title: 'Alexa2 Configuration'
+  requirements:
+    _permission: 'administer alexa configuration'

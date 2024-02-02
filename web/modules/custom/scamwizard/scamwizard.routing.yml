@@ -5,6 +5,7 @@ scamwizard.scamwizardpage:
     _title: "USA.gov Scams Wizard"
   requirements:
     _permission: "access content"
+  
 
 scamwizard.scamwizardpage.banking:
   path: "/scams/banking"

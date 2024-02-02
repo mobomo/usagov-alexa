@@ -83,7 +83,7 @@ class ScamsController extends ControllerBase {
   }
 
   public function scamWizard() {
-    self::syncFromAPI();
+    // self::syncFromAPI();
 
     $fileOpen = file_get_contents("modules/custom/scamwizard/src/Controller/wizardTree.json");
     $data = json_decode($fileOpen);
@@ -109,89 +109,7 @@ class ScamsController extends ControllerBase {
 
     return [
       "#type" => "markup",
-      "#markup" => t("
-          <h2>$h2</h2>
-          <ul style='list-style-type: none;'>
-            <li>
-              <label class='container' style='cursor: pointer;'>
-                <input type='radio' id='optionone' onclick='myFunction()' name='radio'
-                  style='cursor: pointer;'>
-                $option_banking
-              </label>
-            </li>
-            <li>
-              <label class='container' style='cursor: pointer;'>
-                <input type='radio' id='optiontwo' onclick='myFunction()' name='radio'
-                  style='cursor: pointer;'>
-                $option_trickery
-              </label>
-            </li>
-            <li>
-              <label class='container' style='cursor: pointer;'>
-                <input type='radio' id='optionthree' onclick='myFunction()' name='radio'
-                  style='cursor: pointer;'>
-                $option_moving
-              </label>
-            </li>
-            <li>
-              <label class='container' style='cursor: pointer;'>
-                <input type='radio' id='optionfour' onclick='myFunction()' name='radio'
-                  style='cursor: pointer;'>
-                $option_fraud
-              </label>
-            </li>
-            <li>
-              <label class='container' style='cursor: pointer;'>
-                <input type='radio' id='optionfive' onclick='myFunction()' name='radio'
-                  style='cursor: pointer;'>
-                $option_other
-              </label>
-            </li>
-            <li style='cursor: pointer; padding-left: 65px;'>
-              <button onclick='redirector()'>
-                <b>Submit</b>
-              </button>
-              <span id='noRadioSelected' style='color:red;'></span>
-            </li>
-          </ul>
-
-          <script>
-            let url = '';
-
-            function myFunction() {
-
-              if (document.getElementById('optionone').checked) {
-                url = '$domain$path_banking';
-              }
-
-              if (document.getElementById('optiontwo').checked) {
-                url = '$domain$path_trickery';
-              }
-
-              if (document.getElementById('optionthree').checked) {
-                url = '$domain$path_moving';
-              }
-
-              if (document.getElementById('optionfour').checked) {
-                url = '$domain$path_fraud';
-              }
-
-              if (document.getElementById('optionfive').checked) {
-                url = '$domain$path_other';
-              }
-            }
-
-            function redirector() {
-              if (url === '') {
-
-                document.getElementById('noRadioSelected').innerHTML = 'Please select an option'
-              } else {
-                window.location.href = url;
-              }
-            }
-          </script>
-        "
-      ),
+      "#markup" => t(""),
     ];
   }
 

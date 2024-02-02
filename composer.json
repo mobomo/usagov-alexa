@@ -23,7 +23,9 @@
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
         "drush/drush": "^12.3",
-        "jakubsuchy/amazon-alexa-php": "^0.1.7"
+        "jakubsuchy/amazon-alexa-php": "^0.1.7",
+        "maxbeckers/amazon-alexa-php": "^1.13",
+        "noodlesnz/double-metaphone": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"

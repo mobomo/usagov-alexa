@@ -1,0 +1,86 @@
+{
+  "enUS": {
+    "LaunchRequestHandler": {
+      "prompt": "<speak><prosody rate='medium'>Welcome to the <prosody rate='x-slow'>USA gov</prosody> scams wizard!<amazon:emotion name='disappointed' intensity='high'> I'm sorry that you are experiencing a scam. I can help you learn where to report it!</amazon:emotion> Please tell me the type of scam you want to report.</prosody></speak>",
+      "reprompt": "It is a financial scam, if your accounts or loans are affected. a moving scam, to report a moving company or movers. Identity theft, if someone used your personal information. or imposter scam, if the scam involves deception or threats, including romance scams, and phishing. say something else if none of these categories apply."
+    },
+    "ReportScamIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "ExactDefinitionIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "FinancialDefinitionIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "ImposterDefinitionIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "FraudDefinitionIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "MovingDefinitionIntentHandler": {
+      "reprompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "HelpIntentHandler": {
+      "prompt": "<speak>The <prosody rate='slow'>USA gov</prosody> scams wizard is designed to help you figure out where to report your scam. To speak to a human about reporting your scam, please Call us at <say-as interpret-as= 'digits'> 1844</say-as>USA<say-as interpret-as= 'spell-out'>GOV1</say-as></speak>"
+    },
+    "TypesOfScamsHandler": {
+      "prompt": "You can say 'financial scam', if your accounts or loans are affected. 'moving scam', to report a moving company or movers. Say Identity theft, if someone used your personal information. or 'imposter scam', if the scam involved deception or threats, including romance scams, and phishing. Otherwise, say scam something else?"
+    },
+    "CancelAndStopIntentHandler": {
+      "prompt": "<speak> <amazon:emotion name= 'disappointed' intensity= 'medium'>I hope you figured out where to report your scam.</amazon:emotion> If you need further assistance from a human, say 'help,' then I will provide you the<prosody rate='slow'> USA gov number</prosody>.</speak>"
+    },
+    "FallbackIntentHandler": {
+      "prompt": "I didn't hear you, can you please repeat that? Sometimes I need you to slow down or say a complete sentence to give me context."
+    },
+    "StartOverIntentHandler": {
+      "prompt": "<speak><prosody rate='medium'>If you need to make another choice, you can just tell me the choice, or say 'repeat' to hear the choices again, but if you want to start over, I need you to reinvoke this skill.</prosody></speak>"
+    },
+    "SessionEndedRequestHandler": {
+      "prompt": ""
+    }
+  },
+  "esUS": {
+    "LaunchRequestHandler": {
+      "prompt": "<speak><prosody rate='medium'><voice name='Penelope'><lang xml:lang='es-US'>¡Bienvenido! <prosody rate='slow'>Soy el asistente de</prosody> USA gov en Español<amazon:emotion name= 'disappointed' intensity= 'medium'> y estoy aquí para ayudarte a saber dónde reportar tu caso de estafa. ¡Lamento que estés pasando por esto! </amazon:emotion> Por favor, dime, qué tipo de estafa quieres denunciar?</lang></voice></prosody></speak>",
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'> Si necesitas reportar una estafa relacionada con tus cuentas bancarias o préstamos, menciona 'estafa financiera'. Para denunciar empresas falsas de mudanzas, di 'estafa de mudanza'. Si alguien está utilizando tu información personal sin autorización, puedes decir 'robo de identidad'. Si alguien se hizo pasar por otra persona para estafarte, ya sea con un engaño amoroso o mediante robo de información en línea (phishing), menciona 'impostor'. Y si ninguno de estos casos aplica al tuyo, simplemente di 'algo más' y te ayudaré con tu situación específica.</lang></voice></speak>"
+    },
+    "ReportScamIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "ExactDefinitionIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "FinancialDefinitionIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "ImposterDefinitionIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "FraudDefinitionIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "MovingDefinitionIntentHandler": {
+      "reprompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "HelpIntentHandler": {
+      "prompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>El asistente para reportar estafas de USA punto gov en Español está diseñado para ayudarte a saber dónde denunciar tu caso de estafa. Si quieres hablar con una persona sobre cómo reportar una estafa, llama al <say-as interpret-as= 'digits'> 1844</say-as>USA<say-as interpret-as= 'spell-out'>GOV1</say-as></voice></speak>"
+    },
+    "TypesOfScamsHandler": {
+      "prompt": "You can say 'financial scam', if your accounts or loans are affected. 'moving scam', to report a moving company or movers. Say Identity theft, if someone used your personal information. or 'imposter scam', if the scam involved deception or threats, including romance scams, and phishing. Otherwise, say scam something else?"
+    },
+    "CancelAndStopIntentHandler": {
+      "prompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'> <amazon:emotion name= 'disappointed' intensity= 'medium'>Espero que hayas encontrado dónde reportar tu caso de estafa. Si necesitas más ayuda o quieres hablar con una persona, simplemente di: 'ayuda' y te daré el número de teléfono de USA Gov en Español.</amazon:emotion></lang></voice></speak>"
+    },
+    "FallbackIntentHandler": {
+      "prompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "StartOverIntentHandler": {
+      "prompt": "<speak><voice name='Penelope'><lang xml:lang='es-US'>Por favor, ¿puedes repetir eso? No lo entendí la primera vez.</lang></voice></speak>"
+    },
+    "SessionEndedRequestHandler": {
+      "prompt": ""
+    }
+  }
+}

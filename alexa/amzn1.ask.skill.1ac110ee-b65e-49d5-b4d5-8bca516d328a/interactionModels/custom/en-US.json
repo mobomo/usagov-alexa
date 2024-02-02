@@ -1,0 +1,1149 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "exact",
+              "elicitationRequired": true,
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.62347839380.179007778197.148090886604"
+                }
+              ],
+              "type": "exact",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.662925100949.99637767998"
+              }
+            },
+            {
+              "name": "financial",
+              "elicitationRequired": false,
+              "type": "financial",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "imposter",
+              "elicitationRequired": false,
+              "type": "imposter",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "fraud",
+              "elicitationRequired": false,
+              "type": "fraud",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "moving",
+              "elicitationRequired": false,
+              "type": "moving",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "ReportScam",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "I want the number",
+            "I need the number",
+            "give me the number",
+            "person please",
+            "speak to a person",
+            "how do I get help from a human",
+            "I need more information",
+            "is there a number to call",
+            "how do I speak to a human to help me with my scam",
+            "I need a human",
+            "I need assistance",
+            "how do I get help",
+            "I need to speak to a human",
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "exact",
+              "type": "exact",
+              "samples": [
+                "I am experiencing a {exact}",
+                "I am experiencing an {exact}",
+                "I got duped by someone {exact}",
+                "I am experiencing {exact}",
+                "I am reporting a {exact} scam",
+                "It was a {exact} attempt",
+                "The scam was related to a {exact}",
+                "I think it was a {exact} scam",
+                "I think it\u0027s an {exact} scam",
+                "It was a {exact} scam",
+                "{exact} scam",
+                "It\u0027s a {exact} scam",
+                "It must be an {exact} scam",
+                "It\u0027s a {exact}",
+                "I think it\u0027s {exact}",
+                "it\u0027s an {exact}",
+                "It is {exact}",
+                "it is an {exact}",
+                "I believe it fits into the {exact} category",
+                "I need to report an {exact} scam",
+                "I need to report a {exact} scam",
+                "I need to report a {exact}",
+                "I need to report an {exact}",
+                "someone {exact}",
+                "I believe it is an {exact} scam",
+                "I believe it is an {exact}",
+                "they said they were {exact}",
+                "they said they were from {exact}",
+                "I\u0027m experiencing a {exact} scam",
+                "I\u0027m experiencing an {exact} scam",
+                "I\u0027m experiencing {exact}",
+                "I need to report someone using my {exact}",
+                "I\u0027m experiencing {exact} fraud",
+                "I\u0027m experiencing an {exact} fraud",
+                "{exact} fraud",
+                "I am reporting {exact}",
+                "{exact}"
+              ]
+            },
+            {
+              "name": "financial",
+              "type": "financial"
+            },
+            {
+              "name": "imposter",
+              "type": "imposter"
+            },
+            {
+              "name": "fraud",
+              "type": "fraud"
+            },
+            {
+              "name": "moving",
+              "type": "moving"
+            }
+          ],
+          "name": "ReportScam",
+          "samples": [
+            "I\u0027m experiencing a lot of {exact}",
+            "I\u0027m receiving a lot of {exact}",
+            "more of a {exact}",
+            "more of a {financial}",
+            "more of a {fraud}",
+            "more of a {moving}",
+            "more of a {imposter}",
+            "more of an {exact}",
+            "more of an {financial}",
+            "more of an {fraud}",
+            "more of an {moving}",
+            "more of an {imposter}",
+            "It\u0027s more of a {exact}",
+            "It\u0027s more of a {financial}",
+            "It\u0027s more of a {fraud}",
+            "It\u0027s more of a {moving}",
+            "It\u0027s more of a {imposter}",
+            "It\u0027s more of an {exact}",
+            "It\u0027s more of an {financial}",
+            "It\u0027s more of an {fraud}",
+            "It\u0027s more of an {moving}",
+            "It\u0027s more of an {imposter}",
+            "I need to report someone pretending to be {financial}",
+            "I need to report someone pretending to be {fraud}",
+            "I need to report someone pretending to be {moving}",
+            "I need to report someone pretending to be {imposter}",
+            "I need to report someone pretending to be {exact}",
+            "I\u0027m dealing with {financial}",
+            "I\u0027m dealing with {fraud} ",
+            "I\u0027m dealing with {imposter}",
+            "I\u0027m dealing with {moving}",
+            "I\u0027m dealing with {exact}",
+            "I\u0027m reporting an {moving}",
+            "I\u0027m reporting an {imposter}",
+            "I\u0027m reporting an {financial}",
+            "I\u0027m reporting an {fraud}",
+            "I\u0027m reporting an {exact}",
+            "I\u0027m reporting {moving}",
+            "I\u0027m reporting {imposter}",
+            "I\u0027m reporting {financial}",
+            "I\u0027m reporting {fraud}",
+            "I\u0027m reporting {exact}",
+            "I\u0027m reporting a {moving}",
+            "I\u0027m reporting a {fraud}",
+            "I\u0027m reporting a {imposter}",
+            "I\u0027m reporting a {financial}",
+            "I\u0027m reporting a {exact}",
+            "It happened {exact}",
+            "It started {exact}",
+            "I began {exact}",
+            "I need to report an {moving}",
+            "I need to report an {fraud}",
+            "I need to report an {imposter}",
+            "I need to report an {financial}",
+            "I need to report an {exact}",
+            "I need to report an {financial} issue",
+            "I need to report an {imposter} issue",
+            "I need to report an {fraud} issue",
+            "I need to report an {moving} issue",
+            "I need to report an {exact} issue",
+            "I need to report a {moving} problem",
+            "I need to report a {imposter} problem",
+            "I need to report a {fraud} problem",
+            "I need to report a {moving} problem",
+            "I need to report a {exact} problem",
+            "Does the government take scam reports",
+            "where do i report {moving}",
+            "where do i report {financial}",
+            "where do i report {imposter}",
+            "where do i report {fraud}",
+            "where do i report {exact}",
+            "how do I report {moving}",
+            "how do I report {financial}",
+            "how do I report {imposter}",
+            "how do I report {fraud}",
+            "how do I report {exact}",
+            "I believe I might have been scammed",
+            "where do I report a scammer",
+            "where do I report a suspected scam",
+            "where do I report a scam",
+            "I just got duped",
+            "I just lost money to a scammer",
+            "I\u0027ve been scammed",
+            "I need to report {fraud}",
+            "I need to report {exact}",
+            "I need to report a scam",
+            "My scam is a {exact}",
+            "My scam is a {imposter}",
+            "My scam is a {moving}",
+            "My scam is a {financial}",
+            "I\u0027m experiencing {exact}",
+            "I\u0027m experiencing {fraud}",
+            "I\u0027m experiencing {financial}",
+            "I\u0027m experiencing {imposter}",
+            "I\u0027m experiencing {moving}",
+            "someone committed {moving} fraud",
+            "someone committed {fraud} fraud",
+            "someone committed {imposter} fraud",
+            "someone committed {financial} fraud",
+            "someone committed {exact} fraud",
+            "I believe it is a {exact}",
+            "I believe it is a {moving}",
+            "I believe it is a {financial} {exact}",
+            "I believe it is a {imposter}",
+            "I believe it is a {fraud}",
+            "I believe it is a {moving} scam",
+            "I believe it is a {imposter} {exact} scam",
+            "I believe it is a {fraud} scam",
+            "I believe it is a {financial} scam",
+            "someone {exact}",
+            "someone {fraud}",
+            "someone {financial}",
+            "someone {imposter}",
+            "someone {moving}",
+            "someone is using my {exact}",
+            "someone is using my {fraud}",
+            "someone is using my {financial}",
+            "someone is using my {imposter}",
+            "someone is using my {moving}",
+            "I\u0027m experiencing an {exact} fraud",
+            "I\u0027m experiencing an {fraud} fraud",
+            "I\u0027m experiencing an {imposter} fraud",
+            "I\u0027m experiencing an {financial} fraud",
+            "I\u0027m experiencing an {moving} fraud",
+            "I\u0027m experiencing {moving} fraud",
+            "I\u0027m experiencing {fraud} fraud",
+            "I\u0027m experiencing {exact} fraud",
+            "I\u0027m experiencing {imposter} fraud",
+            "I\u0027m experiencing {financial} fraud",
+            "I need to report someone using my {exact}",
+            "I need to report someone using my {imposter}",
+            "I need to report someone using my {fraud}",
+            "I need to report someone using my {financial}",
+            "I need to report someone using my {fraud}",
+            "I\u0027m experiencing an {imposter} scam",
+            "I\u0027m experiencing an {exact} scam",
+            "I\u0027m experiencing an {fraud} scam",
+            "I\u0027m experiencing an {financial} scam",
+            "I\u0027m experiencing an {moving} scam",
+            "I\u0027m experiencing a {moving} {exact} scam",
+            "I\u0027m experiencing a {financial} scam",
+            "I\u0027m experiencing a {fraud} scam",
+            "I\u0027m experiencing a {imposter} scam",
+            "{moving} fraud",
+            "{imposter} fraud",
+            "{fraud} fraud",
+            "{financial} fraud",
+            "{exact} fraud",
+            "someone committed {exact}",
+            "someone committed {financial}",
+            "someone committed {fraud}",
+            "someone committed {imposter}",
+            "someone committed {moving}",
+            "I believe it is an {imposter}",
+            "I believe it is an {exact}",
+            "I believe it is an {financial}",
+            "I believe it is an {fraud}",
+            "I believe it is an {moving}",
+            "I need to report an {fraud}",
+            "I need to report an {exact}",
+            "I need to report an {imposter}",
+            "I need to report an {financial}",
+            "I need to report an {moving}",
+            "I need to report a {financial}",
+            "I need to report a {imposter}",
+            "I need to report a {fraud}",
+            "I need to report a {moving}",
+            "I need to report a {exact}",
+            "I need to report a {imposter} scam",
+            "I need to report a {exact} scam",
+            "I need to report a {financial} scam",
+            "I need to report a {fraud} scam",
+            "I need to report a {moving} scam",
+            "I need to report an {financial} scam",
+            "I need to report an {exact} scam",
+            "I need to report an {fraud} scam",
+            "I need to report an {imposter} scam",
+            "I need to report an {moving} scam",
+            "I believe it fits into the {imposter} category",
+            "I believe it fits into the {financial} category",
+            "I believe it fits into the {fraud} category",
+            "I believe it fits into the {moving} category",
+            "I believe it fits into the {exact} category",
+            "it is an {fraud}",
+            "it is an {financial}",
+            "it is an {imposter}",
+            "it is an {moving}",
+            "it is an {exact}",
+            "It is {financial}",
+            "It is {fraud}",
+            "It is {imposter}",
+            "It is {moving}",
+            "It is {exact}",
+            "it is a {financial}",
+            "it is a {exact}",
+            "it is a {fraud}",
+            "it is a {imposter}",
+            "it is a {exact}",
+            "My scam was a {fraud} scam",
+            "My scam was a {exact} scam",
+            "My scam was a {imposter} scam",
+            "My scam was a {financial} scam",
+            "My scam was a {moving} scam",
+            "It is an {imposter}",
+            "It is an {exact}",
+            "It is an {financial}",
+            "It is an {fraud}",
+            "It is an {moving}",
+            "I think it\u0027s an {moving}",
+            "I think it\u0027s an {financial}",
+            "I think it\u0027s an {fraud}",
+            "I think it\u0027s an {imposter}",
+            "I think it\u0027s an {exact}",
+            "I think it\u0027s a {financial}",
+            "I think it\u0027s a {fraud}",
+            "I think it\u0027s a {imposter}",
+            "I think it\u0027s a {moving}",
+            "I think it\u0027s a {exact}",
+            "{moving} scam",
+            "{financial} scam",
+            "{fraud} scam",
+            "{imposter} scam",
+            "{exact} scam",
+            "{financial}",
+            "{exact}",
+            "{fraud}",
+            "{imposter}",
+            "{moving}",
+            "It\u0027s a {imposter}",
+            "It\u0027s a {exact}",
+            "It\u0027s a {fraud}",
+            "It\u0027s a {financial}",
+            "It\u0027s a {moving}",
+            "My scam was a {imposter}",
+            "My scam was a {moving}",
+            "My scam was a {fraud}",
+            "My scam was a {financial}",
+            "My scam was a {exact}",
+            "{exact} fraud",
+            "I\u0027m experiencing an {exact} fraud",
+            "I\u0027m experiencing {exact} fraud",
+            "I need to report someone using my {exact}",
+            "I\u0027m experiencing {exact}",
+            "I\u0027m experiencing an {exact} scam",
+            "I\u0027m experiencing a {exact} scam",
+            "they said they were from {exact}",
+            "they said they were {exact}",
+            "I believe it is an {exact}",
+            "I believe it is an {exact} scam",
+            "someone {exact}",
+            "I need to report an {exact}",
+            "I need to report a {exact}",
+            "I need to report a {exact} scam",
+            "I need to report an {exact} scam",
+            "I believe it fits into the {exact} category",
+            "it is an {exact}",
+            "It is {exact}",
+            "it\u0027s an {exact}",
+            "{exact}",
+            "I think it\u0027s {exact}",
+            "It\u0027s a {exact}",
+            "It must be an {exact} scam.",
+            "It\u0027s a {exact} scam",
+            "{exact} scam",
+            "It was a {exact} scam",
+            "I think it\u0027s an {exact} scam",
+            "I think it was a {exact} scam",
+            "The scam was related to a {exact}",
+            "It was a {exact} attempt",
+            "It was a {exact} scam attempt"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "financial",
+              "type": "financial"
+            }
+          ],
+          "name": "FinancialDefinition",
+          "samples": [
+            "how do you define an {financial}",
+            "how do you define {financial}",
+            "how do you define a {financial}",
+            "What\u0027s a {financial}",
+            "What is the {financial} scam",
+            "What is a {financial}",
+            "Can you describe {financial}",
+            "Tell me what {financial} is",
+            "What is a {financial} scam",
+            "Tell me about {financial}",
+            "describe an {financial} scam",
+            "describe a {financial} scam",
+            "describe {financial} scam",
+            "describe an {financial}",
+            "describe a {financial}",
+            "describe {financial}",
+            "how would you describe an {financial} scam",
+            "how would you describe a {financial} scam",
+            "how would you describe an {financial}",
+            "how would you describe a {financial}",
+            "How would you describe {financial}",
+            "what does {financial}",
+            "please define {financial}",
+            "tell me what an {financial} is",
+            "Tell me what a {financial} is",
+            "define the difference between {financial} and",
+            "define {financial}",
+            "what is the difference between a {financial} scam and a",
+            "what is the difference between an {financial} scam and",
+            "what is the difference between an {financial} and a",
+            "What is the difference between a {financial} and an",
+            "what\u0027s an {financial} scam",
+            "what\u0027s an {financial}",
+            "what is an {financial} scam",
+            "what is an {financial}",
+            "What\u0027s a {financial} scam"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "imposter",
+              "type": "imposter"
+            }
+          ],
+          "name": "ImposterDefinition",
+          "samples": [
+            "how do you define an {imposter}",
+            "how do you define {imposter}",
+            "how do you define a {imposter}",
+            "What\u0027s a {imposter}",
+            "What is the {imposter} scam",
+            "What is a {imposter}",
+            "Can you describe {imposter}",
+            "Tell me what {imposter} is",
+            "What is a {imposter} scam",
+            "Tell me about {imposter}",
+            "describe an {imposter} scam",
+            "describe a {imposter} scam",
+            "describe {imposter} scam",
+            "describe an {imposter}",
+            "describe a {imposter}",
+            "describe {imposter}",
+            "how would you describe an {imposter} scam",
+            "how would you describe a {imposter} scam",
+            "how would you describe an {imposter}",
+            "how would you describe a {imposter}",
+            "How would you describe {imposter}",
+            "what does {imposter}",
+            "please define {imposter}",
+            "tell me what an {imposter} is",
+            "Tell me what a {imposter} is",
+            "define the difference between {imposter} and",
+            "define {imposter}",
+            "what is the difference between a {imposter} scam and a",
+            "what is the difference between an {imposter} scam and",
+            "what is the difference between an {imposter} and a",
+            "What is the difference between a {imposter} and an",
+            "what\u0027s an {imposter} scam",
+            "what\u0027s an {imposter}",
+            "what is an {imposter} scam",
+            "what is an {imposter}",
+            "What\u0027s a {imposter} scam"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "fraud",
+              "type": "fraud"
+            }
+          ],
+          "name": "IdentityTheftDefinition",
+          "samples": [
+            "how do you define an {fraud}",
+            "how do you define {fraud}",
+            "how do you define a {fraud}",
+            "What\u0027s a {fraud}",
+            "What is the {fraud} scam",
+            "What is a {fraud}",
+            "Can you describe {fraud}",
+            "Tell me what {fraud} is",
+            "What is a {fraud} scam",
+            "Tell me about {fraud}",
+            "describe an {fraud} scam",
+            "describe a {fraud} scam",
+            "describe {fraud} scam",
+            "describe an {fraud}",
+            "describe a {fraud}",
+            "describe {fraud}",
+            "how would you describe an {fraud} scam",
+            "how would you describe a {fraud} scam",
+            "how would you describe an {fraud}",
+            "how would you describe a {fraud}",
+            "How would you describe {fraud}",
+            "what does {fraud}",
+            "please define {fraud}",
+            "tell me what an {fraud} is",
+            "Tell me what a {fraud} is",
+            "define the difference between {fraud} and",
+            "define {fraud}",
+            "what is the difference between a {fraud} scam and a",
+            "what is the difference between an {fraud} scam and",
+            "what is the difference between an {fraud} and a",
+            "What is the difference between a {fraud} and an",
+            "what\u0027s an {fraud} scam",
+            "what\u0027s an {fraud}",
+            "what is an {fraud} scam",
+            "what is an {fraud}",
+            "What\u0027s a {fraud} scam"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "moving",
+              "type": "moving"
+            }
+          ],
+          "name": "MovingDefinition",
+          "samples": [
+            "how do you define an {moving}",
+            "how do you define {moving}",
+            "how do you define a {moving}",
+            "What\u0027s a {moving}",
+            "What is the {moving} scam",
+            "What is a {moving}",
+            "Can you describe {moving}",
+            "Tell me what {moving} is",
+            "What is a {moving} scam",
+            "Tell me about {moving}",
+            "describe an {moving} scam",
+            "describe a {moving} scam",
+            "describe {moving} scam",
+            "describe an {moving}",
+            "describe a {moving}",
+            "describe {moving}",
+            "how would you describe an {moving} scam",
+            "how would you describe a {moving} scam",
+            "how would you describe an {moving}",
+            "how would you describe a {moving}",
+            "How would you describe {moving}",
+            "what does {moving}",
+            "please define {moving}",
+            "tell me what an {moving} is",
+            "Tell me what a {moving} is",
+            "define the difference between {moving} and",
+            "define {moving}",
+            "what is the difference between a {moving} scam and a",
+            "what is the difference between an {moving} scam and",
+            "what is the difference between an {moving} and a",
+            "What is the difference between a {moving} and an",
+            "what\u0027s an {moving} scam",
+            "what\u0027s an {moving}",
+            "what is an {moving} scam",
+            "what is an {moving}",
+            "What\u0027s a {moving} scam"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "exact",
+              "type": "exact"
+            }
+          ],
+          "name": "ExactDefinition",
+          "samples": [
+            "how do you define an {exact}",
+            "how do you define {exact}",
+            "how do you define a {exact}",
+            "what is {exact}",
+            "describe an {exact} scam",
+            "describe a {exact} scam",
+            "describe {exact} scam",
+            "describe an {exact}",
+            "describe a {exact}",
+            "describe {exact}",
+            "how would you describe an {exact} scam",
+            "how would you describe a {exact} scam",
+            "how would you describe an {exact}",
+            "how would you describe a {exact}",
+            "How would you desicribe {exact}",
+            "please define {exact}",
+            "tell me what an {exact} is",
+            "Tell me what a {exact} is",
+            "define the difference between {exact} and",
+            "define {exact}",
+            "what is the difference between a {exact} scam and",
+            "what is the difference between an {exact} scam and",
+            "what is the difference between an {exact} and",
+            "What is the difference between a {exact} and",
+            "what\u0027s an {exact} scam",
+            "what\u0027s an {exact}",
+            "what is an {exact} scam",
+            "what is an {exact}",
+            "What\u0027s a {exact} scam",
+            "What\u0027s a {exact}",
+            "What is the {exact} scam",
+            "What is a {exact} ",
+            "Can you describe {exact}",
+            "Tell me what {exact} is",
+            "What is a {exact} scam",
+            "Tell me about {exact}"
+          ]
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": [
+            "start over",
+            "there is another scam I want to report",
+            "I have another scam to report",
+            "I want to report a second scam",
+            "I want to report another scam",
+            "I need to report a second scam",
+            "I need to report another scam"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "internet",
+                  "cybercrime",
+                  "whats app",
+                  "digital",
+                  "online purchase",
+                  "happened online",
+                  "started online",
+                  "instagram",
+                  "WhatsApp",
+                  "facebook",
+                  "digital",
+                  "internet",
+                  "cyber"
+                ],
+                "value": "online"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fake",
+                  "unsolicited",
+                  "unsolicited check",
+                  "fake check",
+                  "check bounced",
+                  "bad check",
+                  "bounced check",
+                  "fake or unsolicited check"
+                ],
+                "value": "check"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "dating",
+                  "love",
+                  "tinder",
+                  "catfish",
+                  "catfishing",
+                  "love interest"
+                ],
+                "value": "romance"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "unauthorized",
+                  "from my account",
+                  "taking money",
+                  "from my account",
+                  "stole money",
+                  "from my checking",
+                  "from my savings",
+                  "stealing money",
+                  "withdrawals",
+                  "taking money",
+                  "stealing money",
+                  "withdrawing money",
+                  "withdrawal",
+                  "unauthorized withdrawal",
+                  "automatic withdrawal"
+                ],
+                "value": "withdrawal"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "scam calls",
+                  "calls",
+                  "email",
+                  "link",
+                  "texts",
+                  "messages",
+                  "emails",
+                  "scammers calling me",
+                  "email",
+                  "computer scam",
+                  "digital",
+                  "email",
+                  "phone and text scams",
+                  "voicemail",
+                  "telephone scam",
+                  "scam text",
+                  "scam call",
+                  "phish",
+                  "fake texts",
+                  "fishing",
+                  "scam emails",
+                  "fake emails",
+                  "scam messages",
+                  "fake messages",
+                  "paypal",
+                  "fake sender",
+                  "fake company emails"
+                ],
+                "value": "phishing"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "real estate",
+                  "property",
+                  "apartment",
+                  "advertisement",
+                  "for rent",
+                  "for a rental",
+                  "for rent",
+                  "false inventory",
+                  "fake ad",
+                  "fake property management",
+                  "fake advertisement",
+                  "home for rent",
+                  "condo for rent",
+                  "apartment for rent",
+                  "fake ad",
+                  "rental ad"
+                ],
+                "value": "rental"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "debt",
+                  "help with my bills",
+                  "debt help",
+                  "debt assistant",
+                  "foreclosure assistance",
+                  "mortgage help",
+                  "mortgage and foreclosure",
+                  "debt relief",
+                  "foreclosure"
+                ],
+                "value": "mortgage"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "same state",
+                  "local move",
+                  "locally",
+                  "in the neighborhood",
+                  "my same state",
+                  "down the street",
+                  "in state",
+                  "within",
+                  "within my state",
+                  "down the street",
+                  "within the state",
+                  "nearby",
+                  "local"
+                ],
+                "value": "local"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "different state",
+                  "nationally",
+                  "a different state",
+                  "to another state",
+                  "between states",
+                  "to another state",
+                  "across state lines",
+                  "out of state"
+                ],
+                "value": "across"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "tax forms",
+                  "tax form",
+                  "taxes",
+                  "tax refund",
+                  "tax return"
+                ],
+                "value": "tax"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fraudulent unemployment",
+                  "unemployment benefits",
+                  "access unemployment"
+                ],
+                "value": "unemployment"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "work",
+                  "job",
+                  "work in the US"
+                ],
+                "value": "employment"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "medicare coverage",
+                  "medicaid coverage",
+                  "government health benefits",
+                  "medicaid and medicare",
+                  "medicare"
+                ],
+                "value": "medicaid"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "health care coverage",
+                  "medical coverage",
+                  "affordable care act",
+                  "supplemental medical coverage",
+                  "aca",
+                  "supplemental coverage",
+                  "hospital",
+                  "health insurance"
+                ],
+                "value": "medical"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "another",
+                  "another type of",
+                  "hotel",
+                  "something else",
+                  "crypto",
+                  "other",
+                  "crypto fraud",
+                  "virus",
+                  "wire fraud",
+                  "something different",
+                  "hardship elimination",
+                  "credit card",
+                  "another financial situation",
+                  "social media scam",
+                  "another situation",
+                  "another financial scam",
+                  "other banking scam",
+                  "other situation",
+                  "a different scam",
+                  "none of those",
+                  "crypto currency",
+                  "another online scam",
+                  "a different type of scam",
+                  "another"
+                ],
+                "value": "other"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "I.R.S.",
+                  "i r s",
+                  "i. r. s.",
+                  "irs",
+                  "i.r.s.",
+                  "eye are s",
+                  "from the I.R.S.",
+                  "I.R.S.",
+                  "from the IRS"
+                ],
+                "value": "IRS"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "social security",
+                  "social security office",
+                  "from the social security office",
+                  "from social security"
+                ],
+                "value": "socialsecurity"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fake",
+                  "fake website",
+                  "call center",
+                  "fake company",
+                  "trusted company",
+                  "government",
+                  "threat scam",
+                  "fake company",
+                  "swindling",
+                  "mafia tactics",
+                  "department of treasury",
+                  "federal government",
+                  "trusted company",
+                  "granddaughter",
+                  "grandson",
+                  "family member",
+                  "grandchildren",
+                  "from the government",
+                  "sweepstakes",
+                  "paypal",
+                  "grandchild",
+                  "trusted person",
+                  "government office"
+                ],
+                "value": "company"
+              }
+            }
+          ],
+          "name": "exact"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "loan",
+                  "account",
+                  "banking",
+                  "affecting my finances",
+                  "financial loss"
+                ],
+                "value": "financial"
+              }
+            }
+          ],
+          "name": "financial"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "relocation service scammers",
+                  "scam relocation service",
+                  "scam movers",
+                  "movers",
+                  "relocation service",
+                  "relocation",
+                  "moving service"
+                ],
+                "value": "moving"
+              }
+            }
+          ],
+          "name": "moving"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "stealing my",
+                  "stealing my personal information",
+                  "identity theft",
+                  "information",
+                  "personal information",
+                  "fraud",
+                  "stole my information",
+                  "stole my identity",
+                  "stealing my information",
+                  "stealing my identity",
+                  "identity",
+                  "information",
+                  "personal information theft",
+                  "information theft"
+                ],
+                "value": "fraud"
+              }
+            }
+          ],
+          "name": "fraud"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "deception",
+                  "swindler",
+                  "mafia tactics",
+                  "trickery",
+                  "deceptor",
+                  "deception",
+                  "trickster",
+                  "impersonator"
+                ],
+                "value": "imposter"
+              }
+            }
+          ],
+          "name": "imposter"
+        }
+      ],
+      "invocationName": "my development wizard"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In order to give you accurate reporting instructions I\u0027ll need to know the type of scam you\u0027ve encountered. Would you categorize it as phishing, identity theft, a government scam, a check scam, banking scam, an online scam, a real estate scam, or something else?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What category of scam are you experiencing. Is it a financial scam, moving scam, Identity theft, imposter, a romance scam, phishing. Or is it something different?"
+          },
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003e\u003c!-- {fraud} --\u003e  Thank you for that information. One more question, please tell me the type of identity theft you are experiencing: \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027slow\u0027\u003eemployment\u003c/prosody\u003e\u003c/prosody\u003e\u003cbreak time\u003d\u00273ms\u0027/\u003e \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003eunemployment\u003c/prosody\u003e\u003c/prosody\u003e\u003cbreak time\u003d\u00273ms\u0027/\u003e \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003etax return or tax refund\u003c/prosody\u003e\u003c/prosody\u003e\u003cbreak time\u003d\u00273ms\u0027/\u003e \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027slow\u0027\u003emedical\u003c/prosody\u003e\u003c/prosody\u003e\u003cbreak time\u003d\u00273ms\u0027/\u003e \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027slow\u0027\u003emedicaid or medicare\u003c/prosody\u003e\u003c/prosody\u003e\u003cbreak time\u003d\u00273ms\u0027/\u003e or another type of fraud.\u003c/prosody\u003e\u003c/speak\u003e"
+          },
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003e\u003c!-- {moving} --\u003eThank you for letting me know you are dealing with a moving scam. Were you moving \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027slow\u0027\u003ewithin\u003c/prosody\u003e\u003c/prosody\u003e your same state. or \u003cprosody volume\u003d\u0027loud\u0027\u003e\u003cprosody rate\u003d\u0027slow\u0027\u003eto a different\u003c/prosody\u003e\u003c/prosody\u003e state.\u003c/prosody\u003e\u003c/speak\u003e"
+          },
+          {
+            "type": "SSML",
+            "value": " \u003cspeak\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003e\u003c!-- {imposter} --\u003eThank you for that information. One more question, please tell me the type of deception you are experiencing: Did someone pretend to be from the IRS, the Social security office, a trusted person, company, or from another government office. Are you experiencing phishing, or a love interest scam. Or is it something else.\u003c/prosody\u003e\u003c/speak\u003e"
+          },
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003e\u003cprosody rate\u003d\u0027medium\u0027\u003e\u003c!-- {financial} --\u003eThank you for letting me know you are experiencing a financial scam. For the correct reporting instructions, please Tell me which situation applies: check scam, unauthorized withdrawal, mortgage or foreclosure scam, Or is it something else.\u003c/prosody\u003e\u003c/speak\u003e"
+          }
+        ],
+        "id": "Elicit.Slot.662925100949.99637767998"
+      },
+      {
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003e Welcome to the \u003cprosody rate\u003d\u0027slow\u0027\u003eUSA gov\u003c/prosody\u003e scams wizard! I\u0027m sorry that you are experiencing a scam. I can help you learn where to report it! Please tell me the type of scam you want to report.\u003c/speak\u003e"
+          }
+        ],
+        "id": "Confirm.Intent.1010946470881"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Let me know if you think it is more of a check scam, phishing, identity theft, romance scam, deception scam, real estate scam, or something else."
+          },
+          {
+            "type": "PlainText",
+            "value": "You can say \u0027financial scam\u0027, if your accounts or loans are affected. \u0027moving scam\u0027, to report a moving company or movers. It is Identity theft, if someone used your personal information. or an \u0027imposter scam\u0027, if the scam involved deception or threats, including romance scams, and phishing. Or is your scam something else?"
+          }
+        ],
+        "id": "Slot.Validation.62347839380.179007778197.148090886604"
+      }
+    ]
+  }
+}

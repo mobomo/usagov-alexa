@@ -1,0 +1,22 @@
+alexa2_demo.wizards:
+  path: '/wizards'
+  defaults:
+    _title: 'Select a Wizard'
+    _controller: '\Drupal\alexa2_demo\Controller\WizardController::wizardSelectPage'
+  requirements:
+    _role: administrator
+  options:
+    no_cache: 'TRUE'
+
+alexa2_demo.wizards.wizard:
+  path: '/wizards/{wizard}'
+  defaults:
+    _title_callback: '\Drupal\alexa2_demo\Controller\WizardController::wizardPageTitle'
+    _controller: '\Drupal\alexa2_demo\Controller\WizardController::wizardPage'
+  requirements:
+    _role: administrator
+  options:
+    parameters:
+      wizard:
+        type: entity:node
+    no_cache: 'TRUE'

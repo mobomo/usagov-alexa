@@ -1,0 +1,894 @@
+{
+  "enUS": [
+    {
+      "name": "exact",
+      "values": [
+        {
+          "name": {
+            "value": "online",
+            "synonyms": [
+              "whats app",
+              "digital",
+              "online purchase",
+              "happened online",
+              "started online",
+              "instagram",
+              "WhatsApp",
+              "facebook",
+              "digital",
+              "internet",
+              "cyber"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "check",
+            "synonyms": [
+              "fake",
+              "unsolicited",
+              "unsolicited check",
+              "fake check",
+              "check bounced",
+              "bad check",
+              "bounced check",
+              "fake or unsolicited check"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "romance",
+            "synonyms": [
+              "dating",
+              "love",
+              "tinder",
+              "catfish",
+              "catfishing",
+              "love interest"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "withdrawal",
+            "synonyms": [
+              "unauthorized",
+              "from my account",
+              "taking money",
+              "from my account",
+              "stole money",
+              "from my checking",
+              "from my savings",
+              "stealing money",
+              "withdrawals",
+              "taking money",
+              "stealing money",
+              "withdrawing money",
+              "withdrawal",
+              "unauthorized withdrawal",
+              "automatic withdrawal"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "phishing",
+            "synonyms": [
+              "email",
+              "link",
+              "texts",
+              "messages",
+              "emails",
+              "scammers calling me",
+              "email",
+              "computer scam",
+              "fake",
+              "fake website",
+              "digital",
+              "email",
+              "phone and text scams",
+              "voicemail",
+              "telephone scam",
+              "scam text",
+              "scam call",
+              "phish",
+              "fake texts",
+              "fishing",
+              "scam emails",
+              "fake emails",
+              "scam messages",
+              "fake messages",
+              "paypal",
+              "fake sender",
+              "fake company emails"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "rental",
+            "synonyms": [
+              "property",
+              "apartment",
+              "advertisement",
+              "for rent",
+              "for a rental",
+              "for rent",
+              "false inventory",
+              "fake ad",
+              "fake property management",
+              "fake advertisement",
+              "home for rent",
+              "condo for rent",
+              "apartment for rent",
+              "fake ad",
+              "rental ad"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "mortgage",
+            "synonyms": [
+              "debt",
+              "help with my bills",
+              "debt help",
+              "debt assistant",
+              "foreclosure assistance",
+              "mortgage help",
+              "mortgage and foreclosure",
+              "debt relief",
+              "foreclosure"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "local",
+            "synonyms": [
+              "same state",
+              "local move",
+              "locally",
+              "in the neighborhood",
+              "my same state",
+              "down the street",
+              "in state",
+              "within",
+              "within my state",
+              "down the street",
+              "within the state",
+              "nearby",
+              "local"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "across",
+            "synonyms": [
+              "different state",
+              "nationally",
+              "a different state",
+              "to another state",
+              "between states",
+              "to another state",
+              "across state lines",
+              "out of state"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "tax",
+            "synonyms": [
+              "tax forms",
+              "tax form",
+              "taxes",
+              "tax refund",
+              "tax return"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "unemployment",
+            "synonyms": [
+              "fraudulent unemployment",
+              "unemployment benefits",
+              "access unemployment"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "employment",
+            "synonyms": ["work", "job", "work in the US"]
+          }
+        },
+        {
+          "name": {
+            "value": "medicaid",
+            "synonyms": [
+              "medicare coverage",
+              "medicaid coverage",
+              "government health benefits",
+              "medicaid and medicare",
+              "medicare"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "medical",
+            "synonyms": [
+              "health care coverage",
+              "medical coverage",
+              "affordable care act",
+              "supplemental medical coverage",
+              "aca",
+              "obama care",
+              "supplemental coverage",
+              "hospital",
+              "health insurance"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "other",
+            "synonyms": [
+              "another",
+              "another type of",
+              "hotel",
+              "something else",
+              "crypto",
+              "other",
+              "crypto fraud",
+              "virus",
+              "wire fraud",
+              "something different",
+              "hardship elimination",
+              "credit card",
+              "another financial situation",
+              "social media scam",
+              "another situation",
+              "another financial scam",
+              "other banking scam",
+              "other situation",
+              "a different scam",
+              "none of those",
+              "crypto currency",
+              "another online scam",
+              "a different type of scam",
+              "another"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "IRS",
+            "synonyms": [
+              "I.R.S.",
+              "i r s",
+              "i. r. s.",
+              "irs",
+              "i.r.s.",
+              "eye are s",
+              "from the I.R.S.",
+              "I.R.S.",
+              "from the IRS"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "socialsecurity",
+            "synonyms": [
+              "social security",
+              "social security office",
+              "from the social security office",
+              "from social security"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "company",
+            "synonyms": [
+              "call center",
+              "fake company",
+              "trusted company",
+              "government",
+              "threat scam",
+              "fake company",
+              "swindling",
+              "mafia tactics",
+              "department of treasury",
+              "federal government",
+              "trusted company",
+              "granddaughter",
+              "grandson",
+              "family member",
+              "grandchildren",
+              "from the government",
+              "sweepstakes",
+              "paypal",
+              "grandchild",
+              "trusted person",
+              "government office"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "financial",
+      "values": [
+        {
+          "name": {
+            "value": "financial",
+            "synonyms": [
+              "account",
+              "banking",
+              "affecting my finances",
+              "financial loss"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "moving",
+      "values": [
+        {
+          "name": {
+            "value": "moving",
+            "synonyms": [
+              "relocation service scammers",
+              "scam relocation service",
+              "scam movers",
+              "movers",
+              "relocation service",
+              "relocation",
+              "moving service"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "fraud",
+      "values": [
+        {
+          "name": {
+            "value": "fraud",
+            "synonyms": [
+              "identity theft",
+              "information",
+              "personal information",
+              "fraud",
+              "stole my information",
+              "stole my identity",
+              "stealing my information",
+              "stealing my identity",
+              "identity",
+              "information",
+              "personal information theft",
+              "information theft"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "imposter",
+      "values": [
+        {
+          "name": {
+            "value": "imposter",
+            "synonyms": [
+              "deception",
+              "swindler",
+              "mafia tactics",
+              "trickery",
+              "deceptor",
+              "deception",
+              "trickster",
+              "impersonator"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "esUS": [
+    {
+      "name": "exact",
+      "values": [
+        {
+          "name": {
+            "value": "internet",
+            "synonyms": [
+              "Alexa.getLocale(handlerInput.requestEnvelope",
+              "en línea",
+              "cybercrime",
+              "whats app",
+              "digital",
+              "compras en línea",
+              "compras en internet",
+              "pasó en línea",
+              "pasó en internet",
+              "comenzó en línea",
+              "comenzó en internet",
+              "instagram",
+              "WhatsApp",
+              "what's app",
+              "whats app",
+              "facebook",
+              "digital",
+              "ciber"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "cheque",
+            "synonyms": [
+              "falso",
+              "no solicitado",
+              "inesperado",
+              "cheque no solicitado",
+              "cheque inesperado",
+              "cheque falso",
+              "cheque devuelto",
+              "cheque rebotado",
+              "cheque sin fondos",
+              "cheque sin fondos",
+              "falso o cheque no solicitado",
+              "falso o cheque inesperado"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "romance",
+            "synonyms": [
+              "tener una cita",
+              "salir con alguien",
+              "amorosa",
+              "tinder",
+              "catfish",
+              "identidad falsa para engañar a otro",
+              "persona con perfil faso en internet",
+              "farsante del amor",
+              "catfishing",
+              "pesca de inocentes en redes sociales",
+              "engañar en línea",
+              "amor por interés",
+              "amor falso"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "retiro",
+            "synonyms": [
+              "sin autorización",
+              "no autorizado",
+              "de mi cuenta",
+              "tomar dinero",
+              "quitar dinero",
+              "sacar dinero",
+              "de mi cuenta",
+              "robó dinero",
+              "de mi cuenta de cheques",
+              "de mi cuenta corriente",
+              "de mis ahorros",
+              "de mi cuenta de ahorros",
+              "robar dinero",
+              "robando dinero",
+              "withdrawals",
+              "tomar dinero",
+              "quitar dinero",
+              "sacar dinero",
+              "robar dinero",
+              "retiro de dinero",
+              "withdrawal",
+              "retiro sin autorización",
+              "retiro no autorizado",
+              "retiro automático"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "phishing",
+            "synonyms": [
+              "pesca de",
+              "robo de información en línea",
+              "pesca de información personal",
+              "emails",
+              "correos electrónicos",
+              "email",
+              "correo electrónico",
+              "enlaces falso",
+              "links",
+              "textos",
+              "mensajes de textos",
+              "mensajes",
+              "mensajes",
+              "estafadores me llamaron",
+              "email",
+              "estafa con la computadora",
+              "digital",
+              "estafa por teléfono y texto",
+              "estafa de llamadas y mensajes",
+              "voicvoicemail",
+              "correo de voz",
+              "mensajeemail",
+              "estafa por teléfono",
+              "estafa de mensajes",
+              "estafas de texto",
+              "estafa de llamadas",
+              "phish",
+              "mensajes de textos falsos",
+              "pesca",
+              "estafas de correos electrónicos",
+              "estafas con emails",
+              "correos electrónicos falsos",
+              "emails falsos",
+              "estafas por mensajes",
+              "mensajes falsos",
+              "paypal",
+              "remitente falso",
+              "correo electrónico de una compañía falsa",
+              "email de una compañía falsa"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "alquiler",
+            "synonyms": [
+              "propiedades",
+              "apartamento",
+              "departamentos",
+              "anuncio",
+              "anuncio",
+              "en renta",
+              "en alquiler",
+              "de alquiler",
+              "para renta",
+              "de alquiler",
+              "para renta",
+              "inventario falso",
+              "anuncio falso",
+              "anuncio publicitario falso",
+              "falsa de administración de propiedades",
+              "falsa de alquiler",
+              "publicidad falsa",
+              "casa en renta",
+              "casa en alquiler",
+              "condominio en renta",
+              "condominio en alquiler",
+              "apartamento en renta",
+              "apartamento en alquiler",
+              "anuncio falso",
+              "anuncio publicitario falso",
+              "anuncio de alquiler",
+              "anuncio para renta",
+              "de bienes raíces",
+              "en renta",
+              "en alquiler",
+              "cuarto en renta",
+              "cuarto en alquiler"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "hipoteca",
+            "synonyms": [
+              "deuda",
+              "ayuda con mis facturas",
+              "ayuda con deuda",
+              "ayuda para pagar deudas",
+              "asistente para pagar deudas",
+              "asistencia con ejecución hipotecaria",
+              "ayuda hipotecaria",
+              "hipoteca y ejecución hipotecaria",
+              "préstamo y ejecución hipoteracia",
+              "alivio de deudas",
+              "ayuda con deudas",
+              "ayuda para pagar deudas",
+              "foreclosure",
+              "ejecución hipotecaria",
+              "perder la casa",
+              "asistente para pagar deudas"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "local",
+            "synonyms": [
+              "mismo estado",
+              "local move",
+              "locally",
+              "en el mismo vecindario",
+              "my mismo estado",
+              "en la misma calle",
+              "cerca de mi calle",
+              "en el estado",
+              "dentro",
+              "dentro de mi estado",
+              "mudanza cerca de aquí",
+              "dentro del estado",
+              "cerca de aquí",
+              "dentro del mismo estado"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "nacional",
+            "synonyms": [
+              "un estado diferente",
+              "nacional",
+              "a otro estado",
+              "entre estados",
+              "a otro estado",
+              "cruzando las fronteras del estado",
+              "a través de las fronteras estatales",
+              "fuera del estado"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "impuesto",
+            "synonyms": [
+              "tax forms",
+              "tax form",
+              "taxes",
+              "reembolso de impuestos",
+              "devolución de impuestos",
+              "declaración de impuestos"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "desempleo",
+            "synonyms": [
+              "reclamo faudulento de beneficios por desempleo",
+              "beneficios de desempleo",
+              "beneficios por desempleo",
+              "acceso a beneficios de desempleo"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "empleo",
+            "synonyms": ["trabajo", "job", "trabajo en Estados Unidos"]
+          }
+        },
+        {
+          "name": {
+            "value": "medicaid",
+            "synonyms": [
+              "cobertura de medicare",
+              "cobertura de medicaid",
+              "servicios de salud del Gobierno",
+              "medicaid y medicare",
+              "medicare"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "médicos",
+            "synonyms": [
+              "cobertura de atención médica",
+              "cobertura de cuidados médicos",
+              "cobertura médica",
+              "ley del cuidado de salud a bajo precio",
+              "seguro suplementario",
+              "cobertura médica suplementaria",
+              "seguro médico suplementario",
+              "aca",
+              "cobertura suplementaria",
+              "hospital",
+              "seguro de salud",
+              "aseguranza de salud"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "otro",
+            "synonyms": [
+              "otro tipo de estafa",
+              "another type of",
+              "hotel",
+              "algo más",
+              "algo diferente",
+              "cripto",
+              "crypto fraud",
+              "virus",
+              "fraude con transferencia",
+              "algo diferente",
+              "ayuda para eliminar problemas",
+              "ayuda para resolver problemas",
+              "tarjeta de crédito",
+              "otra situación financiera",
+              "estafa en redes sociales",
+              "otra situación",
+              "otro caso",
+              "otra estafa finaciera",
+              "otra estafa bancaria",
+              "otra situación",
+              "una estafa diferente",
+              "ninguno de estos",
+              "criptomonedas",
+              "another online scam",
+              "a different type of scam",
+              "another"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "irs",
+            "synonyms": [
+              "IRS",
+              "I.R.S.",
+              "i r s",
+              "i. r. s.",
+              "i.r.s.",
+              "ai arr es",
+              "del I.R.S.",
+              "I.R.S.",
+              "del IRS"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "SeguroSocial",
+            "synonyms": [
+              "seguro social",
+              "oficina del seguro social",
+              "from the social security office",
+              "del seguro social",
+              "con el seguro seguro social"
+            ]
+          }
+        },
+        {
+          "name": {
+            "value": "compañía",
+            "synonyms": [
+              "falso",
+              "website falso",
+              "centro de llamadas",
+              "compañía falsa",
+              "empresa falsa",
+              "compañía de confianza",
+              "empresa de confianza",
+              "government",
+              "estafa relacionada con amenaza",
+              "compañía falsa",
+              "empresa falsa",
+              "embaucador",
+              "falsante",
+              "mafia tactics",
+              "departamento del tesoro",
+              "Gobierno federal",
+              "trusted company",
+              "nieta",
+              "nieto",
+              "miembro de la familia",
+              "familiar",
+              "pariente",
+              "nietos",
+              "del Gobierno",
+              "premios",
+              "sorteos",
+              "paypal",
+              "grandchild",
+              "persona de confianza",
+              "oficina del Gobierno"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "financiera",
+      "values": [
+        {
+          "name": {
+            "value": "financiera",
+            "synonyms": [
+              "account",
+              "bancaria",
+              "financiero",
+              "afectó mis finanzas",
+              "afectando mis finanzas",
+              "pérdida financiera",
+              "préstamo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "mudanza",
+      "values": [
+        {
+          "name": {
+            "value": "mudanza",
+            "synonyms": [
+              "relocation service scammers",
+              "scam relocation service",
+              "scam movers",
+              "cargador de mudanza",
+              "ayudante de mudanza",
+              "servicio de reubicación",
+              "reubicación",
+              "servicio de mudanza"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "fraude",
+      "values": [
+        {
+          "name": {
+            "value": "fraude",
+            "synonyms": [
+              "robar mi información personal",
+              "robo de identidad",
+              "información",
+              "información personal",
+              "stole my information",
+              "robó mi identidad",
+              "stealing my information",
+              "stealing my identity",
+              "identidad",
+              "information",
+              "robo de información"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "impostor",
+      "values": [
+        {
+          "name": {
+            "value": "impostor",
+            "synonyms": [
+              "estafador",
+              "farsante",
+              "tácticas mafiosas",
+              "astucia",
+              "engañador",
+              "deception",
+              "embaucador",
+              "tramposo",
+              "suplantación de identidad",
+              "falsante"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
