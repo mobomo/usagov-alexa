@@ -5,11 +5,13 @@ function alexa2_demo_theme($existing, $type, $theme, $path) {
         'alexa2_demo_wizard' => [
             'variables' => [
                 'hello' => t('Hello World!'),
+                'wizard_tree' => []
             ],
         ],
         'alexa2_demo_wizard_select' => [
             'variables' => [
                 'hello' => t('Hello World!'),
+                'wizards' => []
             ],
         ],
     ];

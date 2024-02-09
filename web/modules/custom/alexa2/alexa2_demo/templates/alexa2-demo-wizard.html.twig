@@ -1,2 +1,12 @@
 <h1>Wizard Page</h1>
-{{ hello }}
+
+<div id="react-root"></div>
+
+{# Liam - Comment out or remove below when adding React. #}
+{% if wizard_tree is empty %}
+    <h3>Invalid wizard path.</h3>
+{% else %}
+    {% for wizard_step in wizard_tree %}
+        <p>{{ wizard_step.original_node.title.value|raw|striptags }} - {{ wizard_step.original_node.body.value|raw|striptags }}</p>
+    {% endfor %}
+{% endif %}

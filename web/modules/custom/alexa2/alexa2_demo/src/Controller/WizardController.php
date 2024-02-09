@@ -12,15 +12,29 @@ class WizardController extends ControllerBase {
         //     "#type" => "markup",
         //     "#markup" => $this->buildWizardTree($wizard),
         // ];
+        // For rendering the front-end of the wizard tree, things we need to know are:
+        // Title of the current Wizard/Wizard Step
+        // Children of the current Wizard/Wizard Step (titles and ids)
+        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard);
         return [
             '#theme' => 'alexa2_demo_wizard',
+            '#attached' => [
+                'library' => [
+                    'alexa2_demo/alexa2_demo.react_wizard_viewer',
+                ],
+                // JS variables go here
+                'drupalSettings' => [
+                    'wizardTree' => $wizardTree
+                ]
+            ],
+            '#wizard_tree' => $wizardTree
         ];
     }
 
     public function wizardPageTitle(Node $wizard) {
         $title = '';
 
-        if ( $wizard ) {
+        if ( $wizard != null ) {
             $title = $wizard->getTitle();
         }
 
@@ -69,20 +83,11 @@ class WizardController extends ControllerBase {
         //     "#type" => "markup",
         //     "#markup" => t($markup),
         // ];
+
         return [
             '#theme' => 'alexa2_demo_wizard_select',
-            // '#hello' => 'test',
+            '#wizards' => $availableWizards
         ];
-    }
-
-    protected function buildWizardTree(Node $wizard) {
-        $wizardTree = '<p>Invalid Wizard Selection</p>';
-
-        if ( $wizard != null ) {
-            // TODO build wizard steps here.
-        }
-
-        return t($wizardTree);
     }
 
 }

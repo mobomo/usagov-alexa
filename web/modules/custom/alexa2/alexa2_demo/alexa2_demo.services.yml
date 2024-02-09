@@ -8,4 +8,4 @@ services:
     tags:
       - { name: drush.command }
   alexa2_demo.wizard_tree:
-    class: Drupal\alexa2\Services\WizardTreeService
+    class: Drupal\alexa2_demo\Services\WizardTreeService

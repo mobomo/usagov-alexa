@@ -1,0 +1,24 @@
+# base:
+#   css:
+#     theme:
+#       main.css: {}
+#   js:
+#     main.js: {}
+
+alexa2_demo.react_wizard_select:
+  css:
+    # base -> layout -> component -> state -> theme
+    theme:
+      css/reactWizardSelect.css: {}
+  js:
+    js/reactWizardSelect.js: {}
+  # dependencies:
+  #   - core/jquery
+  #   - alexa2_demo/base
+
+alexa2_demo.react_wizard_viewer:
+  css:
+    theme:
+      css/reactWizardViewer.css: {}
+  js:
+    js/reactWizardViewer.js: {}

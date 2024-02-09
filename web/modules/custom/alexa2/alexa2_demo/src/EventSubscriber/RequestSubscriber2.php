@@ -67,40 +67,36 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         break;
       
       case 'FallbackIntent':
-        $response->sessionAttributes['currentStep'] = $request->session->attributes['currentStep'];
-        $response->response->outputSpeech = OutputSpeech::createByText('Sorry, I\'m not sure what that is. Please say your scam. Or you can say start over or stop.');
-        $response->response->shouldEndSession = false;
+        $this->fallbackIntent( $request, $response );
+        break;
+      
+      case 'DynamicEntitiesIntent':
+        //ER_SUCCESS_NO_MATCH
+        //ER_SUCCESS_MATCH
+        // Check to see if this is a direct match for the slot. Alexa will also match non-slot values.
+        // E.g. if your utterance is "My scam is {slotname}" and slotname has values ["test"] as options,
+        // saying "My scam is test" will trigger this Intent and result in ER_SUCCESS_MATCH for the slot, while
+        // saying "My scam is nothing" will trigger this Intent and result in ER_SUCCESS_NO_MATCH.
+        // Note that indirect matches will still show ER_SUCCESS_MATCH, e.g. in the above example,
+        // "My scam is tests" would still be ER_SUCCESS_MATCH
+        if ($choice = $this->getSlotValueFromMatch( $request )) {
+          $this->wizardStep( $request, $response, $choice );
+        } else {
+          // TODO - do we want to do something else when we land on this Intent but the
+          // slot isn't a match.
+          $this->fallbackIntent( $request, $response );
+        }
+
+
         break;
 
       case 'SearchQueryIntent':
-        $response->response->shouldEndSession = false;
-        $choice = $this->getSlotValue( $request, 'query' );
-        $currentStep = $this->getCurrentStep( $request );
-        $nextStep = $this->findNextStep( $choice, $currentStep );
-        $suggestions = $this->getSuggestions($nextStep);
-        $title = $nextStep->getTitle();
-
-        // If the current step and next step are equal, we didn't find a matching step
-        // for the uttered phrase. We should say something else.
-        if ($currentStep && $nextStep && $currentStep->id() === $nextStep->id()) {
-          $output = "I'm sorry, I didn't catch that. You can say things like: It's " . $suggestions . '.';
-          $output .= " Or you can say 'start over' or 'stop.'";
+        if ( $choice = $this->getSlotValue( $request, 'query' ) ) {
+          $this->wizardStep( $request, $response, $choice );
         } else {
-          $output = $nextStep->body->value;
-          $output = strip_tags(html_entity_decode($output), $ssmlTags);
-          if ( $suggestions && !empty($suggestions) ) {
-            $output .= " You can say things like: It's " . $suggestions . '.';
-          } else {
-            $output .= " Would you like to ask about another scam? You can say 'start over' or 'stop.'";
-          }
+          // TODO
+          $this->fallbackIntent( $request, $response );
         }
-        $nextStepUUID = $nextStep->uuid();
-        $output = '<speak>' . $output . '</speak>';
-        $response->sessionAttributes['currentStep'] = $nextStepUUID;
-        $reprompt = new Reprompt(OutputSpeech::createBySSML($output));
-        $response->response->reprompt = $reprompt;
-        $response->response->outputSpeech = OutputSpeech::createBySSML($output);
-        $response->response->card = Card::createSimple($title, $output);
         break;
 
       case 'RestartIntent':
@@ -114,6 +110,7 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         $question = $currentStep->body->value;
         $question = strip_tags(html_entity_decode($question), $ssmlTags);
         $suggestions = $this->getSuggestions($currentStep);
+        $utterances = $this->getAllPossibleUtterances( $currentStep );
         if ( $suggestions && !empty($suggestions) ) {
           $question .= " You can say things like: It's " . $suggestions . '.';
         }
@@ -121,10 +118,62 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         $response->response->outputSpeech = OutputSpeech::createBySSML( $question );
         $reprompt = new Reprompt(OutputSpeech::createBySSML( $question ));
         $response->response->reprompt = $reprompt;
-        // $response->response->card = Card::createSimple( $title, $question );
+        $response->response->card = Card::createSimple( $title, $question );
+
+        $this->updateSlotSuggestions( $request, $response, $utterances );
         break;
     }
 
+  }
+
+  protected function updateSlotSuggestions( &$request, &$response, $utterances ) {
+    $types = [];
+    $updateDynamicEntitiesDirective = \MaxBeckers\AmazonAlexa\Response\Directives\Dialog\UpdateDynamicEntities\Replace::create();
+    foreach ($utterances as $utterance) {
+      $types[] = $utterance;
+    }
+    $updateDynamicEntitiesDirective->addType(
+      \MaxBeckers\AmazonAlexa\Response\Directives\Dialog\Entity\Type::create('DynamicSlot', $types)
+    );
+    $response->response->addDirective($updateDynamicEntitiesDirective);
+  }
+
+  protected function wizardStep( &$request, &$response, $choice ) {
+    $response->response->shouldEndSession = false;
+    $currentStep = $this->getCurrentStep( $request );
+    $nextStep = $this->findNextStep( $choice, $currentStep );
+    $suggestions = $this->getSuggestions( $nextStep );
+    $utterances = $this->getAllPossibleUtterances( $nextStep );
+    $title = $nextStep->getTitle();
+
+    // If the current step and next step are equal, we didn't find a matching step
+    // for the uttered phrase. We should say something else.
+    if ($currentStep && $nextStep && $currentStep->id() === $nextStep->id()) {
+      $output = "I'm sorry, I didn't catch that. You can say things like: It's " . $suggestions . '.';
+      $output .= " Or you can say 'start over' or 'stop.'";
+    } else {
+      $output = $nextStep->body->value;
+      $output = strip_tags(html_entity_decode($output), $ssmlTags);
+      if ( $suggestions && !empty($suggestions) ) {
+        $output .= " You can say things like: It's " . $suggestions . '.';
+      } else {
+        $output .= " Would you like to ask about another scam? You can say 'start over' or 'stop.'";
+      }
+    }
+    $nextStepUUID = $nextStep->uuid();
+    $output = '<speak>' . $output . '</speak>';
+    $response->sessionAttributes['currentStep'] = $nextStepUUID;
+    $reprompt = new Reprompt(OutputSpeech::createBySSML($output));
+    $response->response->reprompt = $reprompt;
+    $response->response->outputSpeech = OutputSpeech::createBySSML($output);
+    $response->response->card = Card::createSimple($title, $output);
+    $this->updateSlotSuggestions( $request, $response, $utterances );
+  }
+
+  protected function fallbackIntent( &$request, &$response ) {
+    $response->sessionAttributes['currentStep'] = $request->session->attributes['currentStep'];
+    $response->response->outputSpeech = OutputSpeech::createByText('Sorry, I\'m not sure what that is. Please say your scam. Or you can say start over or stop.');
+    $response->response->shouldEndSession = false;
   }
 
   public function getSuggestions( $currentStep ) {
@@ -146,6 +195,31 @@ class RequestSubscriber2 implements EventSubscriberInterface {
     }
 
     return implode($separator, $suggestions);
+  }
+
+  protected function getAllPossibleUtterances( $currentStep ) {
+    $utterances = [];
+
+    if ( $currentStep && ($children = $currentStep->get('field_wizard_step')->referencedEntities()) ) {
+      foreach ($children as $child) {
+        // Add primary utterance and aliases to possible phrases
+        $primaryUtterance = $child->get('field_wizard_primary_utterance')->getString();
+        $utterance = [
+          'id' => preg_replace('/[ -]/', '_', $primaryUtterance),
+          'name' => [
+            'value' => $primaryUtterance,
+            'synonyms' => []
+          ]
+        ];
+        $aliases = $child->get('field_wizard_aliases')->getString();
+        if ( !empty($aliases) ) {
+          $utterance['synonyms'] = array_merge($utterances, preg_split('/\s*,\s*/', $aliases));
+        }
+        $utterances[] = $utterance;
+      }
+    }
+
+    return $utterances;
   }
 
   public function getCurrentStep( $request ) {
@@ -206,6 +280,20 @@ class RequestSubscriber2 implements EventSubscriberInterface {
      }
    }
    return null;
+  }
+
+  public function getSlotValueFromMatch( $request ) {
+    foreach ( $request->request->intent->slots as $slot ) {
+      $resolutions = $slot?->resolutions;
+      if ( $resolutions ) {
+        foreach ( $resolutions as $resolution ) {
+          if ($resolution->status->code === "ER_SUCCESS_MATCH") {
+            return $resolution->values[0]->name;
+          }
+        }
+      }
+    }
+    return null;
   }
 
   public function phrasesMatch( $phrase, $possibleMatches, $part = 'normal' ) {
