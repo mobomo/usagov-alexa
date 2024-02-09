@@ -83,9 +83,22 @@ class WizardController extends ControllerBase {
         //     "#type" => "markup",
         //     "#markup" => t($markup),
         // ];
+        $reactWizards = [];
+        foreach ($availableWizards as $key => $val) {
+            $reactWizards[$key] = $val->toArray();
+        }
 
         return [
             '#theme' => 'alexa2_demo_wizard_select',
+            '#attached' => [
+                'library' => [
+                    'alexa2_demo/alexa2_demo.react_wizard_select',
+                ],
+                // JS variables go here
+                'drupalSettings' => [
+                    'wizards' => $reactWizards
+                ]
+            ],
             '#wizards' => $availableWizards
         ];
     }

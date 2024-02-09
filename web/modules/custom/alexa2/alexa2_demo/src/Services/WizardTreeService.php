@@ -52,7 +52,8 @@ class WizardTreeService {
       'title' => $wizardStep->getTitle(),
       'id' => $wizardStep->id(),
       'children' => [],
-      'original_node' => $wizardStep
+      'original_node' => $wizardStep,
+      'original_node_data' => $wizardStep->toArray()
     ];
     $children = $wizardStep->get('field_wizard_step')->referencedEntities();
 
