@@ -15,7 +15,10 @@ class WizardController extends ControllerBase {
         // For rendering the front-end of the wizard tree, things we need to know are:
         // Title of the current Wizard/Wizard Step
         // Children of the current Wizard/Wizard Step (titles and ids)
-        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard);
+        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
+        // $wizardStepForm = \Drupal::formBuilder()->getForm('Drupal\node\Form\SimpleForm');
+        error_log(json_encode($wizardTree));
+
         return [
             '#theme' => 'alexa2_demo_wizard',
             '#attached' => [
@@ -27,7 +30,8 @@ class WizardController extends ControllerBase {
                     'wizardTree' => $wizardTree
                 ]
             ],
-            '#wizard_tree' => $wizardTree
+            '#wizard_tree' => $wizardTree,
+            '#wizard_step_form' => $wizardStepForm
         ];
     }
 

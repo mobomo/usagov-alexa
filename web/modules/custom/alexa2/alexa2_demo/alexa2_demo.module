@@ -5,7 +5,8 @@ function alexa2_demo_theme($existing, $type, $theme, $path) {
         'alexa2_demo_wizard' => [
             'variables' => [
                 'hello' => t('Hello World!'),
-                'wizard_tree' => []
+                'wizard_tree' => [],
+                'wizard_step_form' => ''
             ],
         ],
         'alexa2_demo_wizard_select' => [
