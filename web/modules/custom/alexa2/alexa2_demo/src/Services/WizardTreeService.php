@@ -17,12 +17,6 @@ class WizardTreeService {
       ->accessCheck(TRUE)
       ->execute();
     $wizards = Node::loadMultiple($wizards);
-    // $wizardSteps = \Drupal::entityQuery('node')
-    //   ->condition('status', 1)
-    //   ->condition('type', 'wizard_step')
-    //   ->accessCheck(TRUE)
-    //   ->execute();
-    // $wizardSteps = Node::loadMultiple($wizardSteps);
     foreach ($wizards as $wizard) {
       $wizardTree[$wizard->id()] = $this->buildWizardStep($wizard);
     }
@@ -34,14 +28,9 @@ class WizardTreeService {
     return $this->buildWizardTreeFromNode( Node::load($startNodeId) );
   }
 
-  public function buildWizardTreeFromNode( Node $wizard ) {
-    $wizardTree = [];
-    $wizardSteps = $wizard->get('field_wizard_step')->referencedEntities();
-    foreach ($wizardSteps as $wizardStep) {
-      $wizardTree[$wizardStep->id()] = $this->buildWizardStep($wizardStep);
-    }
+  public function buildWizardTreeFromNode( Node $wizard, $keyedChildren = true ) {
 
-    return $wizardTree;
+    return $this->buildWizardStep( $wizard, $keyedChildren );
   }
 
   protected function buildWizardStep( $wizardStep, $keyedChildren = true ) {
@@ -61,24 +50,6 @@ class WizardTreeService {
       // 'original_node' => $wizardStep,
       // 'original_node_data' => $wizardStep->toArray()
     ];
-    /*
-      {
-        "name": "banking",  
-        "title": "banking",
-        "nid": "1",
-        "body": "Please select scam",
-        "primaryUtterance": "some string",
-        "aliases": "bank,banking,money",
-        "children": [
-          {
-            "name": "fakeCheck",
-            "title": "Fake Check",
-            "nid": "2",
-            "children": [...]
-          }
-        ]
-      }
-    */
     $children = $wizardStep->get('field_wizard_step')->referencedEntities();
 
     foreach ($children as $child) {
@@ -92,6 +63,12 @@ class WizardTreeService {
     }
 
     return $treeNode;
+
+  }
+
+  public function saveWizardTree($tree) {
+
+
 
   }
 
