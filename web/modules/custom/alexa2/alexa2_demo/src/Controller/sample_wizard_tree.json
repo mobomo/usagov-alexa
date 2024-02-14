@@ -13,8 +13,8 @@
       "body": "<p><prosody rate='medium'>A scam that affects your financial accounts, such as savings, checking, or loans, is a financial scam. Also, any scam that involves investment accounts, credit card, or mortgage accounts is a financial scam.</prosody></p>",
       "primaryUtterance": "financial",
       "aliases": "bank, banking",
-      "children": {
-        "4": {
+      "children": [
+        {
           "name": "fake_check",
           "title": "Fake Check",
           "id": "4",
@@ -23,7 +23,7 @@
           "aliases": "",
           "children": []
         }
-      }
+      ]
     },
     {
       "name": "imposter",

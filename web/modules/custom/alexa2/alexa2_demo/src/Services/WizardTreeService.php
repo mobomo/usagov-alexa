@@ -54,7 +54,7 @@ class WizardTreeService {
 
     foreach ($children as $child) {
       $childId = $child->id();
-      $childStep = $this->buildWizardStep( $child );
+      $childStep = $this->buildWizardStep( $child, $keyedChildren );
       if ( $keyedChildren ) {
         $treeNode['children'][$childId] = $childStep;
       } else {
@@ -67,7 +67,6 @@ class WizardTreeService {
   }
 
   public function saveWizardTree($tree) {
-
 
 
   }
