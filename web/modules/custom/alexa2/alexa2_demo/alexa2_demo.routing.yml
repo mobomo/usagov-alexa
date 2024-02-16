@@ -20,3 +20,13 @@ alexa2_demo.wizards.wizard:
       wizard:
         type: entity:node
     no_cache: 'TRUE'
+
+alexa2_demo.wizard_tree.update.v1:
+  path: '/alexa/api/v1/wizard-tree/update'
+  defaults:
+    _title: 'Update Wizard Tree Content'
+    _controller: '\Drupal\alexa2_demo\Controller\WizardTreeApi::updateWizardTree'
+  requirements:
+    _custom_access: '\Drupal\alexa2_demo\Controller\WizardTreeApi::updateWizardTreeAccess'
+  options:
+    no_cache: 'TRUE'

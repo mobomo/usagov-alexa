@@ -8,8 +8,9 @@ use Drupal\node\Entity\Node;
 class WizardController extends ControllerBase {
     
     public function wizardPage(Node $wizard) {
-        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
-        error_log(json_encode($wizardTree));
+        // $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
+        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNode( $wizard );
+        $wizardUpdatePath = \Drupal\Core\Url::fromRoute('alexa2_demo.wizard_tree.update.v1')->toString();
 
         return [
             '#theme' => 'alexa2_demo_wizard',
@@ -19,7 +20,8 @@ class WizardController extends ControllerBase {
                 ],
                 // JS variables go here
                 'drupalSettings' => [
-                    'wizardTree' => $wizardTree
+                    'wizardTree' => $wizardTree,
+                    'wizardUpdateUrl' => $wizardUpdatePath
                 ]
             ],
             '#wizard_tree' => $wizardTree,
