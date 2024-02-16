@@ -186,6 +186,8 @@ class WizardTreeService {
         $node->set('field_wizard_aliases', $wizardStep['aliases'] ?? '');
 
         $node->setOwnerId(\Drupal::currentUser()->id());
+
+        $node->set('field_wizard_step', []);
         
         // Save the node.
         $node->save();
@@ -197,20 +199,11 @@ class WizardTreeService {
         if ($parent) {
           // TODO set children here.
           $currentChildren = $parent->get('field_wizard_step')->referencedEntities();
-          $inArray = false;
-          foreach ($currentChildren as $childIdtoCheck) {
-            if ( $childIdToCheck === $node->id() ) {
-              $inArray = true;
-              break;
-            }
-          }
-          if ( !$inArray ) {
-            $currentChildren[] = [
-              'target_id' => $node->id()
-            ];
-            $parent->set('field_wizard_step', $currentChildren);
-            $parent->save();
-          }
+          $currentChildren[] = [
+            'target_id' => $node->id()
+          ];
+          $parent->set('field_wizard_step', $currentChildren);
+          $parent->save();
         }
       }
     }
