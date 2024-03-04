@@ -6,7 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
 
 class WizardController extends ControllerBase {
-    
+
     public function wizardPage(Node $wizard) {
         // $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
         $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNode( $wizard );
@@ -25,7 +25,7 @@ class WizardController extends ControllerBase {
                 ]
             ],
             '#wizard_tree' => $wizardTree,
-            '#wizard_step_form' => $wizardStepForm
+            //'#wizard_step_form' => $wizardStepForm
         ];
     }
 
