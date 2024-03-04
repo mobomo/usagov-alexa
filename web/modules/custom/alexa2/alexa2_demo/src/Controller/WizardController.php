@@ -11,7 +11,6 @@ class WizardController extends ControllerBase {
         // $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
         $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNode( $wizard );
         $wizardUpdatePath = \Drupal\Core\Url::fromRoute('alexa2_demo.wizard_tree.update.v1')->toString();
-        error_log(json_encode($wizardTree));
 
         return [
             '#theme' => 'alexa2_demo_wizard',
