@@ -25,7 +25,6 @@ class WizardController extends ControllerBase {
                 ]
             ],
             '#wizard_tree' => $wizardTree,
-            //'#wizard_step_form' => $wizardStepForm
         ];
     }
 

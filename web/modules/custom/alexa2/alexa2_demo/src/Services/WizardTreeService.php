@@ -41,17 +41,30 @@ class WizardTreeService {
     $ids = [];
     $treeQueue = [];
 
-    $treeQueue[] = $wizard;
+    $treeQueue[] = [
+      'node' => $wizard,
+      'parent' => null,
+    ];
 
     while ( !empty($treeQueue) ) {
       $treeNode = array_shift($treeQueue);
+      $parent = $treeNode['parent'];
+      $treeNode = $treeNode['node'];
       if ( !isset($wizardTree[$treeNode->id()]) ) {
         $ids[] = $treeNode->id();
         $wizardTree[$treeNode->id()] = $this->buildWizardDataFromStep( $treeNode, true );
+        if ( $parent !== null ) {
+          $wizardTree[$treeNode->id()]['parentStepId'] = $parent->id();
+        } else {
+          $wizardTree[$treeNode->id()]['parentStepId'] = null;
+        }
         $children = $treeNode->get('field_wizard_step')->referencedEntities();
         foreach ( $children as $child ) {
           if ( !isset($wizardTree[$child->id()]) ) {
-            $treeQueue[] = $child;
+            $treeQueue[] = [
+              'node' => $child,
+              'parent' => $treeNode,
+            ];
           }
         }
       }
