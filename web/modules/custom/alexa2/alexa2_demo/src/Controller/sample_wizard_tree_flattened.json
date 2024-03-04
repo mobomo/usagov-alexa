@@ -1,73 +1,89 @@
 {
-    "entities": {
-      "2": {
-        "name": "scams_wizard",
-        "title": "Scams Wizard",
-        "id": "2",
-        "body": "<p><prosody rate='medium'>Welcome to the <prosody rate='x-slow'>USA gov</prosody> scams wizard!<amazon:emotion name='disappointed' intensity='high'> I'm sorry that you are experiencing a scam. I can help you learn where to report it!</amazon:emotion> Please tell me the type of scam you want to report.</prosody></p>",
-        "primaryUtterance": "scam",
-        "aliases": "scams",
-        "children": [
-          "3",
-          "6",
-          "7",
-          "8"
-        ]
-      },
-      "3": {
-        "name": "financial",
-        "title": "Financial",
-        "id": "3",
-        "body": "<p><prosody rate='medium'>A scam that affects your financial accounts, such as savings, checking, or loans, is a financial scam. Also, any scam that involves investment accounts, credit card, or mortgage accounts is a financial scam.</prosody></p>",
-        "primaryUtterance": "financial",
-        "aliases": "bank, banking",
-        "children": [
-          "4"
-        ]
-      },
-      "4": {
-        "name": "fake_check",
-        "title": "Fake Check",
-        "id": "4",
-        "body": "<p>A Fake Check Scam. Here's what to do about a fake check scam...</p>",
-        "primaryUtterance": "fake check",
-        "aliases": "",
-        "children": []
-      },
-      "6": {
-        "name": "imposter",
-        "title": "Imposter",
-        "id": "6",
-        "body": "<p>An imposter scam involves some sort of trickery where a person is trying to make you think they are from a trusted entity, such as the government, or a known company. An imposter scam can also involve someone pretending to be a love interest, or a family member.</p>",
-        "primaryUtterance": "imposter",
-        "aliases": "",
-        "children": []
-      },
-      "7": {
-        "name": "moving",
-        "title": "Moving",
-        "id": "7",
-        "body": "<p><prosody rate='medium'>Some moving companies use fraudulent practices such as demanding cash up front, or requiring you to pay additional money before they will return your belongings.</prosody></p>",
-        "primaryUtterance": "moving",
-        "aliases": "",
-        "children": []
-      },
-      "8": {
-        "name": "fraud",
-        "title": "Fraud",
-        "id": "8",
-        "body": "<p><prosody rate='medium'>Fraud scams occur when someone steals personal information from you, then uses that information to pretend they are you<break time='1ms'/> in order to gain access to services such as unemployment, or social security.</prosody></p>",
-        "primaryUtterance": "fraud",
-        "aliases": "",
-        "children": []
-      }
+  "entities": {
+    "2": {
+      "name": "scams_wizard",
+      "title": "Scams Wizard",
+      "id": "2",
+      "body": "<p><prosody rate='medium'>Welcome to the <prosody rate='x-slow'>USA gov</prosody> scams wizard!<amazon:emotion name='disappointed' intensity='high'> I'm sorry that you are experiencing a scam. I can help you learn where to report it!</amazon:emotion> Please tell me the type of scam you want to report.</prosody></p>",
+      "primaryUtterance": "scam",
+      "aliases": "scams",
+      "children": [
+        "3",
+        "6",
+        "7",
+        "8",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ],
+      "parentStepId": null
     },
-    "ids": [
-      "2",
-      "3",
-      "6",
-      "7",
-      "8",
-      "4"
-    ]
-  }
+    "3": {
+      "name": "financial",
+      "title": "Financial",
+      "id": "3",
+      "body": "<p><prosody rate='medium'>A scam that affects your financial accounts, such as savings, checking, or loans, is a financial scam. Also, any scam that involves investment accounts, credit card, or mortgage accounts is a financial scam.</prosody></p>",
+      "primaryUtterance": "financial",
+      "aliases": "bank, banking",
+      "children": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "parentStepId": "2"
+    },
+    "4": {
+      "name": "fake_check",
+      "title": "Fake Check",
+      "id": "4",
+      "body": "<p>A Fake Check Scam. Here's what to do about a fake check scam...</p>",
+      "primaryUtterance": "fake check",
+      "aliases": "",
+      "children": [],
+      "parentStepId": "3"
+    },
+    "6": {
+      "name": "imposter",
+      "title": "Imposter",
+      "id": "6",
+      "body": "<p>An imposter scam involves some sort of trickery where a person is trying to make you think they are from a trusted entity, such as the government, or a known company. An imposter scam can also involve someone pretending to be a love interest, or a family member.</p>",
+      "primaryUtterance": "imposter",
+      "aliases": "",
+      "children": [],
+      "parentStepId": "2"
+    },
+    "7": {
+      "name": "moving",
+      "title": "Moving",
+      "id": "7",
+      "body": "<p><prosody rate='medium'>Some moving companies use fraudulent practices such as demanding cash up front, or requiring you to pay additional money before they will return your belongings.</prosody></p>",
+      "primaryUtterance": "moving",
+      "aliases": "",
+      "children": [],
+      "parentStepId": "2"
+    },
+    "8": {
+      "name": "fraud",
+      "title": "Fraud",
+      "id": "8",
+      "body": "<p><prosody rate='medium'>Fraud scams occur when someone steals personal information from you, then uses that information to pretend they are you<break time='1ms'/> in order to gain access to services such as unemployment, or social security.</prosody></p>",
+      "primaryUtterance": "fraud",
+      "aliases": "",
+      "children": [],
+      "parentStepId": "2"
+    }
+  },
+  "ids": [
+    "2",
+    "3",
+    "6",
+    "7",
+    "8",
+    "4"
+  ]
+}
