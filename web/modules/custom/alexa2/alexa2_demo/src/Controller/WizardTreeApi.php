@@ -7,6 +7,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 // JsonResponse if returning JSON data.
 
 class WizardTreeApi extends ControllerBase {
@@ -17,16 +18,15 @@ class WizardTreeApi extends ControllerBase {
      * @param \Symfony\Component\HttpFoundation\Request $request
      *  The HTTP request containing all request data.
      * 
-     * @return \Symfony\Component\HttpFoundation\Response
-     *  A simple HTTP response containing a status code.
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     *  A simple HTTP response containing a status code and JSON data.
      */
     public function updateWizardtree(Request $request) {
-        $response = new Response();
+        $response = new JsonResponse();
 
         if ($request->getMethod() !== 'POST') {
             $response->setStatusCode(Response::HTTP_METHOD_NOT_ALLOWED);
-            $response->setContent('Method Not Allowed');
-            $response->send();
+            $response->setContent('{"error": "Method Not Allowed"}');
             return $response;
         }
         
@@ -34,8 +34,7 @@ class WizardTreeApi extends ControllerBase {
 
         if ( !$postData || empty($postData) ) {
             $response->setStatusCode(Response::HTTP_BAD_REQUEST);
-            $response->setContent('Bad Request');
-            $response->send();
+            $response->setContent('{"error": "Bad Request"}');
             return $response;
         }
 
@@ -43,9 +42,7 @@ class WizardTreeApi extends ControllerBase {
         // TODO parse status
 
         $response->setStatusCode(Response::HTTP_OK);
-        // TODO better message? E.g. nodes deleted, created, updated, etc.
-        $response->setContent('Wizard Tree Updated Successfully.');
-        $response->send();
+        $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattedWizardTreeFromNodeId($postData['id'])));
         return $response;
     }
 
