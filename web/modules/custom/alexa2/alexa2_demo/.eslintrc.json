@@ -1,23 +1,29 @@
 {
+  "root": true,
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:prettier/recommended",
-    "prettier",
     "prettier/prettier"
   ],
   "settings": {
     "import/resolver": {
-      "babel-module": {
-        "root": ["./src"]
-      }
+      "typescript": {}
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "import",
+    "eslint-plugin-prettier",
+    "prettier"
+  ],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",

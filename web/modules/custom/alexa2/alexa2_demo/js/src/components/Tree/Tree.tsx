@@ -11,9 +11,10 @@ const Tree: React.FC<PropTypes> = ({ wizardSteps }) => {
   return (
     <ul>
       {map(
-        (wizardStep) => (
-          <TreeNode wizardStep={wizardStep} key={wizardStep.id} />
-        ),
+        (wizardStep) =>
+          !wizardStep.delete && (
+            <TreeNode wizardStep={wizardStep} key={wizardStep.id} />
+          ),
         wizardSteps,
       )}
     </ul>

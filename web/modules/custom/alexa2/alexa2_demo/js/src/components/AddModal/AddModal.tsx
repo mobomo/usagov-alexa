@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
@@ -6,14 +6,14 @@ import {
   WizardStep,
   selectWizardSteps,
   updateWizardStep,
+  addWizardStep,
 } from '@/state/wizardStepsSlice';
 import useUpdateWizardTree from '@/hooks/updateWizardTree';
-import ConfirmDeleteModal from '@/components/ConfirmDeleteModal';
 
 interface PropTypes {
   wizardStep: WizardStep;
-  showEditModal: boolean;
-  setShowEditModal: (value: React.SetStateAction<boolean>) => void;
+  showAddModal: boolean;
+  setShowAddModal: (value: React.SetStateAction<boolean>) => void;
 }
 
 type FormData = {
@@ -24,64 +24,53 @@ type FormData = {
   aliases: string;
 };
 
-const EditModal: React.FC<PropTypes> = ({
+const AddModal: React.FC<PropTypes> = ({
   wizardStep,
-  showEditModal,
-  setShowEditModal,
+  showAddModal,
+  setShowAddModal,
 }) => {
   const dispatch = useDispatch();
   const [updateWizardTree] = useUpdateWizardTree();
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   const wizardSteps = useSelector(selectWizardSteps);
   const { register, handleSubmit } = useForm<FormData>();
 
   const handleSubmitClick: SubmitHandler<FormData> = useCallback(
     async (data) => {
-      await updateWizardTree({ wizardSteps: wizardSteps });
+      dispatch(
+        addWizardStep({
+          ...data,
+          id: '-1',
+          parentStepId: wizardStep.id,
+        }),
+      );
 
       dispatch(
         updateWizardStep({
           ...wizardStep,
-          name: data.name ? data.name : wizardStep.name,
-          title: data.title ? data.title : wizardStep.title,
-          body: data.body ? data.body : wizardStep.body,
-          primaryUtterance: data.primaryUtterance
-            ? data.primaryUtterance
-            : wizardStep.primaryUtterance,
-          aliases: data.aliases ? data.aliases : wizardStep.aliases,
+          childStepIds: wizardStep.childStepIds
+            ? ['-1', ...wizardStep.childStepIds]
+            : [],
         }),
       );
 
-      setShowEditModal(!showEditModal);
+      await updateWizardTree({ wizardSteps: wizardSteps });
+
+      setShowAddModal(!showAddModal);
     },
     [dispatch],
   );
 
-  const handleDeleteClick = useCallback(() => {
-    setShowDeleteModal(!showDeleteModal);
-  }, []);
-
-  const handleDeleteSubmitClick = useCallback(() => {
-    console.log('DELETE');
-    dispatch(
-      updateWizardStep({
-        ...wizardStep,
-        delete: true,
-      }),
-    );
-  }, [dispatch]);
-
   return (
     <div
-      onClick={() => setShowEditModal(!showEditModal)}
+      onClick={() => setShowAddModal(!showAddModal)}
       className="fixed left-0 top-0 flex h-screen w-full items-center  justify-center bg-black bg-opacity-30"
     >
       <div
         onClick={(e) => e.stopPropagation()}
         className="rounded-xl border bg-white p-8"
       >
-        <h1 className="mb-4 text-xl">{wizardStep.title}</h1>
+        <h1 className="mb-4 text-xl">New Wizard Step</h1>
 
         <form
           onSubmit={handleSubmit(handleSubmitClick)}
@@ -90,50 +79,34 @@ const EditModal: React.FC<PropTypes> = ({
           <label>Title</label>
           <input
             {...register('title')}
-            placeholder={wizardStep.title}
             className="mb-4 h-12 w-[640px] rounded-md border p-2 text-lg"
           />
 
           <label>Body</label>
           <input
             {...register('body')}
-            placeholder={wizardStep.body}
             className="mb-4 h-12 w-[640px] rounded-md border p-2 text-lg"
           />
 
           <label>Primary Utterance</label>
           <input
             {...register('primaryUtterance')}
-            placeholder={wizardStep.primaryUtterance}
             className="mb-4 h-12 w-[640px] rounded-md border p-2 text-lg"
           />
 
           <label>Aliases</label>
           <input
             {...register('aliases')}
-            placeholder={wizardStep.aliases}
             className="mb-4 h-12 w-[640px] rounded-md border p-2 text-lg"
           />
 
           <div className="flex justify-evenly">
             <button
-              onClick={() => setShowEditModal(!showEditModal)}
+              onClick={() => setShowAddModal(!showAddModal)}
               className="rounded-md border p-4 hover:bg-gray-light"
             >
               Cancel
             </button>
-
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleDeleteClick();
-              }}
-              className="rounded-md border p-4 hover:bg-gray-light"
-            >
-              Delete
-            </button>
-
             <input
               type="submit"
               className="rounded-md border p-4 hover:bg-gray-light"
@@ -141,16 +114,8 @@ const EditModal: React.FC<PropTypes> = ({
           </div>
         </form>
       </div>
-
-      {showDeleteModal && (
-        <ConfirmDeleteModal
-          handleDeleteSubmitClick={handleDeleteSubmitClick}
-          showDeleteModal={showDeleteModal}
-          setShowDeleteModal={setShowDeleteModal}
-        />
-      )}
     </div>
   );
 };
 
-export default EditModal;
+export default AddModal;

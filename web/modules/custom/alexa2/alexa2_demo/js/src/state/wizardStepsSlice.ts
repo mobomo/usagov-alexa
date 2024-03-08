@@ -5,11 +5,12 @@ export interface WizardStep {
   id: string;
   parentStepId?: string;
   childStepIds?: string[];
-  name: string;
-  title: string;
-  body: string;
-  primaryUtterance: string;
-  aliases: string;
+  name?: string;
+  title?: string;
+  body?: string;
+  primaryUtterance?: string;
+  aliases?: string;
+  delete?: boolean;
 }
 
 export const initialState = {
@@ -95,6 +96,10 @@ const wizardStepsSlice = createSlice({
 export const { selectAll: selectWizardSteps } =
   wizardStepsAdapter.getSelectors<RootState>((state) => state.wizardSteps);
 
-export const { addWizardStep, addWizardSteps, updateWizardStep, removeWizardStep } =
-  wizardStepsSlice.actions;
+export const {
+  addWizardStep,
+  addWizardSteps,
+  updateWizardStep,
+  removeWizardStep,
+} = wizardStepsSlice.actions;
 export default wizardStepsSlice.reducer;
