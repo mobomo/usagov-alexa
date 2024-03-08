@@ -206,7 +206,7 @@ class WizardTreeService {
   protected function saveWizardTreeFlattened($tree) {
     // As a flattened tree, iterate through each item in the tree and update that node.
     // If the item has no parent, it is a wizard. If it has a parent, it is a wizard step.
-    foreach ( $tree as $wizardStepId => $wizardStep ) {
+    foreach ( $tree as $wizardStep ) {
       if ( $wizardStep !== null ) {
         // Attempt to load the node. If the ID is null, negative,
         // or a node doesn't exist with that ID, then $node will
@@ -223,7 +223,7 @@ class WizardTreeService {
             // be loaded and modified.
             if ( isset($tree[$wizardStep['parentStepId']] )) {
               $parent = $tree[$wizardStep['parentStepId']];
-              $childIndex = array_search($wizardStepId, $parent['children']);
+              $index = array_search($wizardStep['id'], $parent['children']);
               if ($index !== false) {
                 unset($parent['children'][$index]);
               }
@@ -247,7 +247,7 @@ class WizardTreeService {
             // The parent has been updated, and the current node has been deleted.
             // If a step is deleted, all of its children should also be deleted.
             $toDelete = [];
-            $childQueue = [$wizardStepId];
+            $childQueue = [$wizardStep['id']];
             while ( !empty($childQueue) ) {
               $currentNodeId = unshift($childQueue);
               // If not already, set the current node id to be deleted.
@@ -320,9 +320,11 @@ class WizardTreeService {
 
           $fieldWizardStep = [];
           foreach ( $wizardStep['children'] as $childId ) {
-            $fieldWizardStep[] = [
-              'target_id' => $childId
-            ];
+            if ($childId > 0) {
+              $fieldWizardStep[] = [
+                'target_id' => $childId
+              ];
+            }
           }
 
           // TODO if not new node, compare new child step array with array 
@@ -332,6 +334,41 @@ class WizardTreeService {
           
           // Save the node.
           $node->save();
+
+          // TODO better way to handle this?
+          if ( $wizardStep['id'] <= 0 ) {
+            // Currently, an ID of -1 means the step is a new step.
+            // Because of this, the node must first be created so an ID is generated,
+            // then the parent Node (or tree data) should be updated to point to this ID.
+
+            $newId = $node->id();
+            $parentStepId = $wizardStep['parentStepId'];
+            // TODO insert into correct spot based on weight.
+            if ( isset($tree[$parentStepId]) ) {
+              $index = array_search($wizardStep['id'], $tree[$parentStepId]['children']);
+              if ($index !== false) {
+                $tree[$parentStepId]['children'][$index] = $newId;
+              }
+            } else {
+              // If the parent isn't in the tree, the node must be loaded,
+              // the new ID added as a child step, then the node must be saved.
+              $parentNode = Node::load($parentStepId);
+              if ( $parentNode != null ) {
+                $newChildren = [];
+                $referencedEntities = $parentNode->get('field_wizard_step')->referencedEntities();
+                foreach ( $referencedEntities as $referencedEntity ) {
+                  $newChildren[] = [
+                    'target_id' => $referencedEntity->id()
+                  ];
+                }
+                $newChildren[] = $newId;
+                $parentNode->set('field_wizard_step', $newChildren);
+                $parentNode->save();
+              }
+            }
+          }
+
+          unset($tree[$wizardStep['id']]);
         }
       }
     }
