@@ -32,7 +32,24 @@ class WizardTreeService {
     return $this->buildWizardStep( $wizard, $keyedChildren );
   }
 
-  public function buildFlattedWizardTreeFromNodeId( $startNodeId ) {
+  public function buildFlattenedWizardTree() {
+
+    $wizardTree = [];
+    $wizards = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'wizard')
+      ->accessCheck(TRUE)
+      ->execute();
+    $wizards = Node::loadMultiple($wizards);
+    foreach ( $wizards as $wizard ) {
+      $wizardTree[$wizard->id()] = $this->buildFlattenedWizardTreeFromNode( $wizard );
+    }
+
+    return $wizardTree;
+
+  }
+
+  public function buildFlattenedWizardTreeFromNodeId( $startNodeId ) {
     return $this->buildFlattenedWizardTreeFromNode( Node::load($startNodeId) );
   }
 
@@ -72,7 +89,8 @@ class WizardTreeService {
 
     return [
       'entities' => $wizardTree,
-      'ids' => $ids
+      'ids' => $ids,
+      'rootStepId' => $wizard->id()
     ];
   }
 
@@ -143,20 +161,180 @@ class WizardTreeService {
     // TODO validate user permissions
     // TODO delete wizard steps if not present in given tree.
     if ($this->validateUserWizardTreePermissions()) {
-      $this->saveWizardStep($tree);
+      // Support data structure being wrapped in top-level objects
+      // 'entities' and 'ids' - see buildFlattenedWizardTree
+      if ( isset($tree['entities'] )) {
+        $tree = $tree['entities'];
+      }
+      // Determine format - nested vs. flattened
+      $nested = true;
+      foreach ( $tree as $treeNode ) {
+        $children = $treeNode['children'];
+        foreach ( $children as $child ) {
+          if ( is_numeric($child) ) {
+            $nested = false;
+          }
+          break;
+        }
+        break;
+      }
+
+      if ( $nested ) {
+        $this->saveWizardTreeNested($tree);
+      } else {
+        $this->saveWizardTreeFlattened($tree);
+      }
     } else {
       // TODO
     }
   }
 
-  public function validateUserWizardTreePermissions() {
+  public function validateUserWizardTreePermissions($user = null) {
     // TODO properly load currently logged in user
-    $user = \Drupal::currentUser();
+    $user ??= \Drupal::currentUser();
     // TODO determine correct permissions
     if ( $user->isAuthenticated() ) {//&& $user->hasPermission('')) {
       return true;
     }
     return false;
+  }
+
+  protected function saveWizardTreeNested($tree) {
+    $this->saveWizardStep($tree);
+  }
+
+  protected function saveWizardTreeFlattened($tree) {
+    // As a flattened tree, iterate through each item in the tree and update that node.
+    // If the item has no parent, it is a wizard. If it has a parent, it is a wizard step.
+    foreach ( $tree as $wizardStepId => $wizardStep ) {
+      if ( $wizardStep !== null ) {
+        // Attempt to load the node. If the ID is null, negative,
+        // or a node doesn't exist with that ID, then $node will
+        // be null.
+        if ( isset($wizardStep['id']) ) {
+          $node = Node::load($wizardStep['id']);
+        }
+
+        if ( $wizardStep['delete'] == true ) {
+          if ( $node !== null ) {
+            // If needed, remove this item as a child of the parent.
+            // If the parent's data still lives in the tree, then it hasn't yet been
+            // saved. If it doesn't, then it has been saved and the parent node will need to
+            // be loaded and modified.
+            if ( isset($tree[$wizardStep['parentStepId']] )) {
+              $parent = $tree[$wizardStep['parentStepId']];
+              $childIndex = array_search($wizardStepId, $parent['children']);
+              if ($index !== false) {
+                unset($parent['children'][$index]);
+              }
+            } else {
+              $parentNode = Node::load($wizardStep['parentStepId']);
+              if ( $parentNode !== null ) {
+                $parentChildSteps = $parentNode->get('field_wizard_step')->referencedEntities();
+                $parentNewChildSteps = [];
+                foreach ( $parentChildSteps as $parentChildStep ) {
+                  if ( $parentChildStep->id() != $wizardStep['id'] ) {
+                    $parentNewChildSteps[] = [
+                      'target_id' => $parentChildStep->id()
+                    ];
+                  }
+                  $parentNode->set('field_wizard_step', $parentNewChildSteps);
+                  $parentNode->save();
+                }
+              }
+            }
+
+            // The parent has been updated, and the current node has been deleted.
+            // If a step is deleted, all of its children should also be deleted.
+            $toDelete = [];
+            $childQueue = [$wizardStepId];
+            while ( !empty($childQueue) ) {
+              $currentNodeId = unshift($childQueue);
+              // If not already, set the current node id to be deleted.
+              if ( !in_array($currentNodeId, $toDelete) ) {
+                // Add the current node's child items from the tree to the delete queue.
+                $toDelete[] = $currentNodeId;
+                if ( isset($tree[$currentNodeId]) && isset($tree[$currentNodeId]['children']) ) {
+                  foreach ($tree[$currentNodeId]['children'] as $childNodeId ) {
+                    if ( !in_array($childNodeId, $toDelete) && !in_array($childNodeId, $childQueue) ) {
+                      $childQueue[] = $childNodeId;
+                    }
+                  }
+                }
+                // Add the current node's child items from the database to the delete queue.
+                $childNode = Node::load($currentNodeId);
+                if ( $childNode !== null ) {
+                  $childNodes = $childNode->get('field_wizard_step')->referencedEntities();
+                  foreach ( $referencedEntities as $referencedEntity ) {
+                    if ( !in_array($referencedEntity->id(), $toDelete) && !in_array($referencedEntity->id(), $childQueue) ) {
+                      $childQueue[] = $referencedEntity->id();
+                    }
+                  }
+                }
+              }
+            }
+
+            // Now that the node and all of its children (from the passed in tree data as well as Drupal)
+            // are marked for deletion, delete them all and remove them from the tree data.
+            foreach ( $toDelete as $toDeleteId ) {
+              // Delete node and unset in tree.
+              $toDeleteNode = Node::load($toDeleteId);
+              if ( $toDeletenode !== null ) {
+                $toDeleteNode->delete();
+              }
+
+              if ( isset($toDeleteId, $tree) ) {
+                unset($tree[$toDeleteId]);
+              }
+            }
+          }
+        } else {
+          $isNewNode = false;
+          if ( !isset($node) ) {
+            $isNewNode = true;
+            if ( isset($wizardStep['parentStepId']) ) {
+              $node = Node::create([
+                'type' => 'wizard_step'
+              ]);
+            } else {
+              $node = Node::create([
+                'type' => 'wizard'
+              ]);
+            }
+          }
+
+          // TODO handle node creation/updating in separate protected function?
+          $node->setTitle($wizardStep['title']);
+          
+          // TODO set correct format
+          $node->set('body', [
+            'value' => $wizardStep['body'],
+            'format' => 'full_html'
+          ]);
+
+          $node->set('field_wizard_primary_utterance', $wizardStep['primaryUtterance'] ?? '');
+
+          $node->set('field_wizard_aliases', $wizardStep['aliases'] ?? '');
+
+          $node->setOwnerId(\Drupal::currentUser()->id());
+
+          $fieldWizardStep = [];
+          foreach ( $wizardStep['children'] as $childId ) {
+            $fieldWizardStep[] = [
+              'target_id' => $childId
+            ];
+          }
+
+          // TODO if not new node, compare new child step array with array 
+          // from node and delete any children that aren't referenced by the new array.
+
+          $node->set('field_wizard_step', $fieldWizardStep);
+          
+          // Save the node.
+          $node->save();
+        }
+      }
+    }
   }
 
   private function saveWizardStep($wizardStep, $parent = null) {
@@ -168,7 +346,7 @@ class WizardTreeService {
       if ($wizardStep['id']) {
         $node = Node::load($wizardStep['id']);
       }
-      if ( $wizardStep['delete'] === true ) {
+      if ( $wizardStep['delete'] == true ) {
         foreach ( $wizardStep['children'] as $childData ) {
           $childData['delete'] = true;
           $this->saveWizardStep( $childData, $node );

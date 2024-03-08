@@ -42,7 +42,7 @@ class WizardTreeApi extends ControllerBase {
         // TODO parse status
 
         $response->setStatusCode(Response::HTTP_OK);
-        $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattedWizardTreeFromNodeId($postData['id'])));
+        $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNodeId($postData['rootStepId'])));
         return $response;
     }
 
@@ -55,51 +55,57 @@ class WizardTreeApi extends ControllerBase {
      * @return \Drupal\Core\Access\AccessResultInterface
      *  The result of the access check.
      */
-    public function updateWizardTreeAccess() {
+    public function updateWizardTreeAccess(\Drupal\Core\Session\AccountInterface $account) {
         // TODO validate user permission
 
         // return AccessResult::allowedIf($account->hasPermission('do example things') && $this->someOtherCustomCondition());
-        return AccessResult::allowedIf(true);
+        return AccessResult::allowedIf(\Drupal::service('alexa2_demo.wizard_tree')->validateUserWizardTreePermissions($account));
     }
 
-    // public function ajax(Request $request) {
-    //     if ($request->request->get('action') == 'create') {
-    //         // If nid is <= 0, then the node doesn't exist
-    //         if ($request->request->get('nid') <= 0) {
-    //             $node = Node::create([
-    //                 'type' => 'wc_scheduled_content',
-    //             ]);
-    //         } else {
-    //             $node = Node::load($request->request->get('nid'));
-    //         }
-    //         error_log($request->request->get('end'));
-    //         if (!is_null($node)) {
-    //             $node->setTitle($request->request->get('title'));
-    //             $node->set('field_wc_schedule_item', $request->request->get('target_id'));
-    //             $node->set('field_wc_schedule_screen', $request->request->get('screen'));
-    //             $node->set('field_wc_schedule_end_time', $request->request->get('end'));
-    //             $node->set('field_wc_schedule_start_time', $request->request->get('start'));
-    //             $node->save();
-    //             return new JsonResponse([
-    //                 'status' => 'created',
-    //                 'id' => $node->id(),
-    //                 'title' => $node->get('title')->value,
-    //                 'start' => $request->request->get('start'),
-    //                 'end' => $request->request->get('end'),
-    //                 'scheduled_item' => $request->request->get('target_id'),
-    //                 'screen' => $request->request->get('screen')
-    //             ]);
-    //         }
-    //     } else if ($request->request->get('action') == 'delete') {
-    //         if ($request->request->get('nid') > 0) {
-    //             $node = Node::load($request->request->get('nid'));
-    //             if (!is_null($node)) {
-    //                 $node->delete();
-    //             }
-    //             return new JsonResponse(['status' => 'deleted']);
-    //         }
-    //     }
-    //     return new JsonResponse(['status' => 'nothing']);
-    // }
+    /**
+     * Checks access for getting wizard tree data.
+     * 
+     * @param \Drupal\Core\Session\AccountInterface $account
+     *  Run access check for this account.
+     * 
+     * @return \Drupal\Core\Access\AccessResultInterface
+     *  The result of the access check.
+     */
+    public function getWizardTreeAccess(\Drupal\Core\Session\AccountInterface $account) {
+        // TODO validate user permission
+
+        return AccessResult::allowedIf(\Drupal::service('alexa2_demo.wizard_tree')->validateUserWizardTreePermissions($account));
+    }
+
+    /**
+     * Generates the flattened JSON structure for the wizard tree.
+     * Optionally generate using a provided node id as the root node.
+     * 
+     * @param int|null $rootId
+     *   ID of the node to act as the root. null to generate the whole tree for all wizards.
+     * 
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     *  A simple HTTP response containing a status code and JSON data.
+     */
+    public function getFlattenedWizardTree(Request $request, int|null $rootId = null) : JsonResponse {
+        $response = new JsonResponse();
+
+        if ($request->getMethod() !== 'GET') {
+            $response->setStatusCode(Response::HTTP_METHOD_NOT_ALLOWED);
+            $response->setContent('{"error": "Method Not Allowed"}');
+            return $response;
+        }
+
+        if ( $rootId !== null ) {
+            $tree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNodeId( $rootId );
+        } else {
+            $tree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTree();
+        }
+        // TODO parse status
+
+        $response->setStatusCode(Response::HTTP_OK);
+        $response->setContent(json_encode($tree));
+        return $response;
+    }
 
 }
