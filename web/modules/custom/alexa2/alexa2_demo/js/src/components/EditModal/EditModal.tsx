@@ -63,7 +63,6 @@ const EditModal: React.FC<PropTypes> = ({
   }, []);
 
   const handleDeleteSubmitClick = useCallback(() => {
-    console.log('DELETE');
     dispatch(
       updateWizardStep({
         ...wizardStep,
