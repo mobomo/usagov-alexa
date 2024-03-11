@@ -1,6 +1,9 @@
 # Backend files
 .DS_Store
 
+# Files
+web/sites/default/files/php/twig/*
+
 # Visual Studio Code workspace file
 DrupalLocal.code-workspace
 

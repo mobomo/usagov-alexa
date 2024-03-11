@@ -19,6 +19,6 @@ alexa2_demo.react_wizard_select:
 alexa2_demo.react_wizard_viewer:
   css:
     theme:
-      css/reactWizardViewer.css: {}
+      js/dist/style.css: {}
   js:
-    js/reactWizardViewer.js: {}
+    js/dist/wizard-cms.js: {}
