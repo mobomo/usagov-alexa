@@ -164,7 +164,11 @@ class WizardTreeService {
       // Support data structure being wrapped in top-level objects
       // 'entities' and 'ids' - see buildFlattenedWizardTree
       if ( isset($tree['entities'] )) {
-        $tree = $tree['entities'];
+        $treeArray = $tree['entities'];
+        $tree = [];
+        foreach ($treeArray as $treeNode) {
+          $tree[$treeNode['id']] = $treeNode;
+        }
       }
       // Determine format - nested vs. flattened
       $nested = false;
@@ -178,7 +182,6 @@ class WizardTreeService {
         }
         break;
       }
-      error_log("IS NESTED: " . ($nested ? 'true' : 'false'));
       if ( $nested ) {
         $this->saveWizardTreeNested($tree);
       } else {
@@ -206,7 +209,8 @@ class WizardTreeService {
   protected function saveWizardTreeFlattened($tree) {
     // As a flattened tree, iterate through each item in the tree and update that node.
     // If the item has no parent, it is a wizard. If it has a parent, it is a wizard step.
-    foreach ( $tree as $wizardStep ) {
+    foreach ( $tree as $wizardStepId => $wizardStep ) {
+      $wizardStep = $tree[$wizardStepId];
       if ( $wizardStep !== null ) {
         // Attempt to load the node. If the ID is null, negative,
         // or a node doesn't exist with that ID, then $node will
@@ -290,7 +294,7 @@ class WizardTreeService {
           }
         } else {
           $isNewNode = false;
-          if ( !isset($node) ) {
+          if ( $node === null ) {
             $isNewNode = true;
             if ( isset($wizardStep['parentStepId']) ) {
               $node = Node::create([
@@ -336,18 +340,22 @@ class WizardTreeService {
           $node->save();
 
           // TODO better way to handle this?
-          if ( $wizardStep['id'] <= 0 ) {
-            // Currently, an ID of -1 means the step is a new step.
-            // Because of this, the node must first be created so an ID is generated,
-            // then the parent Node (or tree data) should be updated to point to this ID.
+          // Currently, an ID of -1 means the step is a new step.
+          // Because of this, the node must first be created so an ID is generated,
+          // then the parent Node (or tree data) should be updated to point to this ID.
 
-            $newId = $node->id();
-            $parentStepId = $wizardStep['parentStepId'];
+          $newId = $node->id();
+          $parentStepId = $wizardStep['parentStepId'];
+          if ( $isNewNode ) {
             // TODO insert into correct spot based on weight.
             if ( isset($tree[$parentStepId]) ) {
+              // Check to make sure the node ID (e.g. possibly -1) is not already set in parent.
+              // If it is, swap it out with the correct ID. If not, add it in.
               $index = array_search($wizardStep['id'], $tree[$parentStepId]['children']);
               if ($index !== false) {
                 $tree[$parentStepId]['children'][$index] = $newId;
+              } else {
+                $tree[$parentStepId]['children'][] = $newId;
               }
             } else {
               // If the parent isn't in the tree, the node must be loaded,
