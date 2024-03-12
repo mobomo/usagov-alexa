@@ -253,7 +253,7 @@ class WizardTreeService {
             $toDelete = [];
             $childQueue = [$wizardStep['id']];
             while ( !empty($childQueue) ) {
-              $currentNodeId = unshift($childQueue);
+              $currentNodeId = array_shift($childQueue);
               // If not already, set the current node id to be deleted.
               if ( !in_array($currentNodeId, $toDelete) ) {
                 // Add the current node's child items from the tree to the delete queue.
