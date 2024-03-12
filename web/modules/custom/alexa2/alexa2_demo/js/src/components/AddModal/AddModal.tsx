@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
+import { filter } from 'ramda';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import {
   WizardStep,
   selectWizardSteps,
-  updateWizardStep,
-  addWizardStep,
+  selectIds,
 } from '@/state/wizardStepsSlice';
 import useUpdateWizardTree from '@/hooks/updateWizardTree';
 
@@ -33,32 +33,33 @@ const AddModal: React.FC<PropTypes> = ({
   const [updateWizardTree] = useUpdateWizardTree();
 
   const wizardSteps = useSelector(selectWizardSteps);
+  const wizardStepIds = useSelector(selectIds);
+
+  const rootWizardSteps = filter(
+    (wizardStep) => !wizardStep.parentStepId,
+    wizardSteps,
+  );
+
   const { register, handleSubmit } = useForm<FormData>();
 
   const handleSubmitClick: SubmitHandler<FormData> = useCallback(
     async (data) => {
-      dispatch(
-        addWizardStep({
-          ...data,
-          id: '-1',
-          parentStepId: wizardStep.id,
-        }),
-      );
-
-      dispatch(
-        updateWizardStep({
-          ...wizardStep,
-          childStepIds: wizardStep.childStepIds
-            ? ['-1', ...wizardStep.childStepIds]
-            : [],
-        }),
-      );
-
-      await updateWizardTree({ wizardSteps: wizardSteps });
+      await updateWizardTree({
+        entities: [
+          {
+            id: '-1',
+            parentStepId: wizardStep.id,
+            ...data,
+          },
+          ...wizardSteps,
+        ],
+        ids: ['-1', ...wizardStepIds],
+        rootStepId: rootWizardSteps[0].id,
+      });
 
       setShowAddModal(!showAddModal);
     },
-    [dispatch],
+    [dispatch, wizardSteps],
   );
 
   return (
