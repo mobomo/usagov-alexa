@@ -167,12 +167,12 @@ class WizardTreeService {
         $tree = $tree['entities'];
       }
       // Determine format - nested vs. flattened
-      $nested = true;
+      $nested = false;
       foreach ( $tree as $treeNode ) {
         $children = $treeNode['children'];
         foreach ( $children as $child ) {
-          if ( is_numeric($child) ) {
-            $nested = false;
+          if ( !is_numeric($child) ) {
+            $nested = true;
           }
           break;
         }
