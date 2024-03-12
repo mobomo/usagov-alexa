@@ -178,7 +178,7 @@ class WizardTreeService {
         }
         break;
       }
-
+      error_log("IS NESTED: " . ($nested ? 'true' : 'false'));
       if ( $nested ) {
         $this->saveWizardTreeNested($tree);
       } else {

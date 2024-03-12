@@ -41,8 +41,20 @@ class WizardTreeApi extends ControllerBase {
         $status = \Drupal::service('alexa2_demo.wizard_tree')->saveWizardTree( $postData );
         // TODO parse status
 
+        $rootStepId = $postData['rootStepId'];
+
+        if ( $rootStepId === null ) {
+            // If step ID wasn't sent, see if the data is in nested format
+            // and if so, grab the top level id from that.
+            $rootStepId = $postData['id'];
+        }
+
         $response->setStatusCode(Response::HTTP_OK);
-        $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNodeId($postData['rootStepId'])));
+        if ( $rootStepId !== null ) {
+            $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNodeId($rootStepId)));
+        } else {
+            $response->setContent(json_encode(\Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTree()));
+        }
         return $response;
     }
 
