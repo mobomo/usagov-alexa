@@ -9,7 +9,7 @@ class WizardTreeService {
   const ALLOWED_SSML_TAGS = '<amazon:domain><amazon:effect><amazon:emotion><audio><break><emphasis><lang><p><phoneme><prosody><s><say-as><sub><voice><w>';
 
   public function buildWizardTree() {
-    
+
     $wizardTree = [];
     $wizards = \Drupal::entityQuery('node')
       ->condition('status', 1)
@@ -147,7 +147,7 @@ class WizardTreeService {
           $stepData['children'][] = $child->id();
         }
       }
-      
+
       return $stepData;
     }
 
@@ -309,7 +309,7 @@ class WizardTreeService {
 
           // TODO handle node creation/updating in separate protected function?
           $node->setTitle($wizardStep['title']);
-          
+
           // TODO set correct format
           $node->set('body', [
             'value' => $wizardStep['body'],
@@ -331,11 +331,11 @@ class WizardTreeService {
             }
           }
 
-          // TODO if not new node, compare new child step array with array 
+          // TODO if not new node, compare new child step array with array
           // from node and delete any children that aren't referenced by the new array.
 
           $node->set('field_wizard_step', $fieldWizardStep);
-          
+
           // Save the node.
           $node->save();
 
@@ -424,7 +424,7 @@ class WizardTreeService {
         $node->setOwnerId(\Drupal::currentUser()->id());
 
         $node->set('field_wizard_step', []);
-        
+
         // Save the node.
         $node->save();
 
