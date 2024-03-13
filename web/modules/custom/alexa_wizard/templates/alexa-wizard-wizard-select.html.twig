@@ -1,7 +1,7 @@
 <h1>Wizard Select Page</h1>
 <div id="react-root"></div>
 
-{{ attach_library('alexa2_demo/alexa2_demo.react_wizard_steps') }}
+{{ attach_library('alexa_wizard/alexa_wizard.react_wizard_steps') }}
 
 
 {# Liam - Comment out or remove below when adding React. #}
@@ -23,7 +23,7 @@
                 <li>
                     <label class="container" style="cursor: pointer;">
                         <input type="radio" name="wizard" id="option_{{ wizard.id }}"
-                            wizard-path="{{ path('alexa2_demo.wizards.wizard', { 'wizard': wizard.id }) }}"
+                            wizard-path="{{ path('alexa_wizard.wizards.wizard', { 'wizard': wizard.id }) }}"
                             name="radio" style="cursor: pointer;" {% if loop.first %}checked{% endif %}>
                         &nbsp;{{ wizard.title.value}}
                     </label>

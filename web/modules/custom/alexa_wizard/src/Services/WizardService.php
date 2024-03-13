@@ -162,10 +162,10 @@ class WizardService {
     if ( $this->isValidTreeNode($wizard) ) {
       // Create a queue of nodes to add to the return array and add the initial
       // Node to it.
-      $treeQueue = [
+      $treeQueue = [[
         'node' => $wizard,
         'parent' => null,
-      ];
+      ]];
 
       // Continue processing until all Nodes have been handled.
       while ( !empty($treeQueue) ) {
