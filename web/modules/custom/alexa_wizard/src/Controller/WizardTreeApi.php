@@ -18,10 +18,10 @@ class WizardTreeApi extends ControllerBase {
 
   /**
    * Accepts a POST request containing the wizard tree data to be modified.
-   * 
+   *
    * @param \Symfony\Component\HttpFoundation\Request $request
    *  The HTTP request containing all request data.
-   * 
+   *
    * @return \Symfony\Component\HttpFoundation\JsonResponse
    *  A simple HTTP response containing a status code and JSON data.
    */
@@ -36,9 +36,9 @@ class WizardTreeApi extends ControllerBase {
       $response->setContent('{"error": "Method Not Allowed"}');
       return $response;
     }
-    
+
     $postData = $request->toArray();
-    
+
     // POST data is required.
     if ( !$postData || empty($postData) ) {
       $response->setStatusCode(Response::HTTP_BAD_REQUEST);
@@ -69,14 +69,14 @@ class WizardTreeApi extends ControllerBase {
 
   /**
    * Checks access for updating wizard tree nodes.
-   * 
+   *
    * @param \Drupal\Core\Session\AccountInterface $account
    *  Run access check for this account.
-   * 
-   * @return \Drupal\Core\Access\AccessResultInterface
+   *
+   * @return \Drupal\Core\Access\AccessResult
    *  The result of the access check.
    */
-  public function updateWizardTreeAccess(AccountInterface $account) : AccessResultInterface {
+  public function updateWizardTreeAccess(AccountInterface $account) : AccessResult {
       // TODO validate user permission
 
       // return AccessResult::allowedIf($account->hasPermission('do example things') && $this->someOtherCustomCondition());
@@ -85,10 +85,10 @@ class WizardTreeApi extends ControllerBase {
 
   /**
      * Checks access for getting wizard tree data.
-     * 
+     *
      * @param \Drupal\Core\Session\AccountInterface $account
      *  Run access check for this account.
-     * 
+     *
      * @return \Drupal\Core\Access\AccessResultInterface
      *  The result of the access check.
      */
@@ -101,10 +101,10 @@ class WizardTreeApi extends ControllerBase {
     /**
      * Generates the flattened JSON structure for the wizard tree.
      * Optionally generate using a provided node id as the root node.
-     * 
+     *
      * @param int|null $rootId
      *   ID of the node to act as the root. null to generate the whole tree for all wizards.
-     * 
+     *
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      *   A simple HTTP response containing a status code and JSON data.
      */
