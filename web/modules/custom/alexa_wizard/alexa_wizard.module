@@ -1,0 +1,48 @@
+<?php
+
+function alexa_wizard_theme($existing, $type, $theme, $path) {
+    return [
+        'alexa_wizard_wizard' => [
+            'variables' => [
+                'hello' => t('Hello World!'),
+                'wizard_tree' => [],
+                'wizard_step_form' => ''
+            ],
+        ],
+        'alexa_wizard_wizard_select' => [
+            'variables' => [
+                'hello' => t('Hello World!'),
+                'wizards' => []
+            ],
+        ],
+    ];
+}
+
+// function alexa_wizard_theme() {
+//     $routeName = \Drupal::routeMatch()->getRouteName();
+    
+//     if ( $routeName === 'alexa_wizard.wizards' ) {
+//         $theme['alexa_wizard_wizards'] = [
+//             'template' => 'page--select-wizard',
+//             'variables' => [
+//                 'hello' => 'hello world',
+//             ],
+//         ];
+//         $theme['page__select_wizard'] = [
+//             'template' => 'page--select-wizard',
+//         ];
+//     } else if ( $routeName === 'alexa_wizard.wizards.wizard' ) {
+//         $wizardId = \Drupal::routeMatch()->getParameter('wizard_id');
+//         $theme['alexa_wizard_wizard'] = [
+//             'template' => 'page--wizard',
+//             'variables' => [
+//                 'hello' => 'hello world',
+//             ],
+//         ];
+//         $theme['page__wizard'] = [
+//             'template' => 'page--wizard',
+//         ];
+//     }
+
+//     return $theme;
+// }

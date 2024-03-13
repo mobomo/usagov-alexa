@@ -1,0 +1,11 @@
+services:
+  alexa_wizard.request_subscriber:
+    class: Drupal\alexa_wizard\EventSubscriber\RequestSubscriber
+    tags:
+      - { name: event_subscriber }
+  alexa_wizard.commands:
+    class: \Drupal\alexa_wizard\Drush\Commands\AlexaWizardCommands
+    tags:
+      - { name: drush.command }
+  alexa_wizard.wizard:
+    class: Drupal\alexa_wizard\Services\WizardService

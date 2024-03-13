@@ -1,0 +1,50 @@
+<h1>Wizard Select Page</h1>
+<div id="react-root"></div>
+
+{{ attach_library('alexa2_demo/alexa2_demo.react_wizard_steps') }}
+
+
+{# Liam - Comment out or remove below when adding React. #}
+{% if wizards is empty %}
+    <h3>Sorry, there are no available wizards.</h3><a href="{{ path('node.add', {'node_type': 'wizard'}) }}"><button class="btn btn-primary">Create a New Wizard</button></a>
+{% else %}
+    <style>
+        #wizard-selection.disabled {
+            pointer-events: none;
+            filter: grayscale(1.0);
+            opacity: 0.5;
+            cursor: default;
+        }
+    </style>
+    <div id="wizard-selection">
+        <h3>Select the wizard you want to manage.</h3>
+        <ul style="list-style-type: none;">
+            {% for wizard in wizards %}
+                <li>
+                    <label class="container" style="cursor: pointer;">
+                        <input type="radio" name="wizard" id="option_{{ wizard.id }}"
+                            wizard-path="{{ path('alexa2_demo.wizards.wizard', { 'wizard': wizard.id }) }}"
+                            name="radio" style="cursor: pointer;" {% if loop.first %}checked{% endif %}>
+                        &nbsp;{{ wizard.title.value}}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+        <button class="btn btn-primary" onclick="selectWizard()" style="margin-right: 10px;">
+            <b>Submit</b>
+        </button>
+        <a href="{{ path('node.add', {'node_type': 'wizard'}) }}"><button class="btn btn-primary"><b>Create a New Wizard</b></button></a>
+    </div>
+    <script>
+        
+        function selectWizard() {
+            // TODO disable radios and buttons, show spinner
+            // bad css disable below could be replaced with proper method
+            document.getElementById('wizard-selection').classList.add('disabled');
+            let selectedWizardPath = document.querySelector('input[name="wizard"]:checked').getAttribute('wizard-path');
+            window.location.href = selectedWizardPath;
+            // TODO error fallback with message in case this fails for whatever reason
+        }
+
+    </script>
+{% endif %}

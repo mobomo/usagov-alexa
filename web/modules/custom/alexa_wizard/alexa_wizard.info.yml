@@ -1,0 +1,7 @@
+name: Alexa Wizard
+type: module
+description: Module that integrates with Alexa by creating a dialog path using Wizard content types.
+core_version_requirement: ^9 || ^10
+package: Alexa
+dependencies:
+  - alexa2:alexa2
