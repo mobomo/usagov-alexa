@@ -86,7 +86,8 @@ class WizardController extends ControllerBase {
         // JS variables go here
         'drupalSettings' => [
           'wizards' => $reactWizards
-        ]
+        ],
+        '#wizards' => $availableWizards
       ]
     ];
   }
