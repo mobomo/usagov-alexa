@@ -1,12 +1,9 @@
 import React, { useCallback, useState } from 'react';
+import { filter } from 'ramda';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-import {
-  WizardStep,
-  selectWizardSteps,
-  updateWizardStep,
-} from '@/state/wizardStepsSlice';
+import { WizardStep, selectWizardSteps } from '@/state/wizardStepsSlice';
 import useUpdateWizardTree from '@/hooks/updateWizardTree';
 import ConfirmDeleteModal from '@/components/ConfirmDeleteModal';
 
@@ -31,27 +28,35 @@ const EditModal: React.FC<PropTypes> = ({
 }) => {
   const dispatch = useDispatch();
   const [updateWizardTree] = useUpdateWizardTree();
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const wizardSteps = useSelector(selectWizardSteps);
+
+  const rootWizardSteps = filter(
+    (wizardStep) => !wizardStep.parentStepId,
+    wizardSteps,
+  );
+
   const { register, handleSubmit } = useForm<FormData>();
 
   const handleSubmitClick: SubmitHandler<FormData> = useCallback(
     async (data) => {
-      await updateWizardTree({ wizardSteps: wizardSteps });
-
-      dispatch(
-        updateWizardStep({
-          ...wizardStep,
-          name: data.name ? data.name : wizardStep.name,
-          title: data.title ? data.title : wizardStep.title,
-          body: data.body ? data.body : wizardStep.body,
-          primaryUtterance: data.primaryUtterance
-            ? data.primaryUtterance
-            : wizardStep.primaryUtterance,
-          aliases: data.aliases ? data.aliases : wizardStep.aliases,
-        }),
-      );
+      await updateWizardTree({
+        entities: [
+          {
+            ...wizardStep,
+            name: data.name ? data.name : wizardStep.name,
+            title: data.title ? data.title : wizardStep.title,
+            body: data.body ? data.body : wizardStep.body,
+            primaryUtterance: data.primaryUtterance
+              ? data.primaryUtterance
+              : wizardStep.primaryUtterance,
+            aliases: data.aliases ? data.aliases : wizardStep.aliases,
+          },
+        ],
+        ids: [wizardStep.id],
+        rootStepId: rootWizardSteps[0].id,
+      });
 
       setShowEditModal(!showEditModal);
     },
@@ -62,14 +67,18 @@ const EditModal: React.FC<PropTypes> = ({
     setShowDeleteModal(!showDeleteModal);
   }, []);
 
-  const handleDeleteSubmitClick = useCallback(() => {
-    dispatch(
-      updateWizardStep({
-        ...wizardStep,
-        delete: true,
-      }),
-    );
-  }, [dispatch]);
+  const handleDeleteSubmitClick = useCallback(async () => {
+    await updateWizardTree({
+      entities: [
+        {
+          ...wizardStep,
+          delete: true,
+        },
+      ],
+      ids: [wizardStep.id],
+      rootStepId: rootWizardSteps[0].id,
+    });
+  }, []);
 
   return (
     <div

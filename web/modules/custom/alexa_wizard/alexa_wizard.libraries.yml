@@ -5,20 +5,9 @@
 #   js:
 #     main.js: {}
 
-alexa_wizard.react_wizard_select:
-  css:
-    # base -> layout -> component -> state -> theme
-    theme:
-      css/reactWizardSelect.css: {}
-  js:
-    js/reactWizardSelect.js: {}
-  # dependencies:
-  #   - core/jquery
-  #   - alexa_wizard/base
-
 alexa_wizard.react_wizard_viewer:
   css:
     theme:
-      css/reactWizardViewer.css: {}
+      js/dist/style.css: {}
   js:
-    js/reactWizardViewer.js: {}
+    js/dist/wizard-cms.js: {}

@@ -9,13 +9,13 @@ use Drupal\node\Entity\Node;
  * Controller to handle route theming for the Alexa Wizard.
  */
 class WizardController extends ControllerBase {
-  
+
   /**
    * Sets theme and variables needed to generate a wizard page.
-   * 
+   *
    * @param Node $wizard
    *   The wizard being viewed.
-   * 
+   *
    * @return array
    */
   public function wizardPage(Node $wizard) : array {
@@ -44,10 +44,10 @@ class WizardController extends ControllerBase {
 
   /**
    * Callback function to set the Wizard Page's title.
-   * 
+   *
    * @param Node $wizard
    *   The wizard being viewed.
-   * 
+   *
    * @return string
    *   The title of the current webpage.
    */
@@ -63,7 +63,7 @@ class WizardController extends ControllerBase {
 
   /**
    * Sets theme and variables needed to create the wizard selection page.
-   * 
+   *
    * @return array
    */
   public function wizardSelectPage() : array {
@@ -87,8 +87,8 @@ class WizardController extends ControllerBase {
         'drupalSettings' => [
           'wizards' => $reactWizards
         ],
-        '#wizards' => $availableWizards
-      ]
+      ],
+      '#wizards' => $availableWizards
     ];
   }
 
