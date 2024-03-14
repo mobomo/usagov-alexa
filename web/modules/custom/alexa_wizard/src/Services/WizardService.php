@@ -135,7 +135,7 @@ class WizardService {
    * @return array
    *   Wizard tree data represented as a flattened array.
    */
-  public function buildFlattedWizardTreeFromNodeId( int $startNodeId ) : array {
+  public function buildFlattenedWizardTreeFromNodeId( int $startNodeId ) : array {
     $node = Node::load($startNodeId);
     if ( $this->isValidTreeNode($node) ) {
       return $this->buildFlattenedWizardTreeFromNode( Node::load($startNodeId) );
