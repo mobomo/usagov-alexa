@@ -3,6 +3,7 @@
 
 # Files
 web/sites/default/files/php/twig/*
+vendor/*
 
 # Visual Studio Code workspace file
 DrupalLocal.code-workspace
