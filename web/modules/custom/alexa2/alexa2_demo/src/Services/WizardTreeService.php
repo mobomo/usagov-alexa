@@ -58,10 +58,12 @@ class WizardTreeService {
     $ids = [];
     $treeQueue = [];
 
-    $treeQueue[] = [
-      'node' => $wizard,
-      'parent' => null,
-    ];
+    if ( $wizard != null ) {
+      $treeQueue[] = [
+        'node' => $wizard,
+        'parent' => null,
+      ];
+    }
 
     while ( !empty($treeQueue) ) {
       $treeNode = array_shift($treeQueue);

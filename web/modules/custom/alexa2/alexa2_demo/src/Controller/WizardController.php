@@ -7,9 +7,9 @@ use Drupal\node\Entity\Node;
 
 class WizardController extends ControllerBase {
 
-    public function wizardPage(Node $wizard) {
+    public function wizardPage(string $wizardId) {
         // $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildWizardTreeFromNode($wizard, false);
-        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNode( $wizard );
+        $wizardTree = \Drupal::service('alexa2_demo.wizard_tree')->buildFlattenedWizardTreeFromNodeId( $wizardId );
         $wizardUpdatePath = \Drupal\Core\Url::fromRoute('alexa2_demo.wizard_tree.update.v1')->toString();
 
         return [
@@ -28,10 +28,12 @@ class WizardController extends ControllerBase {
         ];
     }
 
-    public function wizardPageTitle(Node $wizard) {
+    public function wizardPageTitle(string $wizardId) {
+        $wizard = Node::load($wizardId);
         $title = '';
 
         if ( $wizard != null ) {
+            // TODO better page title
             $title = $wizard->getTitle();
         }
 

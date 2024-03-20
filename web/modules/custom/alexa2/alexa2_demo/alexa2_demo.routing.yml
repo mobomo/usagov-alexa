@@ -9,16 +9,16 @@ alexa2_demo.wizards:
     no_cache: 'TRUE'
 
 alexa2_demo.wizards.wizard:
-  path: '/wizards/{wizard}'
+  path: '/wizards/{wizardId}'
   defaults:
     _title_callback: '\Drupal\alexa2_demo\Controller\WizardController::wizardPageTitle'
     _controller: '\Drupal\alexa2_demo\Controller\WizardController::wizardPage'
   requirements:
     _role: administrator
   options:
-    parameters:
-      wizard:
-        type: entity:node
+    # parameters:
+    #   wizard:
+    #     type: string #entity:node
     no_cache: 'TRUE'
 
 alexa2_demo.wizard_tree.update.v1:
