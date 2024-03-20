@@ -103,18 +103,7 @@ class WizardTreeService {
     }
 
     $treeNode = $this->buildWizardDataFromStep( $wizardStep, false );
-
-    // $treeNode = [
-    //   'name' => preg_replace('/[ -]/', '_', strtolower($wizardStep->getTitle() ?? 'wizard_step_' . $wizardStep->id())),
-    //   'title' => $wizardStep->getTitle() ?? '',
-    //   'id' => $wizardStep->id() ?? '',
-    //   'body' => strip_tags(html_entity_decode($this->getFieldValue($wizardStep, 'body')), WizardTreeService::ALLOWED_SSML_TAGS),
-    //   'primaryUtterance' => $this->getFieldValue($wizardStep, 'field_wizard_primary_utterance'),
-    //   'aliases' => $this->getFieldValue($wizardStep, 'field_wizard_aliases'),
-    //   'children' => [],
-    //   // 'original_node' => $wizardStep,
-    //   // 'original_node_data' => $wizardStep->toArray()
-    // ];
+    
     $children = $wizardStep->get('field_wizard_step')->referencedEntities();
 
     foreach ($children as $child) {
