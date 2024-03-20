@@ -53,7 +53,7 @@ class WizardTreeService {
     return $this->buildFlattenedWizardTreeFromNode( Node::load($startNodeId) );
   }
 
-  public function buildFlattenedWizardTreeFromNode( Node $wizard ) {
+  public function buildFlattenedWizardTreeFromNode( Node|null $wizard ) {
     $wizardTree = [];
     $ids = [];
     $treeQueue = [];
@@ -92,7 +92,7 @@ class WizardTreeService {
     return [
       'entities' => $wizardTree,
       'ids' => $ids,
-      'rootStepId' => $wizard->id()
+      'rootStepId' => $wizard?->id()
     ];
   }
 

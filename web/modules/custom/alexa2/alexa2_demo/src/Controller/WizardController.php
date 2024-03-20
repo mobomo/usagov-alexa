@@ -30,7 +30,7 @@ class WizardController extends ControllerBase {
 
     public function wizardPageTitle(string $wizardId) {
         $wizard = Node::load($wizardId);
-        $title = '';
+        $title = 'No Wizard Data';
 
         if ( $wizard != null ) {
             // TODO better page title
