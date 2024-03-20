@@ -268,10 +268,11 @@ class WizardTreeService {
                 // Add the current node's child items from the database to the delete queue.
                 $childNode = Node::load($currentNodeId);
                 if ( $childNode !== null ) {
-                  $childNodes = $childNode->get('field_wizard_step')->referencedEntities();
-                  foreach ( $referencedEntities as $referencedEntity ) {
-                    if ( !in_array($referencedEntity->id(), $toDelete) && !in_array($referencedEntity->id(), $childQueue) ) {
-                      $childQueue[] = $referencedEntity->id();
+                  $childNodeIds = $childNode->get('field_wizard_step')->getValue();
+                  foreach ( $childNodeIds as $childNodeId) {
+                    $childNodeId = $childNodeId['target_id'];
+                    if ( !in_array($childNodeId, $toDelete) && !in_array($childNodeId, $childQueue)) {
+                      $childQueue[] = $childNodeId;
                     }
                   }
                 }
@@ -284,7 +285,6 @@ class WizardTreeService {
               // Delete node and unset in tree.
               $toDeleteNode = Node::load($toDeleteId);
               if ( $toDeleteNode !== null ) {
-                error_log("DELETING: " . $toDeleteId);
                 $toDeleteNode->delete();
               }
 

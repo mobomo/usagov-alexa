@@ -119,7 +119,6 @@ class RequestSubscriber2 implements EventSubscriberInterface {
         $reprompt = new Reprompt(OutputSpeech::createBySSML( $question ));
         $response->response->reprompt = $reprompt;
         $response->response->card = Card::createSimple( $title, $question );
-        error_log(json_encode($response->response->jsonStringify()));
 
         $this->updateSlotSuggestions( $request, $response, $utterances );
         break;
