@@ -17,16 +17,16 @@ alexa_wizard.wizards:
     no_cache: 'TRUE'
 
 alexa_wizard.wizards.wizard:
-  path: '/wizards/{wizard}'
+  path: '/wizards/{wizardId}'
   defaults:
     _title_callback: '\Drupal\alexa_wizard\Controller\WizardController::wizardPageTitle'
     _controller: '\Drupal\alexa_wizard\Controller\WizardController::wizardPage'
   requirements:
     _role: administrator
   options:
-    parameters:
-      wizard:
-        type: entity:node
+    # parameters:
+    #   wizard:
+    #     type: string #entity:node
     no_cache: 'TRUE'
 
 alexa_wizard.wizard_tree.update.v1:

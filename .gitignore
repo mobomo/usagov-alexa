@@ -3,6 +3,8 @@
 
 # Files
 web/sites/default/files/php/twig/*
+vendor/*
+web/core/*
 
 # Visual Studio Code workspace file
 DrupalLocal.code-workspace
@@ -137,3 +139,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# test files
+drupal.sqlite-test*
+web/sites/simpletest/*

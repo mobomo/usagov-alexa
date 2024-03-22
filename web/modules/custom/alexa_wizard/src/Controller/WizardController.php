@@ -13,14 +13,14 @@ class WizardController extends ControllerBase {
   /**
    * Sets theme and variables needed to generate a wizard page.
    *
-   * @param Node $wizard
-   *   The wizard being viewed.
+   * @param string $wizardId
+   *   The ID of the wizard being viewed.
    *
    * @return array
    */
-  public function wizardPage(Node $wizard) : array {
+  public function wizardPage(string $wizardId) : array {
     // Generate the flattened wizard tree
-    $wizardTree = \Drupal::service('alexa_wizard.wizard')->buildFlattenedWizardTreeFromNode( $wizard );
+    $wizardTree = \Drupal::service('alexa_wizard.wizard')->buildFlattenedWizardTreeFromNodeId( $wizardId );
     // Determine the Wizard update path.
     // TODO make this absolute instead of relative.
     $wizardUpdatePath = \Drupal\Core\Url::fromRoute('alexa_wizard.wizard_tree.update.v1')->toString();
@@ -45,16 +45,18 @@ class WizardController extends ControllerBase {
   /**
    * Callback function to set the Wizard Page's title.
    *
-   * @param Node $wizard
-   *   The wizard being viewed.
+   * @param string $wizardId
+   *   The ID of the wizard being viewed.
    *
    * @return string
    *   The title of the current webpage.
    */
-  public function wizardPageTitle(Node $wizard) : string {
-    $title = '';
+  public function wizardPageTitle(string $wizardId) : string {
+    $title = 'No Wizard Data';
 
+    $wizard = Node::load($wizardId);
     if ( $wizard != null ) {
+      // TODO better page title
       $title = $wizard->getTitle();
     }
 

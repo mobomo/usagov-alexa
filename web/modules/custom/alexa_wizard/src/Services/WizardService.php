@@ -158,14 +158,17 @@ class WizardService {
   public function buildFlattenedWizardTreeFromNode( Node|null $wizard ) : array {
     $wizardTree = [];
     $ids = [];
+    $treeQueue = [];
     
     if ( $this->isValidTreeNode($wizard) ) {
       // Create a queue of nodes to add to the return array and add the initial
       // Node to it.
-      $treeQueue = [[
-        'node' => $wizard,
-        'parent' => null,
-      ]];
+      if ( $wizard != null ) {
+        $treeQueue[] = [
+          'node' => $wizard,
+          'parent' => null,
+        ];
+      }
 
       // Continue processing until all Nodes have been handled.
       while ( !empty($treeQueue) ) {
@@ -198,7 +201,7 @@ class WizardService {
     return [
       'entities' => $wizardTree,
       'ids' => $ids,
-      'rootStepId' => $wizard->id()
+      'rootStepId' => $wizard?->id()
     ];
   }
 
@@ -425,10 +428,11 @@ class WizardService {
                 // Add the current node's child items from the database to the delete queue.
                 $childNode = Node::load($currentNodeId);
                 if ( $childNode !== null ) {
-                  $childNodes = $childNode->get('field_wizard_step')->referencedEntities();
-                  foreach ( $referencedEntities as $referencedEntity ) {
-                    if ( !in_array($referencedEntity->id(), $toDelete) && !in_array($referencedEntity->id(), $childQueue) ) {
-                      $childQueue[] = $referencedEntity->id();
+                  $childNodeIds = $childNode->get('field_wizard_step')->getValue();
+                  foreach ( $childNodeIds as $childNodeId) {
+                    $childNodeId = $childNodeId['target_id'];
+                    if ( !in_array($childNodeId, $toDelete) && !in_array($childNodeId, $childQueue)) {
+                      $childQueue[] = $childNodeId;
                     }
                   }
                 }
