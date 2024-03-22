@@ -1,6 +1,0 @@
-scamwizard.scamwizardpage:
-  title: Report a Scam
-  description: Link to the scamWizard() method
-  route_name: scamwizard.scamwizardpage
-  weight: 9
-  menu_name: main
