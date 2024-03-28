@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\alexa_wizard\Services;
+namespace Drupal\wizards\Services;
 
 use Drupal\node\Entity\Node;
 
