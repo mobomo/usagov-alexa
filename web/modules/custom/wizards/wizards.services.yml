@@ -1,8 +1,4 @@
 services:
-  wizards.request_subscriber:
-    class: Drupal\wizards\EventSubscriber\RequestSubscriber
-    tags:
-      - { name: event_subscriber }
   wizards.commands:
     class: \Drupal\wizards\Drush\Commands\WizardsCommands
     tags:
