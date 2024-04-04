@@ -301,6 +301,10 @@ function prepareContentTypesAndFields() {
 
 function usagov_wizards_install($is_syncing) {
   prepareContentTypesAndFields();
+  $nodeTypes = ['wizard', 'wizard_step'];
+  foreach ( $nodeTypes as $nodeType) {
+    updateFormDisplay($nodeType);
+  }
 }
 
 function usagov_wizards_theme($existing, $type, $theme, $path) {
@@ -319,4 +323,61 @@ function usagov_wizards_theme($existing, $type, $theme, $path) {
             ],
         ],
     ];
+}
+
+/**
+ * Updates the form display of a given bundle (node type) using data provided
+ * in a configuration YAML file.
+ * 
+ * @param string $bundle
+ *   The bundle of the node type to edit.
+ * @param string|null $filePath
+ *   The path to the configuration file to load. If null, the path will
+ *   be automatically determined using the bundle.
+ */
+function updateFormDisplay( string $bundle, string|null $filePath = null ) : void {
+  $fileContents = null;
+  if ( !empty($filePath) ) {
+    $fileContents = file_get_contents($filePath);
+  }
+  if ( empty($fileContents) ) {
+    // Failed to load or no filepath provided
+    $fileContents = file_get_contents(getConfigFilePath() . "/entity_form_display/core.entity_form_display.node.$bundle.default.yml");
+  }
+  if ( !empty($fileContents) ) {
+    try {
+      // $formDisplays = [];
+      // $fdQuery = \Drupal::entityQuery('entity_form_display')
+      //   ->condition('targetEntityType', 'node')
+      //   ->condition('bundle', $bundle);
+      // $formDisplayIds = $fdQuery->execute();
+      // foreach ( $formDisplayIds as $formDisplayId ) {
+      //   $fd = \Drupal\Core\Entity\Entity\EntityFormDisplay::load($formDisplayId);
+      // }
+
+      // Load form display data from file
+      $formDisplayData = \Drupal\Component\Serialization\Yaml::decode($fileContents);
+      // Load node type's current form display settings from Drupal
+      $formDisplay = \Drupal\Core\Entity\Entity\EntityFormDisplay::load('node.' . $bundle . '.default');
+      if ( !empty($formDisplay) ) {
+        $formDisplayData = $formDisplayData['content'];
+        if ( empty($formDisplayData) ) {
+          $formDisplayData = [];
+        }
+        foreach ( $formDisplayData as $key => $value) {
+          $formDisplay->setComponent($key, $value);
+        }
+
+        // foreach ( $formDisplayMergeKeys as $key ) {
+        //   if ( !empty($formDisplayData[$key] )) {
+        //     $newData = array_merge($formDisplay->getComponent($key) ?? [], $formDisplayData[$key]);
+        //     $formDisplay->setComponent($key, $newData);
+        //   }
+        // }
+        $formDisplay->save();
+      }
+    } catch ( Exception $e ) {
+      error_log("Failed to modify form display for type $bundle:    {$e->getMessage()}");
+    }
+  }
 }
