@@ -3,3 +3,5 @@ type: module
 description: Module that provides a UI and content types for creating wizards.
 core_version_requirement: ^9 || ^10
 package: USAgov
+dependencies:
+  - multilingual:language
