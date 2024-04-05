@@ -237,7 +237,9 @@ function prepareContentTypesAndFields() {
       'field_wizard_step'
     ],
     'wizard' => [],
-    'wizard_step' => []
+    'wizard_step' => [
+      'field_option_name'
+    ]
   ];
 
   // First create node types, because they can be referenced
