@@ -22,6 +22,8 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
+        "drupal/language_switcher_extended": "^1.1",
+        "drupal/pathauto": "^1.12",
         "drush/drush": "^12.3",
         "jakubsuchy/amazon-alexa-php": "^0.1.7",
         "maxbeckers/amazon-alexa-php": "^1.13",
