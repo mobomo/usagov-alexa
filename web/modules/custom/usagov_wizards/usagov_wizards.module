@@ -212,35 +212,16 @@ function getConfigFilePath() {
  * Note this uses the content types with machine names "wizard" and "wizard_step"
  */
 function prepareContentTypesAndFields() {
-  $nodeTypes = ['wizard', 'wizard_step'];
+  $fieldsToAdd = \Drupal::service('usagov_wizards.wizards')::FIELD_DATA;
+  $nodeTypes = array_keys($fieldsToAdd);
+  if (($key = array_search('#shared', $nodeTypes)) !== false) {
+    unset($nodeTypes[$key]);
+  }
   $entityTypeManager = \Drupal::entityTypeManager();
   // First, make sure content types exist. They are Wizard (wizard)
   // and Wizard Step (wizard_step)
   // Then, add required fields. These fields should already exist in the CMS.
   // If they don't, create them first, then add them.
-  $fieldsToAdd = [
-    '#shared' => [
-      'field_page_intro',
-      'field_hide_page_intro',
-      'field_meta_description',
-      'field_short_description',
-      'field_page_type',
-      'field_language_toggle',
-      'body',
-      'field_header_html',
-      'field_css_icon',
-      'field_footer_html',
-      'field_for_contact_center_only',
-      'field_faq_page',
-      'field_custom_twig_content',
-      'field_exclude_from_contact_cente',
-      'field_wizard_step'
-    ],
-    'wizard' => [],
-    'wizard_step' => [
-      'field_option_name'
-    ]
-  ];
 
   // First create node types, because they can be referenced
   // by content reference fields.
@@ -253,52 +234,16 @@ function prepareContentTypesAndFields() {
   foreach ( $nodeTypes as $nodeType ) {
     // #shared is an array containing machine names of all fields
     // shared by all content types created here (i.e. wizard and wizard_step)
-    foreach ( $fieldsToAdd['#shared'] as $fieldToAdd ) {
-      loadOrCreateFieldConfig($fieldToAdd, $nodeType);
+    foreach ( $fieldsToAdd['#shared'] as $fieldToAddMachineName => $fieldToAddData ) {
+      loadOrCreateFieldConfig($fieldToAddMachineName, $nodeType);
     }
     // Additionally, add support for non-shared fields.
     if ( isset($fieldsToAdd[$nodeType]) ) {
-      foreach ( $fieldsToAdd[$nodeType] as $fieldToAdd ) {
-        loadOrCreateFieldConfig($fieldToAdd, $nodeType);
+      foreach ( $fieldsToAdd[$nodeType] as $fieldToAddMachineName => $fieldToAddData ) {
+        loadOrCreateFieldConfig($fieldToAddMachineName, $nodeType);
       }
     }
   }
-
-
-  // Title                          (title) - default drupal field
-  // Revision log message           Not a field - default drupal input
-  // Menu settings                  Not a field - default drupal group
-  // Simple XML Sitemap             Not a field - default drupal input
-  // URL Redirects                  Not a field - default drupal input
-  // URL alias                      Not a field - default drupal input
-  // Provide menu link              Not a field - default drupal input
-  // Menu link title                Not a field - default drupal input
-  // Authoring information          Not a field - default drupal input
-  // Promotion options              Not a field - default drupal input
-  // Nothing to do for the above fields. They should all exist by default in any
-  // node type in Drupal.
-  // Page Intro                     (field_page_intro)
-  // Hide Page Intro                (field_hide_page_intro)
-  // Meta Description               (field_meta_description)
-  // Short Description              (field_short_description)
-  // Page Type                      (field_page_type)
-  // Language                       () TODO
-  // Language Toggle                (field_language_toggle)
-  // Body                           (body)
-  // Text Format                    Not a field - this is related to body
-  // Header HTML                    (field_header_html)
-  // CSS Icon                       (field_css_icon)
-  // Footer HTML (field)            (field_footer_html)
-  // For contact center use only    (field_for_contact_center_only)
-  // FAQ                            (field_faq_page)
-  // Custom Twig Content            (field_custom_twig_content)
-  // Exclude from contact center    (field_exclude_from_contact_cente)
-  // Wizard Step                    (field_wizard_step)
-  // Change [publishing state] to   () TODO
-  // Description                    () TODO
-  // Parent Item                    () TODO
-  // Weight                         () TODO
-  // TODO unknown fields (not already in CMS?)
 }
 
 function usagov_wizards_install($is_syncing) {

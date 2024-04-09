@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.wizard.field_hide_page_intro
+    - wizard.type.basic_page
+id: wizard.basic_page.field_hide_page_intro
+field_name: field_hide_page_intro
+entity_type: wizard
+bundle: basic_page
+label: 'Hide Page Intro'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

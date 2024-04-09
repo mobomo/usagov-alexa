@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_twig_content
+    - node.type.wizard
+id: node.wizard.field_custom_twig_content
+field_name: field_custom_twig_content
+entity_type: node
+bundle: wizard
+label: 'Custom Twig Content'
+description: "Enable custom content from a twig file named for this page's path alias."
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

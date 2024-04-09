@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_page
+    - node.type.wizard
+id: node.wizard.field_faq_page
+field_name: field_faq_page
+entity_type: node
+bundle: wizard
+label: 'FAQ Page'
+description: 'If selected, FAQ data is generated from the page content so search engines can display rich results.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

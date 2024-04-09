@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.wizard.field_page_type
+    - wizard.type.basic_page
+    - taxonomy.vocabulary.page_type
+  content:
+    - 'taxonomy_term:page_type:24ada0c8-3397-4b5f-a8bc-55adff307199'
+id: wizard.basic_page.field_page_type
+field_name: field_page_type
+entity_type: wizard
+bundle: basic_page
+label: 'Page Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 24ada0c8-3397-4b5f-a8bc-55adff307199
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      page_type: page_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

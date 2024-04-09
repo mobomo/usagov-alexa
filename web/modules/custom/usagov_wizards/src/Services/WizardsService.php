@@ -6,6 +6,101 @@ use Drupal\node\Entity\Node;
 
 class WizardsService {
 
+  const FIELDS_TO_SAVE = [
+    '#shared' => [
+      'body' => [
+        'name' => 'body',
+      ],
+      'field_footer_html' => [
+        'name' => 'footerHTML',
+      ],
+      'field_header_html' => [
+        'name' => 'headerHTML',
+      ],
+      'field_meta_description' => [
+        'name' => 'metaDescription',
+      ],
+      'language' => [
+        'name' => 'language',
+      ],
+      'wizardStep' => [
+        'name' => 'children',
+      ]
+    ],
+    'wizard' => [
+      'field_for_contact_center_only' => [
+        'name' => 'forContactCenterUseOnly',
+      ],
+      'field_language_toggle' => [
+        'name' => 'languageToggle',
+      ],
+      'field_page_intro' => [
+        'name' => 'pageIntro',
+      ],
+      'field_hide_page_intro' => [
+        'name' => 'hidePageIntro',
+      ],
+      'field_short_description' => [
+        'name' => 'shortDescription',
+      ],
+      'field_css_icon' => [
+        'name' => 'cssIcon',
+      ],
+      'field_custom_twig_content' => [
+        'name' => 'customTwigContent',
+      ],
+      'field_exclude_from_contact_cente' => [
+        'name' => 'excludeFromContactCenter',
+      ],
+    ],
+    'wizard_step' => [
+      'field_option_name' => [
+        'name' => 'optionName',
+      ],
+    ],
+  ];
+  
+  // ---------------------------------------------- Currently Used ---------------------------------------------- //
+  // Title                          (node.title)
+  // Body                           (node.body)
+  // Footer HTML (field)            (node.field_footer_html)
+  // Header HTML                    (node.field_header_html)
+  // Meta Description               (node.field_meta_description)
+  // Language                       (Node->language()->getName() (or ->getId()))
+  // Language Toggle                (node.field_language_toggle)
+  // For contact center use only    (node.field_for_contact_center_only)
+  // Option Name                    (node.field_option_name)
+  // Wizard Step                    (node.field_wizard_step)
+  // Page Intro                     (node.field_page_intro)
+  // Hide Page Intro                (node.field_hide_page_intro)
+  // Short Description              (node.field_short_description)
+  // CSS Icon                       (node.field_css_icon)
+  // Custom Twig Content            (node.field_custom_twig_content)
+  // Exclude from contact center    (node.field_exclude_from_contact_cente)
+
+  // ------------------------------------- Exist in CMS but not Used - TODO ------------------------------------- //
+  // FAQ                            (node.field_faq_page)  -- FAQ appears to be a paragraphs thing. Wondering if it's needed since we know these are all wizards.
+  // Page Type                      (node.field_page_type) -- This is a taxonomy reference. Wondering if it's needed since we know these are all wizards.
+
+  // -------------------------------------------- Not Fields - TODO --------------------------------------------- //
+  // Text Format                    TODO Not a field - this is related to body - TODO how to get/display/set this option programmatically
+  // Create Revision                TODO - checkbox
+  // Revision log message           TODO
+  // Menu Settings                  TODO this contains several settings/options - autogen?
+  // Provide menu link              TODO - checkbox
+  // Menu link title                TODO
+  // Description                    TODO - menu item description
+  // Parent Link                    TODO - menu item parent
+  // Weight                         TODO - menu item weight
+  // Simple XML Sitemap             TODO - needed?
+  // URL Redirects                  TODO - needed?
+  // URL alias                      TODO - needed?
+  // Authoring information          TODO - allow this to be edited, or should it be autogen?
+  // Promotion options              TODO - is this needed?
+  // Change [publishing state] to   TODO - dropdown selection
+
+
+
   /**
    * Constructs an array containing wizard tree data with nested children.
    * Builds the entire wizard tree.
@@ -231,24 +326,6 @@ class WizardsService {
   function buildWizardDataFromStep( Node $wizardStep, bool $includeChildIds = false ) : array {
     $stepData = [];
 
-    // Page Intro                     (field_page_intro)
-    // Hide Page Intro                (field_hide_page_intro)
-    // Meta Description               (field_meta_description)
-    // Short Description              (field_short_description)
-    // Page Type                      (field_page_type)
-    // Language                       () TODO
-    // Language Toggle                (field_language_toggle)
-    // Body                           (body)
-    // Text Format                    Not a field - this is related to body
-    // Header HTML                    (field_header_html)
-    // CSS Icon                       (field_css_icon)
-    // Footer HTML (field)            (field_footer_html)
-    // For contact center use only    (field_for_contact_center_only)
-    // FAQ                            (field_faq_page)
-    // Custom Twig Content            (field_custom_twig_content)
-    // Exclude from contact center    (field_exclude_from_contact_cente)
-    // Wizard Step                    (field_wizard_step)
-
     if ( $wizardStep ) {
       // TODO strip tags from text fields
       // TODO separate functions for getting wizard and wizard step field values - they have different fields available.
@@ -272,6 +349,7 @@ class WizardsService {
         'faq' => $this->getFieldValue($wizardStep, 'field_faq_page'),
         'customTwigContent' => $this->getFieldValue($wizardStep, 'field_custom_twig_content'),
         'excludeFromContactCenter' => $this->getFieldValue($wizardStep, 'field_exclude_from_contact_cente'),
+        'optionName' => $this->getFieldValue($wizardStep, 'field_option_name'),
         'children' => []
       ];
 

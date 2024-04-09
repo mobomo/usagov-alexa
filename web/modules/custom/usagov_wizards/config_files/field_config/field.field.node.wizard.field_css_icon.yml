@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_css_icon
+    - node.type.wizard
+id: node.wizard.field_css_icon
+field_name: field_css_icon
+entity_type: node
+bundle: wizard
+label: 'CSS Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
