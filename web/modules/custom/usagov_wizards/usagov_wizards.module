@@ -212,7 +212,7 @@ function getConfigFilePath() {
  * Note this uses the content types with machine names "wizard" and "wizard_step"
  */
 function prepareContentTypesAndFields() {
-  $fieldsToAdd = \Drupal::service('usagov_wizards.wizards')::FIELD_DATA;
+  $fieldsToAdd = \Drupal::service('usagov_wizards.wizard')::FIELD_DATA;
   $nodeTypes = array_keys($fieldsToAdd);
   if (($key = array_search('#shared', $nodeTypes)) !== false) {
     unset($nodeTypes[$key]);

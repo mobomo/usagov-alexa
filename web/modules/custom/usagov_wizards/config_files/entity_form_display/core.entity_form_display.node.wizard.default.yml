@@ -1,18 +1,21 @@
-uuid: 54747832-1f7a-42f7-a908-fa21486de4da
+uuid: 03889060-b4bd-4d00-8130-76b39ccb1299
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.wizard.body
+    - field.field.node.wizard.field_css_icon
+    - field.field.node.wizard.field_custom_twig_content
+    - field.field.node.wizard.field_exclude_from_contact_cente
     - field.field.node.wizard.field_footer_html
     - field.field.node.wizard.field_for_contact_center_only
     - field.field.node.wizard.field_header_html
     - field.field.node.wizard.field_language_toggle
     - field.field.node.wizard.field_meta_description
+    - field.field.node.wizard.field_page_intro
     - field.field.node.wizard.field_wizard_step
     - node.type.wizard
   module:
-    - content_moderation
     - path
     - text
 id: node.wizard.default
@@ -22,7 +25,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 9
     region: content
     settings:
       rows: 9
@@ -36,9 +39,31 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_css_icon:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_custom_twig_content:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_exclude_from_contact_cente:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_footer_html:
     type: string_textarea
-    weight: 15
+    weight: 13
     region: content
     settings:
       rows: 5
@@ -46,7 +71,7 @@ content:
     third_party_settings: {  }
   field_for_contact_center_only:
     type: text_textarea
-    weight: 13
+    weight: 11
     region: content
     settings:
       rows: 5
@@ -54,7 +79,7 @@ content:
     third_party_settings: {  }
   field_header_html:
     type: text_textarea
-    weight: 14
+    weight: 12
     region: content
     settings:
       rows: 5
@@ -62,7 +87,7 @@ content:
     third_party_settings: {  }
   field_language_toggle:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -72,15 +97,23 @@ content:
     third_party_settings: {  }
   field_meta_description:
     type: string_textarea
-    weight: 10
+    weight: 8
     region: content
     settings:
       rows: 1
       placeholder: ''
     third_party_settings: {  }
+  field_page_intro:
+    type: string_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_wizard_step:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -116,7 +149,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 7
     region: content
     settings:
       display_label: true

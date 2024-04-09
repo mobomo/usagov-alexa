@@ -6,7 +6,7 @@ use Drupal\node\Entity\Node;
 
 class WizardsService {
 
-  const FIELDS_TO_SAVE = [
+  const FIELD_DATA = [
     '#shared' => [
       'body' => [
         'name' => 'body',
