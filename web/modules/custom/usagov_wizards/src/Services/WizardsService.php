@@ -559,16 +559,23 @@ class WizardsService {
 
           // TODO handle node creation/updating in separate protected function?
           $node->setTitle($wizardStep['title']);
-          
-          // TODO set correct format
-          $node->set('body', [
-            'value' => $wizardStep['body'],
-            'format' => 'full_html'
-          ]);
 
-          $node->set('field_wizard_primary_utterance', $wizardStep['primaryUtterance'] ?? '');
-
-          $node->set('field_wizard_aliases', $wizardStep['aliases'] ?? '');
+          // TODO language
+          foreach ( static::FIELD_DATA['#shared'] as $fieldKey => $fieldInfo ) {
+            if ( !empty($newData = ($wizardStep[$fieldInfo['name']]) ?? $wizardStep[$fieldKey]) ) {
+              if ($fieldKey == 'body') {
+                // body is treated a bit different because it's formatted text. This should be expanded to allow
+                // different field types to be treated different
+                // TODO set correct format
+                $node->set($fieldkey, [
+                  'value' => $newData,
+                  'format' => 'full_html'
+                ]);
+              } else {
+                $node->set($fieldKey, $newData);
+              }
+            }
+          }
 
           $node->setOwnerId(\Drupal::currentUser()->id());
 
