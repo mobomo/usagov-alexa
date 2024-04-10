@@ -708,7 +708,6 @@ class WizardsService {
    */
   public function getAllWizards() : array {
     $availableWizards = \Drupal::entityQuery('node')
-        ->condition('status', 1)
         ->condition('type', 'wizard')
         ->accessCheck(TRUE)
         ->execute();
