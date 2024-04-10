@@ -10,6 +10,12 @@ This module is intended to work with existing content types and fields within th
 	 2. type - This is the type of field. Currently, only 	`"value"` is a valid field type. If other types need to be added, such as `"reference"`, `"language"`, `"revision"`, etc. need to be added, see the section below titled "To add a new field type:"
  4. In order for the module to be able to create the field and add it to relevant content types, some config files are needed. Specifically, one field config and one field storage config. These files should be YAML files that are placed in `usagov_wizards/config_files/field_config` and `usagov_wizards/config_files/field_storage_config` respectively. They should be named appropriately (match existing naming schemes in the folders.
  5. Optionally, to make the field appear in the Entity Form Display of it's content type, the `usagov_wizards/config_files/entity_form_display/mynodetype.yml` file must be edited to include a section for that field.
+ 
+ ##### A Note on fields - All fields from the doc are listed in the `WizardsService.php` file. They are broken into groups. These groups are:
+ 1. Implemented in the module already.
+ 2. Not implemented in the module because they're marked in the doc as not to be used/shown in React.
+ 3. Not implemented in the module due to questions, but may need to be
+ 4. Not implemented in the module because they're not a Drupal field. This includes things like URL alias, menu settings, etc. Unsure which of these are actually needed in the module.
 ---
 #### To add a new field type:
  1. Open `usagov_wizards/src/Services/WizardsService.php`

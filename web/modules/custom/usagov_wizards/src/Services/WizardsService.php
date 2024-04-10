@@ -34,10 +34,6 @@ class WizardsService {
       // ]
     ],
     'wizard' => [
-      'field_for_contact_center_only' => [
-        'name' => 'forContactCenterUseOnly',
-        'type' => 'value',
-      ],
       'field_language_toggle' => [
         'name' => 'languageToggle',
         'type' => 'value',
@@ -58,14 +54,6 @@ class WizardsService {
         'name' => 'cssIcon',
         'type' => 'value',
       ],
-      'field_custom_twig_content' => [
-        'name' => 'customTwigContent',
-        'type' => 'value',
-      ],
-      'field_exclude_from_contact_cente' => [
-        'name' => 'excludeFromContactCenter',
-        'type' => 'value',
-      ],
     ],
     'wizard_step' => [
       'field_option_name' => [
@@ -83,18 +71,20 @@ class WizardsService {
   // Meta Description               (node.field_meta_description)
   // Language                       (Node->language()->getName() (or ->getId()))
   // Language Toggle                (node.field_language_toggle)
-  // For contact center use only    (node.field_for_contact_center_only)
   // Option Name                    (node.field_option_name)
   // Wizard Step                    (node.field_wizard_step)
   // Page Intro                     (node.field_page_intro)
   // Hide Page Intro                (node.field_hide_page_intro)
   // Short Description              (node.field_short_description)
   // CSS Icon                       (node.field_css_icon)
+  
+  // ------------------------------------- Exist in CMS but not Used - These fields are marked as not being used in the React frontend ------------------------------------- //
+  // FAQ                            (node.field_faq_page)  -- FAQ appears to be a paragraphs thing. Wondering if it's needed since we know these are all wizards.
   // Custom Twig Content            (node.field_custom_twig_content)
+  // For contact center use only    (node.field_for_contact_center_only)
   // Exclude from contact center    (node.field_exclude_from_contact_cente)
 
-  // ------------------------------------- Exist in CMS but not Used - TODO ------------------------------------- //
-  // FAQ                            (node.field_faq_page)  -- FAQ appears to be a paragraphs thing. Wondering if it's needed since we know these are all wizards.
+  // ---------------------------------------------- In the doc, listed to use on frontend, but not added here yet - TODO ---------------------------------------------- //
   // Page Type                      (node.field_page_type) -- This is a taxonomy reference. Wondering if it's needed since we know these are all wizards.
 
   // -------------------------------------------- Not Fields - TODO --------------------------------------------- //
