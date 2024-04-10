@@ -533,7 +533,7 @@ class WizardsService {
             foreach ( $toDelete as $toDeleteId ) {
               // Delete node and unset in tree.
               $toDeleteNode = Node::load($toDeleteId);
-              if ( $toDeletenode !== null ) {
+              if ( $toDeleteNode !== null ) {
                 $toDeleteNode->delete();
               }
 
