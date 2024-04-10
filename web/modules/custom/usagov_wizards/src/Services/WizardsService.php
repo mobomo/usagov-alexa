@@ -20,12 +20,12 @@ class WizardsService {
       'field_meta_description' => [
         'name' => 'metaDescription',
       ],
-      'language' => [
-        'name' => 'language',
-      ],
-      'wizardStep' => [
-        'name' => 'children',
-      ]
+      // 'language' => [
+      //   'name' => 'language',
+      // ],
+      // 'wizardStep' => [
+      //   'name' => 'children',
+      // ]
     ],
     'wizard' => [
       'field_for_contact_center_only' => [
@@ -328,30 +328,40 @@ class WizardsService {
 
     if ( $wizardStep ) {
       // TODO strip tags from text fields
-      // TODO separate functions for getting wizard and wizard step field values - they have different fields available.
+      // TODO separate functions for getting wizard and wizard step field values - they have different fields available.      
       $stepData = [
         'nodeType' => $wizardStep->bundle(),
         'name' => preg_replace('/[ -]/', '_', strtolower($wizardStep->getTitle() ?? 'wizard_step_' . $wizardStep->id())),
         'title' => $wizardStep->getTitle() ?? '',
         'id' => $wizardStep->id() ?? '',
-        'pageIntro' => $this->getFieldValue($wizardStep, 'field_page_intro'),
-        'hidePageIntro' => $this->getFieldValue($wizardStep, 'field_hide_page_intro'),
-        'metaDescription' => $this->getFieldValue($wizardStep, 'field_meta_description'),
-        'shortDescription' => $this->getFieldValue($wizardStep, 'field_short_description'),
-        'pageType' => $this->getFieldValue($wizardStep, 'field_page_type'),
-        'languageToggle' => $this->getFieldValue($wizardStep, 'field_language_toggle'),
         'language' => $wizardStep->language()->getName(),
-        'body' => $this->getFieldValue($wizardStep, 'body'),
-        'headerHTML' => $this->getFieldValue($wizardStep, 'field_header_html'),
-        'cssIcon' => $this->getFieldValue($wizardStep, 'field_css_icon'),
-        'footerHTML' => $this->getFieldValue($wizardStep, 'field_footer_html'),
-        'forContactCenterUseOnly' => $this->getFieldValue($wizardStep, 'field_for_contact_center_use_only'),
-        'faq' => $this->getFieldValue($wizardStep, 'field_faq_page'),
-        'customTwigContent' => $this->getFieldValue($wizardStep, 'field_custom_twig_content'),
-        'excludeFromContactCenter' => $this->getFieldValue($wizardStep, 'field_exclude_from_contact_cente'),
-        'optionName' => $this->getFieldValue($wizardStep, 'field_option_name'),
+        // 'pageIntro' => $this->getFieldValue($wizardStep, 'field_page_intro'),
+        // 'hidePageIntro' => $this->getFieldValue($wizardStep, 'field_hide_page_intro'),
+        // 'metaDescription' => $this->getFieldValue($wizardStep, 'field_meta_description'),
+        // 'shortDescription' => $this->getFieldValue($wizardStep, 'field_short_description'),
+        // 'pageType' => $this->getFieldValue($wizardStep, 'field_page_type'),
+        // 'languageToggle' => $this->getFieldValue($wizardStep, 'field_language_toggle'),
+        // 'body' => $this->getFieldValue($wizardStep, 'body'),
+        // 'headerHTML' => $this->getFieldValue($wizardStep, 'field_header_html'),
+        // 'cssIcon' => $this->getFieldValue($wizardStep, 'field_css_icon'),
+        // 'footerHTML' => $this->getFieldValue($wizardStep, 'field_footer_html'),
+        // 'forContactCenterUseOnly' => $this->getFieldValue($wizardStep, 'field_for_contact_center_use_only'),
+        // 'faq' => $this->getFieldValue($wizardStep, 'field_faq_page'),
+        // 'customTwigContent' => $this->getFieldValue($wizardStep, 'field_custom_twig_content'),
+        // 'excludeFromContactCenter' => $this->getFieldValue($wizardStep, 'field_exclude_from_contact_cente'),
+        // 'optionName' => $this->getFieldValue($wizardStep, 'field_option_name'),
         'children' => []
       ];
+
+      foreach ( static::FIELD_DATA['#shared'] as $fieldKey => $fieldInfo ) {
+        $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey);
+      }
+
+      if ( !empty(static::FIELD_DATA[$wizardStep->bundle()]) ) {
+        foreach ( static::FIELD_DATA[$wizardStep->bundle()] as $fieldKey => $fieldInfo ) {
+          $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey);
+        }
+      }
 
       if ($includeChildIds) {
         $children = $wizardStep->get('field_wizard_step')->referencedEntities();
