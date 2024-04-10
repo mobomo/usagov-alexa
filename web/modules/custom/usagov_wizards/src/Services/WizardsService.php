@@ -567,7 +567,7 @@ class WizardsService {
                 // body is treated a bit different because it's formatted text. This should be expanded to allow
                 // different field types to be treated different
                 // TODO set correct format
-                $node->set($fieldkey, [
+                $node->set($fieldKey, [
                   'value' => $newData,
                   'format' => 'full_html'
                 ]);
