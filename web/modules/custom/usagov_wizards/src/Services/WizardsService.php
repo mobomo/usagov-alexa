@@ -10,52 +10,67 @@ class WizardsService {
     '#shared' => [
       'body' => [
         'name' => 'body',
+        'type' => 'value',
       ],
       'field_footer_html' => [
         'name' => 'footerHTML',
+        'type' => 'value',
       ],
       'field_header_html' => [
         'name' => 'headerHTML',
+        'type' => 'value',
       ],
       'field_meta_description' => [
         'name' => 'metaDescription',
+        'type' => 'value',
       ],
       // 'language' => [
       //   'name' => 'language',
+      //   'type' => 'value',
       // ],
       // 'wizardStep' => [
       //   'name' => 'children',
+      //   'type' => 'value',
       // ]
     ],
     'wizard' => [
       'field_for_contact_center_only' => [
         'name' => 'forContactCenterUseOnly',
+        'type' => 'value',
       ],
       'field_language_toggle' => [
         'name' => 'languageToggle',
+        'type' => 'value',
       ],
       'field_page_intro' => [
         'name' => 'pageIntro',
+        'type' => 'value',
       ],
       'field_hide_page_intro' => [
         'name' => 'hidePageIntro',
+        'type' => 'value',
       ],
       'field_short_description' => [
         'name' => 'shortDescription',
+        'type' => 'value',
       ],
       'field_css_icon' => [
         'name' => 'cssIcon',
+        'type' => 'value',
       ],
       'field_custom_twig_content' => [
         'name' => 'customTwigContent',
+        'type' => 'value',
       ],
       'field_exclude_from_contact_cente' => [
         'name' => 'excludeFromContactCenter',
+        'type' => 'value',
       ],
     ],
     'wizard_step' => [
       'field_option_name' => [
         'name' => 'optionName',
+        'type' => 'value',
       ],
     ],
   ];
@@ -335,31 +350,16 @@ class WizardsService {
         'title' => $wizardStep->getTitle() ?? '',
         'id' => $wizardStep->id() ?? '',
         'language' => $wizardStep->language()->getName(),
-        // 'pageIntro' => $this->getFieldValue($wizardStep, 'field_page_intro'),
-        // 'hidePageIntro' => $this->getFieldValue($wizardStep, 'field_hide_page_intro'),
-        // 'metaDescription' => $this->getFieldValue($wizardStep, 'field_meta_description'),
-        // 'shortDescription' => $this->getFieldValue($wizardStep, 'field_short_description'),
-        // 'pageType' => $this->getFieldValue($wizardStep, 'field_page_type'),
-        // 'languageToggle' => $this->getFieldValue($wizardStep, 'field_language_toggle'),
-        // 'body' => $this->getFieldValue($wizardStep, 'body'),
-        // 'headerHTML' => $this->getFieldValue($wizardStep, 'field_header_html'),
-        // 'cssIcon' => $this->getFieldValue($wizardStep, 'field_css_icon'),
-        // 'footerHTML' => $this->getFieldValue($wizardStep, 'field_footer_html'),
-        // 'forContactCenterUseOnly' => $this->getFieldValue($wizardStep, 'field_for_contact_center_use_only'),
-        // 'faq' => $this->getFieldValue($wizardStep, 'field_faq_page'),
-        // 'customTwigContent' => $this->getFieldValue($wizardStep, 'field_custom_twig_content'),
-        // 'excludeFromContactCenter' => $this->getFieldValue($wizardStep, 'field_exclude_from_contact_cente'),
-        // 'optionName' => $this->getFieldValue($wizardStep, 'field_option_name'),
         'children' => []
       ];
 
       foreach ( static::FIELD_DATA['#shared'] as $fieldKey => $fieldInfo ) {
-        $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey);
+        $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey, $fieldInfo['type']);
       }
 
       if ( !empty(static::FIELD_DATA[$wizardStep->bundle()]) ) {
         foreach ( static::FIELD_DATA[$wizardStep->bundle()] as $fieldKey => $fieldInfo ) {
-          $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey);
+          $stepData[$fieldInfo['name']] = $this->getFieldValue($wizardStep, $fieldKey, $fieldInfo['type']);
         }
       }
 
@@ -735,12 +735,23 @@ class WizardsService {
    *   The Node to load the value from.
    * @param string $fieldName
    *   The field to try to load.
+   * @param string $fieldType
+   *   The type of field to load data from. E.g. value, reference, etc.
+   *   Default is "value"
    * 
    * @return mixed
    *   The field's value if it exists, otherwise an empty string.
    */
-  private function getFieldValue( Node $obj, string $fieldName ) : mixed {
-    return $obj->hasField($fieldName) ? ($obj->get($fieldName)?->value ?? '') : '';
+  private function getFieldValue( Node $obj, string $fieldName, string $fieldType = 'value' ) : mixed {
+    switch ($fieldType) {
+      case 'reference':
+        return $obj->hasField($fieldName) ? ($obj->get($fieldName)?->target_id ?? '') : '';
+        break;
+      case 'value':
+      default:
+        return $obj->hasField($fieldName) ? ($obj->get($fieldName)?->value ?? '') : '';
+        break;
+    }
   }
 
   /**
