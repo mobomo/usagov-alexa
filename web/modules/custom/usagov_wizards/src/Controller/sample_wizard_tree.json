@@ -12,204 +12,90 @@
       "id": "74",
       "language": "English",
       "children": {
-        "48": {
+        "73": {
           "nodeType": "wizard_step",
-          "name": "other_scams",
-          "title": "Other scams",
-          "id": "48",
-          "language": "English",
-          "children": [],
-          "body": "<h2>Based on your answers</h2><p>Report scams to the <a href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\">Federal Trade Commission</a> online.</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p>",
-          "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-          "metaDescription": "",
-          "optionName": "Other"
-        },
-        "49": {
-          "nodeType": "wizard_step",
-          "name": "romance_scam_(catfishing)",
-          "title": "Romance scam (catfishing)",
-          "id": "49",
-          "language": "English",
-          "children": [],
-          "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Scammers use flattery and fake photographs and background stories to gain your affection. They then ask you to send money or gift cards.</p><p><strong>Report this scam</strong></p><p>Report online to the <a href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\">Federal Trade Commission</a>.</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p><a href=\"https://consumer.ftc.gov/articles/what-know-about-romance-scams\">Get tips from the FTC</a> to avoid getting taken advantage of by romance scammers.&nbsp;</p><p>&nbsp;</p>",
-          "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-          "metaDescription": "",
-          "optionName": "Romance (catfishing)"
-        },
-        "53": {
-          "nodeType": "wizard_step",
-          "name": "imposter_scam",
-          "title": "Imposter scam",
-          "id": "53",
+          "name": "banking_scam",
+          "title": "Banking scam",
+          "id": "73",
           "language": "English",
           "children": {
-            "46": {
+            "45": {
               "nodeType": "wizard_step",
-              "name": "federal_tax_or_irs_scam",
-              "title": "Federal tax or IRS scam",
-              "id": "46",
+              "name": "phishing_scam",
+              "title": "Phishing scam",
+              "id": "45",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Imposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.&nbsp;</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://www.treasury.gov/tigta/contact_report_scam.shtml\">U.S. Department of the Treasury</a>. Forward email messages that claim to be from the IRS to <a href=\"mailto:phishing@irs.gov\">phishing@irs.gov</a>.</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>&nbsp;and to the&nbsp;<a href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\">Federal Trade Commission</a>.</p><p><strong>Learn more</strong></p><p>Understand more about <a href=\"https://consumer.gov/scams-identity-theft/imposter-scams\">imposter scams</a> and how to keep yourself safe.</p><p>&nbsp;</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EYou receive a scam email or text message that looks like it’s from a company you trust. It asks you to verify your bank account, debit card, or credit card number.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport phishing attempts to the \u003Ca href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\"\u003EFederal Trade Commission\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EYou can also forward phishing messages to the Anti-Phishing Working Group at \u003Ca href=\"mailto:reportphishing@apwg.org\"\u003Ereportphishing@apwg.org\u003C/a\u003E&nbsp;and&nbsp;to your cell provider at 7726 (SPAM).\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to \u003Ca href=\"https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams\"\u003Erecognize and avoid phishing scams\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Your federal taxes or the IRS"
+              "optionName": "Phishing (scam email or text pretending to be from a real company)",
+              "weight": 0
             },
-            "51": {
+            "70": {
               "nodeType": "wizard_step",
-              "name": "other_imposter_scams",
-              "title": "Other imposter scams",
-              "id": "51",
+              "name": "automatic_withdrawal_scam",
+              "title": "Automatic withdrawal scam",
+              "id": "70",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Imposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Understand more about <a href=\"https://consumer.gov/scams-identity-theft/imposter-scams\">imposter scams</a> and how to keep yourself safe.</p><p>&nbsp;</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EA scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EContact your bank to report and stop unauthorized automatic withdrawals from your account.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn about \u003Ca href=\"https://www.helpwithmybank.gov/help-topics/bank-accounts/electronic-transactions/index-electronic-transactions.html\"\u003Emanaging withdrawals and debit payments\u003C/a\u003E from your bank account.\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "A trusted company, loved one, or a government office"
+              "optionName": "Automated withdrawal made from your account",
+              "weight": 1
             },
-            "52": {
+            "71": {
               "nodeType": "wizard_step",
-              "name": "social_security_scam",
-              "title": "Social Security scam",
-              "id": "52",
+              "name": "unsolicited_check_scam",
+              "title": "Unsolicited check scam",
+              "id": "71",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Scammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://secure.ssa.gov/ipff/home\">Social Security Administration</a>.&nbsp;</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Learn how to recognize and avoid <a href=\"https://www.ssa.gov/scam/\">Social Security-related scams</a>.</p><p>&nbsp;</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EA scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn’t ask for.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport fake checks you receive by mail&nbsp;to the \u003Ca href=\"https://www.uspis.gov/report\"\u003EU.S. Postal Inspection Service\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EFind out \u003Ca href=\"https://consumer.georgia.gov/consumer-topics/unsolicited-checks\"\u003Ewhat to do if you receive an unsolicited check\u003C/a\u003E.\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Your Social Security number or benefits"
+              "optionName": "Unsolicited check in the mail",
+              "weight": 2
+            },
+            "72": {
+              "nodeType": "wizard_step",
+              "name": "fake_check_scam",
+              "title": "Fake check scam",
+              "id": "72",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ESomeone sends you a check for more than the amount they owe and they ask you to refund the difference. But the check was fake, so you have to pay your bank the amount of the check and lose any money you gave the scammer.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport fake checks you receive by mail&nbsp;to the \u003Ca href=\"https://www.uspis.gov/report\"\u003EU.S. Postal Inspection Service\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to avoid and deal with \u003Ca href=\"https://consumer.ftc.gov/articles/how-spot-avoid-report-fake-check-scams\"\u003Efake check scams\u003C/a\u003E.\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "Fake check",
+              "weight": 3
+            },
+            "69": {
+              "nodeType": "wizard_step",
+              "name": "other_banking_scam",
+              "title": "Other banking scam",
+              "id": "69",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003EReport scams to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "Another banking issue",
+              "weight": 4
             }
           },
-          "body": "<p><strong>Did the scam mention:</strong></p>",
+          "body": "",
           "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
           "metaDescription": "",
-          "optionName": "Imposter (someone claiming to be someone they’re not)"
-        },
-        "62": {
-          "nodeType": "wizard_step",
-          "name": "identity_theft",
-          "title": "Identity theft",
-          "id": "62",
-          "language": "English",
-          "children": {
-            "54": {
-              "nodeType": "wizard_step",
-              "name": "another_type_of_identity_theft",
-              "title": "Another type of identity theft",
-              "id": "54",
-              "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Identity theft happens when someone uses your personal or financial information to commit fraud.</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Learn the warning signs and how to <a href=\"https://beta.usa.gov/identity-theft\">protect yourself from identity theft</a>.</p><p>&nbsp;</p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": ""
-            },
-            "57": {
-              "nodeType": "wizard_step",
-              "name": "your_medical_care",
-              "title": "Your medical care",
-              "id": "57",
-              "language": "English",
-              "children": {
-                "55": {
-                  "nodeType": "wizard_step",
-                  "name": "other_types_of_medical_identity_scams",
-                  "title": "Other types of medical identity scams",
-                  "id": "55",
-                  "language": "English",
-                  "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Someone uses your personal information to get health care and submit claims to your insurance provider.</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Learn how to avoid <a href=\"https://consumer.ftc.gov/articles/what-know-about-medical-identity-theft\">medical identity theft</a>.</p><p>&nbsp;</p>",
-                  "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-                  "metaDescription": "",
-                  "optionName": "Another type of medical identity theft"
-                },
-                "56": {
-                  "nodeType": "wizard_step",
-                  "name": "medicare_or_medicaid_identity_theft",
-                  "title": "Medicare or Medicaid identity theft",
-                  "id": "56",
-                  "language": "English",
-                  "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Someone uses your personal information to submit health claims to Medicare or Medicaid.</p><p><strong>Report this scam</strong></p><p>Report online to the <a href=\"https://oig.hhs.gov/fraud/report-fraud/\">Health and Human Services Office of Inspector General Hotline</a>. Or report by phone at 1-800-447-8477 (1-800-HHS-TIPS).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Learn how to avoid <a href=\"https://consumer.ftc.gov/articles/what-know-about-medical-identity-theft\">medical identity theft</a>.</p><p>&nbsp;</p>",
-                  "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-                  "metaDescription": "",
-                  "optionName": "Medicare or Medicaid identity theft"
-                }
-              },
-              "body": "<p><strong>Did the scam involve:</strong></p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": ""
-            },
-            "60": {
-              "nodeType": "wizard_step",
-              "name": "employment",
-              "title": "Employment",
-              "id": "60",
-              "language": "English",
-              "children": {
-                "58": {
-                  "nodeType": "wizard_step",
-                  "name": "unemployment_identity_theft",
-                  "title": "Unemployment identity theft",
-                  "id": "58",
-                  "language": "English",
-                  "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>A person uses your name, Social Security number, and other information to apply for unemployment benefits.</p><p><strong>Report this scam</strong></p><p>Report to your state’s labor department. <a href=\"https://www.dol.gov/agencies/eta/UIIDtheft#state-directory\">Find their contact information in this list.</a></p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.<br><br><strong>Learn more</strong></p><p>Find out how to <a href=\"https://consumer.ftc.gov/consumer-alerts/2020/06/scammer-getting-unemployment-benefits-your-name\">protect your finances after an unemployment scam</a>.</p><p>&nbsp;</p>",
-                  "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-                  "metaDescription": "",
-                  "optionName": "Use your personal information to get unemployment benefits?"
-                },
-                "59": {
-                  "nodeType": "wizard_step",
-                  "name": "job_related_identity_theft",
-                  "title": "Job-related identity theft",
-                  "id": "59",
-                  "language": "English",
-                  "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>A person uses your name, Social Security number, and personal information to apply for a job.&nbsp;</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Get information from the IRS about what to do if you experience <a href=\"https://www.irs.gov/identity-theft-fraud-scams/employment-related-identity-theft\">employment-related identity theft</a>.</p><p>&nbsp;</p>",
-                  "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-                  "metaDescription": "",
-                  "optionName": "Use your personal information to get a job?"
-                }
-              },
-              "body": "<p><strong>Did someone:</strong></p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": "Employment"
-            },
-            "61": {
-              "nodeType": "wizard_step",
-              "name": "tax_related_identity_theft",
-              "title": "Tax-related identity theft",
-              "id": "61",
-              "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Scammers use your Social Security number and other personal information to file a fraudulent tax return.&nbsp;</p><p><strong>Report this scam</strong></p><p>Report to both the IRS and Federal Trade Commission (FTC). Report to the IRS <a href=\"https://www.irs.gov/pub/irs-pdf/f14039.pdf\">using Form 14039</a>. <a href=\"https://www.identitytheft.gov/#/\">Report to the FTC online</a> or by phone at 1-877-438-4338.</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Understand more about <a href=\"https://consumer.gov/scams-identity-theft/imposter-scams\">imposter scams</a> and how to keep yourself safe.</p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": "Your tax returns or refund"
-            }
-          },
-          "body": "<p><strong>Was the identity theft related to:</strong></p>",
-          "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-          "metaDescription": "",
-          "optionName": ""
+          "optionName": "Banking",
+          "weight": 0
         },
         "68": {
           "nodeType": "wizard_step",
@@ -225,24 +111,12 @@
               "id": "47",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Scammers advertise apartments or vacation rentals that they don’t own or manage or that don’t actually exist.&nbsp;</p><p><strong>Report this scam</strong></p><p>Report online to the <a href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\">Federal Trade Commission</a>.</p><p>You can also report to your local law enforcement and the website or publication where the rental ad was posted.</p><p><strong>Learn more</strong></p><p>Learn the signs of a <a href=\"https://consumer.ftc.gov/articles/rental-listing-scams\">rental listing scam</a>.</p><p>&nbsp;</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EScammers advertise apartments or vacation rentals that they don’t own or manage or that don’t actually exist.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport online to the \u003Ca href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\"\u003EFederal Trade Commission\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EYou can also report to your local law enforcement and the website or publication where the rental ad was posted.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn the signs of a \u003Ca href=\"https://consumer.ftc.gov/articles/rental-listing-scams\"\u003Erental listing scam\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Rentals"
-            },
-            "63": {
-              "nodeType": "wizard_step",
-              "name": "other_housing_scam",
-              "title": "Other housing scam",
-              "id": "63",
-              "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p>Report scams to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p>&nbsp;</p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": "Another housing issue"
+              "optionName": "Rentals",
+              "weight": 0
             },
             "66": {
               "nodeType": "wizard_step",
@@ -258,11 +132,12 @@
                   "id": "64",
                   "language": "English",
                   "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.</p><p><strong>Report this scam</strong></p><p>If you have an issue with a move across state lines, file a complaint with the <a href=\"https://www.fmcsa.dot.gov/protect-your-move/file-a-complaint\">Federal Motor Carrier Safety Administration</a>.</p><p>You can also file a report using the <a href=\"https://www.bbb.org/scamtracker/\">Better Business Bureau Scam Tracker</a>.&nbsp;</p><p><strong>Learn more</strong></p><p>Learn how to <a href=\"https://www.fmcsa.dot.gov/protect-your-move\">spot moving fraud before it happens</a>.</p><p>&nbsp;</p>",
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ESome moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EIf you have an issue with a move across state lines, file a complaint with the \u003Ca href=\"https://www.fmcsa.dot.gov/protect-your-move/file-a-complaint\"\u003EFederal Motor Carrier Safety Administration\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EYou can also file a report using the \u003Ca href=\"https://www.bbb.org/scamtracker/\"\u003EBetter Business Bureau Scam Tracker\u003C/a\u003E.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to \u003Ca href=\"https://www.fmcsa.dot.gov/protect-your-move\"\u003Espot moving fraud before it happens\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
                   "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
                   "metaDescription": "",
-                  "optionName": "Across state lines"
+                  "optionName": "Across state lines",
+                  "weight": 0
                 },
                 "65": {
                   "nodeType": "wizard_step",
@@ -271,18 +146,20 @@
                   "id": "65",
                   "language": "English",
                   "children": [],
-                  "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Some moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.</p><p><strong>Report this scam</strong></p><p>If you have a complaint about a move within your same city or state, contact your <a href=\"https://www.fmcsa.dot.gov/protect-your-move/state-law-enforcement\">state or local regulatory authority</a>.</p><p>You can also file a report using the <a href=\"https://www.bbb.org/scamtracker/\">Better Business Bureau Scam Tracker</a>.&nbsp;</p><p><strong>Learn more</strong></p><p>Learn how to <a href=\"https://www.fmcsa.dot.gov/protect-your-move\">spot moving fraud before it happens</a>.</p><p>&nbsp;</p>",
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ESome moving companies use fraudulent practices such as demanding cash up front or requiring you to pay additional money before they’ll give you your belongings.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EIf you have a complaint about a move within your same city or state, contact your \u003Ca href=\"https://www.fmcsa.dot.gov/protect-your-move/state-law-enforcement\"\u003Estate or local regulatory authority\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EYou can also file a report using the \u003Ca href=\"https://www.bbb.org/scamtracker/\"\u003EBetter Business Bureau Scam Tracker\u003C/a\u003E.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to \u003Ca href=\"https://www.fmcsa.dot.gov/protect-your-move\"\u003Espot moving fraud before it happens\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
                   "footerHTML": "",
-                  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
                   "metaDescription": "",
-                  "optionName": "Local or within the same state"
+                  "optionName": "Local or within the same state",
+                  "weight": 1
                 }
               },
-              "body": "<p><strong>Was your move:</strong></p>",
+              "body": "\u003Cp\u003E\u003Cstrong\u003EWas your move:\u003C/strong\u003E\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Moving"
+              "optionName": "Moving",
+              "weight": 1
             },
             "67": {
               "nodeType": "wizard_step",
@@ -291,116 +168,265 @@
               "id": "67",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Scammers may offer to \"help\" you make your mortgage payments, but they’re just trying to take your money.&nbsp;</p><p><strong>Report this scam</strong></p><p>Report to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p><strong>Learn more</strong></p><p>Learn about the types of <a href=\"https://consumer.ftc.gov/articles/mortgage-relief-scams\">mortgage relief scams</a>.</p><p>&nbsp;</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EScammers may offer to \"help\" you make your mortgage payments, but they’re just trying to take your money.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn about the types of \u003Ca href=\"https://consumer.ftc.gov/articles/mortgage-relief-scams\"\u003Emortgage relief scams\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Mortgage or foreclosure"
+              "optionName": "Mortgage or foreclosure",
+              "weight": 2
+            },
+            "63": {
+              "nodeType": "wizard_step",
+              "name": "other_housing_scam",
+              "title": "Other housing scam",
+              "id": "63",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003EReport scams to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "Another housing issue",
+              "weight": 3
             }
           },
-          "body": "<p><strong>Did the scam involve:</strong></p>",
+          "body": "\u003Cp\u003E\u003Cstrong\u003EDid the scam involve:\u003C/strong\u003E\u003C/p\u003E",
           "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
           "metaDescription": "",
-          "optionName": "Housing"
+          "optionName": "Housing",
+          "weight": 1
         },
-        "73": {
+        "62": {
           "nodeType": "wizard_step",
-          "name": "banking_scam",
-          "title": "Banking scam",
-          "id": "73",
+          "name": "identity_theft",
+          "title": "Identity theft",
+          "id": "62",
           "language": "English",
           "children": {
-            "45": {
+            "57": {
               "nodeType": "wizard_step",
-              "name": "phishing_scam",
-              "title": "Phishing scam",
-              "id": "45",
+              "name": "your_medical_care",
+              "title": "Your medical care",
+              "id": "57",
               "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>You receive a scam email or text message that looks like it’s from a company you trust. It asks you to verify your bank account, debit card, or credit card number.</p><p><strong>Report this scam</strong></p><p>Report phishing attempts to the <a href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\">Federal Trade Commission</a>.</p><p>You can also forward phishing messages to the Anti-Phishing Working Group at <a href=\"mailto:reportphishing@apwg.org\">reportphishing@apwg.org</a>&nbsp;and&nbsp;to your cell provider at 7726 (SPAM).</p><p>&nbsp;</p><p><strong>Learn more</strong></p><p>Learn how to <a href=\"https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams\">recognize and avoid phishing scams</a>.</p><p>&nbsp;</p>",
+              "children": {
+                "56": {
+                  "nodeType": "wizard_step",
+                  "name": "medicare_or_medicaid_identity_theft",
+                  "title": "Medicare or Medicaid identity theft",
+                  "id": "56",
+                  "language": "English",
+                  "children": [],
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ESomeone uses your personal information to submit health claims to Medicare or Medicaid.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport online to the \u003Ca href=\"https://oig.hhs.gov/fraud/report-fraud/\"\u003EHealth and Human Services Office of Inspector General Hotline\u003C/a\u003E. Or report by phone at 1-800-447-8477 (1-800-HHS-TIPS).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to avoid \u003Ca href=\"https://consumer.ftc.gov/articles/what-know-about-medical-identity-theft\"\u003Emedical identity theft\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+                  "footerHTML": "",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+                  "metaDescription": "",
+                  "optionName": "Medicare or Medicaid identity theft",
+                  "weight": 0
+                },
+                "55": {
+                  "nodeType": "wizard_step",
+                  "name": "other_types_of_medical_identity_scams",
+                  "title": "Other types of medical identity scams",
+                  "id": "55",
+                  "language": "English",
+                  "children": [],
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ESomeone uses your personal information to get health care and submit claims to your insurance provider.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to avoid \u003Ca href=\"https://consumer.ftc.gov/articles/what-know-about-medical-identity-theft\"\u003Emedical identity theft\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+                  "footerHTML": "",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+                  "metaDescription": "",
+                  "optionName": "Another type of medical identity theft",
+                  "weight": 1
+                }
+              },
+              "body": "\u003Cp\u003E\u003Cstrong\u003EDid the scam involve:\u003C/strong\u003E\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Phishing (scam email or text pretending to be from a real company)"
+              "optionName": "",
+              "weight": 0
             },
-            "69": {
+            "60": {
               "nodeType": "wizard_step",
-              "name": "other_banking_scam",
-              "title": "Other banking scam",
-              "id": "69",
+              "name": "employment",
+              "title": "Employment",
+              "id": "60",
               "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p>Report scams to the <a href=\"https://reportfraud.ftc.gov/\">Federal Trade Commission</a> online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).</p><p>Also, <a href=\"https://www.ic3.gov/Home/FileComplaint\">report any scam that happened online to the FBI</a>.</p><p>&nbsp;</p>",
+              "children": {
+                "58": {
+                  "nodeType": "wizard_step",
+                  "name": "unemployment_identity_theft",
+                  "title": "Unemployment identity theft",
+                  "id": "58",
+                  "language": "English",
+                  "children": [],
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EA person uses your name, Social Security number, and other information to apply for unemployment benefits.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to your state’s labor department. \u003Ca href=\"https://www.dol.gov/agencies/eta/UIIDtheft#state-directory\"\u003EFind their contact information in this list.\u003C/a\u003E\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003Cbr\u003E\u003Cbr\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EFind out how to \u003Ca href=\"https://consumer.ftc.gov/consumer-alerts/2020/06/scammer-getting-unemployment-benefits-your-name\"\u003Eprotect your finances after an unemployment scam\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+                  "footerHTML": "",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+                  "metaDescription": "",
+                  "optionName": "Use your personal information to get unemployment benefits?",
+                  "weight": 0
+                },
+                "59": {
+                  "nodeType": "wizard_step",
+                  "name": "job_related_identity_theft",
+                  "title": "Job-related identity theft",
+                  "id": "59",
+                  "language": "English",
+                  "children": [],
+                  "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EA person uses your name, Social Security number, and personal information to apply for a job.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EGet information from the IRS about what to do if you experience \u003Ca href=\"https://www.irs.gov/identity-theft-fraud-scams/employment-related-identity-theft\"\u003Eemployment-related identity theft\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+                  "footerHTML": "",
+                  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+                  "metaDescription": "",
+                  "optionName": "Use your personal information to get a job?",
+                  "weight": 1
+                }
+              },
+              "body": "\u003Cp\u003E\u003Cstrong\u003EDid someone:\u003C/strong\u003E\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Another banking issue"
+              "optionName": "Employment",
+              "weight": 1
             },
-            "70": {
+            "61": {
               "nodeType": "wizard_step",
-              "name": "automatic_withdrawal_scam",
-              "title": "Automatic withdrawal scam",
-              "id": "70",
+              "name": "tax_related_identity_theft",
+              "title": "Tax-related identity theft",
+              "id": "61",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>A scam company sets up automatic withdrawals from your bank account for you to qualify for a free trial or to collect a prize.</p><p><strong>Report this scam</strong></p><p>Contact your bank to report and stop unauthorized automatic withdrawals from your account.&nbsp;</p><p><strong>Learn more</strong></p><p>Learn about <a href=\"https://www.helpwithmybank.gov/help-topics/bank-accounts/electronic-transactions/index-electronic-transactions.html\">managing withdrawals and debit payments</a> from your bank account.</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EScammers use your Social Security number and other personal information to file a fraudulent tax return.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to both the IRS and Federal Trade Commission (FTC). Report to the IRS \u003Ca href=\"https://www.irs.gov/pub/irs-pdf/f14039.pdf\"\u003Eusing Form 14039\u003C/a\u003E. \u003Ca href=\"https://www.identitytheft.gov/#/\"\u003EReport to the FTC online\u003C/a\u003E or by phone at 1-877-438-4338.\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EUnderstand more about \u003Ca href=\"https://consumer.gov/scams-identity-theft/imposter-scams\"\u003Eimposter scams\u003C/a\u003E and how to keep yourself safe.\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Automated withdrawal made from your account"
+              "optionName": "Your tax returns or refund",
+              "weight": 2
             },
-            "71": {
+            "54": {
               "nodeType": "wizard_step",
-              "name": "unsolicited_check_scam",
-              "title": "Unsolicited check scam",
-              "id": "71",
+              "name": "another_type_of_identity_theft",
+              "title": "Another type of identity theft",
+              "id": "54",
               "language": "English",
               "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>A scammer sends you a check for no reason. If you cash it, you may be authorizing the purchase of items or signing up for a loan you didn’t ask for.</p><p><strong>Report this scam</strong></p><p>Report fake checks you receive by mail&nbsp;to the <a href=\"https://www.uspis.gov/report\">U.S. Postal Inspection Service</a>.</p><p><strong>Learn more</strong></p><p>Find out <a href=\"https://consumer.georgia.gov/consumer-topics/unsolicited-checks\">what to do if you receive an unsolicited check</a>.</p>",
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EIdentity theft happens when someone uses your personal or financial information to commit fraud.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn the warning signs and how to \u003Ca href=\"https://beta.usa.gov/identity-theft\"\u003Eprotect yourself from identity theft\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
               "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
               "metaDescription": "",
-              "optionName": "Unsolicited check in the mail"
-            },
-            "72": {
-              "nodeType": "wizard_step",
-              "name": "fake_check_scam",
-              "title": "Fake check scam",
-              "id": "72",
-              "language": "English",
-              "children": [],
-              "body": "<h2>Based on your answers</h2><p><strong>About this scam</strong></p><p>Someone sends you a check for more than the amount they owe and they ask you to refund the difference. But the check was fake, so you have to pay your bank the amount of the check and lose any money you gave the scammer.</p><p><strong>Report this scam</strong></p><p>Report fake checks you receive by mail&nbsp;to the <a href=\"https://www.uspis.gov/report\">U.S. Postal Inspection Service</a>.</p><p><strong>Learn more</strong></p><p>Learn how to avoid and deal with <a href=\"https://consumer.ftc.gov/articles/how-spot-avoid-report-fake-check-scams\">fake check scams</a>.</p>",
-              "footerHTML": "",
-              "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
-              "metaDescription": "",
-              "optionName": "Fake check"
+              "optionName": "",
+              "weight": 3
             }
           },
-          "body": "",
+          "body": "\u003Cp\u003E\u003Cstrong\u003EWas the identity theft related to:\u003C/strong\u003E\u003C/p\u003E",
           "footerHTML": "",
-          "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
           "metaDescription": "",
-          "optionName": "Banking"
+          "optionName": "",
+          "weight": 2
+        },
+        "53": {
+          "nodeType": "wizard_step",
+          "name": "imposter_scam",
+          "title": "Imposter scam",
+          "id": "53",
+          "language": "English",
+          "children": {
+            "46": {
+              "nodeType": "wizard_step",
+              "name": "federal_tax_or_irs_scam",
+              "title": "Federal tax or IRS scam",
+              "id": "46",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EImposters may pose as the IRS or other government agencies claiming that you owe taxes. They ask you to pay them by purchasing a gift card or wiring money.&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://www.treasury.gov/tigta/contact_report_scam.shtml\"\u003EU.S. Department of the Treasury\u003C/a\u003E. Forward email messages that claim to be from the IRS to \u003Ca href=\"mailto:phishing@irs.gov\"\u003Ephishing@irs.gov\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E&nbsp;and to the&nbsp;\u003Ca href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\"\u003EFederal Trade Commission\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EUnderstand more about \u003Ca href=\"https://consumer.gov/scams-identity-theft/imposter-scams\"\u003Eimposter scams\u003C/a\u003E and how to keep yourself safe.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "Your federal taxes or the IRS",
+              "weight": 0
+            },
+            "52": {
+              "nodeType": "wizard_step",
+              "name": "social_security_scam",
+              "title": "Social Security scam",
+              "id": "52",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EScammers pose as the Social Security Administration or as a government employee. They may ask you to pay money or attempt to get your personal information.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://secure.ssa.gov/ipff/home\"\u003ESocial Security Administration\u003C/a\u003E.&nbsp;\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ELearn how to recognize and avoid \u003Ca href=\"https://www.ssa.gov/scam/\"\u003ESocial Security-related scams\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "Your Social Security number or benefits",
+              "weight": 1
+            },
+            "51": {
+              "nodeType": "wizard_step",
+              "name": "other_imposter_scams",
+              "title": "Other imposter scams",
+              "id": "51",
+              "language": "English",
+              "children": [],
+              "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EImposters pretend to be someone you know or a person in a position of authority. They often come with an urgent request for money.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport to the \u003Ca href=\"https://reportfraud.ftc.gov/\"\u003EFederal Trade Commission\u003C/a\u003E online,&nbsp;or by phone at&nbsp;1-877-382-4357&nbsp;(9:00 AM - 8:00 PM, ET).\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EUnderstand more about \u003Ca href=\"https://consumer.gov/scams-identity-theft/imposter-scams\"\u003Eimposter scams\u003C/a\u003E and how to keep yourself safe.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+              "footerHTML": "",
+              "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+              "metaDescription": "",
+              "optionName": "A trusted company, loved one, or a government office",
+              "weight": 2
+            }
+          },
+          "body": "\u003Cp\u003E\u003Cstrong\u003EDid the scam mention:\u003C/strong\u003E\u003C/p\u003E",
+          "footerHTML": "",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+          "metaDescription": "",
+          "optionName": "Imposter (someone claiming to be someone they’re not)",
+          "weight": 3
+        },
+        "49": {
+          "nodeType": "wizard_step",
+          "name": "romance_scam_(catfishing)",
+          "title": "Romance scam (catfishing)",
+          "id": "49",
+          "language": "English",
+          "children": [],
+          "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003E\u003Cstrong\u003EAbout this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EScammers use flattery and fake photographs and background stories to gain your affection. They then ask you to send money or gift cards.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EReport this scam\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003EReport online to the \u003Ca href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\"\u003EFederal Trade Commission\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003ELearn more\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Ca href=\"https://consumer.ftc.gov/articles/what-know-about-romance-scams\"\u003EGet tips from the FTC\u003C/a\u003E to avoid getting taken advantage of by romance scammers.&nbsp;\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E",
+          "footerHTML": "",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+          "metaDescription": "",
+          "optionName": "Romance (catfishing)",
+          "weight": 4
+        },
+        "48": {
+          "nodeType": "wizard_step",
+          "name": "other_scams",
+          "title": "Other scams",
+          "id": "48",
+          "language": "English",
+          "children": [],
+          "body": "\u003Ch2\u003EBased on your answers\u003C/h2\u003E\u003Cp\u003EReport scams to the \u003Ca href=\"https://reportfraud.ftc.gov/#/?orgcode=USAGOV\"\u003EFederal Trade Commission\u003C/a\u003E online.\u003C/p\u003E\u003Cp\u003EAlso, \u003Ca href=\"https://www.ic3.gov/Home/FileComplaint\"\u003Ereport any scam that happened online to the FBI\u003C/a\u003E.\u003C/p\u003E",
+          "footerHTML": "",
+          "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
+          "metaDescription": "",
+          "optionName": "Other",
+          "weight": 5
         }
       },
-      "body": "<p>What type of scam do you need to report?</p>",
+      "body": "\u003Cp\u003EWhat type of scam do you need to report?\u003C/p\u003E",
       "footerHTML": "",
-      "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+      "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
       "metaDescription": "Just answer a few questions with USAGov's scam reporting tool to find out where to report a scam and how to keep yourself safe.",
-      "optionName": ""
+      "optionName": "",
+      "weight": 0
     }
   },
   "body": "",
   "footerHTML": "",
-  "headerHTML": "<p>&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;</p>",
+  "headerHTML": "\u003Cp\u003E&lt;script type=\"text/javascript\" src=\"//script.crazyegg.com/pages/scripts/0007/9651.js\" async=\"async\" &gt;&lt;/script&gt;\u003C/p\u003E",
   "metaDescription": "Use USA.gov’s scam reporting tool to identify a scam and help you find the right government agency or consumer organization to report it.",
-  "forContactCenterUseOnly": "",
   "languageToggle": "",
   "pageIntro": "",
   "hidePageIntro": "",
   "shortDescription": "",
-  "cssIcon": "",
-  "customTwigContent": "",
-  "excludeFromContactCenter": ""
+  "cssIcon": ""
 }
