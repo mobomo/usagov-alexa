@@ -401,16 +401,16 @@ class WizardsService {
       // Determine format - nested vs. flattened
       // TODO make sure this is correct
       $nested = false;
-      foreach ( $tree as $treeNode ) {
-        $children = $treeNode['children'];
-        foreach ( $children as $child ) {
-          if ( !is_numeric($child) ) {
-            $nested = true;
-          }
-          break;
-        }
-        break;
-      }
+      // foreach ( $tree as $treeNode ) {
+      //   $children = $treeNode['children'];
+      //   foreach ( $children as $child ) {
+      //     if ( empty($child['id']) || empty($child['weight']) ) {
+      //       $nested = true;
+      //     }
+      //     break;
+      //   }
+      //   break;
+      // }
 
       if ( $nested ) {
         $this->saveWizardTreeNested($tree);
