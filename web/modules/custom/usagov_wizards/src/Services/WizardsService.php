@@ -301,10 +301,13 @@ class WizardsService {
 
     $children = $wizardStep->get('field_wizard_step')->referencedEntities();
 
+    $weight = 0;
     foreach ($children as $child) {
       $childId = $child->id();
       if ( !in_array($childId, $visited) ) {
         $childStep = $this->buildWizardStep( $child, $keyedChildren, $visited );
+        $childStep['weight'] = $weight;
+        $weight++;
         if ( $keyedChildren ) {
           $treeNode['children'][$childId] = $childStep;
         } else {
@@ -355,8 +358,13 @@ class WizardsService {
 
       if ($includeChildIds) {
         $children = $wizardStep->get('field_wizard_step')->referencedEntities();
+        $weight = 0;
         foreach ($children as $child) {
-          $stepData['children'][] = $child->id();
+          $stepData['children'][] = [
+            'id' => $child->id(),
+            'weight' => $weight,
+          ];
+          $weight++;
         }
       }
     }
