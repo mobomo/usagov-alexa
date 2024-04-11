@@ -22,7 +22,6 @@ class WizardController extends ControllerBase {
     // Generate the flattened wizard tree
     $wizardTree = \Drupal::service('usagov_wizards.wizard')->buildFlattenedWizardTreeFromNodeId( $wizardId );
     // Determine the Wizard update path.
-    // TODO make this absolute instead of relative.
     $wizardUpdatePath = \Drupal\Core\Url::fromRoute('usagov_wizards.wizard_tree.update.v1')->toString();
 
     // Set the theme to allow for a custom template to be loaded, set JS variables,
@@ -73,7 +72,6 @@ class WizardController extends ControllerBase {
     $availableWizards = \Drupal::service('usagov_wizards.wizard')->getAllWizards();
     $reactWizards = [];
     // Format them for the front end
-    // TODO change this from default Drupal data format to a more friendly format.
     foreach ($availableWizards as $key => $val) {
       $reactWizards[$key] = $val->toArray();
     }

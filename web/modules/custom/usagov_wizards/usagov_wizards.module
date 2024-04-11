@@ -57,7 +57,6 @@ function loadOrCreateFieldConfig( string $fieldName, string $nodeTypeBundle, str
           // Attempt to create the field storage config with loaded data, and return it if successful.
           $fieldConfigData = \Drupal\Component\Serialization\Yaml::decode($fileContents);
           $fieldConfigData['bundle'] = $nodeTypeBundle;
-          // TODO
           $fieldConfig = FieldConfig::create(array_intersect_key($fieldConfigData, array_flip($fieldConfigKeys)));
           $saveSuccessful = $fieldConfig->save();
 
@@ -96,7 +95,6 @@ function loadOrCreateFieldStorageConfig( string $fieldName, string|null $filePat
   $fieldStorageConfig = FieldStorageConfig::loadByName('node', $fieldName);
 
   if ( empty($fieldStorageConfig) ) {
-    // TODO
     $fieldStorageKeys = [
       'id',
       'field_name',

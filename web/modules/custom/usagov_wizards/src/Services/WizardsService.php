@@ -147,7 +147,6 @@ class WizardsService {
     if ( $this->isValidTreeNode($node) ) {
       return $this->buildWizardTreeFromNode( $node, $keyedChildren );
     }
-    // TODO If the node doesn't exist, what do we return? Empty tree? The entire tree?
     return [];
   }
 
@@ -168,7 +167,6 @@ class WizardsService {
     if ( $this->isValidTreeNode($wizard) ) {
       return $this->buildWizardStep( $wizard, $keyedChildren );
     }
-    // TODO If the node doesn't exist, what do we return? Empty tree? The entire tree?
     return [];
   }
 
@@ -207,7 +205,6 @@ class WizardsService {
     if ( $this->isValidTreeNode($node) ) {
       return $this->buildFlattenedWizardTreeFromNode( Node::load($startNodeId) );
     }
-    // TODO If the node doesn't exist, what do we return? Empty tree? The entire tree?
     return [];
   }
 
@@ -288,8 +285,6 @@ class WizardsService {
    *   An array representing the wizard tree.
    */
   protected function buildWizardStep( Node $wizardStep, bool $keyedChildren = true, array &$visited = [] ) : array {
-    // TODO infinite loop prevention. Maintain array of 'visited' nodes. While the React front-end won't
-    // allow for this, Drupal technically does so we should watch for it.
     // Base case - the current step is null, so we return null.
     if ( $wizardStep == null ) {
       return null;
@@ -335,8 +330,6 @@ class WizardsService {
     $stepData = [];
 
     if ( $wizardStep ) {
-      // TODO strip tags from text fields
-      // TODO separate functions for getting wizard and wizard step field values - they have different fields available.      
       $stepData = [
         'nodeType' => $wizardStep->bundle(),
         'name' => preg_replace('/[ -]/', '_', strtolower($wizardStep->getTitle() ?? 'wizard_step_' . $wizardStep->id())),
@@ -385,7 +378,6 @@ class WizardsService {
   public function saveWizardTree( array $tree ) : void {
     // TODO validate tree
     // TODO validate user permissions
-    // TODO delete wizard steps if not present in given tree.
     
     if ($this->validateUserWizardTreePermissions()) {
       // Support data structure being wrapped in top-level objects
@@ -398,25 +390,13 @@ class WizardsService {
           $tree[$treeNode['id']] = $treeNode;
         }
       }
-      // Determine format - nested vs. flattened
-      // TODO make sure this is correct
-      $nested = false;
-      // foreach ( $tree as $treeNode ) {
-      //   $children = $treeNode['children'];
-      //   foreach ( $children as $child ) {
-      //     if ( empty($child['id']) || empty($child['weight']) ) {
-      //       $nested = true;
-      //     }
-      //     break;
-      //   }
-      //   break;
-      // }
-
-      if ( $nested ) {
-        $this->saveWizardTreeNested($tree);
-      } else {
-        $this->saveWizardTreeFlattened($tree);
-      }
+      // TODO defaults to flattened. Nested is broken - the save function
+      // hasn't been updated to support the change in fields.
+      // If we need nested, update the function for the new fields and
+      // it would probably be best to have a separate endpoint for it instead
+      // of auto-detecting here.
+      
+      $this->saveWizardTreeFlattened($tree);
     } else {
       // TODO
     }
@@ -428,7 +408,6 @@ class WizardsService {
    * @return bool
    */
   public function validateUserWizardTreePermissions() : bool {
-    // TODO properly load currently logged in user
     $user = \Drupal::currentUser();
     // TODO determine correct permissions
     if ( $user->isAuthenticated() ) {//&& $user->hasPermission('')) {
@@ -562,7 +541,6 @@ class WizardsService {
             }
           }
 
-          // TODO handle node creation/updating in separate protected function?
           $node->setTitle($wizardStep['title']);
 
           // TODO language
@@ -599,15 +577,11 @@ class WizardsService {
             }
           }
 
-          // TODO if not new node, compare new child step array with array 
-          // from node and delete any children that aren't referenced by the new array.
-
           $node->set('field_wizard_step', $fieldWizardStep);
           
           // Save the node.
           $node->save();
 
-          // TODO better way to handle this?
           // Currently, an ID of -1 means the step is a new step.
           // Because of this, the node must first be created so an ID is generated,
           // then the parent Node (or tree data) should be updated to point to this ID.
@@ -615,7 +589,6 @@ class WizardsService {
           $newId = $node->id();
           $parentStepId = $wizardStep['parentStepId'];
           if ( $isNewNode ) {
-            // TODO insert into correct spot based on weight.
             if ( isset($tree[$parentStepId]) ) {
               // Check to make sure the node ID (e.g. possibly -1) is not already set in parent.
               // If it is, swap it out with the correct ID. If not, add it in.
@@ -723,7 +696,7 @@ class WizardsService {
         }
 
         if ($parent) {
-          // TODO set children here.
+          // TODO set children and handle weights here.
           $currentChildren = $parent->get('field_wizard_step')->referencedEntities();
           $currentChildren[] = [
             'target_id' => $node->id()
