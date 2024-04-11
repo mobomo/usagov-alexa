@@ -474,7 +474,13 @@ class WizardsService {
             // be loaded and modified.
             if ( isset($tree[$wizardStep['parentStepId']] )) {
               $parent = $tree[$wizardStep['parentStepId']];
-              $index = array_search($wizardStep['id'], $parent['children']);
+              $index = false;
+              for ( $i = 0; $i < count($parent['children']); $i++ ) {
+                if ( $parent['children'][$i]['id'] == $wizardStep['id'] ) {
+                  $index = $i;
+                  break;
+                }
+              }
               if ($index !== false) {
                 unset($parent['children'][$index]);
               }
@@ -506,7 +512,8 @@ class WizardsService {
                 // Add the current node's child items from the tree to the delete queue.
                 $toDelete[] = $currentNodeId;
                 if ( isset($tree[$currentNodeId]) && isset($tree[$currentNodeId]['children']) ) {
-                  foreach ($tree[$currentNodeId]['children'] as $childNodeId ) {
+                  foreach ($tree[$currentNodeId]['children'] as $childNodeInfo ) {
+                    $childNodeId = $childNodeInfo['id'];
                     if ( !in_array($childNodeId, $toDelete) && !in_array($childNodeId, $childQueue) ) {
                       $childQueue[] = $childNodeId;
                     }
@@ -578,11 +585,17 @@ class WizardsService {
           $node->setOwnerId(\Drupal::currentUser()->id());
 
           $fieldWizardStep = [];
-          foreach ( $wizardStep['children'] as $childId ) {
-            if ($childId > 0) {
-              $fieldWizardStep[] = [
-                'target_id' => $childId
-              ];
+          if ( !empty($wizardStep['children']) ) {
+            usort($wizardStep['children'], function ($a, $b) {
+              return $a['weight'] <=> $b['weight'];
+            });
+            foreach ( $wizardStep['children'] as $childInfo ) {
+              $childId = $childInfo['id'];
+              if ($childId > 0) {
+                $fieldWizardStep[] = [
+                  'target_id' => $childId
+                ];
+              }
             }
           }
 
@@ -606,11 +619,25 @@ class WizardsService {
             if ( isset($tree[$parentStepId]) ) {
               // Check to make sure the node ID (e.g. possibly -1) is not already set in parent.
               // If it is, swap it out with the correct ID. If not, add it in.
-              $index = array_search($wizardStep['id'], $tree[$parentStepId]['children']);
+              $index = false;
+              for ( $i = 0; $i < count($tree[$parentStepId]['children']); $i++ ) {
+                if ( $wizardStep['id'] == $tree[$parentStepId]['children'][$i] ) {
+                  $index = $i;
+                  break;
+                }
+              }
               if ($index !== false) {
-                $tree[$parentStepId]['children'][$index] = $newId;
+                $tree[$parentStepId]['children'][$index]['id'] = $newId;
               } else {
-                $tree[$parentStepId]['children'][] = $newId;
+                $newWeight = 0;
+                if ( count($tree[$parentStepId]['children']) > 0 ) {
+                  $newWeight = $tree[$parentStepId]['children'][count($tree[$parentStepId]['children']) - 1];
+                  $newWeight++;
+                }
+                $tree[$parentStepId]['children'][] = [
+                  'id' => $newId,
+                  'weight' => $newWeight,
+                ];
               }
             } else {
               // If the parent isn't in the tree, the node must be loaded,
