@@ -62,7 +62,7 @@ class WizardsService {
       ],
     ],
   ];
-  
+
   // ---------------------------------------------- Currently Used ---------------------------------------------- //
   // Title                          (node.title)
   // Body                           (node.body)
@@ -77,7 +77,7 @@ class WizardsService {
   // Hide Page Intro                (node.field_hide_page_intro)
   // Short Description              (node.field_short_description)
   // CSS Icon                       (node.field_css_icon)
-  
+
   // ------------------------------------- Exist in CMS but not Used - These fields are marked as not being used in the React frontend ------------------------------------- //
   // FAQ                            (node.field_faq_page)  -- FAQ appears to be a paragraphs thing. Wondering if it's needed since we know these are all wizards.
   // Custom Twig Content            (node.field_custom_twig_content)
@@ -109,11 +109,11 @@ class WizardsService {
   /**
    * Constructs an array containing wizard tree data with nested children.
    * Builds the entire wizard tree.
-   * 
+   *
    * @param bool $keyedChildren
    *   Whether the 'children' array should be associative (true)
    *   (keyed by child ID) or sequential (false). Default is true.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as an array.
    */
@@ -132,13 +132,13 @@ class WizardsService {
   /**
    * Constructs an array containing wizard tree data with nested children.
    * Builds the wizard tree starting at the Node with the provided ID.
-   * 
+   *
    * @param int $startNodeId
    *   The ID of the node to act as the root of the tree.
    * @param bool $keyedChildren
    *   Whether the 'children' array should be associative (true)
    *   (keyed by child ID) or sequential (false). Default is true.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as an array.
    */
@@ -153,13 +153,13 @@ class WizardsService {
   /**
    * Constructs an array containing wizard tree data with nested children.
    * Builds the wizard tree starting at the provided Node.
-   * 
+   *
    * @param Node|null $wizard
    *   The Node to act as the root of the tree.
    * @param bool $keyedChildren
    *   Whether the 'children' array should be associative (true)
    *   (keyed by child ID) or sequential (false). Default is true.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as an array.
    */
@@ -174,7 +174,7 @@ class WizardsService {
    * Constructs an array containing flattened wizard tree data.
    * All node data is at the top level. Builds the entire wizard tree
    * for all wizards.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as a flattened array.
    */
@@ -193,10 +193,10 @@ class WizardsService {
    * Constructs an array containing flattened wizard tree data. All node data
    * is at the top level. Builds the wizard tree starting at the Node with
    * the provided ID.
-   * 
+   *
    * @param int $startNodeId
    *   The ID of the node to act as the root of the tree.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as a flattened array.
    */
@@ -212,10 +212,10 @@ class WizardsService {
    * Constructs an array containing flattened wizard tree data. All node data
    * is at the top level. Builds the wizard tree starting at the provided Node.
    * Essentially a breadth-first algorithm.
-   * 
+   *
    * @param Node|null $wizard
    *   The Node to act as the root of the tree.
-   * 
+   *
    * @return array
    *   Wizard tree data represented as a flattened array.
    */
@@ -223,7 +223,7 @@ class WizardsService {
     $wizardTree = [];
     $ids = [];
     $treeQueue = [];
-    
+
     if ( $this->isValidTreeNode($wizard) ) {
       // Create a queue of nodes to add to the return array and add the initial
       // Node to it.
@@ -272,7 +272,7 @@ class WizardsService {
 
   /**
    * Recursively builds a nested array representing the wizard tree.
-   * 
+   *
    * @param Node $wizardStep
    *   The Node acting as the root of the current tree.
    * @param bool $keyedChildren
@@ -280,7 +280,7 @@ class WizardsService {
    *   (keyed by child ID) or sequential (false). Default is true.
    * @param array $visited
    *   Keeps a list of visited node ids to prevent infinite recursion
-   * 
+   *
    * @return array
    *   An array representing the wizard tree.
    */
@@ -316,13 +316,13 @@ class WizardsService {
 
   /**
    * Extracts necessary data from a Node into an array.
-   * 
+   *
    * @param Node $wizardStep
    *   The node to pull data from.
    * @param bool $includeChildIds
    *   Whether children should be an empty array or an array of Node ids.
    *   Default is false (empty array).
-   * 
+   *
    * @return array
    *   An array representing this step of the wizard tree.
    */
@@ -369,7 +369,7 @@ class WizardsService {
    * Saves the wizard tree or portion of a wizard tree provided.
    * Note this can create, delete, or edit nodes provided
    * the user is logged in and has permission to do so.
-   * 
+   *
    * @param array
    *   Array containing tree data to be saved.
    */
@@ -378,7 +378,7 @@ class WizardsService {
   public function saveWizardTree( array $tree ) : void {
     // TODO validate tree
     // TODO validate user permissions
-    
+
     if ($this->validateUserWizardTreePermissions()) {
       // Support data structure being wrapped in top-level objects
       // 'entities' and 'ids' - see buildFlattenedWizardTree
@@ -395,7 +395,7 @@ class WizardsService {
       // If we need nested, update the function for the new fields and
       // it would probably be best to have a separate endpoint for it instead
       // of auto-detecting here.
-      
+
       $this->saveWizardTreeFlattened($tree);
     } else {
       // TODO
@@ -404,7 +404,7 @@ class WizardsService {
 
   /**
    * Validates whether the user has necessary permissions to modify the wizard tree.
-   * 
+   *
    * @return bool
    */
   public function validateUserWizardTreePermissions() : bool {
@@ -418,7 +418,7 @@ class WizardsService {
 
   /**
    * Helper function to save wizard tree data in nested format.
-   * 
+   *
    * @param array $tree
    *   The nested wizard tree data.
    */
@@ -428,7 +428,7 @@ class WizardsService {
 
   /**
    * Helper function to save wizard tree data in flattened format.
-   * 
+   *
    * @param array $tree
    *   The flattened wizard tree data.
    */
@@ -578,7 +578,7 @@ class WizardsService {
           }
 
           $node->set('field_wizard_step', $fieldWizardStep);
-          
+
           // Save the node.
           $node->save();
 
@@ -605,7 +605,6 @@ class WizardsService {
                 $newWeight = 0;
                 if ( count($tree[$parentStepId]['children']) > 0 ) {
                   $newWeight = $tree[$parentStepId]['children'][count($tree[$parentStepId]['children']) - 1];
-                  $newWeight++;
                 }
                 $tree[$parentStepId]['children'][] = [
                   'id' => $newId,
@@ -639,9 +638,9 @@ class WizardsService {
 
   /**
    * Recursively saves each step of the wizard tree provided.
-   * 
+   *
    * @param array $wizardStep
-   *   The data for the current wizard step that needs to be saved. 
+   *   The data for the current wizard step that needs to be saved.
    * @param Node $parent
    *   The parent Node of the current wizard step being saved.
    */
@@ -687,7 +686,7 @@ class WizardsService {
         $node->setOwnerId(\Drupal::currentUser()->id());
 
         $node->set('field_wizard_step', []);
-        
+
         // Save the node.
         $node->save();
 
@@ -711,7 +710,7 @@ class WizardsService {
 
   /**
    * Get all Wizard content as Nodes.
-   * 
+   *
    * @return array
    */
   public function getAllWizards() : array {
@@ -727,7 +726,7 @@ class WizardsService {
 
   /**
    * Helper function to return a value for a node.
-   * 
+   *
    * @param Node $obj
    *   The Node to load the value from.
    * @param string $fieldName
@@ -735,7 +734,7 @@ class WizardsService {
    * @param string $fieldType
    *   The type of field to load data from. E.g. value, reference, etc.
    *   Default is "value"
-   * 
+   *
    * @return mixed
    *   The field's value if it exists, otherwise an empty string.
    */
@@ -754,10 +753,10 @@ class WizardsService {
   /**
    * Determines whether a given node is a valid wizard tree node.
    * E.g. is it a Wizard or Wizard Step node.
-   * 
+   *
    * @param Node|null $node
    *   The node to be checked.
-   * 
+   *
    * @return bool
    *   true if this node can be part of a wizard tree, otherwise false
    */
